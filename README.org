@@ -1,10 +1,10 @@
-#+TITLE:Introduction to Programming in C/C++
+#+TITLE: Data Visualization
 #+AUTHOR:Marcus Birkenkrahe
-#+SUBTITLE: CSC 100 @ Lyon College Summer 2022
+#+SUBTITLE: DSC 302 @ Lyon College Fall 2022
 #+OPTIONS: toc:nil
 * What's in this repo?
 
-  * Repository for CSC 101 - Introduction to Programming in C/C++
+  * Repository for DSC 302 - Data Visualization
   * Emacs Org-mode files( ~.org~) are rendered as Markdown (not on
     mobile app but works well in mobile browser).
   * Reference links in the files lead to a 404 error. You always find
@@ -16,6 +16,7 @@
 ** Practice with interactive notebooks
 ** Assignments and solutions
 ** Installation information
+
 * How to use GitHub
 
   * Register and get added as a collaborator to this repo
@@ -29,5 +30,5 @@
 
 * History
 
-   First offered @Lyon: Spring 2022 (Undergrad). To be offered: Summer
-   school 2022, Spring 2024, 2026, 2028.
+   First offered @Lyon: Fall 2022 (Undergrad). To be offered: Fall
+   2024, 2026, 2028.

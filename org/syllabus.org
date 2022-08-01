@@ -1,0 +1,400 @@
+#+title: DSC 302 Syllabus
+#+author: Marcus Birkenkrahe
+#+startup: overview hideblocks indent
+#+options: toc:1 num:1 ^:nil
+#+subtitle: DSC302 - Data Visualization - Syllabus Fall 2022
+* General Course Information
+
+- Meeting Times: Mon-Wed-Fri from 15:00-15:50 am
+- Meeting place: Derby Science Building Computer Lab 209
+- Professor: Marcus Birkenkrahe
+- Professor's Office: Derby Science Building 210
+- Phone: (870) 307-7254 (office) / (501) 422-4725 (private)
+- Office hours: Monday through Friday after class (see Canvas)
+- Textbook: Exploratory Data Analysis Using R by Ronald K. Pearson,
+  chapters 1-4 (pp. 1-180) ([[https://www.routledge.com/Exploratory-Data-Analysis-Using-R/Pearson/p/book/9780367571566?utm_source=cjaffiliates&utm_medium=affiliates&cjevent=9173c8f311ad11ed81e9022e0a82b838][CRC Press, 2018]])
+
+* Objectives
+
+Data science is concerned with getting data to work for us, to give us
+its (presumed) hidden treasures. Data science has been called "the
+sexiest job of the 21st century". Even if you don't want to become a
+professonial data scientist, it's helpful to master the basic concepts
+if you want to succeed in today's data-driven business.
+
+This course focuses on visualizing data. There are many tools and
+platforms out there to visualize patterns found in data and tell
+engaging, convincing stories. As a data scientist, you have to know
+what's out there, understand the principles of good visual
+presentation, and be able to customize plots quickly.
+
+In this course, we look at popular platforms like Tableau and R Shiny,
+and at different packages within R.
+
+* Target audience
+
+The course is for anyone who is interested in
+becoming more data literate in their own field of interest - be it
+languages, theatre, biology, psychology or exercise science - and
+growing their personal skill stack. 
+
+Visualization of data-driven insights and improved productivity when
+working with data and media is a concern for any professional. 
+
+* Student Learning Outcomes
+
+Students who complete "Data visualization" (DSC 302) will be
+able to:
+
+- Learn about, and use popular data science visualization platforms
+- Understand how to visualiye exploratory data analysis results
+- Apply literate programming principles to their work with Org-mode
+- Use infrastructure including command line, Emacs, and GitHub
+- Develop their critical thinking skills
+- Know how to effectively present assignment and project results
+
+This introduction to Exploratory Data Analysis prepares course
+participants for taking DSC 305, "Machine learning".
+
+* Course requirements
+
+Introduction to programming (CSC 100 or CSC 115). Some knowledge of,
+and experience with programming and using the R language is useful but
+not critical. Curiosity is essential. You will gain data literacy
+skills by taking this course. The course will prepare you for further
+studies in computer and data science, or in other disciplines that use
+modern computing, i.e. every discipline, from accounting to zoology).
+
+* Grading system
+
+The table lists course requirements, number of units (classroom
+sessions), points-per-unit (PPU), total points per requirement, and
+the impact of a requirement on your total grade.
+
+#+name: tbl:grading
+| REQUIREMENT   | UNITS | PPU | TOTAL | % of TOTAL |
+|---------------+-------+-----+-------+------------|
+| Final exam    |     1 | 100 |   100 |        20. |
+| Assignments   |    15 |  10 |   150 |        30. |
+| Classwork     |    15 |  10 |   150 |        30. |
+| Sprint review |     5 |  20 |   100 |        20. |
+|---------------+-------+-----+-------+------------|
+| TOTAL         |       |     |   500 |       100. |
+|---------------+-------+-----+-------+------------|
+#+TBLFM: @2$4=$2*$3::@2$5=(@2$4/@6$4)*100::@3$4=$2*$3::@3$5=(@3$4/@6$4)*100::@4$4=$2*$3::@4$5=(@4$4/@6$4)*100::@5$4=$2*$3::@5$5=(@5$4/@6$4)*100::@6$4=vsum(@2..@5)::@6$5=vsum(@2..@5)
+
+You should be able to see your current grade at any time using the
+gradebook for the course.
+
+* Grading table
+
+This table is used to convert completion rates into letter grades. For
+the midterm results, letter grades still carry signs, while for the
+term results, only straight letters are given (by rounding up).
+
+|--------+---------------+---------------+--------|
+|      % | MIDTERM GRADE | FINAL GRADE   | POINTS |
+|--------+---------------+---------------+--------|
+| 100-98 | A+            |               |        |
+|  97-96 | A             | A (passed -   |        |
+|  95-90 | A-            | very good)    |   450. |
+|--------+---------------+---------------+--------|
+|  89-86 | B+            |               |        |
+|  85-80 | B             | B (passed -   |        |
+|  79-76 | B-            | good)         |   380. |
+|--------+---------------+---------------+--------|
+|  75-70 | C+            |               |        |
+|  69-66 | C             | C (passed -   |        |
+|  65-60 | C-            | satisfactory) |   300. |
+|--------+---------------+---------------+--------|
+|  59-56 | D+            |               |        |
+|  55-50 | D             | D (passed)    |   250. |
+|--------+---------------+---------------+--------|
+|   49-0 | F             | F (failed)    |        |
+|--------+---------------+---------------+--------|
+#+TBLFM: @4$4=0.9*500::@7$4=0.76*500::@10$4=0.6*500::@12$4=.50*500
+* (Revision) Tests (ungraded)
+- Complete before coming to class
+- Recall last chapter or section of class
+- Test question subset becomes final exam
+* (Programming) Assignments
+- Complete DataCamp lessons
+- Complete assignments outside of class
+- Be ready to present your solutions
+* Classwork / attendance
+- Complete assignments in class (participation)
+- Upload completed assignments (homework)
+- Be ready to present your results in class
+* (Project) sprint review
+- Research exploratory data analysis project
+- Apply agile project management methods
+- Present your results during 3 sprint reviews
+
+* Standard Policies
+** Honor Code
+
+All graded work in this class is to be pledged in accordance with the
+Lyon College Honor Code. The use of a phone for any reason during the
+course of an exam is considered an honor code violation.
+
+** Class Attendance Policy
+
+Students are expected to attend all class periods for the courses in
+which they are enrolled. They are responsible for conferring with
+individual professors regarding any missed assignments. Faculty
+members are to notify the Registrar when a student misses the
+equivalent of one, two, three, and four weeks of class periods in a
+single course. Under this policy, there is no distinction between
+“excused” and “unexcused” absences, except that a student may make up
+work missed during an excused absence. A reminder of the college’s
+attendance policy will be issued to the student at one week, a second
+reminder at two weeks, a warning at three weeks, and notification of
+administrative withdrawal and the assigning of an “F” grade at four
+weeks. Students who are administratively withdrawn from more than one
+course will be placed on probation or suspended.
+
+** Disabilities
+
+The Morrow Academic Center (MAC) helps students who want to improve
+grades by providing peer-led services including Supplemental
+Instruction (SI), tutoring, the Writing Center, and academic coaching
+as well providing 24-hour, online tutoring for all subjects through
+Tutor.com. A schedule of peer-led services is available at
+lyon.edu/mac and Tutor.com is accessed through courses in
+Schoology. Contact Donald Taylor, Director of Academic Support, at
+870-307-7319 or donald.taylor@lyon.edu for more information about MAC
+services.
+
+** Technology Support
+
+For general technology support, you can contact the IT department by
+emailing support@lyon.edu or by calling 870-307-7555. For assistance
+with classroom-related technologies, such as the learning management
+system (LMS), you can request support using the methods above, or you
+can contact sarah.williams@lyon.edu directly for assistance. Your
+course content will be accessible digitally using either the Schoology
+or Canvas LMS. Both LMS platforms will use your myLyon credentials for
+your student login.
+
+- For Canvas, login at lyon.instructure.com
+- For Schoology, login at lyon.schoology.com
+
+
+** Disabilities
+
+Students seeking reasonable accommodations based on documented
+learning disabilities must contact Interim Director of Academic
+Support Donald Taylor in the Morrow Academic Center at (870) 307-7019
+or at donald.taylor@lyon.edu.
+
+** Harassment, Discrimination, and Sexual Misconduct
+
+Lyon College seeks to provide all members of the community with a safe
+and secure learning and work environment that is free of crime and/or
+policy violations motivated by discrimination, sexual and bias-related
+harassment, and other violations of rights. The College has a
+zero-tolerance policy against gender-based misconduct, sexual assault,
+and interpersonal violence toward any member or guest of the Lyon
+College community. Any individual who has been the victim of an act of
+violence or intimidation is urged to make an official report by
+contacting a campus Title IX coordinator or by visiting
+www.lyon.edu/file-a-title-ix-report. A report of an act of violence or
+intimidation will be dealt with promptly. Confidentiality will be
+maintained to the greatest extent possible within the constraints of
+the law. For more information regarding the College’s Title IX
+policies and procedures, visit www.lyon.edu/title-ix.
+
+** Mental & Behavioral Health
+
+Lyon College is dedicated to ensuring each student has access to
+mental and behavioral health resources. The College’s Mental and
+Behavioral Health Office is located in Edwards Commons and is
+partnered with White River Health System’s Behavioral Health
+Clinic. The office is committed to helping the Lyon community achieve
+maximum mental and behavioral wellness through both preventative and
+reactive care. A full-time, licensed, professional counselor provides
+counseling, consultations, outreach, workshops, and many more mental
+and behavioral services to Lyon students, faculty, and staff at no
+cost. The Mental and Behavioral Health Office also provides access to
+White River Health System’s services and facilities, including
+medication management and in-patient and out-patient care. To make an
+appointment, contact counseling@lyon.edu.
+
+** College-Wide COVID-19 Policies for Fall, 2022
+
+The College does not require masks in instructional and meeting spaces
+inside academic buildings. However, if instructors require masks in
+their classroom, lab, or studio, then students and guests must comply
+with that requirement.  Vaccines are strongly encouraged for all
+faculty, staff, and students. Vaccines are not mandated for Lyon
+College community members, although there may be specific courses
+involving interactions with vulnerable, external populations where a
+vaccine may be required.  The College will continue to offer
+symptomatic testing for students, faculty and staff.
+
+** Details
+
+Details specific to this course may be found in the subsequent pages
+of this syllabus. Those details will include at least the following:
+- A description of the course consistent with the Lyon College
+  catalog.
+- A list of student learning outcomes for the course.
+- A summary of all course requirements.
+- An explanation of the grading system to be used in the course.
+- Any course-specific attendance policies that go beyond the College
+  policy.
+- Details about what constitutes acceptable and unacceptable student
+  collaboration on graded work.
+- A clear statement about which LMS is being used for the course.
+* Learning Management System (LMS)
+
+We will use Canvas in this course ([[https://lyon.instructure.com/courses/568][lyon.instructure.com/courses/568]]).
+* Assignments and Honor Code
+
+There will be several assignments during the summer school,
+including programming assignments and multiple-choice tests. They
+are due at the beginning of the class period on the due date. Once
+class begins, the assigment will be considered one day late if it
+has not been turned in.  Late programs will not be accepted without
+an extension. Extensions will *not* be granted for reasons such as:
+
+- You could not get to a computer
+- You could not get a computer to do what you wanted it to do
+- The network was down
+- The printer was out of paper or toner
+- You erased your files, lost your homework, or misplaced your
+  flash drive
+- You had other coursework or family commitments that interfered
+  with your work in this course
+
+  Put “Pledged” and a note of any collaboration in the comments of
+  any program you turn in. Programming assignments are individual
+  efforts, but you may seek assistance from another student or the
+  course instructor.  You may not copy someone else’s solution. If
+  you are having trouble finishing an assignment, it is far better to
+  do your own work and receive a low score than to go through an
+  honor trial and suffer the penalties that may be involved.
+
+  What is cheating on an assignment? Here are a few examples:
+
+  - Having someone else write your assignment, in whole or in part
+  - Copying an assignment someone else wrote, in whole or in part
+  - Collaborating with someone else to the extent that your
+    submissions are identifiably very similar, in whole or in part
+  - Turning in a submission with the wrong name on it
+
+    What is not cheating?  Here are some examples:
+
+    - Talking to someone in general terms about concepts involved in an
+      assignment
+    - Asking someone for help with a specific error message or bug in
+      your program
+    - Getting help with the specifics of language syntax or citation
+      style
+    - Utilizing information given to you by the instructor
+
+    Any assistance must be clearly explained in the comments at the
+    beginning of your submission.  If you have any questions about
+    this, please ask or review the policies relating to the Honor Code.
+
+    Absences on Days of Exams:
+
+    Test “make-ups” will only be allowed if arrangements have been made
+    prior to the scheduled time.  If you are sick the day of the test,
+    please e-mail me or leave a message on my phone before the
+    scheduled time, and we can make arrangements when you return.
+* Attendance policy
+
+In accordance with college policy, you must attend a minimum of 80% of
+non-cancelled meetings without risking a fail. This means that you
+must attend a minimum of 32/40 meetings. If you miss more than 8
+meetings, you fail the class automatically. Any missed meetings result
+in an [[https://catalog.lyon.edu/class-attendance]["Early Alert" report]].
+
+You should take care not to miss consecutive sessions if at all
+possible - otherwise you risk losing touch with the class and falling
+behind.
+* Dates and class schedule
+
+- Important extra-curricular dates
+  #+name: tab:extra
+  | WHEN           | WHAT                            |
+  |----------------+---------------------------------|
+  | August 16      | Classes begin                   |
+  | August 29      | Last day to drop course         |
+  | September 5    | Labor day (no classes)          |
+  | October 1-4    | Fall break (no classes)         |
+  | October 6      | Mid-term grades due             |
+  | October 14-26  | Sesquicentennial week           |
+  | October 20     | Service day (no classes)        |
+  | November 23-27 | Thanksgiving break (no classes) |
+  | December 2     | Last day of classes             |
+  | December 14    | Final grades due                |
+
+- Class session schedule  
+  #+name: tab:schedule
+  | NO | DATE       | TESTS      | TEXTBOOK           | ASSIGNMENT[fn:1]                   |
+  |----+------------+------------+--------------------+------------------------------------|
+  |  1 | Wed-17-Aug | Entry Test |                    | 1. Visualizing distributions [DC]  |
+  |  2 | Fri-19-Aug |            |                    | 2. Emacs tutorial                  |
+  |----+------------+------------+--------------------+------------------------------------|
+  |  3 | Mon-22-Aug | Test 1     | 1. Data, EDA, R    | 3. Visualizing two variables [DC]  |
+  |  4 | Wed-24-Aug |            |                    |                                    |
+  |  5 | Fri-26-Aug |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  |  6 | Mon-29-Aug | Test 2     | 2. Graphics in R   | 4. The color and the shape [DC]    |
+  |  7 | Wed-31-Aug |            |                    |                                    |
+  |  8 | Fri-02-Sep |            |                    | 1st Sprint review                  |
+  |----+------------+------------+--------------------+------------------------------------|
+  |  9 | Wed-07-Sep | Test 3     | 2.3 plot()         | 5. 99 problems... [DC]             |
+  | 10 | Fri-09-Sep |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 11 | Mon-12-Sep | Test 4     | 2.4 Adding details | 6. Intro to base R graphics [DC]   |
+  | 12 | Wed-14-Sep |            |                    |                                    |
+  | 13 | Fri-16-Sep |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 14 | Mon-19-Sep | Test 5     | 2.5 Plot types     | 7. Different plot types [DC]       |
+  | 15 | Wed-21-Sep |            |                    |                                    |
+  | 16 | Fri-23-Sep |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 17 | Mon-26-Sep | Test 6     | 2.6 Plot arrays    | 8. Adding details to plots [DC]    |
+  | 18 | Wed-28-Sep |            |                    |                                    |
+  | 19 | Fri-30-Sep |            |                    | 2nd Sprint Review                  |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 20 | Wed-05-Oct | Test 7     | 2.7 Color graphics | 9. How much is too much? [DC]      |
+  | 21 | Fri-07-Oct |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 22 | Mon-10-Oct | Test 8     | 3.1 Exploring data | 10. Adv plot customization [DC]    |
+  | 23 | Wed-12-Oct |            |                    |                                    |
+  | 24 | Fri-14-Oct |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 25 | Mon-24-Oct | Test 9     | 3.2 Numerical data | 11. Intro to ggplot [DC]           |
+  | 26 | Wed-26-Oct |            |                    |                                    |
+  | 27 | Fri-28-Oct |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 28 | Mon-31-Oct | Test 10    | 3.3 Anomalies      | 12. Building web apps w/shiny [DC] |
+  | 29 | Wed-02-Nov |            |                    | 3rd Sprint Review                  |
+  | 30 | Fri-04-Nov |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 31 | Mon-07-Nov | Test 11    | 3.4 Relationships  | 13. Introduction to Tableau [DC]   |
+  | 32 | Wed-09-Nov |            |                    |                                    |
+  | 33 | Fri-11-Nov |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 34 | Mon-14-Nov | Test 12    | 4 External data    | 14. External data                  |
+  | 35 | Wed-16-Nov |            |                    |                                    |
+  | 36 | Fri-18-Nov |            |                    |                                    |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 37 | Mon-21-Nov | Test 13    | 4.74. RSQLite      | 15. RSQLite                        |
+  |----+------------+------------+--------------------+------------------------------------|
+  | 38 | Mon-28-Nov | Test 14    |                    | Final Sprint review                |
+  | 39 | Wed-30-Nov |            |                    | Final Sprint review                |
+  | 40 | Fri-02-Dec |            |                    | Final Sprint review                |
+  |----+------------+------------+--------------------+------------------------------------|
+
+* Footnotes
+
+[fn:1]Assignments include selected chapters from five different
+DataCamp courses: "Data Visualization for Everyone", "Data
+Visualization in R", "Introduction to Tableau", "Introduction to Data
+Visualization with ggplot2", and "Building web applications with shiny
+in R".

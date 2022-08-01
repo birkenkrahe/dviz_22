@@ -1,0 +1,58 @@
+#+TITLE:Agenda - DSC 302
+#+AUTHOR:Marcus Birkenkrahe
+#+SUBTITLE:Agenda - DSC 302 - Data Visualization, Fall 2022
+#+STARTUP:overview hideblocks indent
+#+OPTIONS: toc:nil num:nil ^:nil
+* README
+
+- DSC 105 covers the basics of data science with R, simple
+  visualization and productivity tools
+- We use R as a language, GNU Emacs as editor, ESS as statistics
+  extension, and Org-mode for literate programming
+- For details on objectives, audience, grading, schedule, check the
+  [[https://github.com/birkenkrahe/ds1/blob/piHome/org/syllabus.org][syllabus]] or the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][FAQ]] on GitHub.
+- This file contains a (dynamically updated) agenda for each session
+  as well as some content.
+- You can also look at [[https://github.com/birkenkrahe/ds1/blob/piHome/org/agenda.org][the agenda on GitHub]].
+
+* FAQ - FREQUENTLY ASKED QUESTIONS
+
+#+attr_html: :width 300px
+#+caption: Three Spheres II, M.C. Escher (1946)
+[[../img/escher.jpg]]
+
+- [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][Frequently Asked Questions @GitHub]]
+- First place to go to with a general question
+- FAQ is regularly updated with new content
+
+* WEEK 1: INTRODUCTION TO THE COURSE
+
+- Mutual introductions
+- Review: Entry test
+- Course overview
+- Practice: course infrastructure
+- Assignments
+- Glossary
+
+* Week 2: GETTING STARTED
+
+- Quiz 1: course infrastructure
+- Lecture: 
+- Practice:
+    
+* Footnotes
+
+[fn:2]To get full points, you need to complete a DataCamp assignment
+on time. Late submission costs you 1 point per day (i.e. 0 points
+after 10 days). For non-DataCamp assignments you lose points for
+incomplete submissions.
+
+[fn:1]From the [[https://lyon.instructure.com/courses/568/assignments/1539][Canvas assignment]]:
+#+begin_quote
+Practice: course infrastructure (see GitHub) - no submission. To be
+completed in the classroom. If you actively participated in the
+practice session and/or uploaded the completed practice file
+(usually Org-mode, occasionally other file formats), you get full
+points. If you missed a classroom session with a submittable
+practice file, you can complete and submit it later.
+#+end_quote

@@ -5,12 +5,6 @@
 #+ATTR_HTML: :width 700px
 #+caption: data science pipeline
 [[../img/2_pipeline.png]]
-
-- *Data* is a nebulous concept
-- *Coding* seems (still) hard
-- *Statistics* is a vast field
-- *Story* does not seem solid
-
 * WHY DO WE ANALYZE DATA?
 
 #+ATTR_HTML: :width 300px
@@ -55,9 +49,8 @@ Pearson:
 - Rows = observation of entity, event, or process
 - Columns = recorded characteristic or attribute
 
-* DATA FRAMES
-
 #+begin_src R :results output :exports both
+  ## extract first six records from the mtcars data frame
   head(mtcars)
 #+end_src
 
@@ -73,15 +66,39 @@ Pearson:
 
 #+begin_notes
 - Data frame rows and columns have /names/
-- Complete description with ~help(mtcars)~
+- Complete description with [[http://127.0.0.1:23426/library/datasets/html/mtcars.html][help(mtcars)]]
 - Meta data supplement data frame content
 #+end_notes
 
-* EXPLORATORY ANALYSIS
+* META DATA
 
-* COMPUTERS, SOFTWARE, AND R
+- "Data about data" (Greek μετά = 'after', 'beyond')
+- Meta data in ~mtcars~:
+  + Original source of the data
+  + Scientific paper analyzing the data
+  + Description of the variables (columns)
 
-* GLOSSARY
+*What could be issues with metadata?*
+
+#+begin_notes
+- *Completeness* - origin
+- *Consistency* - logic, values, (time) dependency
+- *Accuracy* - origin and validity
+#+end_notes
+
+#+begin_quote
+"As potentially valuable as metadata is, we cannot afford to accept it
+uncritically: we should always cross-check the metadata with the
+actual data values, with our intuition and prior understanding of the
+subject matter, and with other sources of information that may be
+available." (Pearson, 2018)
+#+end_quote
+
+* TODO EXPLORATORY ANALYSIS
+
+* TODO COMPUTERS, SOFTWARE, AND R
+
+* IN PROGRESS GLOSSARY
 
 | TERM        | MEANING                |
 |-------------+------------------------|
@@ -90,3 +107,7 @@ Pearson:
 | Attribute   | Characteristic         |
 | Meta data   | Data about data        |
 | Data        | Entity, event, process |
+
+* REFERENCES
+
+ Pearson, R.K. (2018). Exploratory Data Analysis Using R. CRC Press.

@@ -1,0 +1,37 @@
+#+TITLE:Practice: EDA example
+#+AUTHOR: [YourName]
+#+SUBTITLE: Data visualization (DSC 302) Fall 2022
+#+OPTIONS: toc:nil num:nil ^:nil
+* README
+
+  - Practice instructions for the data visualization lectures
+  - Emacs + ESS + Org-mode and R must be installed
+  - Upload the completed file as a class assignment ([[https://lyon.instructure.com/courses/571/assignments/1704][Canvas link]])
+
+* TIME TABLE
+  
+  #+name: tab:2_practice
+  | PRACTICE        | MIN |
+  |-----------------+-----|
+  | Install R       |  30 |
+  | Find R          |  15 |
+  | Run scripts     |  15 |
+  | Explore shell   |  30 |
+  | Change dir      |  10 |
+  | Change prompt   |  10 |
+  | Compute/comment |  10 |
+  | R Packages      |  15 |
+  | Customization   |  15 |
+  |-----------------+-----|
+  | TOTAL           | 150 |
+  #+TBLFM: @11$2=vsum(@2..@10)
+
+* TODO IDENTIFY YOURSELF
+
+  - Update the ~#+AUTHOR:~ information in the header
+  - Add this on a line to the header of this file :
+    ~#+STARTUP: overview hideblocks indent~
+  - With the cursor on theline, activate the header line with ~C-c C-c~.
+  - Put your cursor on the headline of this section, and type ~S <LEFT>~
+    until you see ~DONE~ instead of ~TODO~ next to the title.
+

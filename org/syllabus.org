@@ -72,15 +72,15 @@ sessions), points-per-unit (PPU), total points per requirement, and
 the impact of a requirement on your total grade.
 
 #+name: tbl:grading
-| REQUIREMENT   | UNITS | PPU | TOTAL | % of TOTAL |
-|---------------+-------+-----+-------+------------|
-| Final exam    |     1 | 100 |   100 |        20. |
-| Assignments   |    15 |  10 |   150 |        30. |
-| Classwork     |    15 |  10 |   150 |        30. |
-| Sprint review |     5 |  20 |   100 |        20. |
-|---------------+-------+-----+-------+------------|
-| TOTAL         |       |     |   500 |       100. |
-|---------------+-------+-----+-------+------------|
+| REQUIREMENT       | UNITS | PPU | TOTAL | % of TOTAL |
+|-------------------+-------+-----+-------+------------|
+| Final exam        |     1 | 100 |   100 |        20. |
+| Home Assignments  |    15 |  10 |   150 |        30. |
+| Class Assignments |    15 |  10 |   150 |        30. |
+| Sprint review     |     5 |  20 |   100 |        20. |
+|-------------------+-------+-----+-------+------------|
+| TOTAL             |       |     |   500 |       100. |
+|-------------------+-------+-----+-------+------------|
 #+TBLFM: @2$4=$2*$3::@2$5=(@2$4/@6$4)*100::@3$4=$2*$3::@3$5=(@3$4/@6$4)*100::@4$4=$2*$3::@4$5=(@4$4/@6$4)*100::@5$4=$2*$3::@5$5=(@5$4/@6$4)*100::@6$4=vsum(@2..@5)::@6$5=vsum(@2..@5)
 
 You should be able to see your current grade at any time using the
@@ -117,11 +117,11 @@ term results, only straight letters are given (by rounding up).
 - Complete before coming to class
 - Recall last chapter or section of class
 - Test question subset becomes final exam
-* (Programming) Assignments
+* Home assignments
 - Complete DataCamp lessons
 - Complete assignments outside of class
 - Be ready to present your solutions
-* Classwork / attendance
+* Class assignments
 - Complete assignments in class (participation)
 - Upload completed assignments (homework)
 - Be ready to present your results in class

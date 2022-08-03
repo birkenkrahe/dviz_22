@@ -1,0 +1,92 @@
+#+TITLE:  DATA, Exploratory Data Analysis, and R
+#+AUTHOR: Marcus Birkenkrahe
+#+Subtitle: Introdution to Data Visualization
+#+STARTUP: hideblocks overview indent
+#+ATTR_HTML: :width 700px
+#+caption: data science pipeline
+[[../img/2_pipeline.png]]
+
+- *Data* is a nebulous concept
+- *Coding* seems (still) hard
+- *Statistics* is a vast field
+- *Story* does not seem solid
+
+* WHY DO WE ANALYZE DATA?
+
+#+ATTR_HTML: :width 300px
+#+caption: data science pipeline
+[[../img/2_analysis.jpg]]
+
+- Well, what do you think?
+
+#+begin_notes
+Tip: reframe WHY questions as WHAT questions -
+
+- What data?
+- What analysis?
+- What benefits?
+#+end_notes
+
+Pearson:
+#+begin_quote
+1. to *understand* what has happened or what is happening;
+2. to *predict* what is likely to happen, either in the future or in
+   other circumstances we haven't seen;
+3. to *guide* us in making decisions.
+#+end_quote
+
+* DATA - CONCEPT
+
+- An *entity*, e.g.
+  + family history of patient in medical study
+  + competing company characteristics in marketing analysis
+
+- An *event*, e.g.
+  + demographic characteristics of voters
+  + locations visited during a shopping visit
+
+- A *process*, e.g.
+  + manufacturing data from a production line
+  + hiring data from an application process
+
+* DATA - PRACTICE
+
+- Data structures = rectangular array of observed values
+- Rows = observation of entity, event, or process
+- Columns = recorded characteristic or attribute
+
+* DATA FRAMES
+
+#+begin_src R :results output
+  head(mtcars)
+#+end_src
+
+#+RESULTS:
+:                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+: Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+: Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+: Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+: Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+: Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+: Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+
+
+#+begin_notes
+- Data frame rows and columns have /names/
+- Complete description with ~help(mtcars)~
+- Meta data supplement data frame content
+#+end_notes
+
+* EXPLORATORY ANALYSIS
+
+* COMPUTERS, SOFTWARE, AND R
+
+* GLOSSARY
+
+| TERM        | MEANING                |
+|-------------+------------------------|
+| Data frame  | Rectangular array      |
+| Observation | Recorded event         |
+| Attribute   | Characteristic         |
+| Meta data   | Data about data        |
+| Data        | Entity, event, process |

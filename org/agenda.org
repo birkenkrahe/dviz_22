@@ -37,22 +37,6 @@
 * Week 2: GETTING STARTED
 
 - Quiz 1: course infrastructure
-- Lecture: 
-- Practice:
+- Lecture: Data, Exploratory Data Analysis, and R
+- Practice: A representative R session
     
-* Footnotes
-
-[fn:2]To get full points, you need to complete a DataCamp assignment
-on time. Late submission costs you 1 point per day (i.e. 0 points
-after 10 days). For non-DataCamp assignments you lose points for
-incomplete submissions.
-
-[fn:1]From the [[https://lyon.instructure.com/courses/568/assignments/1539][Canvas assignment]]:
-#+begin_quote
-Practice: course infrastructure (see GitHub) - no submission. To be
-completed in the classroom. If you actively participated in the
-practice session and/or uploaded the completed practice file
-(usually Org-mode, occasionally other file formats), you get full
-points. If you missed a classroom session with a submittable
-practice file, you can complete and submit it later.
-#+end_quote

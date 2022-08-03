@@ -1,0 +1,189 @@
+#+TITLE: Course overview
+#+AUTHOR: Marcus Birkenkrahe
+#+SUBTITLE: Data visualization (DSC 302) Fall 2022
+#+STARTUP:overview hideblocks inden
+#+attr_html: :width 600px
+#+caption: The Red Tower/La tour rouge (Giorgio de Chirico, 1913) Source: Guggenheim
+[[../img/1_tower.jpg]]
+* MUTUAL INTRODUCTIONS
+#+attr_html: :width 500px
+#+caption: Marc Chagall, Over the town (2018) Source: Wikiart
+[[../img/1_chagall.jpg]]
+
+1. Why are you here?
+2. What would delight you?
+3. What would disappoint you?
+4. Where are you headed?
+* COURSE SYLLABUS (on GitHub and on Canvas)
+#+attr_html: :width 500px
+#+caption: DSC 302 Syllabus on GitHub
+[[../img/1_syllabus.png]]
+
+- General information & standard policies
+- Course information (grading, attendance)
+- [[https://github.com/birkenkrahe/ds1/blob/piHome/org/syllabus.org#classroom-sessions-schedule][Schedule]] with dates of tests and assignments
+- The [[https://github.com/birkenkrahe/dviz][GitHub repo]] contains course material
+
+* COURSE TOPICS (ILLUSTRATED)
+#+attr_html: :width 550px
+#+caption: Course topics
+[[../img/1_xkcd_curve_fitting.png]]
+* COURSE TOPICS (SPELLED OUT)
+#+attr_html: :width 500px
+#+caption: Lyonel Feininger, Sailing Boats (1929)
+[[../img/1_topics.png]]
+
+1) Exploratory Data Analysis (EDA) using R
+2) Graphics in base R with applications
+3) Working with external data (critically)
+* AGILE TEAM PROJECT
+#+attr_html: :width 600px
+#+caption: Agile (Scrum) project
+[[../img/1_scrum.png]]
+
+The team project makes up 20% of your final grade for this course.
+
+- What is a team project? (FAQ)
+- Do you have examples for data science projects? (FAQ)
+- Can you do a project as an absolute beginner? (FAQ)
+
+*Note:* the first /[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-is-a-sprint-review][sprint review]]/ is on August 31. Use it to present your
+initial results (see FAQ on [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-i-need-to-deliver-at-a-sprint-review][what to deliver]], and [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-first-sprint][1st sprint review]]).
+* MANY PROJECT OPPORTUNITIES
+
+#+attr_html: :width 350px
+#+caption: DataCamp course "Data Visualization For Everyone" start page
+[[../img/1_competition.png]]  
+  
+* INTRODUCTION TO DataCamp (home assignments)
+#+attr_html: :width 500px
+#+caption: DataCamp course "Data Visualization For Everyone" start page
+[[../img/1_datacamp.png]]
+
+- DataCamp is a data science learning platform
+- Access for you is free (classroom license)
+- 9/15 assignments are DataCamp assignments
+- Assignments are drawn from 5 courses
+  1. Data visualization for everyone
+  2. Data visualization with R
+  3. Introduction to data visualization with ggplot2
+  4. Building web applications with Shiny in R
+  5. Introduction to Tableau
+- Complete them on time to get full points
+- Completed DataCamp courses can [[https://www.linkedin.com/in/birkenkrahe/][support your resume]]
+* INTRODUCTION TO THE TEXTBOOK
+#+attr_html: :width 200px
+#+caption: Cover of EDA Using R (Pearson, 2018)
+[[../img/1_textbook.jpg]]
+
+- R is /FOSS/ with focus on stats and graphics
+- Pearson's "[[https://www.routledge.com/Exploratory-Data-Analysis-Using-R/Pearson/p/book/9780367571566][EDA Using R]]" is extensive (563 pp.)
+- You don't have to read along but it might help
+
+* OTHER SOURCES
+#+attr_html: :width 200px
+#+caption: Cover of Fundamentals of Data Visualization (2019) by Claus Wilke
+[[../img/1_wilke.png]]
+
+- [[https://clauswilke.com/dataviz/][Introduction to data visualization]]: Wilke (2019) - *in library*
+- Many other tutorials and textbooks available 
+- The best (free) short online tutorial: [[https://github.com/matloff/fasteR][Matloff's "fasteR"]]
+- The best complete textbook: Davies' "[[https://nostarch.com/bookofr][Book of R]]" - *in library*
+- Beware of ideologies (cp. Matloff's "[[http://github.com/matloff/TidyverseSkeptic][TidyverseSceptic]]")
+* INTRODUCTION to GNU Emacs + ESS + Org-mode
+#+attr_html: :width 500px
+#+caption: GNU Emacs start page
+[[../img/1_emacs.png]]
+
+- Emacs: self-documenting, extensible /FOSS/ text editor
+- Process, file and package management (like an OS)
+- /Literate programming/ environment for 43 languages
+- /IDE/ for R programming and /REPL/ for interactive coding
+* LITERATE PROGRAMMING
+#+attr_html: :width 600px
+#+caption: What is literate programming?
+[[../img/1_litprog.png]]
+
+Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WILtLJR2sHSfr6Fs/edit?usp=sharing][Teaching data science with hacker tools]]" (2022)
+
+- Common practice among data scientists
+- /Paradigm/ behind interactive computing notebooks
+- Useful when learning any programming language
+* PRACTICE - COURSE INFRASTRUCTURE
+
+*Useful:* take notes! Practice leads to mastery and the practice
+exercises will often come back to haunt you in the tests.
+
+    1) Open a browser
+    2) Find the GitHub repos (birkenkrahe/ds1 and /org)
+    3) Open the command line terminal
+    4) Open/close R
+    5) Open Emacs
+    6) Find the Emacs tutorial
+    7) Open/close R inside Emacs
+    8) Run R in an Org-mode file
+    9) Close Emacs
+    10) Close the command line terminal
+
+*Note:* Class room practice completion = 10 points each for active
+participation.
+
+* HOME ASSIGNMENTS
+
+- There are 15 programming assignments altogether = 10 points each, or
+  30% of your final grade.
+
+- Register with DataCamp and complete the DataCamp chapter
+  "[[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][Visualizing distributions]]" from the course "Data visualization for
+  everyone" by Monday, 22 August at 3 pm (ca. 20 min).
+
+  + Motivating visualization of data
+  + Continous vs. categorical variables
+  + Plot types: histograms and box plots
+
+- [[https://lyon.instructure.com/courses/568/assignments/1436][Complete the Emacs on-board tutorial]] and upload an edited copy to
+  Canvas by Friday, 26 August at 11 am (ca. 60 min).
+
+  + Get comfortable with Emacs keyboard bindings
+  + Learn how to create, view, edit, save files
+  + Learn how to insert a time stamp automatically
+* TESTS (NOT GRADED)
+#+attr_html: :width 500px
+#+caption: Start page of the entry quiz on Canvas
+[[../img/1_entry_quiz.png]]
+
+- Tests have to be completed online, are timed, and have a deadline;
+  after the deadline, you can play them an unlimited number of times
+- There will be a revision quiz on Canvas every week, consisting of
+  5-10 multiple choice, matching and true/false questions.
+- A subset of the test questions will form the final exam (20% of your
+  final grade) - we will practice in the last week before the exam.
+
+* GLOSSARY
+
+| TERM          | MEANING                                |
+|---------------+----------------------------------------|
+| Command line  | aka terminal/shell to talk to the OS   |
+| Emacs         | GNU self-extensible text editor        |
+| FOSS          | Free and Open Source Software          |
+| GitHub        | Software development platform          |
+| Git           | Version control software               |
+| GNU           | GNU's not Unix                         |
+| IDE           | Integrated Development Environment     |
+| "Literate     |                                        |
+| Programming"  | Story + code => source code + doc      |
+| Paradigm      | A standard way of looking at things    |
+| R             | FOSS statistical programming language  |
+| REPL          | Read-Eval-Print-Loop                   |
+| Repo          | Code repository                        |
+| "Tidyverse"   | Popular R package bundle               |
+| Scrum         | Agile project management method        |
+| Sprint review | Period to complete a prototype         |
+| Prototype     | Intermediate (not perfect) solution    |
+
+* REFERENCES
+
+  - Davies T D (2016). The Book of R. NoStarch Press.
+  - Pearson R K (2018). Exploratory Data Analysis Using R. CRC Press.
+  - Wilke C (2019). Fundamentals of Data Visualization. O'Reilly
+    Media. [[https://clauswilke.com/dataviz/][Online: clauswilke.com]]

@@ -57,7 +57,7 @@ Pearson:
 
 * DATA FRAMES
 
-#+begin_src R :results output
+#+begin_src R :results output :exports both
   head(mtcars)
 #+end_src
 

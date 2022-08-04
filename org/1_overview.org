@@ -36,6 +36,26 @@
 1) Exploratory Data Analysis (EDA) using R
 2) Graphics in base R with applications
 3) Working with external data (critically)
+* WHY "DATA VISUALIZATION"?
+
+  #+attr_html: :width 700px
+  #+caption: Charles Minard, Napoleon's Russian campaign 1812
+  [[../img/minard.png]]
+  
+  - The purpose of data science is /pattern identification/
+  - /Visualization/ happens in the head of the researcher first
+  - /Graphing/ happens throughout, /storytelling/ happens last
+
+  #+begin_notes
+  - The diagram by Charles Minard (1869) tells the story of Napoleon's
+    disastrous Russian campaign in 1812 (datavizblog.com, 2013)
+  - Variables: army location, temperature, size over time
+  - Diagram type: [[https://analytics.googleblog.com/2011/12/sankey-diagrams-and-flow-over-hundred.html][Sankey flow diagram]] ([[https://www.sankey-diagrams.com/][many examples]])
+  - Data type: time series (an object class, ~ts~, in R)
+  - The story of this campaign is also the backstory for Tolstoy's
+    novel [[https://en.wikipedia.org/wiki/War_and_Peace]["WAR AND PEACE" (Война и мир, 1867)]]
+  #+end_notes  
+
 * AGILE TEAM PROJECT
 #+attr_html: :width 600px
 #+caption: Agile (Scrum) project
@@ -52,10 +72,18 @@ initial results (see FAQ on [[https://github.com/birkenkrahe/org/blob/master/FAQ
 * MANY PROJECT OPPORTUNITIES
 
 #+attr_html: :width 350px
-#+caption: DataCamp course "Data Visualization For Everyone" start page
+#+caption: DataCamp competition announcement
 [[../img/1_competition.png]]  
+
+- Create an interesting data visualization
+- Explore a graphics or animation package
+- Solve a real-world problem
+- Analyse existing visualizations
+- See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples
+- [[https://www.datacamp.com/blog/12-of-the-best-data-visualizations-tools][Explore a data visualization tool]]
+- [[https://github.com/birkenkrahe/dviz/issues/12][Visualize whale song / double up between 2 or 3 courses]]
   
-* INTRODUCTION TO DataCamp (home assignments)
+* INTRODUCTION TO DataCamp
 #+attr_html: :width 500px
 #+caption: DataCamp course "Data Visualization For Everyone" start page
 [[../img/1_datacamp.png]]
@@ -109,25 +137,6 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
 - Common practice among data scientists
 - /Paradigm/ behind interactive computing notebooks
 - Useful when learning any programming language
-* PRACTICE - COURSE INFRASTRUCTURE
-
-*Useful:* take notes! Practice leads to mastery and the practice
-exercises will often come back to haunt you in the tests.
-
-    1) Open a browser
-    2) Find the GitHub repos (birkenkrahe/ds1 and /org)
-    3) Open the command line terminal
-    4) Open/close R
-    5) Open Emacs
-    6) Find the Emacs tutorial
-    7) Open/close R inside Emacs
-    8) Run R in an Org-mode file
-    9) Close Emacs
-    10) Close the command line terminal
-
-*Note:* Class room practice completion = 10 points each for active
-participation.
-
 * HOME ASSIGNMENTS
 
 - There are 15 programming assignments altogether = 10 points each, or
@@ -159,30 +168,52 @@ participation.
 - A subset of the test questions will form the final exam (20% of your
   final grade) - we will practice in the last week before the exam.
 
+* PRACTICE - COURSE INFRASTRUCTURE
+
+*Useful:* take notes! Practice leads to mastery and the practice
+exercises will often come back to haunt you in the tests.
+
+    1) Open a browser
+    2) Find the GitHub repos (birkenkrahe/ds1 and /org)
+    3) Open the command line terminal
+    4) Open/close R
+    5) Open Emacs
+    6) Find the Emacs tutorial
+    7) Open/close R inside Emacs
+    8) Run R in an Org-mode file
+    9) Close Emacs
+    10) Close the command line terminal
+
+*Note:* Class room practice completion = 10 points each for active
+participation.
+
 * GLOSSARY
 
-| TERM          | MEANING                                |
-|---------------+----------------------------------------|
-| Command line  | aka terminal/shell to talk to the OS   |
-| Emacs         | GNU self-extensible text editor        |
-| FOSS          | Free and Open Source Software          |
-| GitHub        | Software development platform          |
-| Git           | Version control software               |
-| GNU           | GNU's not Unix                         |
-| IDE           | Integrated Development Environment     |
-| "Literate     |                                        |
-| Programming"  | Story + code => source code + doc      |
-| Paradigm      | A standard way of looking at things    |
-| R             | FOSS statistical programming language  |
-| REPL          | Read-Eval-Print-Loop                   |
-| Repo          | Code repository                        |
-| "Tidyverse"   | Popular R package bundle               |
-| Scrum         | Agile project management method        |
-| Sprint review | Period to complete a prototype         |
-| Prototype     | Intermediate (not perfect) solution    |
+| TERM          | MEANING                               |
+|---------------+---------------------------------------|
+| Command line  | aka terminal/shell to talk to the OS  |
+| Emacs         | GNU self-extensible text editor       |
+| FOSS          | Free and Open Source Software         |
+| GitHub        | Software development platform         |
+| Git           | Version control software              |
+| GNU           | GNU's not Unix                        |
+| IDE           | Integrated Development Environment    |
+| "Literate     |                                       |
+| Programming"  | Story + code => source code + doc     |
+| Paradigm      | A standard way of looking at things   |
+| R             | FOSS statistical programming language |
+| REPL          | Read-Eval-Print-Loop                  |
+| Repo          | Code repository                       |
+| "Tidyverse"   | Popular R package bundle              |
+| Scrum         | Agile project management method       |
+| Sprint review | Period to complete a prototype        |
+| Prototype     | Intermediate (not perfect) solution   |
 
 * REFERENCES
 
+  - datavizblog.com (May 26, 2013).DataViz History: Charles Minard's
+    Flow Map of Napoleon's Russian Campaign of 1812. [[https://datavizblog.com/2013/05/26/dataviz-history-charles-minards-flow-map-of-napoleons-russian-campaign-of-1812-part-5/][Online:
+    datavizblog.com]]
   - Davies T D (2016). The Book of R. NoStarch Press.
   - Pearson R K (2018). Exploratory Data Analysis Using R. CRC Press.
   - Wilke C (2019). Fundamentals of Data Visualization. O'Reilly

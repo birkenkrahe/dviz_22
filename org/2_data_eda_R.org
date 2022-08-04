@@ -4,7 +4,16 @@
 #+STARTUP: hideblocks overview indent
 #+ATTR_HTML: :width 700px
 #+caption: data science pipeline
+
 [[../img/2_pipeline.png]]
+
+- Why do we analyze data?
+- Data as a concept and as a practice
+- The importance of metadata
+- Exploratory Data Analysis
+- Numbers vs. graphs
+- 
+
 * WHY DO WE ANALYZE DATA?
 
 #+ATTR_HTML: :width 300px
@@ -41,7 +50,7 @@ Pearson:
 
 - A *process*, e.g.
   + manufacturing data from a production line
-  + hiring data from an application process
+  + application information from a hiring process
 
 * DATA - PRACTICE
 
@@ -72,6 +81,10 @@ Pearson:
 
 * META DATA
 
+#+attr_html: :width 300px
+#+caption: Greek goddess of peace and spring (Εiρήνη)
+[[../img/2_eirene.png]]
+
 - "Data about data" (Greek μετά = 'after', 'beyond')
 - Meta data in ~mtcars~:
   + Original source of the data
@@ -94,20 +107,283 @@ subject matter, and with other sources of information that may be
 available." (Pearson, 2018)
 #+end_quote
 
-* TODO EXPLORATORY ANALYSIS
+* TODO PRACTICE: META OR NOT META?
 
-* TODO COMPUTERS, SOFTWARE, AND R
+#+attr_html: :width 300px
+#+caption: datascience.codata.org/articles/10.5334/dsj-2022-010/
+[[../img/2_meta.png]]
+
+*Pair exercise:* Identify the different types of data and metadata in
+the screenshot of an online journal article.
+
+#+begin_notes
+1) Article meta data: Journal title, "Research paper", title, authors
+2) Layout meta data: HTML/CSS elements
+3) Browser meta data: browser data (buttons for: download, font size,
+   print, login, register, menu options; browser console; URL)
+4) Article content data: abstract + paper text, tables and figures
+
+#+attr_html: :width 300px
+#+caption: Solution
+[[../img/2_meta_solution.png]]
+#+end_notes
+
+* PROBLEM: MISSING VALUES
+
+#+attr_html: :width 500px
+#+caption: Pima Indians data sets in the MASS package
+[[../img/2_pima.png]]
+
+#+begin_src R :session *R* :results output
+  str(Pima.te)
+  str(Pima.tr)
+  str(Pima.tr2`)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+'data.frame':   332 obs. of  8 variables:
+ $ npreg: int  6 1 1 3 2 5 0 1 3 9 ...
+ $ glu  : int  148 85 89 78 197 166 118 103 126 119 ...
+ $ bp   : int  72 66 66 50 70 72 84 30 88 80 ...
+ $ skin : int  35 29 23 32 45 19 47 38 41 35 ...
+ $ bmi  : num  33.6 26.6 28.1 31 30.5 25.8 45.8 43.3 39.3 29 ...
+ $ ped  : num  0.627 0.351 0.167 0.248 0.158 0.587 0.551 0.183 0.704 0.263 ...
+ $ age  : int  50 31 21 26 53 51 31 33 27 29 ...
+ $ type : Factor w/ 2 levels "No","Yes": 2 1 1 2 2 2 2 1 1 2 ...
+
+ 'data.frame':  200 obs. of  8 variables:
+ $ npreg: int  5 7 5 0 0 5 3 1 3 2 ...
+ $ glu  : int  86 195 77 165 107 97 83 193 142 128 ...
+ $ bp   : int  68 70 82 76 60 76 58 50 80 78 ...
+ $ skin : int  28 33 41 43 25 27 31 16 15 37 ...
+ $ bmi  : num  30.2 25.1 35.8 47.9 26.4 35.6 34.3 25.9 32.4 43.3 ...
+ $ ped  : num  0.364 0.163 0.156 0.259 0.133 ...
+ $ age  : int  24 55 35 26 23 52 25 24 63 31 ...
+ $ type : Factor w/ 2 levels "No","Yes": 1 2 1 1 1 2 1 1 1 2 ...
+
+ 'data.frame':  300 obs. of  8 variables:
+ $ npreg: int  5 7 5 0 0 5 3 1 3 2 ...
+ $ glu  : int  86 195 77 165 107 97 83 193 142 128 ...
+ $ bp   : int  68 70 82 76 60 76 58 50 80 78 ...
+ $ skin : int  28 33 41 43 25 27 31 16 15 37 ...
+ $ bmi  : num  30.2 25.1 35.8 47.9 26.4 35.6 34.3 25.9 32.4 43.3 ...
+ $ ped  : num  0.364 0.163 0.156 0.259 0.133 ...
+ $ age  : int  24 55 35 26 23 52 25 24 63 31 ...
+ $ type : Factor w/ 2 levels "No","Yes": 1 2 1 1 1 2 1 1 1 2 ...
+#+end_example
+
+- The MASS package contains three different versions of the Pima
+  indians [[https://rdrr.io/cran/MASS/man/Pima.tr.html][data set]] (diabetes in women of the Pima tribe)
+- MASS metadata comments:
+
+  #+begin_quote
+  "The training set ~Pima.tr~ contains a randomly selected set of 200
+  subjects, and ~Pima.te~ contains the remaining 332 subjects. ~Pima.tr2~
+  contains ~Pima.tr~ plus 100 subjects with missing values in the
+  explanatory variables."
+  #+end_quote
+
+- The [[https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database][kaggle.com database]] is yet another version: more records, one
+  more variable - the "Metadata" information is missing
+
+- Missing data are often coded as ~0~ instead of ~NA~ leading to errors:
+
+  #+begin_quote
+  "A number of studies characterizing /binary classifiers/ have been
+  published using [the Pima] dataset as a benchmark where the authors
+  were not aware that data values were missing." (Pearson, 2018)
+  #+end_quote
+
+* PROBLEM: VARIABLE DEFINITIONS
+
+- How many planets are there orbiting the sun?
+
+#+attr_html: :width 500px
+[[../img/2_solarsystem.png]]
+
+#+begin_notes
+- Definitions count: e.g. /planethood/ (Weintraub, 2007)
+  1. the object is too small to generate nuclear fusion energy
+  2. the object is big enough to be spherical
+  3. the object must have a primary orbit around a star
+
+- Unrecognized disagreements in the definition of a variable are
+  possible between those who /measure and record/ it, and those who use
+  data in /analysis/.
+
+- Prominent examples: when does a patient die of COVID-19? What is the
+  cause of death? When do two patients have the same disease?
+#+end_notes
+
+* EXPLORATORY DATA ANALYSIS (EDA)
+
+#+attr_html: :width 500px
+[[../img/2_pattern.png]]
+
+#+begin_quote
+"We look at /numbers/ or /graphs/ and try to find /patterns/. We pursue
+leads suggested by background information, imagination, patterns
+perceived, and experience with other data analyses." (Diaconis, 1985)
+#+end_quote
+
+- Analysis is always based on exploring numbers
+
+- Non-numerical data are converted to numbers: e.g. /categorical/
+  variables are converted from discrete named values ("political
+  party", "city") into counts or relative frequencies
+
+- Each discrete value or category is also called a "level"
+
+* TYPES OF CATEGORICAL VARIABLES
+
+#+caption: AI-generated outline for research topic (Source: OpenAI)
+#+attr_html: :width 500px
+[[../img/2_openai.png]]
+
+- Few levels (e.g. "Firm", "Party", "City")
+
+- Many levels (e.g. US ZIP code with 40,000 levels)
+
+- Exploitable sub-structure (e.g. text data[fn:1])
+
+* SOME ISSUES WITH GRAPHS
+
+- Humans are better at seeing patterns in graphs than numbers[fn:3]
+
+#+attr_html: :width 500px
+#+caption: Anscombe dataset
+[[../img/2_anscombe.png]]
+  
+- Use different graphs to explore and to explain - data mining is
+  /exploratory/, data story telling is /explanatory/[fn:2]
+
+- Usefulness of a graph depends on *how data* are displayed, and
+  strongly on *which data* are chosen to be displayed
+
+* TODO PRACTICE: RAW VS. TRANSFORMED GRAPH DATA
+
+- The following two sets of plots are constructed from the ~brain~
+  element of the ~mammals~ dataset from the ~MASS~ package that lists body
+  and brain weights for 62 different animals.
+
+- *What do you think which graphs are more meaningful and why?*
+
+  #+begin_src R :file ../img/2_brain.png :exports both :session *R* :results output graphics file
+    library(MASS)
+    library(car)
+    par(mfrow=c(2,2))
+    truehist(mammals$brain)
+    truehist(log(mammals$brain))
+    qqPlot(mammals$brain)
+    title("Normal QQ-plot")
+    qqPlot(log(mammals$brain))
+    title("Normal QQ-plot")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/2_brain.png]]
+
+  #+begin_notes
+  - The plots are telling us something about the distribution of data
+    values.
+  - The left-hand pair were generated from raw data values, the
+    right-hand pair were generated from log-transformed data
+  - The right-hand pair suggests that the data exhibit a Gaussian
+    (normal) distribution 
+  #+end_notes
+
+* R FOR EXPLORATORY ANALYSIS
+
+#+attr_html: :width 700px
+[[../img/2_xkcd_outlier.png]]
+
+- Exploratory analysis has more use for graphical tools
+
+- R supports many different graphical displays and plot types
+
+- Important focus: searching for anomalies and outliers in the data
+
+* COMPUTERS, SOFTWARE, AND R
+* DATA ANALYSIS WORKFLOW
+#+attr_html: :width 600px
+#+caption: Data analysis workflow (emanuelaf.github. io - modified)
+[[../img/2_workflow.png]]
+
+1. *Acquire*: make data available to the software
+2. *Analyse*: perform the analysis
+3. *Advise*: make analysis results available to those who need them
+
+#+begin_notes
+- In training, the emphasis is often on (2) analysis, and pre-loaded,
+  small, clean datasets and well-tested packages are used.
+- On the job, the emphasis is on (1) acquisition, and much time is
+  spent importing and readying the data for analysis
+- In business, the main interest is (3) advice, hence the shift to
+  storytelling and interpretation
+#+end_notes
+
+* COMPUTERS
+#+attr_html: :width 500px
+#+caption: Von Neumann computer architecture (PSC Arivukal, 2020)
+[[../img/2_computer.jpg]]
+
+- RAM is several orders of magnitude faster than NVM
+- Most R functions require raw data and results to fit in RAM
+- OS and Internet impose infrastructure constraints[fn:4]
+
+* WHY R?
+
+
+
+* TODO PRACTICE: A REPRESENTATIVE R SESSION
+* WAITING SUMMARY
+
+- 
 
 * IN PROGRESS GLOSSARY
 
-| TERM        | MEANING                |
-|-------------+------------------------|
-| Data frame  | Rectangular array      |
-| Observation | Recorded event         |
-| Attribute   | Characteristic         |
-| Meta data   | Data about data        |
-| Data        | Entity, event, process |
+| TERM                 | MEANING                       |
+|----------------------+-------------------------------|
+| Data frame           | Rectangular array             |
+| Observation          | Recorded event                |
+| Attribute            | Characteristic                |
+| Meta data            | Data about data               |
+| Data                 | Entity, event, process        |
+| Binary classifier    | Attribute with 2 values       |
+| Missing value (~NA~)   | Values that were not recorded |
+| Categorical variable | Non-numerical, discrete       |
+| Level                | Category, discrete value      |
+| Anomaly, outlier     | Unusual data                  |
 
 * REFERENCES
 
- Pearson, R.K. (2018). Exploratory Data Analysis Using R. CRC Press.
+- OpenAI (2022). Example: Generate an outline for a research
+  topic. [[https://beta.openai.com/examples/default-essay-outline][Online: beta.openai.com.]]
+- Pearson, R.K. (2018). Exploratory Data Analysis Using R. CRC Press.
+- PSC Arivukal (July 26, 2020). Basic Computer Architecture. [[https://www.pscarivukal.com/2020/07/basic-computer-architecture.html][Online:
+  pscarivukal.com]].
+- Revolutionanalytics (May 2, 2017). The Datasaurus Dozen. [[https://blog.revolutionanalytics.com/2017/05/the-datasaurus-dozen.html][Online:
+  blog.revolutionanalytics.com]].
+
+* Footnotes
+
+[fn:4]Though they can also be enablers of education: e.g. Linux and
+the command line shell as a data science tool, and online REPL
+installations (usually Docker containers) as training grounds.
+
+[fn:3]The plots show Anscombe's quartet - four scatterplots which
+despite having different numerical values all have identical mean,
+variance, and standard correlation (Source: revolutionanalytics.com).
+
+[fn:1]Text data can be normalized (reduced - e.g. parsed into words,
+eliminating common words like "and", "of" and punctuation marks), and
+converted to numbers. The numbers are analyzed mathematically, and the
+result is transformed back to allow interpretation of the original
+text data. This technique leads to impressive NLP feats (so-called
+[[https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)][transformer ML models]] based on massive mined data sets, like [[https://openai.com/api/][GPT-3]].)
+
+[fn:2]This difference goes deeper than data science: explanatory
+research is usually confirmatory (of some theory), while exploratory
+research is used to construct, or build, theory. Personal note: All of
+my own research has been exploratory.

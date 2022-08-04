@@ -37,6 +37,6 @@
 * Week 2: GETTING STARTED
 
 - Quiz 1: course infrastructure
-- Lecture: Data, Exploratory Data Analysis, and R
-- Practice: A representative R session
+- Lectures: Data, Exploratory Data Analysis, and R
+- Practice: Metadata identification; representative R session
     

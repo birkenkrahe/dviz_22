@@ -1,4 +1,4 @@
-#+TITLE:Practice: EDA example
+#+TITLE:Practice: A Representative R Session
 #+AUTHOR: [YourName]
 #+SUBTITLE: Data visualization (DSC 302) Fall 2022
 #+OPTIONS: toc:nil num:nil ^:nil

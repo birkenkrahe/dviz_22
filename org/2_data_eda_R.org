@@ -2,9 +2,8 @@
 #+AUTHOR: Marcus Birkenkrahe
 #+Subtitle: Introdution to Data Visualization
 #+STARTUP: hideblocks overview indent
-#+ATTR_HTML: :width 700px
+#+ATTR_HTML: :width 400px
 #+caption: data science pipeline
-
 [[../img/2_pipeline.png]]
 
 - Why do we analyze data?
@@ -12,7 +11,10 @@
 - The importance of metadata
 - Exploratory Data Analysis
 - Numbers vs. graphs
-- 
+- Data analysis workflow
+- Why R?
+- R package management
+- Download R practice file
 
 * WHY DO WE ANALYZE DATA?
 
@@ -22,21 +24,21 @@
 
 - Well, what do you think?
 
-#+begin_notes
-Tip: reframe WHY questions as WHAT questions -
+  #+begin_notes
+  Tip: reframe WHY questions as WHAT questions -
 
-- What data?
-- What analysis?
-- What benefits?
-#+end_notes
+  - What data?
+  - What analysis?
+  - What benefits?
+  #+end_notes
 
-Pearson:
-#+begin_quote
-1. to *understand* what has happened or what is happening;
-2. to *predict* what is likely to happen, either in the future or in
-   other circumstances we haven't seen;
-3. to *guide* us in making decisions.
-#+end_quote
+  Pearson:
+  #+begin_quote
+  1. to *understand* what has happened or what is happening;
+  2. to *predict* what is likely to happen, either in the future or in
+     other circumstances we haven't seen;
+  3. to *guide* us in making decisions.
+  #+end_quote
 
 * DATA - CONCEPT
 
@@ -58,19 +60,19 @@ Pearson:
 - Rows = observation of entity, event, or process
 - Columns = recorded characteristic or attribute
 
-#+begin_src R :results output :exports both
-  ## extract first six records from the mtcars data frame
-  head(mtcars)
-#+end_src
+  #+begin_src R :results output :exports both
+    ## extract first six records from the mtcars data frame
+    head(mtcars)
+  #+end_src
 
-#+RESULTS:
-:                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
-: Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
-: Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
-: Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
-: Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
-: Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
-: Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+  #+RESULTS:
+  :                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+  : Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+  : Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+  : Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+  : Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+  : Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+  : Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
 
 
 #+begin_notes
@@ -91,21 +93,21 @@ Pearson:
   + Scientific paper analyzing the data
   + Description of the variables (columns)
 
-*What could be issues with metadata?*
+  *What could be issues with metadata?*
 
-#+begin_notes
-- *Completeness* - origin
-- *Consistency* - logic, values, (time) dependency
-- *Accuracy* - origin and validity
-#+end_notes
+  #+begin_notes
+  - *Completeness* - origin
+  - *Consistency* - logic, values, (time) dependency
+  - *Accuracy* - origin and validity
+  #+end_notes
 
-#+begin_quote
-"As potentially valuable as metadata is, we cannot afford to accept it
-uncritically: we should always cross-check the metadata with the
-actual data values, with our intuition and prior understanding of the
-subject matter, and with other sources of information that may be
-available." (Pearson, 2018)
-#+end_quote
+  #+begin_quote
+  "As potentially valuable as metadata is, we cannot afford to accept it
+  uncritically: we should always cross-check the metadata with the
+  actual data values, with our intuition and prior understanding of the
+  subject matter, and with other sources of information that may be
+  available." (Pearson, 2018)
+  #+end_quote
 
 * TODO PRACTICE: META OR NOT META?
 
@@ -123,9 +125,9 @@ the screenshot of an online journal article.
    print, login, register, menu options; browser console; URL)
 4) Article content data: abstract + paper text, tables and figures
 
-#+attr_html: :width 300px
-#+caption: Solution
-[[../img/2_meta_solution.png]]
+   #+attr_html: :width 300px
+   #+caption: Solution
+   [[../img/2_meta_solution.png]]
 #+end_notes
 
 * PROBLEM: MISSING VALUES
@@ -134,6 +136,7 @@ the screenshot of an online journal article.
 #+caption: Pima Indians data sets in the MASS package
 [[../img/2_pima.png]]
 
+Check out structure of Pima datasets:
 #+begin_src R :session *R* :results output
   str(Pima.te)
   str(Pima.tr)
@@ -175,6 +178,7 @@ the screenshot of an online journal article.
 
 - The MASS package contains three different versions of the Pima
   indians [[https://rdrr.io/cran/MASS/man/Pima.tr.html][data set]] (diabetes in women of the Pima tribe)
+
 - MASS metadata comments:
 
   #+begin_quote
@@ -199,22 +203,22 @@ the screenshot of an online journal article.
 
 - How many planets are there orbiting the sun?
 
-#+attr_html: :width 500px
-[[../img/2_solarsystem.png]]
+  #+attr_html: :width 500px
+  [[../img/2_solarsystem.png]]
 
-#+begin_notes
-- Definitions count: e.g. /planethood/ (Weintraub, 2007)
-  1. the object is too small to generate nuclear fusion energy
-  2. the object is big enough to be spherical
-  3. the object must have a primary orbit around a star
+  #+begin_notes
+  - Definitions count: e.g. /planethood/ (Weintraub, 2007)
+    1. the object is too small to generate nuclear fusion energy
+    2. the object is big enough to be spherical
+    3. the object must have a primary orbit around a star
 
-- Unrecognized disagreements in the definition of a variable are
-  possible between those who /measure and record/ it, and those who use
-  data in /analysis/.
+  - Unrecognized disagreements in the definition of a variable are
+    possible between those who /measure and record/ it, and those who use
+    data in /analysis/.
 
-- Prominent examples: when does a patient die of COVID-19? What is the
-  cause of death? When do two patients have the same disease?
-#+end_notes
+  - Prominent examples: when does a patient die of COVID-19? What is the
+    cause of death? When do two patients have the same disease?
+  #+end_notes
 
 * EXPLORATORY DATA ANALYSIS (EDA)
 
@@ -251,15 +255,15 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 
 - Humans are better at seeing patterns in graphs than numbers[fn:3]
 
-#+attr_html: :width 500px
-#+caption: Anscombe dataset
-[[../img/2_anscombe.png]]
-  
-- Use different graphs to explore and to explain - data mining is
-  /exploratory/, data story telling is /explanatory/[fn:2]
+  #+attr_html: :width 500px
+  #+caption: Anscombe dataset
+  [[../img/2_anscombe.png]]
 
-- Usefulness of a graph depends on *how data* are displayed, and
-  strongly on *which data* are chosen to be displayed
+  - Use different graphs to explore and to explain - data mining is
+    /exploratory/, data story telling is /explanatory/[fn:2]
+
+  - Usefulness of a graph depends on *how data* are displayed, and
+    strongly on *which data* are chosen to be displayed
 
 * TODO PRACTICE: RAW VS. TRANSFORMED GRAPH DATA
 
@@ -290,7 +294,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
   - The left-hand pair were generated from raw data values, the
     right-hand pair were generated from log-transformed data
   - The right-hand pair suggests that the data exhibit a Gaussian
-    (normal) distribution 
+    (normal) distribution
   #+end_notes
 
 * R FOR EXPLORATORY ANALYSIS
@@ -304,7 +308,6 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 
 - Important focus: searching for anomalies and outliers in the data
 
-* COMPUTERS, SOFTWARE, AND R
 * DATA ANALYSIS WORKFLOW
 #+attr_html: :width 600px
 #+caption: Data analysis workflow (emanuelaf.github. io - modified)
@@ -314,14 +317,14 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 2. *Analyse*: perform the analysis
 3. *Advise*: make analysis results available to those who need them
 
-#+begin_notes
-- In training, the emphasis is often on (2) analysis, and pre-loaded,
-  small, clean datasets and well-tested packages are used.
-- On the job, the emphasis is on (1) acquisition, and much time is
-  spent importing and readying the data for analysis
-- In business, the main interest is (3) advice, hence the shift to
-  storytelling and interpretation
-#+end_notes
+   #+begin_notes
+   - In training, the emphasis is often on (2) analysis, and pre-loaded,
+     small, clean datasets and well-tested packages are used.
+   - On the job, the emphasis is on (1) acquisition, and much time is
+     spent importing and readying the data for analysis
+   - In business, the main interest is (3) advice, hence the shift to
+     storytelling and interpretation
+   #+end_notes
 
 * COMPUTERS
 #+attr_html: :width 500px
@@ -334,30 +337,121 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 
 * WHY R?
 
+#+attr_html: :width 200px
+[[../img/2_Rlogo.png]]
 
+- R is FOSS (Free Open Source Software) available for all OS
+- Supported range of analysis methods ready for use
+- Unix-style package and version control system
+- Diverse, active community of users and developers
+
+* THE STRUCTURE OF R
+#+attr_html: :width 400px
+#+caption: ggplot2 downloads from CRAN 2012-2020
+[[../img/2_ggplot2.png]]
+
+1. Set of /base R packages/ for basic statistics, data analysis, graphics
+2. Set of /recommended packages/ included in installations (like ~MASS~)
+3. Set of /optional add-on packages/ for special purposes
+
+*Example:* The optional, popular ~ggplot2~ graphics package was downloaded
+more than 272 mio. times between 2012 and 2020, with a monthly average
+of > 800k downloads (Source: CRAN, 2021).
+
+* INSTALLATION AND LOADING R PACKAGES
+
+- We'll do this directly on the command line ([[https://bookdown.org/ndphillips/YaRrr/packages.html][see e.g. here]]):
+
+- Installation = download and unpacking of binary or compilation (on
+  Windows, when you're asked, do not compile from source):
+  #+begin_example R
+  install.packages("MASS")
+  install.packages("car")
+  #+end_example
+
+- Loading = load package (functions + datasets) into current R
+  session:
+  #+begin_example R
+  library(MASS)
+  library(car)
+  #+end_example
+
+- Alternatively, you can use the Rgui program, or the RStudio IDE
+
+* OPTIONAL INSTALLATION IN THE RGUI
+
+- Start the Rgui from the CMD line terminal
+- The Rgui includes a command line and graphics
+- The RTerm or R program is a console only
+- In the R GUI, find the tab "Packages"
+- Set CRAN mirror site (closest to you)
+- Install or update package from list
+
+#+attr_html: :width 400px
+#+caption: Package management in the Rgui program
+[[../img/2_packages.png]]
+
+#+attr_html: :width 400px
+#+caption: Package management in the Rgui program
+[[../img/2_packages1.png]]
+
+#+attr_html: :width 400px
+#+caption: Package management in the Rgui program
+[[../img/2_packages2.png]]
 
 * TODO PRACTICE: A REPRESENTATIVE R SESSION
-* WAITING SUMMARY
 
-- 
+#+attr_html: :width 300px
+[[../img/2_github.png]]
 
-* IN PROGRESS GLOSSARY
+1) Open the course directory in GitHub,
+   [[https://github.com/birkenkrahe/dviz]]
+2) Open ~/org/2_practice.org~
+3) Open the ~raw~ version of the file
+4) Save file as ~2_practice.org~
+5) Right click on the file in Explorer
+6) Change ~Opens with:~ property to Emacs
+7) Open file with Emacs from the Explorer
 
-| TERM                 | MEANING                       |
-|----------------------+-------------------------------|
-| Data frame           | Rectangular array             |
-| Observation          | Recorded event                |
-| Attribute            | Characteristic                |
-| Meta data            | Data about data               |
-| Data                 | Entity, event, process        |
-| Binary classifier    | Attribute with 2 values       |
-| Missing value (~NA~)   | Values that were not recorded |
-| Categorical variable | Non-numerical, discrete       |
-| Level                | Category, discrete value      |
-| Anomaly, outlier     | Unusual data                  |
+Summary:
+#+begin_comment
+The GitHub directory contains all lecture and practice files. The ~raw~
+version is the Org-mode file without markup 3 In Windows, you can set
+a file type to be opened by one program (not possible in Linux or
+MacOS because Unix does not know file type extensions.
+#+end_comment
+
+* CONCEPT SUMMARY
+
+- Data are analysed to understand, predict, or guide decisions
+- Data are entities, events or processes
+- Meta data contain critical information for validation
+- The data analysis workflow: acquire, analyze, advise
+- R is FOSS, specialized on stats, and popular
+- CRAN is the central hub for R package management
+
+* GLOSSARY
+
+| TERM                 | MEANING                         |
+|----------------------+---------------------------------|
+| Data frame           | Rectangular array               |
+| Observation          | Recorded event                  |
+| Attribute            | Characteristic                  |
+| Meta data            | Data about data                 |
+| Data                 | Entity, event, process          |
+| Binary classifier    | Attribute with 2 values         |
+| Missing value (~NA~)   | Values that were not recorded   |
+| Categorical variable | Non-numerical, discrete         |
+| Level                | Category, discrete value        |
+| Anomaly, outlier     | Unusual data                    |
+| CRAN                 | Comprehensive R Archive Network |
+| Rgui                 | R console pgm with graphics     |
+| Rterm                | R console (terminal) pgm only   |
 
 * REFERENCES
 
+- CRAN (27 April 2021). Visualize downloads from CRAN
+  Packages. [[https://cran.r-project.org/web/packages/Visualize.CRAN.Downloads/vignettes/Visualize.CRAN.Downloads.html][Online: cran.r-project.org]].
 - OpenAI (2022). Example: Generate an outline for a research
   topic. [[https://beta.openai.com/examples/default-essay-outline][Online: beta.openai.com.]]
 - Pearson, R.K. (2018). Exploratory Data Analysis Using R. CRC Press.

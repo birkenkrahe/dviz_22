@@ -35,5 +35,4 @@
   - Put your cursor on the headline of this section, and type ~S <LEFT>~
     until you see ~DONE~ instead of ~TODO~ next to the title.
 
-* TODO 
 

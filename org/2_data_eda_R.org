@@ -399,6 +399,19 @@ of > 800k downloads (Source: CRAN, 2021).
 #+caption: Package management in the Rgui program
 [[../img/2_packages2.png]]
 
+* QUESTIONS TO ASK FROM DATA
+
+1. Where does the dataset come from, and how is it documented?
+2. How many records (rows) does this dataset contain?
+3. How many fields (variables, columns) are included in each record?
+4. What kinds of variables are these (e.g. numerical, categorical)
+5. Are there missing values?
+6. If there are missing values: are these variables always observed?
+7. If there are missing values: how are they represented?
+8. Are the variables included in the dataset the ones we expect?
+9. Are the variable values consistent with what we expect?
+10. Do the variables exhibit the relationships we expect?
+
 * TODO PRACTICE: A REPRESENTATIVE R SESSION
 
 #+attr_html: :width 300px

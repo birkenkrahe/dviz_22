@@ -1,7 +1,7 @@
 #+TITLE:  DATA, Exploratory Data Analysis, and R
 #+AUTHOR: Marcus Birkenkrahe
 #+Subtitle: Introdution to Data Visualization
-#+STARTUP: hideblocks overview indent
+#+STARTUP: hideblocks overview indent inlineimages
 #+ATTR_HTML: :width 400px
 #+caption: data science pipeline
 [[../img/2_pipeline.png]]

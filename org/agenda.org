@@ -38,5 +38,7 @@
 
 - Quiz 1: course infrastructure
 - Lectures: Data, Exploratory Data Analysis, and R
-- Practice: Metadata identification; representative R session
+- Practice: Metadata identification
+- Practice: Representative R session
+  
     

@@ -1,7 +1,7 @@
 #+TITLE: Course overview
 #+AUTHOR: Marcus Birkenkrahe
 #+SUBTITLE: Data visualization (DSC 302) Fall 2022
-#+STARTUP:overview hideblocks inden
+#+STARTUP:overview hideblocks indent inlineimages
 #+attr_html: :width 600px
 #+caption: The Red Tower/La tour rouge (Giorgio de Chirico, 1913) Source: Guggenheim
 [[../img/1_tower.jpg]]

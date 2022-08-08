@@ -179,7 +179,7 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
   + Plot types: histograms and box plots
 
 - [[https://lyon.instructure.com/courses/568/assignments/1436][Complete the Emacs on-board tutorial]] and upload an edited copy to
-  Canvas by Friday, 26 August at 11 am (ca. 60 min).
+  Canvas by Friday, 26 August at 3 pm (ca. 60 min).
 
   + Get comfortable with Emacs keyboard bindings
   + Learn how to create, view, edit, save files

@@ -247,8 +247,7 @@ of this syllabus. Those details will include at least the following:
   collaboration on graded work.
 - A clear statement about which LMS is being used for the course.
 * Learning Management System (LMS)
-
-We will use Canvas in this course ([[https://lyon.instructure.com/courses/568][lyon.instructure.com/courses/568]]).
+We will use Canvas in this course ([[https://lyon.instructure.com/courses/571][lyon.instructure.com/courses/571]]).
 * Assignments and Honor Code
 
 There will be several assignments during the summer school,

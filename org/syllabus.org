@@ -304,11 +304,9 @@ an extension. Extensions will *not* be granted for reasons such as:
     scheduled time, and we can make arrangements when you return.
 * Attendance policy
 
-In accordance with college policy, you must attend a minimum of 80% of
-non-cancelled meetings without risking a fail. This means that you
-must attend a minimum of 32/40 meetings. If you miss more than 8
-meetings, you fail the class automatically. Any missed meetings result
-in an [[https://catalog.lyon.edu/class-attendance]["Early Alert" report]].
+In accordance with college policy, if you miss 4 weeks of class, you
+fail the course automatically. Any missed meetings result in an [[https://catalog.lyon.edu/class-attendance]["Early
+Alert" report]].
 
 You should take care not to miss consecutive sessions if at all
 possible - otherwise you risk losing touch with the class and falling

@@ -212,8 +212,8 @@ exercises will often come back to haunt you in the tests.
 9) Close Emacs
 10) Close the command line terminal
 
-    *Note:* Class room practice completion = 10 points each for active
-    participation.
+*Note:* Class room practice completion = 10 points each for active
+participation.
 
 * GLOSSARY
 

@@ -10,7 +10,7 @@
 - We use R as a language, GNU Emacs as editor, ESS as statistics
   extension, and Org-mode for literate programming
 - For details on objectives, audience, grading, schedule, check the
-  [[https://github.com/birkenkrahe/ds1/blob/piHome/org/syllabus.org][syllabus]] or the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][FAQ]] on GitHub.
+  [[https://github.com/birkenkrahe/dviz/blob/piHome/org/syllabus.org][syllabus]] or the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][FAQ]] on GitHub.
 - This file contains a (dynamically updated) agenda for each session
   as well as some content.
 - You can also look at [[https://github.com/birkenkrahe/dviz/blob/piHome/org/agenda.org][the agenda on GitHub]].

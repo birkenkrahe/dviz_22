@@ -98,10 +98,10 @@ The team project makes up 20% of your final grade for this course.
 #+caption: DataCamp competition announcement
 [[../img/1_competition.png]]
 
-- Create an interesting data visualization
-- Explore a graphics or animation package
-- Solve a real-world problem
-- Analyse existing visualizations
+- Create an interesting data visualization ([[https://r-graph-gallery.com/][examples]])
+- Explore a graphics or animation package ([[https://gganimate.com/][like here]])
+- Solve a real-world problem ([[https://www.kaggle.com/competitions?hostSegmentIdFilter=11][like here]])
+- Analyse existing visualizations ([[https://h5p.org/node/1095582][like here]])
 - See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples
 - [[https://www.datacamp.com/blog/12-of-the-best-data-visualizations-tools][Explore a data visualization tool]]
 - [[https://github.com/birkenkrahe/dviz/issues/12][Visualize whale song / double up between 2 or 3 courses]]
@@ -202,7 +202,7 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
 exercises will often come back to haunt you in the tests.
 
 1) Open a browser
-2) Find the GitHub repos (birkenkrahe/ds1 and /org)
+2) Find the GitHub repos (birkenkrahe/dviz and /org)
 3) Open the command line terminal
 4) Open/close R
 5) Open Emacs

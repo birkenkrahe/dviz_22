@@ -101,6 +101,7 @@ The team project makes up 20% of your final grade for this course.
 - Create an interesting data visualization ([[https://r-graph-gallery.com/][examples]])
 - Explore a graphics or animation package ([[https://gganimate.com/][like here]])
 - Solve a real-world problem ([[https://www.kaggle.com/competitions?hostSegmentIdFilter=11][like here]])
+- Road scouts! Explain how maps are made nowadays ([[https://archive.org/details/CaughtMa1940][cp. with 1940]])
 - Analyse existing visualizations ([[https://h5p.org/node/1095582][like here]])
 - See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples
 - [[https://www.datacamp.com/blog/12-of-the-best-data-visualizations-tools][Explore a data visualization tool]]

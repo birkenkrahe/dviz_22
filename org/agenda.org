@@ -28,11 +28,36 @@
 * WEEK 1: INTRODUCTION TO THE COURSE
 
 - Mutual introductions
+- Review: prerequisites (email, Jul 18)
 - Review: Entry test
 - Course overview
 - Practice: course infrastructure
 - Assignments
 - Glossary
+** Prerequisites
+
+#+attr_html: :width 400px
+#+caption: Napoleon's retreat from Moscow (Adolph Northen, 1851)
+[[../img/napoleon.jpg]]
+
+#+begin_quote
+In DSC 302 (Data Visualization), familiarity with the basics of R
+would be useful (though, again, we'll learn coding as we go
+along). Check the FAQ. The quickest route: complete course
+"Introduction to R" in DataCamp. Contact me for free access. Textbook:
+Exploratory Data Analysis Using R, chapter 1-8, by R K Pearson (CRC
+Press, 2018).
+#+end_quote
+
+- General preparation: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-prepare-for-your-data-science-classes][see the FAQ]] - R, Emacs + ESS + Org-mode
+
+#+begin_notes
+Napoleon committed what is called a statistical "Type II" error: he
+assumed that the Russians would behave like all his other enemies
+had. This was his "null hypothesis", which he should have rejected. If
+he had, he might have conquered Russia and would like have created a
+different Europe than we know it.
+#+end_notes
 
 * Week 2: GETTING STARTED
 

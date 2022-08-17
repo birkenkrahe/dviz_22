@@ -5,16 +5,16 @@
 #+attr_html: :width 600px
 #+caption: The Red Tower/La tour rouge (Giorgio de Chirico, 1913) Source: Guggenheim
 [[../img/1_tower.jpg]]
-* MUTUAL INTRODUCTIONS
+* Mutual introductions
 #+attr_html: :width 500px
 #+caption: Marc Chagall, Over the town (2018) Source: Wikiart
 [[../img/1_chagall.jpg]]
 
-1. Why are you here?
-2. What would delight you?
-3. What would disappoint you?
-4. Where are you headed?
-* COURSE SYLLABUS (on GitHub and on Canvas)
+1. Why are you here? /(What is it about visualization)/
+2. What would delight you? /(In this course)/
+3. What would disappoint you? /(In this course)/
+4. Where are you headed? /(In life)/
+* Course syllabus (on GitHub and on Canvas)
 #+attr_html: :width 500px
 #+caption: DSC 302 Syllabus on GitHub
 [[../img/1_syllabus.png]]
@@ -23,26 +23,35 @@
 - Course information (grading, attendance)
 - [[https://github.com/birkenkrahe/ds1/blob/piHome/org/syllabus.org#classroom-sessions-schedule][Schedule]] with dates of tests and assignments
 - The [[https://github.com/birkenkrahe/dviz][GitHub repo]] contains course material
+- *To see the notes, open the Emacs Org-mode file*
 
-* COURSE TOPICS (ILLUSTRATED)
+* Course "learning" platform: Canvas
+
+#+attr_html: :width 500px
+#+caption: Course topics
+[[../img/1_canvas.png]]
+
+- All grades should be visible at all times
+- New system for me & for Lyon: bear with us
+- Control your own [[https://lyon.instructure.com/courses/571?view=notifications][notifications]]
+
+* Course topics (illustrated)
 #+attr_html: :width 550px
 #+caption: xkcd 2048: curve-fitting methods and the messages they send
 [[../img/1_xkcd_curve_fitting.png]]
 
 #+begin_notes
-Title: Cauchy-Lorentz: "Something alarmingly mathematical is
-happening, and you should probably pause to Google my name and check
-what field I originally worked in." - An illustration of several plots
-of the same data with curves fitted to the points, paired with
-conclusions that you might draw about the person who made them. These
-data, when plotted on an X/Y graph, appear to have a general upward
-trend, but the data is far too noisy, with too few data points, to
-clearly suggest any specific growth pattern. In such a case, many
-different mathematical and statistical models could be presented as
-roughly fitting the data, but none of them fits well enough to
-compellingly represent the data. Source: [[https://explainxkcd.com/wiki/index.php/2048:_Curve-Fitting][explainxkcd.com]] 09/2018.
+"An illustration of several plots of the same data with curves fitted
+to the points, paired with conclusions that you might draw about the
+person who made them. These data, when plotted on an X/Y graph, appear
+to have a general upward trend, but the data is far too noisy, with
+too few data points, to clearly suggest any specific growth
+pattern. In such a case, many different mathematical and statistical
+models could be presented as roughly fitting the data, but none of
+them fits well enough to compellingly represent the data." Source:
+[[https://explainxkcd.com/wiki/index.php/2048:_Curve-Fitting][explainxkcd.com]] 09/2018.
 #+end_notes
-* COURSE TOPICS (SPELLED OUT)
+* Course topics (spelled out)
 #+attr_html: :width 500px
 #+caption: Lyonel Feininger, Sailing Boats (1929)
 [[../img/1_topics.png]]
@@ -50,7 +59,7 @@ compellingly represent the data. Source: [[https://explainxkcd.com/wiki/index.ph
 1) Exploratory Data Analysis (EDA) using R
 2) Graphics in base R with applications
 3) Working with external data (critically)
-* WHY "DATA VISUALIZATION"?
+* Why "data visualization"?
 
 #+attr_html: :width 700px
 #+caption: Charles Minard, Napoleon's Russian campaign 1812
@@ -70,7 +79,7 @@ compellingly represent the data. Source: [[https://explainxkcd.com/wiki/index.ph
     novel [[https://en.wikipedia.org/wiki/War_and_Peace]["WAR AND PEACE" (Война и мир, 1867)]]
   #+end_notes
 
-* GET THE STORY BEHIND THE STATS
+* Get the story behind the stats
 
 Even /The Fayetteville Observer/ is trying to catch readers with data
 visualization / data story offers:
@@ -79,40 +88,67 @@ visualization / data story offers:
 #+caption: The Fayetteville Observer ad (Aug 5, 2022)
 [[../img/1_FayettevilleObserver.png]]
 
-* AGILE TEAM PROJECT
+* Agile [team] project
 #+attr_html: :width 600px
 #+caption: Agile (Scrum) project
 [[../img/1_scrum.png]]
 
 The team project makes up 20% of your final grade for this course.
 
-- What is a team project? (FAQ)
-- Do you have examples for data science projects? (FAQ)
-- Can you do a project as an absolute beginner? (FAQ)
+See the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][GitHub FAQ]] for answers to these questions:
+- What is a team project? 
+- Do you have examples for data science projects?
+- Can you do a project as an absolute beginner?
 
   *Note:* the first /[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-is-a-sprint-review][sprint review]]/ is on August 31. Use it to present your
   initial results (see FAQ on [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-i-need-to-deliver-at-a-sprint-review][what to deliver]], and [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-first-sprint][1st sprint review]]).
-* MANY PROJECT OPPORTUNITIES
+* IMRaD and Scrum
+#+attr_html: :width 600px
+#+caption: Agile (Scrum) project
+[[../img/1_imrad.png]]
 
-#+attr_html: :width 200px
-#+caption: DataCamp competition announcement
-[[../img/1_competition.png]]
+- Introduction (research question - what you want to find out)
+- Method (how you want to do it)
+- Results (what you found out)
+- Discussion (what it means)
+
+([[https://youtu.be/dip7UwZ3wUM][Video: Research Writing with IMRaD]])
+
+* Many project opportunities
+
+#+attr_html: :width 500px
+#+caption: Visualize 3D/4D medical imaging data in the browser
+[[../img/1_shiny.png]]
 
 - Create an interesting data visualization ([[https://r-graph-gallery.com/][examples]])
 - Explore a graphics or animation package ([[https://gganimate.com/][like here]])
 - Solve a real-world problem ([[https://www.kaggle.com/competitions?hostSegmentIdFilter=11][like here]])
 - Road scouts! Explain how maps are made nowadays ([[https://archive.org/details/CaughtMa1940][cp. with 1940]])
 - Analyse existing visualizations ([[https://h5p.org/node/1095582][like here]])
-- See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples
+- See [[https://app.datacamp.com/learn/projects][DataCamp projects]] for examples, or a DataCamp competition
 - [[https://www.datacamp.com/blog/12-of-the-best-data-visualizations-tools][Explore a data visualization tool]]
 - [[https://github.com/birkenkrahe/dviz/issues/12][Visualize whale song / double up between 2 or 3 courses]]
-- Explore any of these graphics solutions (~base~, ~ggplot2~ and ~Shiny~ are
+- Explore any of these graphics solutions (~base~, ~ggplot2~ and [[https://shiny.rstudio.com/gallery/][Shiny]] are
   covered in this course already):
   #+attr_html: :width 400px
   #+caption: Source: Modern Data Visualization with R (Kabacoff, 2021)
   [[../img/1_graphics.png]]
 
-* INTRODUCTION TO DataCamp
+* Video lectures
+#+attr_html: :width 350px
+#+caption: La lecture Marie Therese (Picasso, 1932)
+[[../img/1_lecture.jpg]]
+
+- [[https://www.youtube.com/playlist?list=PLwgb17bzeNygo8GU6SivwwjsQj9QabqAJ][Emacs + Org-mode + R]] (Tutorial videos Spring '22)
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXkLa45V6JeEhNZEXvsmUR1f][Introduction to R: installation and shell]]
+- Vectors in R ([[https://www.youtube.com/playlist?list=PL6SfZh1-kWXl3_YDc-8SS5EuG4h1aILHz][part 1]], [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXlA2axuHdNMzhwhuEhtGtlK][part 2]], [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXn0PLpr1dB8NQwkDuThwkf5][part 3]])
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXmMY6rKe2dkUUdn41m50-n6][Data frames, matrices, lists, factors in R]]
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXlKpHIv66nOhGAFxztXaCEd][Data frames in R]]
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXkDVwgn2kXG13Y4SnoWDj9q][Base R plotting]]
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXnLB9cVQQKRxtAFFDfyGw0h][Plotting with ggplot2]]
+- [[https://www.youtube.com/playlist?list=PLwgb17bzeNyi9RjO0pL48am-Bk6XWol44][Data import]] with R
+- [[https://www.youtube.com/playlist?list=PL6SfZh1-kWXl3RimChL59F7lKSDGA97AZ][RStudio R Notebooks and literate programming]]
+* Introduction to DataCamp
 #+attr_html: :width 500px
 #+caption: DataCamp course "Data Visualization For Everyone" start page
 [[../img/1_datacamp.png]]
@@ -128,7 +164,7 @@ The team project makes up 20% of your final grade for this course.
   5. Introduction to Tableau
 - Complete them on time to get full points
 - Completed DataCamp courses can [[https://www.linkedin.com/in/birkenkrahe/][support your resume]]
-* INTRODUCTION TO THE TEXTBOOK
+* Introduction to the textbook
 #+attr_html: :width 200px
 #+caption: Cover of EDA Using R (Pearson, 2018)
 [[../img/1_textbook.jpg]]
@@ -137,7 +173,7 @@ The team project makes up 20% of your final grade for this course.
 - Pearson's "[[https://www.routledge.com/Exploratory-Data-Analysis-Using-R/Pearson/p/book/9780367571566][EDA Using R]]" is extensive (563 pp.)
 - You don't have to read along but it might help
 
-* OTHER SOURCES
+* Other sources
 #+attr_html: :width 200px
 #+caption: Cover of Fundamentals of Data Visualization (2019) by Claus Wilke
 [[../img/1_wilke.png]]
@@ -147,7 +183,7 @@ The team project makes up 20% of your final grade for this course.
 - The best (free) short online tutorial: [[https://github.com/matloff/fasteR][Matloff's "fasteR"]]
 - The best complete textbook: Davies' "[[https://nostarch.com/bookofr][Book of R]]" - *in library*
 - Beware of ideologies (cp. Matloff's "[[http://github.com/matloff/TidyverseSkeptic][TidyverseSceptic]]")
-* INTRODUCTION to GNU Emacs + ESS + Org-mode
+* Introduction to GNU Emacs + ESS + Org-mode
 #+attr_html: :width 500px
 #+caption: GNU Emacs start page
 [[../img/1_emacs.png]]
@@ -156,7 +192,7 @@ The team project makes up 20% of your final grade for this course.
 - Process, file and package management (like an OS)
 - /Literate programming/ environment for 43 languages
 - /IDE/ for R programming and /REPL/ for interactive coding
-* LITERATE PROGRAMMING
+* Literate programming
 #+attr_html: :width 600px
 #+caption: What is literate programming?
 [[../img/1_litprog.png]]
@@ -166,7 +202,7 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
 - Common practice among data scientists
 - /Paradigm/ behind interactive computing notebooks
 - Useful when learning any programming language
-* HOME ASSIGNMENTS
+* Home assignments
 
 - There are 15 programming assignments altogether = 10 points each, or
   30% of your final grade.
@@ -185,7 +221,7 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
   + Get comfortable with Emacs keyboard bindings
   + Learn how to create, view, edit, save files
   + Learn how to insert a time stamp automatically
-* TESTS (NOT GRADED)
+* Tests (not graded)
 #+attr_html: :width 500px
 #+caption: Start page of the entry quiz on Canvas
 [[../img/1_entry_quiz.png]]
@@ -197,7 +233,7 @@ Source: "[[https://docs.google.com/presentation/d/1wA7sb41EjV6GP3oBEFsOiYnoe29WI
 - A subset of the test questions will form the final exam (20% of your
   final grade) - we will practice in the last week before the exam.
 
-* PRACTICE - COURSE INFRASTRUCTURE
+* Practice - course infrastructure
 
 *Useful:* take notes! Practice leads to mastery and the practice
 exercises will often come back to haunt you in the tests.
@@ -216,7 +252,7 @@ exercises will often come back to haunt you in the tests.
 *Note:* Class room practice completion = 10 points each for active
 participation.
 
-* GLOSSARY
+* Glossary
 
 | TERM          | MEANING                               |
 |---------------+---------------------------------------|
@@ -238,7 +274,7 @@ participation.
 | Sprint review | Period to complete a prototype        |
 | Prototype     | Intermediate (not perfect) solution   |
 
-* REFERENCES
+* References
 
 - datavizblog.com (May 26, 2013).DataViz History: Charles Minard's
   Flow Map of Napoleon's Russian Campaign of 1812. [[https://datavizblog.com/2013/05/26/dataviz-history-charles-minards-flow-map-of-napoleons-russian-campaign-of-1812-part-5/][Online:

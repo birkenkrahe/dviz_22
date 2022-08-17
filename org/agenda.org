@@ -58,6 +58,27 @@ had. This was his "null hypothesis", which he should have rejected. If
 he had, he might have conquered Russia and would like have created a
 different Europe than we know it.
 #+end_notes
+* Practice - course infrastructure
+
+*Useful:* take notes! Practice leads to mastery and the practice
+exercises will often come back to haunt you in the tests.
+
+1) Open a browser
+2) Find the GitHub repos (birkenkrahe/dviz and /org)
+3) Open the command line terminal
+4) Open/close R
+5) Open Emacs
+6) Find the Emacs tutorial
+7) Open/close R inside Emacs
+8) Run R in an Org-mode file
+9) Close Emacs
+10) Close the command line terminal
+
+*Note:* Class room practice completion = 10 points each for active
+participation.
+
+([[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_practice.org][Link to practice file in GitHub]])
+
 
 * Week 2: GETTING STARTED
 

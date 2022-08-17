@@ -102,21 +102,21 @@
   5) Create a new Org-mode file ~Rtest.org~ with ~C-x C-f~
   6) In the file, enter the following two code blocks as shown:
      #+attr_html: :width 400px    
-     [[./img/practice_R.png]]
+     [[../img/practice_R.png]]
   7) Move your cursor over the first block and enter ~C-c C-c~ to execute
      it. Then move your cursor over the second block and execute
      it. Two ~#+Results~ appear:
      #+attr_html: :width 400px
-     [[./img/practice_R_1.png]]
+     [[../img/practice_R_1.png]]
   8) To open the link and see the plot, move your cursor over the link
      and enter ~C-c C-o~. The plot will open in a new buffer below.
      #+attr_html: :width 400px
-     [[./img/practice_R_2.png]]
+     [[../img/practice_R_2.png]]
   9) Move your cursor back to the ~Rtest.org~ buffer with ~C-x o~, remove
      the other buffer with ~C-x 1~ and press ~<F6>~. The graph will now be
      shown inline. Press ~<F7>~ to make it disappear.
      #+attr_html: :width 400px
-     [[./img/practice_R_3.png]]
+     [[../img/practice_R_3.png]]
 
 * TODO Close GUI Emacs
 

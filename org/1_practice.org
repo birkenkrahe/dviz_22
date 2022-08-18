@@ -2,6 +2,7 @@
 #+AUTHOR: [YourName]
 #+SUBTITLE: Data visualization (DSC 302) Fall 2022
 #+OPTIONS: toc:nil num:nil ^:nil
+#+startup: overview hideblocks indent inlineimages
 * README
 
   - Practice instructions for data science course infrastructure
@@ -11,17 +12,17 @@
   #+name: tab:3_practice
   | PRACTICE                   | MIN |
   |----------------------------+-----|
-  | Identify yourself          |   5 |
-  | Find GitHub repos          |  10 |
-  | Open the terminal          |   5 |
-  | Open/close R from terminal |  10 |
-  | Emacs tutorial             |  60 |
-  | Open/close R in Emacs      |  15 |
+  | Identify yourself          |   2 |
+  | Find GitHub repos          |   2 |
+  | Open the terminal          |   1 |
+  | Open/close R from terminal |   2 |
+  | Emacs tutorial             |   2 |
+  | Open/close R in Emacs      |   5 |
   | Run R in Org-mode file     |  15 |
-  | Close Emacs/terminal       |   5 |
+  | Close Emacs/terminal       |   1 |
   |----------------------------+-----|
-  | TOTAL                      | 105 |
-  #+TBLFM: @10$2=vsum(@5..@9)
+  | TOTAL                      |  30 |
+  #+TBLFM: @10$2=vsum(@2..@9) 
 
 * TODO Identify yourself
 
@@ -58,12 +59,19 @@
   5) The first six lines of a data frame appear in the shell
   6) Enter ~q()~ and confirm with ~n~ to leave the R shell
 
+  #+attr_html: :width 300px
+  [[../img/shell.png]]
+
 * TODO Open terminal Emacs
 
   1) In the terminal, after the prompt, enter the command ~emacs -nw~
   2) The GNU Emacs editor opens inside the terminal
   3) Any time you're stuck in Emacs, type ~C-g~ to quit the command
+  4) Type ~ALT-X emacs-version <ENTER>~ to get the Emacs version number
 
+  #+attr_html: :width 300px
+  [[../img/emacs.png]]
+  
 * TODO Find and open the Emacs tutorial
 
   1) In Emacs, enter ~C-h t~ by pressing CTRL and h followed by t

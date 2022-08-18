@@ -31,10 +31,11 @@
 #+caption: Course topics
 [[../img/1_canvas.png]]
 
-- All grades should be visible at all times
-- New system for me & for Lyon: bear with us
+- All [[https://lyon.instructure.com/courses/571/grades][grades]] should be visible at all times
 - Control your own [[https://lyon.instructure.com/courses/571?view=notifications][notifications]]
-
+- Course [[https://lyon.instructure.com/courses/571/wiki][links]] on a (wiki) page
+- New CMS for me & for Lyon: bear with us[fn:1]
+- Lecture /notes/ (from Emacs Org-mode) will not show in GitHub
 * Course topics (illustrated)
 #+attr_html: :width 550px
 #+caption: xkcd 2048: curve-fitting methods and the messages they send
@@ -283,3 +284,11 @@ participation.
 - Pearson R K (2018). Exploratory Data Analysis Using R. CRC Press.
 - Wilke C (2019). Fundamentals of Data Visualization. O'Reilly
   Media. [[https://clauswilke.com/dataviz/][Online: clauswilke.com]]
+
+* Footnotes
+
+[fn:1]CMS = Content Management System; these are the most common
+systems in business applications - present whenever people create
+'content' of any sort (documents e.g.) and need to store it for
+later. CMS systems rely on database technology. In the case of
+Canvas, that's MySQL.

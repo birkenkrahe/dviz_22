@@ -15,7 +15,7 @@
   as well as some content.
 - You can also look at [[https://github.com/birkenkrahe/dviz/blob/piHome/org/agenda.org][the agenda on GitHub]].
 
-* FAQ - FREQUENTLY ASKED QUESTIONS
+* FAQ - Frequently Asked Questions
 
 #+attr_html: :width 300px
 #+caption: Three Spheres II, M.C. Escher (1946)
@@ -25,7 +25,7 @@
 - First place to go to with a general question
 - FAQ is regularly updated with new content
 
-* WEEK 1: INTRODUCTION TO THE COURSE
+* Week 1: introduction to the course
 
 - Mutual introductions
 - Review: prerequisites (email, Jul 18)
@@ -57,6 +57,8 @@ he had, he might have conquered Russia and would like have created a
 different Europe than we know it.
 #+end_notes
 * Practice - course infrastructure
+
+*IF YOU ALREADY DID THIS IN ANOTHER CLASS: FINISH THE EMACS TUTORIAL!*
 
 *Useful:* take notes! Practice leads to mastery and the practice
 exercises will often come back to haunt you in the tests.

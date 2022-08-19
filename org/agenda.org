@@ -27,13 +27,16 @@
 
 * Week 1: introduction to the course
 
-- Mutual introductions
-- Review: prerequisites (email, Jul 18)
-- Review: Entry test
-- Course overview
-- Practice: course infrastructure
-- Assignments
-- Glossary
+* Objectives
+
+- [X] Mutual introductions
+- [X] Review: prerequisites (see email from July 18)
+- [X] Review: Entry test
+- [X] Lecture: Course overview
+- [X] Practice: course infrastructure
+- [X] First assignments and tests
+- [ ] [[file:1_overview.org][Glossary]]
+
 * Prerequisites
 
 #+attr_html: :width 400px
@@ -56,6 +59,29 @@ had. This was his "null hypothesis", which he should have rejected. If
 he had, he might have conquered Russia and would like have created a
 different Europe than we know it.
 #+end_notes
+* Assignments for next week
+
+- By Monday Aug 22, 3 pm: [[https://lyon.instructure.com/courses/571/assignments/1649][GNU Emacs online tutorial]] - you need to
+  alter, save and submit the tutorial to Canvas. You should also get
+  Emacs + ESS for your PC.
+
+- By Friday Aug 26, 11 am: [[https://lyon.instructure.com/courses/571/assignments/1647][Visualizing distributions (DataCamp)]] - you
+  have to register with DataCamp and join the Lyon group for fall '22.
+
+- By Monday Aug 22, 3 pm: [[https://lyon.instructure.com/courses/571/assignments/1693/edit?quiz_lti][Test 1 (Course infrastructure)]] - you
+  complete this 5-question quiz in Canvas. 
+
+- By Wednesday Aug 24, 3 pm: Enter a project idea and team member
+  names, and your question(s) [[https://lyon.instructure.com/courses/571/pages/enter-your-project-idea-and-participants-here][in this table in Canvas]].
+
+- For general questions, you can use the Google chat for this course
+  (invitation only)
+  
+- Get the mobile app! (Canvas student)
+
+  #+attr_html: :width 200px
+  [[../img/mobile.png]]
+
 * Practice - course infrastructure
 
 *IF YOU ALREADY DID THIS IN ANOTHER CLASS: FINISH THE EMACS TUTORIAL!*
@@ -74,8 +100,8 @@ exercises will often come back to haunt you in the tests.
 9) Close Emacs
 10) Close the command line terminal
 
-*Note:* Class room practice completion = 10 points each for active
-participation.
+Note: Class room practice completion = 10 points each for active
+participation (if there's a practice file, you can make up).
 
 ([[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_practice.org][Link to practice file in GitHub]])
 

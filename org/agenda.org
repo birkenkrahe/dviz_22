@@ -65,11 +65,11 @@ different Europe than we know it.
   alter, save and submit the tutorial to Canvas. You should also get
   Emacs + ESS for your PC.
 
-- By Friday Aug 26, 11 am: [[https://lyon.instructure.com/courses/571/assignments/1647][Visualizing distributions (DataCamp)]] - you
-  have to register with DataCamp and join the Lyon group for fall '22.
-
 - By Monday Aug 22, 3 pm: [[https://lyon.instructure.com/courses/571/assignments/1693/edit?quiz_lti][Test 1 (Course infrastructure)]] - you
   complete this 5-question quiz in Canvas. 
+
+- By Friday Aug 26, 11 am: [[https://lyon.instructure.com/courses/571/assignments/1647][Visualizing distributions (DataCamp)]] - you
+  have to register with DataCamp and join the Lyon group for fall '22.
 
 - By Wednesday Aug 24, 3 pm: Enter a project idea and team member
   names, and your question(s) [[https://lyon.instructure.com/courses/571/pages/enter-your-project-idea-and-participants-here][in this table in Canvas]].

@@ -1,5 +1,5 @@
 #+TITLE: Practice: Course Infrastructure
-#+AUTHOR: [YourName]
+#+AUTHOR: Marcus Birkenkrahe
 #+SUBTITLE: Data visualization (DSC 302) Fall 2022
 #+OPTIONS: toc:nil num:nil ^:nil
 #+startup: overview hideblocks indent inlineimages
@@ -24,7 +24,7 @@
   | TOTAL                      |  30 |
   #+TBLFM: @10$2=vsum(@2..@9) 
 
-* TODO Identify yourself
+* DONE Identify yourself
 
   - Update the ~#+AUTHOR:~ information in the header
   - Add this on a line to the header of this file :
@@ -34,7 +34,7 @@
     until you see ~DONE~ instead of ~TODO~ next to the title.
   - Perform this last step each time you complete a section.
 
-* TODO Find the GitHub repos
+* DONE Find the GitHub repos
 
   1) Open any Web browser
   2) Go to the URL https://github.com/birkenkrahe
@@ -43,14 +43,14 @@
   5) Find your course
   6) Check out the sub-directories ~org~ and ~pdf~
 
-* TODO Open the command line terminal
+* DONE Open the command line terminal
 
   1) On Windows, go to the search field and type ~CMD~
   2) Pin the app to the Windows taskbar
-  3) On MacOS,
+  3) On MacOS, search for "Terminal"
   4) Open the app
 
-* TODO Open/close R from the terminal
+* DONE Open/close R from the terminal
 
   1) In the terminal, after the prompt ~>~, enter the command ~R~
   2) On the R shell, enter the command ~plot(rnorm(1000))~
@@ -62,7 +62,7 @@
   #+attr_html: :width 300px
   [[../img/shell.png]]
 
-* TODO Open terminal Emacs
+* DONE Open terminal Emacs
 
   1) In the terminal, after the prompt, enter the command ~emacs -nw~
   2) The GNU Emacs editor opens inside the terminal
@@ -72,12 +72,12 @@
   #+attr_html: :width 300px
   [[../img/emacs.png]]
   
-* TODO Find and open the Emacs tutorial
+* DONE Find and open the Emacs tutorial
 
   1) In Emacs, enter ~C-h t~ by pressing CTRL and h followed by t
   2) The Emacs tutorial appears on the screen
 
-* TODO @home: work through the Emacs tutorial
+* DONE @home: work through the Emacs tutorial
 
   1) Complete the tutorial by going through it line by line (ca. 60')
 

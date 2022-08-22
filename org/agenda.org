@@ -27,7 +27,7 @@
 
 * Week 1: introduction to the course
 
-* Objectives
+** Objectives
 
 - [X] Mutual introductions
 - [X] Review: prerequisites (see email from July 18)
@@ -37,7 +37,7 @@
 - [X] First assignments and tests
 - [ ] [[file:1_overview.org][Glossary]]
 
-* Prerequisites
+** Prerequisites
 
 #+attr_html: :width 400px
 #+caption: Napoleon's retreat from Moscow (Adolph Northen, 1851)
@@ -59,7 +59,7 @@ had. This was his "null hypothesis", which he should have rejected. If
 he had, he might have conquered Russia and would like have created a
 different Europe than we know it.
 #+end_notes
-* Assignments for next week
+** Assignments for next week
 
 - By Monday Aug 22, 3 pm: [[https://lyon.instructure.com/courses/571/assignments/1649][GNU Emacs online tutorial]] - you need to
   alter, save and submit the tutorial to Canvas. You should also get
@@ -82,7 +82,7 @@ different Europe than we know it.
   #+attr_html: :width 200px
   [[../img/mobile.png]]
 
-* Practice - course infrastructure
+** Practice - course infrastructure
 
 *IF YOU ALREADY DID THIS IN ANOTHER CLASS: FINISH THE EMACS TUTORIAL!*
 
@@ -107,7 +107,14 @@ participation (if there's a practice file, you can make up).
 
 * Week 2: GETTING STARTED
 
+- [ ] Getting started with projects
 - Quiz 1: course infrastructure
 - Lectures: Data, Exploratory Data Analysis, and R
 - Practice: Metadata identification
 - Practice: Representative R session
+
+* Getting started with projects
+
+- Featured example: [[https://www.autodesk.com/research/publications/same-stats-different-graphs][Datasaurus Dozen in R (or Python)]] (see also [[https://youtu.be/iwzzv1biHv8][video]])
+- Getting an overview of visualization in data science (no coding):
+  "Preparation, Exploration and Visualization" [[https://app.datacamp.com/learn/courses/data-science-for-everyone][in this DataCamp course]]

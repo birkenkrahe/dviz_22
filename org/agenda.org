@@ -112,7 +112,7 @@ participation (if there's a practice file, you can make up).
 - [ ] Practice: Metadata identification
 - [ ] Practice: Representative R session
 
-* Home assignments - how they work
+** Home assignments - how they work
 #+attr_html: :width 400px
 #+captions: course infrastructure
 [[../img/platforms.png]]
@@ -122,7 +122,7 @@ participation (if there's a practice file, you can make up).
 - You loose 1 point for every day of late submission
 - Canvas Gradebook is updated manually (with some delay)
 
-* Getting started with projects
+** Getting started with projects
 
 - Course has 15 participants!
 
@@ -131,9 +131,9 @@ participation (if there's a practice file, you can make up).
 - I can only accommodate at most 9 projects (last week of term)
 - Put your team/ideas into this table ([[https://lyon.instructure.com/courses/568/pages/enter-your-project-idea-and-participants-here][Canvas]]) by Wednesday
   
-- [ ] *Who has not yet found a team?*
+- [X] *Who has not yet found a team?*
 
-- [ ] *Who has a team but no idea what to do?* 
+- [X] *Who has a team but no idea what to do?* 
 
 - Reminder: plenty of project opportunities ([[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_overview.org#many-project-opportunities][overview]] / GitHub [[https://github.com/birkenkrahe/dviz/issues][issues]])
 
@@ -144,6 +144,48 @@ participation (if there's a practice file, you can make up).
 [[../img/datasaurus.png]]
 
 - Featured example: [[https://www.autodesk.com/research/publications/same-stats-different-graphs][Datasaurus Dozen in R (or Python)]] (see also [[https://youtu.be/iwzzv1biHv8][video]])
+
+* Business dashboard example
+#+attr_html: :width 500px
+[[../img/dashboard.png]]
+
+- The image shows a Power BI dashboard that "uses visualizations to
+  tell a story. Because it is limited to one page, a well-designed
+  dashboard contains only the most-important elements of that
+  story. The visualizations you see on the dashboard are called /tiles/
+  and are /pinned/ to the dashboard by report /designers/ [...] Selecting
+  a tile takes you to the report page where the visualization was
+  created."
+
+#+attr_html: :width 500px
+[[../img/dashboard1.png]]
+  
+- "The visualizations on a dashboard come from reports and each report
+  is based on one dataset. In fact, one way to think of a dashboard is
+  as an entryway into the underlying reports and datasets. Selecting a
+  visualization takes you to the report that was used to create it." 
+  
+(Text and image source: Microsoft, 2021)
+* Meta data example: nuclear winter
+#+attr_html: :width 500px
+[[../img/nuclear.jpg]]
+
+- This is strangely similar to simulations that I ran in the 1990s
+
+- [[https://github.com/birkenkrahe/dsmath/issues/27]["Nuclear war between US, Russia would leave 5 billion dead from
+  hunger"]] - you can follow this story through three different
+  reference frames: 1) USA Today, which is quoting 2) Nature, which is
+  quoting 3) the original article. Each time, the meta data changes.
+
+- Mixed this up with [[https://github.com/birkenkrahe/dsmath/issues/26]["Disproving a 60-year-old hypothesis: most
+  'silent' mutations are actually harmful"]]
+  
+* References
+
+Microsoft (12/07/2021). Dashboards for business users of the Power BI
+service. [[https://docs.microsoft.com/en-us/power-bi/consumer/end-user-dashboards][URL: docs.microsoft.com]].
+
+
 
 
 

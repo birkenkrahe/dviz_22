@@ -106,10 +106,10 @@ participation (if there's a practice file, you can make up).
 
 * Week 2: GETTING STARTED
 
-- [ ] Getting started with projects
-- [ ] Quiz 1: course infrastructure
+- [X] Getting started with projects
+- [X] Quiz 1: course infrastructure
 - [ ] Lectures: Data, Exploratory Data Analysis, and R
-- [ ] Practice: Metadata identification
+- [X] Practice: Metadata identification
 - [ ] Practice: Representative R session
 
 ** Home assignments - how they work
@@ -117,7 +117,7 @@ participation (if there's a practice file, you can make up).
 #+captions: course infrastructure
 [[../img/platforms.png]]
 
-- Assignment is posted on [[https://lyon.instructure.com/courses/568/assignments/1435][Canvas]] (includes the link)
+- Assignment is posted on [[https://lyon.instructure.com/courses/571/assignments][Canvas]] (includes the link)
 - Assignment must be completed on time on [[https://app.datacamp.com/groups/lyon-college-data-science-fall-2022/assignments][DataCamp]]
 - You loose 1 point for every day of late submission
 - Canvas Gradebook is updated manually (with some delay)
@@ -165,7 +165,11 @@ participation (if there's a practice file, you can make up).
   as an entryway into the underlying reports and datasets. Selecting a
   visualization takes you to the report that was used to create it." 
   
-(Text and image source: Microsoft, 2021)
+  (Text and image source: Microsoft, 2021)
+
+- DataCamp offers a [[https://app.datacamp.com/learn/courses/introduction-to-power-bi][Power BI course]] - in this course, you'll start
+  with Tableau instead (completely comparable product).
+  
 * Meta data example: nuclear winter
 #+attr_html: :width 500px
 [[../img/nuclear.jpg]]

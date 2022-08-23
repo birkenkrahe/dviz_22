@@ -14,7 +14,7 @@
 - Why R?
 - R package management
 - Download R practice file
-* WHY DO WE ANALYZE DATA?
+* DONE WHY DO WE ANALYZE DATA?
 #+ATTR_HTML: :width 300px
 #+caption: Caspar David Friedrich, Wanderer above a sea of fog (1818)
 [[../img/2_wanderer.jpg]]
@@ -38,7 +38,7 @@
   3. to *guide* us in making decisions.
   #+end_quote
 
-* DATA - CONCEPT
+* DONE DATA - CONCEPT
 #+ATTR_HTML: :width 500px
 #+caption: collapsed data science pipeline
 [[../img/2_pipeline.png]]
@@ -55,7 +55,7 @@
   + manufacturing data from a production line
   + application information from a hiring process
 
-* DATA - PRACTICE
+* DONE DATA - PRACTICE
 
 - Data structures = rectangular array of observed values
 - Rows = observation of entity, event, or process
@@ -81,7 +81,7 @@
 - Meta data supplement data frame content
 #+end_notes
 
-* META DATA
+* DONE META DATA
 
 #+attr_html: :width 300px
 #+caption: Greek goddess of peace and spring "Eirene"
@@ -109,7 +109,7 @@
   available." (Pearson, 2018)
   #+end_quote
 
-* TODO PRACTICE: META OR NOT META?
+* DONE PRACTICE: META OR NOT META?
 
 #+attr_html: :width 300px
 #+caption: datascience.codata.org/articles/10.5334/dsj-2022-010/

@@ -184,6 +184,24 @@ participation (if there's a practice file, you can make up).
 - Mixed this up with [[https://github.com/birkenkrahe/dsmath/issues/26]["Disproving a 60-year-old hypothesis: most
   'silent' mutations are actually harmful"]]
   
+* 1st sprint review - Wed 31-Aug
+
+- [[https://lyon.instructure.com/courses/571/assignments/1689][Canvas assignment with submission]]
+- Complete [[https://lyon.instructure.com/courses/571/pages/enter-your-project-idea-and-participants-here][projects overview table]] in Canvas *today*!
+- If you are in > 1 course, you can use the same project idea!
+
+  [[../img/flocking.jpg]]
+
+  - Featured project idea: "[[https://processing.org][Processing]]" for visual artists - see
+  e.g. [[https://processing.org/examples/flocking.html]["Flocking"]] to simulate the flocking behavior of birds.
+
+    #+begin_quote
+  "Processing is a flexible software sketchbook and a language for
+  learning how to code. Since 2001, Processing has promoted software
+  literacy within the visual arts and visual literacy within
+  technology."
+  #+end_quote
+
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI

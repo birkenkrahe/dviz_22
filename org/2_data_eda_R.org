@@ -87,27 +87,27 @@
 #+caption: Greek goddess of peace and spring "Eirene"
 [[../img/2_eirene.png]]
 
-- "Data about data" (Greek 'meta'= 'after', 'beyond')
-- Meta data for ~mtcars~:
-  + Original source of the data
-  + Scientific paper analyzing the data
-  + Description of the variables (columns)
+  - "Data about data" (Greek 'meta'= 'after', 'beyond')
+  - Meta data for ~mtcars~:
+    + Original source of the data
+    + Scientific paper analyzing the data
+    + Description of the variables (columns)
 
-  *What could be issues with metadata?*
+    *What could be issues with metadata?*
 
-  #+begin_notes
-  - *Completeness* - origin
-  - *Consistency* - logic, values, (time) dependency
-  - *Accuracy* - origin and validity
-  #+end_notes
+    #+begin_notes
+    - *Completeness* - origin
+    - *Consistency* - logic, values, (time) dependency
+    - *Accuracy* - origin and validity
+    #+end_notes
 
-  #+begin_quote
-  "As potentially valuable as metadata is, we cannot afford to accept it
-  uncritically: we should always cross-check the metadata with the
-  actual data values, with our intuition and prior understanding of the
-  subject matter, and with other sources of information that may be
-  available." (Pearson, 2018)
-  #+end_quote
+    #+begin_quote
+    "As potentially valuable as metadata is, we cannot afford to accept it
+    uncritically: we should always cross-check the metadata with the
+    actual data values, with our intuition and prior understanding of the
+    subject matter, and with other sources of information that may be
+    available." (Pearson, 2018)
+    #+end_quote
 
 * DONE PRACTICE: META OR NOT META?
 
@@ -131,7 +131,6 @@ the screenshot of an online journal article.
 #+end_notes
 
 * PROBLEM: MISSING VALUES
-
 #+attr_html: :width 500px
 #+caption: Pima Indians data sets in the MASS package
 [[../img/2_pima.png]]
@@ -231,16 +230,20 @@ leads suggested by background information, imagination, patterns
 perceived, and experience with other data analyses." (Diaconis, 1985)
 #+end_quote
 
-- Analysis is always based on exploring numbers
+- Analysis is always based on exploring /numbers/ (quantification)
 
-- Non-numerical data are converted to numbers: e.g. /categorical/
-  variables are converted from discrete named values ("political
-  party", "city") into counts or relative frequencies
+- /Non-numerical/ data are converted to numbers: e.g. /categorical/
+  variables are converted from /discrete/ named values ("political
+  party", "city") into counts or relative /frequencies/
 
-- Each discrete value or category is also called a "level"
+- In R, each discrete value or category is also called a /level/.
+  #+name: level
+  #+begin_src R :exports both :session :results output
+    fv <- factor(c("male","female"))
+    fv
+  #+end_src
 
 * TYPES OF CATEGORICAL VARIABLES
-
 #+caption: AI-generated outline for research topic (Source: OpenAI)
 #+attr_html: :width 500px
 [[../img/2_openai.png]]
@@ -254,7 +257,6 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 * SOME ISSUES WITH GRAPHS
 
 - Humans are better at seeing patterns in graphs than numbers[fn:3]
-
   #+attr_html: :width 500px
   #+caption: Anscombe dataset
   [[../img/2_anscombe.png]]
@@ -289,11 +291,10 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
   [[file:../img/2_brain.png]]
 
   #+begin_notes
-  - The plots are telling us something about the distribution of data
-    values.
-  - The left-hand pair were generated from raw data values, the
-    right-hand pair were generated from log-transformed data
-  - The right-hand pair suggests that the data exhibit a Gaussian
+  - The plots tell us something about the /distribution/ of data values.
+  - The left-hand pair were generated from /raw data/ values, the
+    right-hand pair were generated from /log-transformed/ data
+  - The right-hand pair suggests that the data exhibit a /Gaussian/
     (normal) distribution
   #+end_notes
 
@@ -479,7 +480,7 @@ MacOS because Unix does not know file type extensions.
 the command line shell as a data science tool, and online REPL
 installations (usually Docker containers) as training grounds.
 
-[fn:3]The plots show Anscombe's quartet - four scatterplots which
+[fn:3]The plots show /Anscombe's quartet/ - four scatterplots which
 despite having different numerical values all have identical mean,
 variance, and standard correlation (Source: revolutionanalytics.com).
 

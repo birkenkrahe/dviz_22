@@ -6,7 +6,7 @@
 * README
 
 - DSC 302 focuses on data visualization, and especially EDA
-  (Exploratory Data Analysis). 
+  (Exploratory Data Analysis).
 - We use R as a language, GNU Emacs as editor, ESS as statistics
   extension, and Org-mode for literate programming
 - For details on objectives, audience, grading, schedule, check the
@@ -65,7 +65,7 @@ different Europe than we know it.
   Emacs + ESS for your PC.
 
 - By Monday Aug 22, 3 pm: [[https://lyon.instructure.com/courses/571/assignments/1693/edit?quiz_lti][Test 1 (Course infrastructure)]] - you
-  complete this 5-question quiz in Canvas. 
+  complete this 5-question quiz in Canvas.
 
 - By Friday Aug 26, 11 am: [[https://lyon.instructure.com/courses/571/assignments/1647][Visualizing distributions (DataCamp)]] - you
   have to register with DataCamp and join the Lyon group for fall '22.
@@ -75,7 +75,7 @@ different Europe than we know it.
 
 - For general questions, you can use the Google chat for this course
   (invitation only)
-  
+
 - Get the mobile app! (Canvas student)
 
   #+attr_html: :width 200px
@@ -130,10 +130,10 @@ participation (if there's a practice file, you can make up).
 
 - I can only accommodate at most 9 projects (last week of term)
 - Put your team/ideas into this table ([[https://lyon.instructure.com/courses/568/pages/enter-your-project-idea-and-participants-here][Canvas]]) by Wednesday
-  
+
 - [X] *Who has not yet found a team?*
 
-- [X] *Who has a team but no idea what to do?* 
+- [X] *Who has a team but no idea what to do?*
 
 - Reminder: plenty of project opportunities ([[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_overview.org#many-project-opportunities][overview]] / GitHub [[https://github.com/birkenkrahe/dviz/issues][issues]])
 
@@ -144,6 +144,7 @@ participation (if there's a practice file, you can make up).
 [[../img/datasaurus.png]]
 
 - Featured example: [[https://www.autodesk.com/research/publications/same-stats-different-graphs][Datasaurus Dozen in R (or Python)]] (see also [[https://youtu.be/iwzzv1biHv8][video]])
+
 
 * Business dashboard example
 #+attr_html: :width 500px
@@ -159,17 +160,17 @@ participation (if there's a practice file, you can make up).
 
 #+attr_html: :width 500px
 [[../img/dashboard1.png]]
-  
+
 - "The visualizations on a dashboard come from reports and each report
   is based on one dataset. In fact, one way to think of a dashboard is
   as an entryway into the underlying reports and datasets. Selecting a
-  visualization takes you to the report that was used to create it." 
-  
+  visualization takes you to the report that was used to create it."
+
   (Text and image source: Microsoft, 2021)
 
 - DataCamp offers a [[https://app.datacamp.com/learn/courses/introduction-to-power-bi][Power BI course]] - in this course, you'll start
   with Tableau instead (completely comparable product).
-  
+
 * Meta data example: nuclear winter
 #+attr_html: :width 500px
 [[../img/nuclear.jpg]]
@@ -181,33 +182,40 @@ participation (if there's a practice file, you can make up).
   reference frames: 1) USA Today, which is quoting 2) Nature, which is
   quoting 3) the original article. Each time, the meta data changes.
 
-- Mixed this up with [[https://github.com/birkenkrahe/dsmath/issues/26]["Disproving a 60-year-old hypothesis: most
+- I mixed this up with [[https://github.com/birkenkrahe/dsmath/issues/26]["Disproving a 60-year-old hypothesis: most
   'silent' mutations are actually harmful"]]
-  
+
+
 * 1st sprint review - Wed 31-Aug
 
 - [[https://lyon.instructure.com/courses/571/assignments/1689][Canvas assignment with submission]]
 - Complete [[https://lyon.instructure.com/courses/571/pages/enter-your-project-idea-and-participants-here][projects overview table]] in Canvas *today*!
 - If you are in > 1 course, you can use the same project idea!
-
+  
   [[../img/flocking.jpg]]
 
   - Featured project idea: "[[https://processing.org][Processing]]" for visual artists - see
   e.g. [[https://processing.org/examples/flocking.html]["Flocking"]] to simulate the flocking behavior of birds.
 
-    #+begin_quote
+  #+begin_quote
   "Processing is a flexible software sketchbook and a language for
   learning how to code. Since 2001, Processing has promoted software
   literacy within the visual arts and visual literacy within
   technology."
   #+end_quote
 
+
+* Review: What's the problem with meta data?
+
+[[../img/review.jpg]]
+
+#+begin_quote
+- *Completeness* - origin
+- *Consistency* - logic, values, (time) dependency
+- *Accuracy* - origin and validity
+#+end_quote
+
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI
 service. [[https://docs.microsoft.com/en-us/power-bi/consumer/end-user-dashboards][URL: docs.microsoft.com]].
-
-
-
-
-

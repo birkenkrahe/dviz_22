@@ -186,7 +186,7 @@ Check out structure of Pima datasets:
   contains ~Pima.tr~ plus 100 subjects with missing values in the
   explanatory variables."
   #+end_quote
-
+  
 - The [[https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database][kaggle.com database]] is yet another version: more records, one
   more variable - the "Metadata" information is missing
 
@@ -243,6 +243,10 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
     fv
   #+end_src
 
+  #+RESULTS: level
+  : [1] male   female
+  : Levels: female male
+
 * TYPES OF CATEGORICAL VARIABLES
 #+caption: AI-generated outline for research topic (Source: OpenAI)
 #+attr_html: :width 500px
@@ -267,7 +271,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
   - Usefulness of a graph depends on *how data* are displayed, and
     strongly on *which data* are chosen to be displayed
 
-* TODO PRACTICE: RAW VS. TRANSFORMED GRAPH DATA
+* PRACTICE: RAW VS. TRANSFORMED GRAPH DATA
 
 - The following two sets of plots are constructed from the ~brain~
   element of the ~mammals~ dataset from the ~MASS~ package that lists body

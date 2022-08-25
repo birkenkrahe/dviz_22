@@ -5,9 +5,9 @@
 #+startup: overview hideblocks indent inlineimages
 * README
 
-  - Practice instructions for data science course infrastructure
-  - Emacs + ESS + Org-mode and R must be installed
-  - Upload the completed file as a class assignment
+- Practice instructions for data science course infrastructure
+- Emacs + ESS + Org-mode and R must be installed
+- Upload the completed file as a class assignment
 
   #+name: tab:3_practice
   | PRACTICE                   | MIN |
@@ -22,116 +22,127 @@
   | Close Emacs/terminal       |   1 |
   |----------------------------+-----|
   | TOTAL                      |  30 |
-  #+TBLFM: @10$2=vsum(@2..@9) 
+  #+TBLFM: @10$2=vsum(@2..@9)
 
 * DONE Identify yourself
 
-  - Update the ~#+AUTHOR:~ information in the header
-  - Add this on a line to the header of this file :
-    ~#+STARTUP: overview hideblocks indent~
-  - With the cursor on theline, activate the header line with ~C-c C-c~.
-  - Put your cursor on the headline of this section, and type ~S <LEFT>~
-    until you see ~DONE~ instead of ~TODO~ next to the title.
-  - Perform this last step each time you complete a section.
+- Update the ~#+AUTHOR:~ information in the header
+- Add this on a line to the header of this file :
+  ~#+STARTUP: overview hideblocks indent~
+- With the cursor on theline, activate the header line with ~C-c C-c~.
+- Put your cursor on the headline of this section, and type ~S <LEFT>~
+  until you see ~DONE~ instead of ~TODO~ next to the title.
+- Perform this last step each time you complete a section.
 
 * DONE Find the GitHub repos
 
-  1) Open any Web browser
-  2) Go to the URL https://github.com/birkenkrahe
-  3) Go to the ~org~ repository
-  4) Check out the file ~FAQ.org~
-  5) Find your course
-  6) Check out the sub-directories ~org~ and ~pdf~
+1) Open any Web browser
+2) Go to the URL https://github.com/birkenkrahe
+3) Go to the ~org~ repository
+4) Check out the file ~FAQ.org~
+5) Find your course
+6) Check out the sub-directories ~org~ and ~pdf~
 
 * DONE Open the command line terminal
 
-  1) On Windows, go to the search field and type ~CMD~
-  2) Pin the app to the Windows taskbar
-  3) On MacOS, search for "Terminal"
-  4) Open the app
+1) On Windows, go to the search field and type ~CMD~
+2) Pin the app to the Windows taskbar
+3) On MacOS, search for "Terminal"
+4) Open the app
 
 * DONE Open/close R from the terminal
 
-  1) In the terminal, after the prompt ~>~, enter the command ~R~
-  2) On the R shell, enter the command ~plot(rnorm(1000))~
-  3) A graph will appear in a separate window
-  4) On the R shell, enter the command ~head(mtcars)~
-  5) The first six lines of a data frame appear in the shell
-  6) Enter ~q()~ and confirm with ~n~ to leave the R shell
+1) In the terminal, after the prompt ~>~, enter the command ~R~
+2) On the R shell, enter the command ~plot(rnorm(1000))~
+3) A graph will appear in a separate window
+4) On the R shell, enter the command ~head(mtcars)~
+5) The first six lines of a data frame appear in the shell
+6) Enter ~q()~ and confirm with ~n~ to leave the R shell
 
-  #+attr_html: :width 300px
-  [[../img/shell.png]]
+   #+attr_html: :width 300px
+   [[../img/shell.png]]
 
 * DONE Open terminal Emacs
 
-  1) In the terminal, after the prompt, enter the command ~emacs -nw~
-  2) The GNU Emacs editor opens inside the terminal
-  3) Any time you're stuck in Emacs, type ~C-g~ to quit the command
-  4) Type ~ALT-X emacs-version <ENTER>~ to get the Emacs version number
+1) In the terminal, after the prompt, enter the command ~emacs -nw~
+2) The GNU Emacs editor opens inside the terminal
+3) Any time you're stuck in Emacs, type ~C-g~ to quit the command
+4) Type ~ALT-X emacs-version <ENTER>~ to get the Emacs version number
 
-  #+attr_html: :width 300px
-  [[../img/emacs.png]]
-  
+   #+attr_html: :width 300px
+   [[../img/emacs.png]]
+
 * DONE Find and open the Emacs tutorial
 
-  1) In Emacs, enter ~C-h t~ by pressing CTRL and h followed by t
-  2) The Emacs tutorial appears on the screen
+1) In Emacs, enter ~C-h t~ by pressing CTRL and h followed by t
+2) The Emacs tutorial appears on the screen
 
 * DONE @home: work through the Emacs tutorial
 
-  1) Complete the tutorial by going through it line by line (ca. 60')
+1) Complete the tutorial by going through it line by line (ca. 60')
 
-  2) When done, insert these two lines at the top of the buffer:
-     #+begin_example
-     STUDENT: YourName [PLEDGED]
-     Time-stamp: <>
-     #+end_example
+2) When done, insert these two lines at the top of the buffer:
+   #+begin_example
+   STUDENT: YourName [PLEDGED]
+   Time-stamp: <>
+   #+end_example
 
-  3) While visiting the buffer, insert a time stamp with the command
-     ~M-x time-stamp~. Save the file with ~C-x C-w~ as a ~.txt~ file and
-     submit it in Canvas.
+3) While visiting the buffer, insert a time stamp with the command
+   ~M-x time-stamp~. Save the file with ~C-x C-w~ as a ~.txt~ file and
+   submit it in Canvas.
 
 * TODO Open/close R in GUI Emacs
 
-  1) In the terminal Emacs, enter ~M-x R~
-  2) When prompted ~R starting project directory?~, press RET
-  3) After the ~>~ prompt in the R shell buffer, enter the command:
-     ~head(mtcars~). You should see a table in the R shell buffer.
-  4) Now enter the command ~plot(rnorm(1000))~. A separate window with a
-     graph of 1000 random points should open.
-  5) Close the R session with ~q()~. Confirm with ~n~. 
-  
-* TODO Run R in Org-mode file
+1) In the terminal Emacs, enter ~M-x R~
+2) When prompted ~R starting project directory?~, press RET
+3) After the ~>~ prompt in the R shell buffer, enter the command:
+   ~head(mtcars~). You should see a table in the R shell buffer.
+4) Now enter the command ~plot(rnorm(1000))~. A separate window with a
+   graph of 1000 random points should open.
+5) Close the R session with ~q()~. Confirm with ~n~.
 
-  1) Close the terminal Emacs with ~C-x C-c~
-  2) When prompted if you want to kill active processes, reply ~yes~
-  3) Open a Emacs GUI with the command: ~emacs~
-  4) The start screen now shows an image at the top
-  5) Create a new Org-mode file ~Rtest.org~ with ~C-x C-f~
-  6) In the file, enter the following two code blocks as shown:
-     #+attr_html: :width 400px    
-     [[../img/practice_R.png]]
-  7) Move your cursor over the first block and enter ~C-c C-c~ to execute
-     it. Then move your cursor over the second block and execute
-     it. Two ~#+Results~ appear:
-     #+attr_html: :width 400px
-     [[../img/practice_R_1.png]]
-  8) To open the link and see the plot, move your cursor over the link
-     and enter ~C-c C-o~. The plot will open in a new buffer below.
-     #+attr_html: :width 400px
-     [[../img/practice_R_2.png]]
-  9) Move your cursor back to the ~Rtest.org~ buffer with ~C-x o~, remove
-     the other buffer with ~C-x 1~ and press ~<F6>~. The graph will now be
-     shown inline. Press ~<F7>~ to make it disappear.
-     #+attr_html: :width 400px
-     [[../img/practice_R_3.png]]
+* TODO Run R in Org-mode file
+** Get new .emacs file from GitHub
+
+---*Note: download new ~.emacs~ file [[https://github.com/birkenkrahe/org/blob/master/emacs/.emacs][from GitHub]]*---
+
+1) Get to https://github.com/birkenkrahe/org
+2) In GitHub, open the repo emacs
+3) In the repo emacs, open the file .emacs
+4) Open the RAW .emacs file
+5) Copy the file to clipboard (CTRL-A CTRL-C)
+6) ON your PC open the GUI Emacs
+7) In Emacs open a new file (C-x C-f) ~/.emacs
+8) Copy the clipboard content into this file
+9) Save the .emacs file
+10) Restart Emacs
+
+** Exercise
+1) Close the terminal Emacs with ~C-x C-c~
+2) When prompted if you want to kill active processes, reply ~yes~
+3) Open a Emacs GUI with the command: ~emacs~
+4) The start screen now shows an image at the top
+5) Create a new Org-mode file ~Rtest.org~ with ~C-x C-f~
+6) In the file, enter the following two code blocks as shown:
+   #+attr_html: :width 400px
+   [[../img/practice_R.png]]
+7) Move your cursor over the first block and enter ~C-c C-c~ to execute
+   it. Then move your cursor over the second block and execute
+   it. Two ~#+Results~ appear:
+   #+attr_html: :width 400px
+   [[../img/practice_R_1.png]]
+8) To open the link and see the plot, move your cursor over the link
+   and enter ~C-c C-o~. The plot will open in a new buffer below.
+   #+attr_html: :width 400px
+   [[../img/practice_R_2.png]]
+9) Move your cursor back to the ~Rtest.org~ buffer with ~C-x o~, remove
+   the other buffer with ~C-x 1~ and press ~<F6>~. The graph will now be
+   shown inline. Press ~<F7>~ to make it disappear.
+   #+attr_html: :width 400px
+   [[../img/practice_R_3.png]]
 
 * TODO Close GUI Emacs
 
-  1) Close the GUI Emacs with ~C-x C-c~
-  2) When prompted if you want to save files, reply ~y~ 
-  3) When prompted if you want to kill active processes, reply ~yes~
-
-     
-    
-    
+1) Close the GUI Emacs with ~C-x C-c~
+2) When prompted if you want to save files, reply ~y~
+3) When prompted if you want to kill active processes, reply ~yes~

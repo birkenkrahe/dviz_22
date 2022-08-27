@@ -141,7 +141,7 @@ participation (if there's a practice file, you can make up).
 
 - Recommended: overview of visualization in data science (no coding):
   "Preparation, Exploration and Visualization" [[https://app.datacamp.com/learn/courses/data-science-for-everyone][in this DataCamp course]]
-
+* DONE Project idea: datasaurus dozen
 #+attr_html: :width 600px
 [[../img/datasaurus.png]]
 
@@ -214,6 +214,27 @@ participation (if there's a practice file, you can make up).
 - *Accuracy* - origin and validity
 #+end_quote
 
+
+* DONE Project idea: "Count" dashboard ([[https://count.co/][count.co]])
+
+
+* DONE Test 2 open ("Data, EDA, and R")
+
+
+* DONE Practice: Run R in Org-mode file
+
+- [[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_overview_practice.org#run-r-in-org-mode-file][Instructions in GitHub]]
+- Update your Emacs configuration file
+- Check that you can run R inside Emacs
+
+
+* TODO Practice: a representative R session
+
+1) Questions to ask from data
+2) [[https://github.com/birkenkrahe/dviz/blob/piHome/org/2_data_eda_R_practice.org][Download the file]]
+3) Complete the file
+4) Upload the completed file to [[https://lyon.instructure.com/courses/571/assignments/1704][Canvas]]
+  
 
 * References
 

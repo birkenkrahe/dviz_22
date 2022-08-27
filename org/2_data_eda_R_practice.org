@@ -1,5 +1,5 @@
 #+TITLE:Practice: A Representative R Session
-#+AUTHOR: [YourName]
+#+AUTHOR: [your name here]
 #+SUBTITLE: Data visualization (DSC 302) Fall 2022
 #+OPTIONS: toc:nil num:nil ^:nil
 * README
@@ -139,7 +139,7 @@
 
      #+name: head1
      #+begin_src R :session *R* :results output
-       head(x=whiteside,___)  # show first n=3 lines of x
+       head(x=whiteside,n)  # show first n=3 lines of x
      #+end_src
 
   3) Show the last three records using the function ~tail~ using the block
@@ -163,53 +163,6 @@
      #+begin_quote
      *The ~whiteside~ data frame shows* ...
      #+end_quote
-
-** SOLUTION
-
-   2) Show only the first three records using ~head~, by adding the
-      argument ~n=3~ to the function call in [[head1]] below, and run the
-      block.
-
-      #+begin_src R :session *R* :results output
-        head(x=whiteside, n=3)
-      #+end_src
-
-      #+RESULTS:
-      :    Insul Temp Gas
-      : 1 Before -0.8 7.2
-      : 2 Before -0.7 6.9
-      : 3 Before  0.4 6.4
-
-   3) Show the /last/ three records using the function ~tail~ using the block
-      [[tail]], and run the block.
-
-      #+name: tail
-      #+begin_src R :session *R* :results output
-        tail(x=whiteside, n=3)
-      #+end_src
-
-      #+RESULTS: tail
-      :    Insul Temp Gas
-      : 54 After  8.7 2.8
-      : 55 After  8.8 1.3
-      : 56 After  9.7 1.5
-
-   4) What does the first line of the data frame show? What do the
-      following lines show?
-
-      #+begin_quote
-      - *The first line shows* the names of the fields/variables recorded
-      - *The following lines show* the first records of the data set
-      #+end_quote
-
-   5) What data does the data frame ~whiteside~ as a whole show?
-
-      #+begin_quote
-      *The ~whiteside~ data frame shows* the weekly average heating gas
-      consumption and the weekly average outside temperature for two
-      successive winters, the first before, and the second after
-      Whiteside installed insulation in his house.
-      #+end_quote
 
 * TODO FACTOR VECTORS
 

@@ -114,7 +114,7 @@ participation (if there's a practice file, you can make up).
 - [X] Practice: Metadata identification
 - [ ] Practice: Representative R session
 
-* DONE Home assignments - how they work
+** DONE Home assignments - how they work
 #+attr_html: :width 400px
 #+captions: course infrastructure
 [[../img/platforms.png]]
@@ -124,7 +124,7 @@ participation (if there's a practice file, you can make up).
 - You loose 1 point for every day of late submission
 - Canvas Gradebook is updated manually (with some delay)
 
-* DONE Getting started with projects
+** DONE Getting started with projects
 
 - Course has 15 participants!
 
@@ -141,13 +141,13 @@ participation (if there's a practice file, you can make up).
 
 - Recommended: overview of visualization in data science (no coding):
   "Preparation, Exploration and Visualization" [[https://app.datacamp.com/learn/courses/data-science-for-everyone][in this DataCamp course]]
-* DONE Project idea: datasaurus dozen
+** DONE Project idea: datasaurus dozen
 #+attr_html: :width 600px
 [[../img/datasaurus.png]]
 
 - Featured example: [[https://www.autodesk.com/research/publications/same-stats-different-graphs][Datasaurus Dozen in R (or Python)]] (see also [[https://youtu.be/iwzzv1biHv8][video]])
 
-* DONE Business dashboard example
+** DONE Business dashboard example
 #+attr_html: :width 500px
 [[../img/dashboard.png]]
 
@@ -172,7 +172,7 @@ participation (if there's a practice file, you can make up).
 - DataCamp offers a [[https://app.datacamp.com/learn/courses/introduction-to-power-bi][Power BI course]] - in this course, you'll start
   with Tableau instead (completely comparable product).
 
-* DONE Meta data example: nuclear winter
+** DONE Meta data example: nuclear winter
 #+attr_html: :width 500px
 [[../img/nuclear.jpg]]
 
@@ -186,7 +186,7 @@ participation (if there's a practice file, you can make up).
 - I mixed this up with [[https://github.com/birkenkrahe/dsmath/issues/26]["Disproving a 60-year-old hypothesis: most
   'silent' mutations are actually harmful"]]
 
-* DONE 1st sprint review - Wed 31-Aug
+** DONE 1st sprint review - Wed 31-Aug
 
 - [[https://lyon.instructure.com/courses/571/assignments/1689][Canvas assignment with submission]]
 - Complete [[https://lyon.instructure.com/courses/571/pages/enter-your-project-idea-and-participants-here][projects overview table]] in Canvas *today*!
@@ -204,7 +204,7 @@ participation (if there's a practice file, you can make up).
   technology."
   #+end_quote
 
-* DONE Review: What's the problem with meta data?
+** DONE Review: What's the problem with meta data?
 
 [[../img/review.jpg]]
 
@@ -215,26 +215,29 @@ participation (if there's a practice file, you can make up).
 #+end_quote
 
 
-* DONE Project idea: "Count" dashboard ([[https://count.co/][count.co]])
+** DONE Project idea: "Count" dashboard ([[https://count.co/][count.co]])
 
 
-* DONE Test 2 open ("Data, EDA, and R")
+** DONE Test 2 open ("Data, EDA, and R")
 
 
-* DONE Practice: Run R in Org-mode file
+** DONE Practice: Run R in Org-mode file
 
 - [[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_overview_practice.org#run-r-in-org-mode-file][Instructions in GitHub]]
 - Update your Emacs configuration file
 - Check that you can run R inside Emacs
 
 
-* TODO Practice: a representative R session
+** TODO Practice: a representative R session
 
 1) Questions to ask from data
 2) [[https://github.com/birkenkrahe/dviz/blob/piHome/org/2_data_eda_R_practice.org][Download the file]]
 3) Complete the file
 4) Upload the completed file to [[https://lyon.instructure.com/courses/571/assignments/1704][Canvas]]
   
+* Week 3: graphics in R
+
+ - [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
 
 * References
 

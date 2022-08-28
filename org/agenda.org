@@ -236,8 +236,17 @@ participation (if there's a practice file, you can make up).
 4) Upload the completed file to [[https://lyon.instructure.com/courses/571/assignments/1704][Canvas]]
   
 * Week 3: graphics in R
+#+attr_html: :width 600px
+[[../img/graphics.png]]
 
  - [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
+
+* GNU Emacs: ref cards
+#+attr_html: :width 400px
+[[../img/gnu.jpg]]
+
+- [ ] The power of Dired on one page ([[https://github.com/birkenkrahe/org/blob/master/emacs/dired-ref.pdfhttps://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
+- [ ] The power of Emacs on two pages ([[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][v27]])
 
 * References
 

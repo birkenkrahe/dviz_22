@@ -106,8 +106,6 @@ participation (if there's a practice file, you can make up).
 
 * Week 2: GETTING STARTED
 
--*START BBB RECORDING*-
-
 - [X] Getting started with projects
 - [X] Quiz 1: course infrastructure
 - [ ] Lectures: Data, Exploratory Data Analysis, and R
@@ -214,19 +212,15 @@ participation (if there's a practice file, you can make up).
 - *Accuracy* - origin and validity
 #+end_quote
 
-
 ** DONE Project idea: "Count" dashboard ([[https://count.co/][count.co]])
 
-
 ** DONE Test 2 open ("Data, EDA, and R")
-
 
 ** DONE Practice: Run R in Org-mode file
 
 - [[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_overview_practice.org#run-r-in-org-mode-file][Instructions in GitHub]]
 - Update your Emacs configuration file
 - Check that you can run R inside Emacs
-
 
 ** TODO Practice: a representative R session
 
@@ -235,13 +229,52 @@ participation (if there's a practice file, you can make up).
 3) Complete the file
 4) Upload the completed file to [[https://lyon.instructure.com/courses/571/assignments/1704][Canvas]]
   
-* Week 3: graphics in R
-#+attr_html: :width 600px
+* IN PROGRESS Week 3: graphics in R
+#+attr_html: :width 400px
 [[../img/graphics.png]]
 
  - [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
+ - [ ] DataCamp lesson: [[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][visualizing distributions]] (by Aug 26)
+ 
+* READ Monday Aug 29 last day to drop class
 
-* GNU Emacs: ref cards
+[[../img/drop.png]]
+
+(https://my.lyon.edu/ICS/Academics/Student_Forms.jnz) 
+* IN PROGRESS Practice: extended R EDA example
+* DONE DataCamp: visualizing distributions
+
+- What did you think of this lesson?
+- Review question: when do you use histograms?
+- Review question: when do you use boxplots?
+
+#+begin_notes
+- Histogram: you have a single numeric-continuous variable, and you
+  want to ask questions about the shape of its distribution/frequency.
+- Example: ~Nile~ dataset
+
+  #+begin_src R :file ../img/nile.png :exports both :session :results output graphics file 
+    hist(Nile)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/nile.png]]
+
+- Boxplot: single numeric-continuous variable split by a categorical
+  variable, and you want to compare distributions for each category.
+- Example: ~ToothGrowth~ 
+
+  #+begin_src R :file ../img/tg.png :exports both :session :results output graphics file 
+    boxplot(ToothGrowth$len ~ ToothGrowth$supp)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/tg.png]]
+
+#+end_notes  
+
+* PROJECT Project idea: [[https://github.com/birkenkrahe/dviz/issues/29][healthcare data visualization]]
+* READ GNU Emacs: ref cards
 #+attr_html: :width 400px
 [[../img/gnu.jpg]]
 

@@ -236,13 +236,12 @@ participation (if there's a practice file, you can make up).
  - [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
  - [ ] DataCamp lesson: [[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][visualizing distributions]] (by Aug 26)
  
-* READ Monday Aug 29 last day to drop class
+** READ Monday Aug 29 last day to drop class
 
 [[../img/drop.png]]
 
 (https://my.lyon.edu/ICS/Academics/Student_Forms.jnz) 
-* IN PROGRESS Practice: extended R EDA example
-* DONE DataCamp: visualizing distributions
+** DONE DataCamp: visualizing distributions
 
 - What did you think of this lesson?
 - Review question: when do you use histograms?
@@ -273,13 +272,32 @@ participation (if there's a practice file, you can make up).
 
 #+end_notes  
 
-* PROJECT Project idea: [[https://github.com/birkenkrahe/dviz/issues/29][healthcare data visualization]]
-* READ GNU Emacs: ref cards
+** PROJECT Project idea: [[https://github.com/birkenkrahe/dviz/issues/29][healthcare data visualization]]
+** READ GNU Emacs: ref cards
 #+attr_html: :width 400px
 [[../img/gnu.jpg]]
 
 - [ ] The power of Dired on one page ([[https://github.com/birkenkrahe/org/blob/master/emacs/dired-ref.pdfhttps://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
 - [ ] The power of Emacs on two pages ([[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][v27]])
+
+* IN PROGRESS Practice: extended R EDA example
+
+- histogram with ~hist~ and ~boxplot~
+- ~head~ and ~tail~
+- structure of a data set with ~str~
+- ~factor~ vectors have distinct values (~levels~)
+
+* Review test 2
+
+- *Dataset help:* What does ~MASS::Boston~ mean?
+  
+- *Article meta data* that need to be reviewed critically to analyze an
+  article, include 1) reference, 2) acknowledgements with contributing
+  experts (this is unusual).
+
+- *Products are not data*. Data: (information) entity, event, process.
+
+- Why do *non-numerical* data have to be converted to numbers?
 
 * References
 

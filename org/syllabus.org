@@ -5,6 +5,8 @@
 #+subtitle: DSC302 - Data Visualization - Syllabus Fall 2022
 * General Course Information
 
+- Course title: Data visualization
+- Course number and section: DSC 302.01
 - Meeting Times: Mon-Wed-Fri from 15:00-15:50 am
 - Meeting place: Lyon Building Computer Lab room 104
 - Professor: Marcus Birkenkrahe
@@ -153,7 +155,7 @@ administrative withdrawal and the assigning of an “F” grade at four
 weeks. Students who are administratively withdrawn from more than one
 course will be placed on probation or suspended.
 
-** Disabilities
+** Academic Support
 
 The Morrow Academic Center (MAC) helps students who want to improve
 grades by providing peer-led services including Supplemental
@@ -178,7 +180,6 @@ your student login.
 
 - For Canvas, login at lyon.instructure.com
 - For Schoology, login at lyon.schoology.com
-
 
 ** Disabilities
 

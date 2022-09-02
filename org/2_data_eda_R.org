@@ -404,7 +404,7 @@ of > 800k downloads (Source: CRAN, 2021).
 #+caption: Package management in the Rgui program
 [[../img/2_packages2.png]]
 
-* TODO QUESTIONS TO ASK FROM DATA
+* DONE QUESTIONS TO ASK FROM DATA
 
 1. Where does the dataset come from, and how is it documented?
 2. How many records (rows) does this dataset contain?
@@ -417,7 +417,7 @@ of > 800k downloads (Source: CRAN, 2021).
 9. Are the variable values consistent with what we expect?
 10. Do the variables exhibit the relationships we expect?
 
-* TODO PRACTICE: A REPRESENTATIVE R SESSION
+* IN PROGRESS PRACTICE: A REPRESENTATIVE R SESSION
 
 #+attr_html: :width 300px
 [[../img/2_github.png]]

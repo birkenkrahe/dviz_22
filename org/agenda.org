@@ -25,7 +25,7 @@
 - First place to go to with a general question
 - FAQ is regularly updated with new content
 
-* Week 1: introduction to the course
+* Week 1: Introduction to the course
 ** Objectives
 
 - [X] Mutual introductions
@@ -104,7 +104,9 @@ participation (if there's a practice file, you can make up).
 
 ([[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_practice.org][Link to practice file in GitHub]])
 
-* Week 2: GETTING STARTED
+* Week 2: Getting started
+#+attr_html: :width 400px
+[[../img/graphics.png]]
 
 - [X] Getting started with projects
 - [X] Quiz 1: course infrastructure
@@ -229,9 +231,9 @@ participation (if there's a practice file, you can make up).
 3) Complete the file
 4) Upload the completed file to [[https://lyon.instructure.com/courses/571/assignments/1704][Canvas]]
   
-* Week 3: graphics in R
+* Week 3: Graphics in R
 #+attr_html: :width 400px
-[[../img/graphics.png]]
+[[../img/rainforest.jpg]]
 
  - [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
  - [ ] DataCamp lesson: [[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][visualizing distributions]] (by Aug 26)

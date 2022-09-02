@@ -229,7 +229,7 @@ participation (if there's a practice file, you can make up).
 3) Complete the file
 4) Upload the completed file to [[https://lyon.instructure.com/courses/571/assignments/1704][Canvas]]
   
-* IN PROGRESS Week 3: graphics in R
+* Week 3: graphics in R
 #+attr_html: :width 400px
 [[../img/graphics.png]]
 
@@ -280,14 +280,14 @@ participation (if there's a practice file, you can make up).
 - [ ] The power of Dired on one page ([[https://github.com/birkenkrahe/org/blob/master/emacs/dired-ref.pdfhttps://www.gnu.org/software/emacs/refcards/pdf/dired-ref.pdf][v28]])
 - [ ] The power of Emacs on two pages ([[https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf][v27]])
 
-* IN PROGRESS Practice: extended R EDA example
+** Practice: extended R EDA example
 
 - histogram with ~hist~ and ~boxplot~
 - ~head~ and ~tail~
 - structure of a data set with ~str~
 - ~factor~ vectors have distinct values (~levels~)
 
-* Review test 2
+** Review test 2
 
 - *Dataset help:* What does ~MASS::Boston~ mean?
   

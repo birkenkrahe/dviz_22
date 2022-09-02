@@ -287,7 +287,7 @@ participation (if there's a practice file, you can make up).
 - structure of a data set with ~str~
 - ~factor~ vectors have distinct values (~levels~)
 
-** Review test 2
+** Review [[https://lyon.instructure.com/courses/571/assignments/1715][test 2 - data, EDA, and R]]
 
 - *Dataset help:* What does ~MASS::Boston~ mean?
   

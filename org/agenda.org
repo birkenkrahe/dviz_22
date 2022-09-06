@@ -236,7 +236,7 @@ participation (if there's a practice file, you can make up).
 [[../img/rainforest.jpg]]
 
  - [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
- - [ ] DataCamp lesson: [[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][visualizing distributions]] (by Aug 26)
+ - [X] DataCamp lesson: [[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][visualizing distributions]] (by Aug 26)
  
 ** READ Monday Aug 29 last day to drop class
 
@@ -301,6 +301,27 @@ participation (if there's a practice file, you can make up).
 
 - Why do *non-numerical* data have to be converted to numbers?
 
+* Week 4: Visualizing two variables
+
+#+attr_html: :width 400px
+[[../img/dataliteracymonth.png]]
+
+- [ ] DataCamp Data Literacy month
+- [ ] Review: 1st sprint review
+- [ ] Review: Visualizing two variables
+- [ ] Practice: scatterplots & barcharts & customization
+- [ ] Lecture: explanatory vs. exploratory graphics in R
+
+* NEXT [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
+* DataCamp Data Literacy month
+
+ A bunch of webinars on different aspects of data literacy, "the
+ ability to read, write, communicate, and reason with data. Data
+ literacy skills are foundational for succeeding in the 21st century,
+ and are the prerequisites for a career in data." ([[https://www.datacamp.com/data-literacy-month][DataCamp]])
+* TODO Review: 1st sprint review
+* TODO Review: Visualizing two variables
+* TODO Lecture: exploratory vs. explanatory graphics in R
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI

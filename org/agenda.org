@@ -191,7 +191,7 @@ participation (if there's a practice file, you can make up).
 - [[https://lyon.instructure.com/courses/571/assignments/1689][Canvas assignment with submission]]
 - Complete [[https://lyon.instructure.com/courses/571/pages/enter-your-project-idea-and-participants-here][projects overview table]] in Canvas *today*!
 - If you are in > 1 course, you can use the same project idea!
-  
+
   [[../img/flocking.jpg]]
 
   - Featured project idea: "[[https://processing.org][Processing]]" for visual artists - see
@@ -230,19 +230,19 @@ participation (if there's a practice file, you can make up).
 2) [[https://github.com/birkenkrahe/dviz/blob/piHome/org/2_data_eda_R_practice.org][Download the file]]
 3) Complete the file
 4) Upload the completed file to [[https://lyon.instructure.com/courses/571/assignments/1704][Canvas]]
-  
+
 * Week 3: Graphics in R
 #+attr_html: :width 400px
 [[../img/rainforest.jpg]]
 
- - [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
- - [X] DataCamp lesson: [[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][visualizing distributions]] (by Aug 26)
- 
+- [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
+- [X] DataCamp lesson: [[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][visualizing distributions]] (by Aug 26)
+
 ** READ Monday Aug 29 last day to drop class
 
 [[../img/drop.png]]
 
-(https://my.lyon.edu/ICS/Academics/Student_Forms.jnz) 
+(https://my.lyon.edu/ICS/Academics/Student_Forms.jnz)
 ** DONE DataCamp: visualizing distributions
 
 - What did you think of this lesson?
@@ -254,7 +254,7 @@ participation (if there's a practice file, you can make up).
   want to ask questions about the shape of its distribution/frequency.
 - Example: ~Nile~ dataset
 
-  #+begin_src R :file ../img/nile.png :exports both :session :results output graphics file 
+  #+begin_src R :file ../img/nile.png :exports both :session :results output graphics file
     hist(Nile)
   #+end_src
 
@@ -263,16 +263,16 @@ participation (if there's a practice file, you can make up).
 
 - Boxplot: single numeric-continuous variable split by a categorical
   variable, and you want to compare distributions for each category.
-- Example: ~ToothGrowth~ 
+- Example: ~ToothGrowth~
 
-  #+begin_src R :file ../img/tg.png :exports both :session :results output graphics file 
+  #+begin_src R :file ../img/tg.png :exports both :session :results output graphics file
     boxplot(ToothGrowth$len ~ ToothGrowth$supp)
   #+end_src
 
   #+RESULTS:
   [[file:../img/tg.png]]
 
-#+end_notes  
+#+end_notes
 
 ** PROJECT Project idea: [[https://github.com/birkenkrahe/dviz/issues/29][healthcare data visualization]]
 ** READ GNU Emacs: ref cards
@@ -292,7 +292,7 @@ participation (if there's a practice file, you can make up).
 ** Review [[https://lyon.instructure.com/courses/571/assignments/1715][test 2 - data, EDA, and R]]
 
 - *Dataset help:* What does ~MASS::Boston~ mean?
-  
+
 - *Article meta data* that need to be reviewed critically to analyze an
   article, include 1) reference, 2) acknowledgements with contributing
   experts (this is unusual).
@@ -303,8 +303,8 @@ participation (if there's a practice file, you can make up).
 
 * Week 4: Visualizing two variables
 
-#+attr_html: :width 400px
-[[../img/dataliteracymonth.png]]
+#+attr_html: :width 500px
+[[../img/market.jpg]]
 
 - [ ] DataCamp Data Literacy month
 - [ ] Review: 1st sprint review
@@ -312,16 +312,89 @@ participation (if there's a practice file, you can make up).
 - [ ] Practice: scatterplots & barcharts & customization
 - [ ] Lecture: explanatory vs. exploratory graphics in R
 
-* NEXT [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
-* DataCamp Data Literacy month
+* READ [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
+#+attr_html: :width 500px
+[[../img/emacsorg.png]]
 
- A bunch of webinars on different aspects of data literacy, "the
- ability to read, write, communicate, and reason with data. Data
- literacy skills are foundational for succeeding in the 21st century,
- and are the prerequisites for a career in data." ([[https://www.datacamp.com/data-literacy-month][DataCamp]])
+* READ DataCamp Data Literacy month
+#+attr_html: :width 400px
+[[../img/dataliteracymonth.png]]
+
+A bunch of webinars on different aspects of data literacy, "the
+ability to read, write, communicate, and reason with data. Data
+literacy skills are foundational for succeeding in the 21st century,
+and are the prerequisites for a career in data." ([[https://www.datacamp.com/data-literacy-month][DataCamp]])
+
 * TODO Review: 1st sprint review
+#+attr_html: :width 500px
+[[../img/lost.jpg]]
+
+- Some of you did not enter information in the overview sheet and/or
+  did not submit a sprint review
+
+- You can and should still submit (2 pts penalty per day of late
+  submission)
+
+- If you double up with another course, your sprint reviews need to
+  reflect different research questions, or methods, or results
+
+- Important: references and sources.
+
+- Next sprint review: 30th September
+
 * TODO Review: Visualizing two variables
-* TODO Lecture: exploratory vs. explanatory graphics in R
+* Example: Nile
+- Plot example: use ~Nile~ data set
+  #+begin_src R
+    ## what's in the data set?
+  #+end_src
+  
+  #+begin_src R :file ../img/line.png :results output graphics file
+    plot(Nile)
+  #+end_src
+* Boxes vs bars
+- Swiss "Jugendstrafrechtspflege" (juvenile offender stats, [[https://www.zh.ch/de/sicherheit-justiz/jugendstrafrecht/zahlen-fakten.html#446794079][source]]).
+  Contrast the two plots: what's different?
+  #+attr_html: :width 400px
+  [[../img/offenders1.png]]
+  #+attr_html: :width 400px
+  [[../img/offenders2.png]]
+
+- Box plots vs. bar plots: what's the difference?
+  #+attr_html: :width 600px
+  [[../img/boxbar.png]]
+
+  #+begin_notes
+    - Box plots answer questions about value spread using measures of
+      spread, here: age spread (categorical variable splits data)
+    - Bar plots answer questions about the frequency of a single
+      continuous metric relative to zero, here: count.
+    - In bar plots, other single continuous variables can also be
+      plotted, but the results are less insightful than the box plot
+  #+end_notes
+* Bars vs stacks  
+
+- When would you rather show /stacked bar plots/ than bar plots?
+
+  #+begin_notes
+    When you care about percentages. Each stack adds up to 100%
+  #+end_notes
+* Bars vs dots
+
+- When should you use a dot plot?
+  #+attr_html: :width 600px
+  [[../img/dotplots.png]]
+
+  #+begin_notes
+  - You have a categorical variable
+  - Display numeric scores by category logarithmically - since bars
+    must always begin at 0, the log of 0 is infinite, so there is no
+    log scale for bar plots
+  - Display multiple numeric scores for each category
+  #+end_notes
+  
+* IN PROGRESS Extended EDA example in R  
+* NEXT Exploratory vs. explanatory graphics in R
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI

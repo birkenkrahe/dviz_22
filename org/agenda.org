@@ -302,14 +302,14 @@ participation (if there's a practice file, you can make up).
 - Why do *non-numerical* data have to be converted to numbers?
 
 * Week 4: Visualizing two variables
-
 #+attr_html: :width 500px
 [[../img/market.jpg]]
 
-- [ ] DataCamp Data Literacy month
-- [ ] Review: 1st sprint review
-- [ ] Review: Visualizing two variables
-- [ ] Practice: scatterplots & barcharts & customization
+- [X] DataCamp Data Literacy month
+- [X] Review: 1st sprint review
+- [X] Review: Visualizing two variables
+- [X] Practice: scatterplots & barcharts & customization
+- [ ] Review: test 3 - looking at data
 - [ ] Lecture: explanatory vs. exploratory graphics in R
 
 * READ [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
@@ -325,7 +325,7 @@ ability to read, write, communicate, and reason with data. Data
 literacy skills are foundational for succeeding in the 21st century,
 and are the prerequisites for a career in data." ([[https://www.datacamp.com/data-literacy-month][DataCamp]])
 
-* TODO Review: 1st sprint review
+* DONE Review: 1st sprint review
 #+attr_html: :width 500px
 [[../img/lost.jpg]]
 
@@ -342,24 +342,32 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 - Next sprint review: 30th September
 
-* TODO Review: Visualizing two variables
-* Example: Nile
+* DONE Review: Visualizing two variables
+** Example: Nile
 - Plot example: use ~Nile~ data set
-  #+begin_src R
-    ## what's in the data set?
+  #+begin_src R :results output
+     # ?Nile ## what's in the data set?
+     str(Nile)
   #+end_src
+
+  #+RESULTS:
+  :  Time-Series [1:100] from 1871 to 1970: 1120 1160 963 1210 1160 1160 813 1230 1370 1140 ...
   
   #+begin_src R :file ../img/line.png :results output graphics file
     plot(Nile)
   #+end_src
-* Boxes vs bars
+
+  #+RESULTS:
+  [[file:../img/line.png]]
+
+** Line plots
 - Swiss "Jugendstrafrechtspflege" (juvenile offender stats, [[https://www.zh.ch/de/sicherheit-justiz/jugendstrafrecht/zahlen-fakten.html#446794079][source]]).
   Contrast the two plots: what's different?
   #+attr_html: :width 400px
   [[../img/offenders1.png]]
   #+attr_html: :width 400px
   [[../img/offenders2.png]]
-
+** Boxes vs bars
 - Box plots vs. bar plots: what's the difference?
   #+attr_html: :width 600px
   [[../img/boxbar.png]]
@@ -372,14 +380,14 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
     - In bar plots, other single continuous variables can also be
       plotted, but the results are less insightful than the box plot
   #+end_notes
-* Bars vs stacks  
+** Bars vs stacks  
 
 - When would you rather show /stacked bar plots/ than bar plots?
 
   #+begin_notes
     When you care about percentages. Each stack adds up to 100%
   #+end_notes
-* Bars vs dots
+** Bars vs dots
 
 - When should you use a dot plot?
   #+attr_html: :width 600px
@@ -393,7 +401,48 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   - Display multiple numeric scores for each category
   #+end_notes
   
-* IN PROGRESS Extended EDA example in R  
+* DONE Extended EDA example in R  
+* TODO Review test 3: looking at data
+
+1) What does ~??whiteside~ return? (60%)
+2) Command to plot ~Gas~ against ~Insul~ for ~whiteside~? (65%)
+3) Histograms show ... (80%)
+4) Header arguments to generate ~plot.png~ one level up? (80%)
+5) What are the ~summary~ stats elements? (80%)
+6) Function to turn a ~factor~ into a ~character~ variable? (90%)
+7) What is the /upper quartile/?
+
+#+begin_notes
+1) What does ~??whiteside~ return?
+   - Fuzzy search for keyword across all packages
+
+2) Command to plot ~Gas~ against ~Insul~ for ~whiteside~?)
+   #+begin_src R :file ../img/gas.png :session :results output graphics file
+     library(MASS)
+     boxplot(Gas ~ Insul, data=whiteside)
+   #+end_src
+
+    #+RESULTS:
+    [[file:../img/gas.png]]
+
+3) Histograms show the distribution of a single continuous variable
+
+4) Header arguments to generate ~plot.png~ one level up?
+
+   ~:file ../plot.png :results graphics file~
+
+5) What are the ~summary~ stats elements?
+   - Median, mean, lower/upper quartile, sample min/max
+
+6) Function to turn a ~factor~ into a ~character~ variable?
+   - ~as.character~
+
+7) What is the /upper quartile/?
+   - The set of values that are smaller or equal than 75% of all
+     values in the sample
+   
+#+end_notes
+
 * NEXT Exploratory vs. explanatory graphics in R
 * References
 

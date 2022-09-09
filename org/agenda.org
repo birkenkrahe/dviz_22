@@ -453,7 +453,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 #+attr_html: :width 500px
 [[../img/lab.jpg]]
 
-- Download/open the practice file from GitHub: [[https://tinyurl.com/4dekhhw5][tinyurl.com/4rfwc8md]]
+- Download/open the practice file from GitHub: [[https://tinyurl.com/4rfwc8md][tinyurl.com/4rfwc8md]]
 
 - Put your name and ~[pledged]~ next to it in the meta data header
 

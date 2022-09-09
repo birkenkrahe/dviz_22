@@ -7,7 +7,7 @@
 
   - Practice instructions for the data visualization lectures
   - Emacs + ESS + Org-mode and R must be installed
-  - Upload the completed file as a class assignment ([[https://lyon.instructure.com/courses/571/assignments/1704][Canvas link]])
+  - Upload the completed file as a class assignment ([[https://lyon.instructure.com/courses/571/assignments/2806][Canvas link]])
 
 * TODO Identify yourself
 

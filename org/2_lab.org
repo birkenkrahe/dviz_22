@@ -32,83 +32,57 @@
   - Put your cursor on the headline of this section, and type ~S <LEFT>~
     until you see ~DONE~ instead of ~TODO~ next to the title.
   - Perform this last step each time you complete a section.
+* TODO Compare two data frames
+  In the [[https://github.com/birkenkrahe/dviz/blob/piHome/org/2_data_eda_R.org][last lecture]], you saw [[https://github.com/birkenkrahe/dviz/blob/piHome/img/2_brain.png][some plots]] from the ~mammals~ data frame of
+  the ~MASS~ package, giving body weights and brain weights for 62
+  animals.
 
+  The ~Animals2~ data frame from the ~robustbase~ package gives the same
+  characterizations for a different set of animals.
 
+  In both cases, the row names for these data frames identify these
+  animals, and the objective of this exercise is to examine the
+  differences between the animals characterized in these data frames.
 
-* References
+* TODO Make the required packages available.
 
-  - Pearson (2018), EDA Using R, CRC Press, Chapter 1.3 (pp. 11-21).
+  /Tip: packages need to be installed (once) and loaded (per session)./
 
-* Footnotes
+  Use this code block to start a session and run the necessary commands:
 
-[fn:1]If you say yes, R will save a copy of all your commands in that
-session in a file ~.Rhistory~, and it will save all data in a file
-~.RData~ to recreate your work space the way you left it.
+  #+begin_src R :session :results silent
+       ...
+  #+end_src
 
-[fn:2]You can run this command in any case - installing ~MASS~ does not
-take very long and re-installing the package does no harm, it only
-takes time.
+  Remember when asked to start the session in the same directory
+  where your practice file resides.
 
-[fn:3]The format of this documentation is common for R, and it
-imitates the format of UNIX manual pages. After a /description/ and a
-/usage/ note, the /format/ is described in terms of the variables. The
-/source/ and /references/ given. At the end, the /examples/ section provides
-examples, which sometimes can be called interactively with the ~example~
-function, e.g. ~example(head)~.
+* TODO Identify common data
 
-[fn:4]In class, I often use the ~org-present~ package to present
-Org-mode files and hide the metadata (e.g. for code blocks). If you
-like this, see here for a tutorial including the code to put in your
-~.emacs~ file.
+  The ~rownames~ function returns a vector or row names for a data
+  frame, and the ~intersect~ function computes the intersection of two
+  sets, returning a vector of their common elements.
 
-[fn:5]To find out more about any R function, go to the console and
-look up the help, as in ~help(str)~ or (equivalently) ~?str~. Generic
-functions work with any R object, and their output depends on the
-object type.
+  Using these functions, construct and display the vector
+  ~commonAnimals~ of animal names common to both data frames.
 
-[fn:6]This Org-mode code block header argument lets the computer know
-that you run R in a session buffer ~*R*~ and that you want to see the
-results (if any) right here.
+  How many animals are included in this set? Tip: you can check the
+  length of a vector with the function ~length~.
 
-[fn:7]For factors, if the number of levels is > 6, only the five most
-frequently occurring levels are listed, the others are lumped in one
-'other' category. For L = 2 as here, all values are accounted for.
+* TODO Identify different data
 
-[fn:8]Notice the changed header arguments: ~:results output graphics
-file~ to generate a graphics file, and ~:file boxplot.png~ as the file
-name.
+  The ~setdiff~ function returns a vector of elements contained in one
+  set but not in the other: ~setdiff(A,B)~~ returns a vector of
+  elements in set ~A~ that are not in set ~B~.
 
-[fn:9]This key is bound to the Emacs Lisp function
-~org-display-inline-images~. The key sequence ~C-c C-x C-v~ /toggles/ the
-display of inline images (i.e. switches it on and off). ~<F6>~ only
-makes the images visible, ~<F7>~ only makes them disappear.
+  1) Use ~setdiff~ to display the animals present in ~mammals~ that are *not*
+     present in ~Animals2~.
 
-[fn:10]Values that are at least 1.5 times the interquartile range
-(IQR, difference between upper and lower quartile) above/below of the
-upper/lower quartile are outliers.
-#+begin_src R :session :results output graphics file :file ./img/boxplot3.png
-  x <- c(0,0,2,5,8,8,8,9,9,10,10,10,11,12,12,12,14,15,20,25)
-  boxplot(x)
-#+end_src
+  2) Use ~setdiff~ to display the animals present in ~Animals2~ that are *not*
+     present in ~mammals~.
 
-#+RESULTS:
-[[file:./img/boxplot3.png]]
+  3) Can you give a simple (qualitative) characterization of these
+     differences between the two sets of animals?
 
-In the example, the IQR=5, 1.5*IQR=6, therefore {0,0,20,25} are
-outliers. The boxplot shows this.
-
-[fn:11]One could also fit a single linear regression model to the data
-set using the independent variables ~Temp~ and ~Insul~ as so-called
-/predictors/, to predict the values of the measured/observed dependent
-variable ~Gas~.
-
-[fn:12]Answers: 1) Installed: R, Emacs + ESS; code block in an
-Org-mode file; init commands in the ~~/.emacs~ file. 2) ~search()~. 3)
-~tail~. 4) ~str~. 5) Only the values defined by the factor levels are
-allowed. 6) The arithmetic mean and Tukey's five-point summary
-(lower/upper quartile, min/max, median). 7) A function that accepts
-different R objects (like a data frame) and returns different results
-for each. 8) A graph displaying Tukey's five-point summary for an R
-object, e.g. a data frame. 9) A matrix of scatterplots that shows how
-each variable of a dataset relates to the others. 10) Changing
-plotting symbols, including a legend, and drawing reference lines.
+     /Tip: you have to look at the output of the last two tasks to
+     identify these differences./

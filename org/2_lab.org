@@ -67,7 +67,5 @@
      present in ~mammals~.
 
   3) Can you give a simple (qualitative) characterization of these
-     differences between the two sets of animals?
-
-     /Tip: you have to look at the output of the last two tasks to
-     identify these differences./
+     differences between the two sets of animals? (Look at the
+     output!)

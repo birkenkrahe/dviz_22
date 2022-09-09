@@ -449,7 +449,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 * NEXT Test 4: to be published, due Mon 12-Sept
 
 [[../img/balloons.jpg]]
-* NEXT Lab: Analyzing data interactively with R
+* NEXT Lab: Comparing two data frames
 #+attr_html: :width 500px
 [[../img/lab.jpg]]
 
@@ -457,7 +457,9 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 - Put your name and ~[pledged]~ next to it in the meta data header
 
-- When you have completed the exercise, submit the Org-file in Canvas
+- When you have completed the exercise, submit the Org-file [[https://lyon.instructure.com/courses/571/assignments/2806][in Canvas]]
+
+- If you missed this class session, you can submit the file late
 
 * References
 

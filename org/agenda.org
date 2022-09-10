@@ -458,9 +458,16 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 - If you missed this class session, you can submit the file late
 * Week 5
+#+attr_html: :width 300px
+[[../img/king.png]]
+
+- [ ] Review test 4
+- [ ] Featured: [[https://hackaday.com/2022/09/07/organise-your-hacks-with-treesheets-an-open-source-hierarchical-spreadsheet/][TreeSheets hierarchical spreadsheet]]
+  
+** TODO Review test 4 - comparing data frames / color and shape
+#+attr_html: :width 500px
 [[../img/balloons.jpg]]
 
-** TODO Review test 4 - comparing data frames
 
 * References
 

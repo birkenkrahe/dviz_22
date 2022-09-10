@@ -42,6 +42,11 @@
   Remember when asked to start the session in the same directory
   where your practice file resides.
 
+  If you have trouble installing a package inside Emacs (typical on
+  Windows) then just open a CMD terminal to install. But return back
+  here to load the packages, because loading is for the current
+  session only.
+
 * TODO Identify common data
 
   The ~rownames~ function returns a vector or row names for a data

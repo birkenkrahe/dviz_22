@@ -310,8 +310,8 @@ participation (if there's a practice file, you can make up).
 - [X] Review: 1st sprint review
 - [X] Review: Visualizing two variables
 - [X] Practice: scatterplots & barcharts & customization
-- [ ] Review: test 3 - looking at data
-- [ ] Lecture: explanatory vs. exploratory graphics in R
+- [X] Review: test 3 - looking at data
+- [X] Lab: comparing two similar data frames
 
 ** READ [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
 #+attr_html: :width 500px
@@ -343,7 +343,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 - Next sprint review: 30th September
 
-* DONE Review: Visualizing two variables
+** DONE Review: Visualizing two variables
 *** Example: Nile
 - Plot example: use ~Nile~ data set
   #+begin_src R :results output
@@ -402,10 +402,10 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   - Display multiple numeric scores for each category
   #+end_notes
   
-* DONE Extended EDA example in R
+** DONE Extended EDA example in R
 
 [[../img/2_analysis.svg]]
-* READ Review test 3: looking at data
+** READ Review test 3: looking at data
 
 *Some of you had difficulty with the following questions:*
 
@@ -446,10 +446,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 7) What is the /upper quartile/?
    - The set of values that are smaller or equal than 75% of all
      values in the sample
-* NEXT Test 4: to be published, due Mon 12-Sept
-
-[[../img/balloons.jpg]]
-* NEXT Lab: Comparing two data frames
+** DONE Lab: Comparing two data frames
 #+attr_html: :width 500px
 [[../img/lab.jpg]]
 
@@ -460,6 +457,10 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - When you have completed the exercise, submit the Org-file [[https://lyon.instructure.com/courses/571/assignments/2806][in Canvas]]
 
 - If you missed this class session, you can submit the file late
+* Week 5
+[[../img/balloons.jpg]]
+
+** TODO Review test 4 - comparing data frames
 
 * References
 

@@ -232,7 +232,7 @@ participation (if there's a practice file, you can make up).
 3) Complete the file
 4) Upload the completed file to [[https://lyon.instructure.com/courses/571/assignments/1704][Canvas]]
 
-* Week 3: Graphics in R
+* Week 3: Extended R example
 #+attr_html: :width 400px
 [[../img/rainforest.jpg]]
 
@@ -457,19 +457,101 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - When you have completed the exercise, submit the Org-file [[https://lyon.instructure.com/courses/571/assignments/2806][in Canvas]]
 
 - If you missed this class session, you can submit the file late
-* Week 5
+* Week 5: Graphics systems in R
 #+attr_html: :width 300px
 [[../img/king.png]]
 
-- [ ] Review test 4
-- [ ] Featured: [[https://hackaday.com/2022/09/07/organise-your-hacks-with-treesheets-an-open-source-hierarchical-spreadsheet/][TreeSheets hierarchical spreadsheet]]
+- [ ] Exploratory vs. explanatory graphics & R graphics systems
+- [ ] Featured vizApp: [[https://hackaday.com/2022/09/07/organise-your-hacks-with-treesheets-an-open-source-hierarchical-spreadsheet/][TreeSheets hierarchical spreadsheet]]
+- [ ] Test 4 review - color, plots, and comparison of data frames
+- [ ] DataCamp review - The color and the shape
   
-** TODO Review test 4 - comparing data frames / color and shape
+** TODO DataCamp review - The color and the shape
+
+1) What is GNI? Difference between GNI, GNP and GDP?
+2) Does it make sense to plot GNI vs. life expectancy vs. schooling?
+3) What are plot dimensions besides spatial coordinates?
+4) What is the "Viridis" color palette? /[potential project topic]/
+5) What are correlation heatmaps useful for?
+
+#+begin_notes
+1) What is GNI? Difference between GNI, GNP and GDP? - According to
+   [[https://en.wikipedia.org/wiki/Gross_national_income][Wikipedia]], GNI (same as GNP) and GDP can differ greatly for
+   developing nations, because of foreign aid and capital inflow.
+   #+attr_html: :width 400px
+   [[../img/gni.png]]
+
+2) Does it make sense to plot GNI vs. life expectancy vs. schooling?
+   Remember that correlation is not causation. Correlating
+   characteristics however does suggest causation. In this case:
+   higher life expectancy seems to be the consequence of long
+   schooling and a high GNI. However, does this have to be true?
+   Which factors that could invalidate this conclusion? What are
+   the weaknesses of the chosen characteristics?[fn:1]
+
+3) What are plot dimensions besides spatial coordinates?
+   - color (best option)
+   - size (issues with distinguishability, importance)
+   - levels of transparency (issues with distinguishability)
+   - shape (issues with distinguishing shapes)
+   - panels (good for trends)
+
+4) What is the Viridis color palette? - "~viridis~, and its companion
+   package ~viridisLite~ provide a series of color maps that are
+   designed to improve graph readability for readers with common forms
+   of color blindness and/or color vision deficiency. The color maps
+   are also perceptually-uniform, both in regular form and also when
+   converted to black-and-white for printing.".  Source: [[https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html][CRAN vignette
+   (2021)]]. Fact: ca. 4.5% or 350 million people in the US are
+   colorblind ([[https://www.colorblindguide.com/post/colorblind-people-population-live-counter][Source]], 2021).
+
+5) What are correlation heatmaps useful for?  Correlation heatmaps are
+   designed to show relationships between pairs of continuous
+   variables. They're compact so you can easily compare many variables
+   at once. Higher correlation corresponds to brighter colors.[fn:2]
+
+   #+attr_html: :width 400px
+   #+caption: corr heatmap of customer satisfaction survey
+   [[../img/heatmap.png]]
+   
+#+end_notes
+
+** TODO Mon/Wed: lecture on graphics/systems in R
+#+ATTR_HTML: :width 500px
+[[../img/3_matisse.png]]
+** TODO Friday: [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
 #+attr_html: :width 500px
 [[../img/balloons.jpg]]
 
+** TODO Friday: lab session with ~plot~ 
 
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI
 service. [[https://docs.microsoft.com/en-us/power-bi/consumer/end-user-dashboards][URL: docs.microsoft.com]].
+
+* Footnotes
+
+[fn:2]The heatmap correlates different marketing variables from a
+customer survey, indicating which characteristics are correlated to
+one another. From the map, "holding price increase to a minimum" is
+strongly (> 0.7) correlated with "setting competitive prices" - this
+means that customers who appreciated stable prices also appreciated if
+these prices were competitive (i.e. low by comparison). A correlation
+of 1 means perfect correlation - you only need one variable! This is
+another use for such heatmaps: eliminate superfluous variables.
+
+[fn:1]GNI: composite characteristic, vulnerable to reporting and
+complexity issues, also time-dependent; average lifespan: averages are
+skewed by outliers - e.g. death of young children, time-dependent
+(natural disasters, war, epidemic etc.), policy-dependent (death
+wardens for female babies, 1-child policy); schooling: levels are not
+necessarily comparable - e.g. Berlin vs. Bavaria), also what exactly
+is studied and learnt varies widely; what about home-schooling? The
+parallel coordinates plot in the same lesson shows the variance of
+different values across continents, and you see e.g. how widely all
+values except GNI vary (this would suggest that it's not a very robust
+variable).
+#+attr_html: :width 600px
+[[../img/parallel.png]]
+

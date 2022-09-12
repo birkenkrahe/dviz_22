@@ -466,7 +466,7 @@ MacOS because Unix does not know file type extensions.
 | Rgui                 | R console pgm with graphics     |
 | Rterm                | R console (terminal) pgm only   |
 
-* REFERENCES
+* References
 
 - CRAN (27 April 2021). Visualize downloads from CRAN
   Packages. [[https://cran.r-project.org/web/packages/Visualize.CRAN.Downloads/vignettes/Visualize.CRAN.Downloads.html][Online: cran.r-project.org]].

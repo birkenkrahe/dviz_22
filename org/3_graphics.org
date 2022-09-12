@@ -1,0 +1,134 @@
+#+TITLE:  Exploratory vs explanatory graphics & R graphics systems
+#+AUTHOR: Marcus Birkenkrahe
+#+Subtitle: Introdution to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+ATTR_HTML: :width 600px
+[[../img/3_matisse.png]]
+- What's a snail?
+- Exploratory vs explanatory graphics
+- Plot arrays and their use
+- Base graphics plot functions
+- R packages: ~grid~, ~lattice~, ~ggplot~
+- Which graphics package should you use?
+
+#+begin_notes
+Image: Matisse, The Snail/L'Escargot (1953). Gouache on paper, cut and
+pasted,mounted on canvas, 268.4 x 287 cm). Tate Gallery, London.
+#+end_notes
+* What's a snail?
+#+ATTR_HTML: :width 300px
+[[../img/3_matisse.png]]
+#+ATTR_HTML: :width 280px
+[[../img/3_snail.png]]
+
+- What is the purpose of "graphics". Give some examples!
+- What does "The Snail" by Matisse achieve as graphics?
+- See also: [[https://www.moma.org/interactives/exhibitions/2014/matisse/the-swimming-pool.html][The Swimming Pool]], [[https://thegoodlifefrance.com/the-story-of-the-matisse-chapel-in-vence-south-of-france/][Matisse and the Chapelle du Rosaire]]
+
+#+begin_notes
+- Graphics: beauty/aesthetics, abstract representation of data
+- Technique: color, line, medium, object, artist (subject)
+- Origin: something written or drawn (also: basic unit of speech)
+- John 8:6-8 "Jesus bent down and started writing on the ground with
+  his finger." The Pharisees leave and Jesus is alone with the woman
+  whom he saved from being stoned to death for adultery.
+- Graphics examples: artistic, [[https://www.austinchronicle.com/binary/05ca/arts_feature1-1.jpg][architecture]], [[https://media.slidesgo.com/storage/75701/responsive-images/2-graphic-design-marketing-plan___media_library_original_1119_629.jpg][marketing]], [[https://design-milk.com/flowo-typewriter-e-ink-concept/][product design]]
+#+end_notes
+
+* Infographics vs. data visualization
+
+*How would you describe the difference? Got an example?*
+
+* Infographics
+
+- Aesthetically rich (i.e. beautiful/nice to look at)
+- Manually drawn (i.e. hard to create/alter/check)
+- Represents specific data source
+
+Example: 8-business-model Cow ([[https://www.entrepreneur.com/starting-a-business/this-cow-illustrates-8-business-models-infographic/292515][Leadem, 2017]])
+#+attr_html: :width 200px
+[[../img/cow.png]]
+
+* Data visualization
+
+- Aesthetically barren (i.e. not decorated/beautiful)
+- Algorithmically drawn (i.e. easy to create/alter/check)
+- Rich in data details
+
+Example: interactive network visualization with [[https://cran.r-project.org/web/packages/visNetwork/vignettes/Introduction-to-visNetwork.html][visNetwork in R]]
+([[https://www.r-bloggers.com/2019/06/interactive-network-visualization-with-r/][Junker, 2019]])
+#+attr_html: :width 200px
+[[../img/visedges.png]]
+
+* Exploratory vs explanatory data visualization
+
+*How would you describe the difference? Got an example?*
+
+* Exploratory data visualization
+
+- Helps us to understand what is in a *data set*
+- Alternate name: Exploratory Data Analysis (EDA)
+- Quickly *identify* features, curves, lines, trends, anomalies
+- Best done at a high level of *granularity*
+- Difficulty: separate *signals* from *noise*
+
+Example: CRAN ggplot2 package downloads 2012-2019
+#+attr_html: :width 300px
+[[../img/2_ggplot2.png]]
+
+[[https://cran.r-project.org/web/packages/Visualize.CRAN.Downloads/vignettes/Visualize.CRAN.Downloads.html][Image source: Visualize.Cran.Downloads]] (CRAN, 2021)
+
+* Explanatory data visualization
+
+- Help us *convey* findings to others
+- Alternate name: Data Storytelling
+- Known to you at the outset (apart from *feedback*)
+- *Design* to accommodate a particular *audience*
+- Best done after *editorial decisions* what is relevant
+- Difficulty: *selecting* focused data that support your *story*
+
+Example: Creating a visual CV using R
+#+attr_html: :width 500px
+[[../img/3_cv.png]]
+
+Source: [[https://mmarteaga.github.io/post/VisualCV/][How to create a visual CV using R!]] (Arteaga, 2021)
+* Extended example: US cereal data
+
+
+
+
+
+
+* Base graphics plot functions
+* ~grid~ package
+* ~lattice~ package
+* ~ggplot~ package
+* When use which package
+* Next: ~plot~
+
+* IN PROGRESS Concept summary
+
+- Infographics are design-rich and built to inform, data
+  visualizations (and dashboards) are data-rich and built to be
+  flexible and alterable
+
+- Exploratory/explanatory graphics have different challenges. EDA:
+  separate signal from noise; storytelling: tell a good story!
+
+
+* IN PROGRESS Glossary
+
+| TERM                 | MEANING |
+|----------------------+---------|
+| Infographics         |         |
+| Data visualization   |         |
+| Exploratory graphics |         |
+| Explanatory graphics |         |
+
+* References
+
+- Arteaga M (20 January, 2021). How to create a visual CV using
+  R!. [[https://mmarteaga.github.io/post/VisualCV/][Online: mmarteaga.github.io]].
+- CRAN (27 April 2021). Visualize downloads from CRAN
+  Packages. [[https://cran.r-project.org/web/packages/Visualize.CRAN.Downloads/vignettes/Visualize.CRAN.Downloads.html][Online: cran.r-project.org]].
+

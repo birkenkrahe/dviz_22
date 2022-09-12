@@ -463,10 +463,11 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 - [ ] Exploratory vs. explanatory graphics & R graphics systems
 - [ ] Featured vizApp: [[https://hackaday.com/2022/09/07/organise-your-hacks-with-treesheets-an-open-source-hierarchical-spreadsheet/][TreeSheets hierarchical spreadsheet]]
-- [ ] Test 4 review - color, plots, and comparison of data frames
 - [ ] DataCamp review - The color and the shape
-  
-** TODO DataCamp review - The color and the shape
+- [ ] Test 4 review - color, plots, and comparison of data frames
+- [ ] Complete 1st DataCamp course this week (add to your resume)
+
+* TODO DataCamp review - The color and the shape
 
 1) What is GNI? Difference between GNI, GNP and GDP?
 2) Does it make sense to plot GNI vs. life expectancy vs. schooling?
@@ -516,14 +517,14 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
    
 #+end_notes
 
-** TODO Mon/Wed: lecture on graphics/systems in R
+* TODO Lecture on graphics/systems in R
 #+ATTR_HTML: :width 500px
 [[../img/3_matisse.png]]
-** TODO Friday: [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
+* TODO [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
 #+attr_html: :width 500px
 [[../img/balloons.jpg]]
 
-** TODO Friday: lab session with ~plot~ 
+* TODO Lab session with ~plot~ 
 
 * References
 

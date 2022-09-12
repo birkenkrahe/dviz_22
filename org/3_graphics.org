@@ -93,19 +93,67 @@ Example: Creating a visual CV using R
 
 Source: [[https://mmarteaga.github.io/post/VisualCV/][How to create a visual CV using R!]] (Arteaga, 2021)
 * Extended example: US cereal data
+[[../img/cereal.jpg]]
 
+- Using: ~UScereal~ data frame from the ~MASS~ package
+- 11 characteristics of 65 breakfast cereals available for sale
+- Information mostly based on the package label required by US FDA
+  
+#+begin_src R :session :results output
+library(MASS)  # load MASS package
+data(UScereal) # load UScereal data frame
+str(UScereal)  # display data frame structure
+#+end_src
 
+* Exploratory plot array
 
+A useful, and common, exploratory plot is a panel of pairwise
+scatterplots to summarize the data frame.
 
+#+begin_src R :exports both :session :results output graphics file :file ../img/cereal.png
+  plot(UScereal, las = 2)
+#+end_src
 
+#+RESULTS:
+[[file:../img/cereal.png]]
 
-* Base graphics plot functions
-* ~grid~ package
-* ~lattice~ package
-* ~ggplot~ package
-* When use which package
+#+begin_notes
+- The ~las~ parameter sets the position of the tick labels - ~las=2~ means
+  always perpendicular to the axis.
+- Diagonal elements of the array lis the name of the variable in the
+  x-axis of all plots in that column, and the y-axis of all plots in
+  that row.
+- For 11 variables, 110 plots are shown. Some indicate strong
+  relationships, e.g. ~fat~ and ~calories~.
+- Some variables, like ~vitamins~, show only few values
+#+end_notes
+
+* Explanatory scatterplot
+
+#+attr_html: :width 400px
+[[../img/scatterplot.png]]
+
+#+begin_notes
+- Scatterplot of calories vs. sugar variables, augmented with a robust
+  regression line ("[[https://en.wikipedia.org/wiki/Robust_regression][robustness]]" refers to assumptions about the data)
+- Dashed line highlights the trend our eye sees in the data if we
+  ignore the two outlying points.
+- The outliers correspond to cereals that have much higher calories
+  than any of the others.
+- The annotation of labels and text in the plot further aids the
+  interpretation.
+#+end_notes 
+
+#+begin_src R :exports both :session :results output graphics file :file ../calories.png
+plot(data=UScereal, calories ~ sugars)
+#+end_src
+
+* TODO Base graphics plot functions
+* TODO ~grid~ package
+* TODO ~lattice~ package
+* TODO ~ggplot~ package
+* TODO Which package to use when
 * Next: ~plot~
-
 * IN PROGRESS Concept summary
 
 - Infographics are design-rich and built to inform, data
@@ -114,7 +162,6 @@ Source: [[https://mmarteaga.github.io/post/VisualCV/][How to create a visual CV 
 
 - Exploratory/explanatory graphics have different challenges. EDA:
   separate signal from noise; storytelling: tell a good story!
-
 
 * IN PROGRESS Glossary
 

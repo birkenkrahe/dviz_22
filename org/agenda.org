@@ -461,13 +461,13 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 #+attr_html: :width 300px
 [[../img/king.png]]
 
-- [ ] Exploratory vs. explanatory graphics & R graphics systems
-- [ ] Featured vizApp: [[https://hackaday.com/2022/09/07/organise-your-hacks-with-treesheets-an-open-source-hierarchical-spreadsheet/][TreeSheets hierarchical spreadsheet]]
+- [X] Featured vizApp: [[https://hackaday.com/2022/09/07/organise-your-hacks-with-treesheets-an-open-source-hierarchical-spreadsheet/][TreeSheets hierarchical spreadsheet]]
 - [ ] DataCamp review - The color and the shape
+- [ ] Exploratory vs. explanatory graphics & R graphics systems
 - [ ] Test 4 review - color, plots, and comparison of data frames
 - [ ] Complete 1st DataCamp course this week (add to your resume)
 
-* TODO DataCamp review - The color and the shape
+* DONE DataCamp review - The color and the shape
 
 1) What is GNI? Difference between GNI, GNP and GDP?
 2) Does it make sense to plot GNI vs. life expectancy vs. schooling?
@@ -503,7 +503,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
    of color blindness and/or color vision deficiency. The color maps
    are also perceptually-uniform, both in regular form and also when
    converted to black-and-white for printing.".  Source: [[https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html][CRAN vignette
-   (2021)]]. Fact: ca. 4.5% or 350 million people in the US are
+   (2021)]]. Fact: ca. 4.5% or 350 million people in the world are
    colorblind ([[https://www.colorblindguide.com/post/colorblind-people-population-live-counter][Source]], 2021).
 
 5) What are correlation heatmaps useful for?  Correlation heatmaps are
@@ -525,7 +525,6 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 [[../img/balloons.jpg]]
 
 * TODO Lab session with ~plot~ 
-
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI

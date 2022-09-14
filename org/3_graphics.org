@@ -153,7 +153,9 @@ plot(data=UScereal, calories ~ sugars)
 * TODO ~lattice~ package
 * TODO ~ggplot~ package
 * TODO Which package to use when
-* Next: ~plot~
+* The ~plot~ function
+
+
 * IN PROGRESS Concept summary
 
 - Infographics are design-rich and built to inform, data

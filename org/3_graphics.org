@@ -155,6 +155,38 @@ plot(data=UScereal, calories ~ sugars)
 * TODO Which package to use when
 * The ~plot~ function
 
+- [ ] Open a new Org-mode file ~plot.org~ in Emacs
+
+- [ ] Put this line at the top:
+  #+begin_example org
+  #+PROPERTY: 
+  #+end_example
+
+- ~plot~ is a /generic/ function - it adapts to its arguments: e.g.
+
+  | Plot type   | ~x~       | ~y~       |
+  |-------------+---------+---------|
+  | Scatterplot | ~numeric~ | ~numeric~ |
+  | Boxplot     | ~factor~  | ~numeric~ |
+  | Histogram   | ~factor~  | ~NA~      |
+  | Mosaic plot | ~factor~  | ~factor~  |
+
+- For an overview of the different methods available, use ~methods~.
+
+  #+name: methods
+  #+begin_src R :results output
+    methods(plot)
+  #+end_src
+
+* Histogram with ~plot~
+
+#+begin_src R :exports both :session :results output graphics file :file ../img/3_hist.png
+  x <- factor(c(1,2,2,3,3,3))
+plot(x)
+#+end_src
+
+#+RESULTS:
+[[file:../img/3_hist.png]]
 
 * IN PROGRESS Concept summary
 

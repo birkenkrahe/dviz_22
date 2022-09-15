@@ -2,6 +2,7 @@
 #+AUTHOR: Marcus Birkenkrahe
 #+Subtitle: Introdution to Data Visualization
 #+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
 #+ATTR_HTML: :width 600px
 [[../img/3_matisse.png]]
 - What's a snail?
@@ -92,17 +93,38 @@ Example: Creating a visual CV using R
 [[../img/3_cv.png]]
 
 Source: [[https://mmarteaga.github.io/post/VisualCV/][How to create a visual CV using R!]] (Arteaga, 2021)
+* DONE Preparations to code along
+
+[[../img/emacsprep.png]]
+
+- Open a new Org-mode file ~plot.org~ in Emacs
+
+- Put this line at the top of the file ~plot.org~:
+
+  ~#+PROPERTY: header-args:R :results output :session *R*~
+
+- Activate the code by putting your cursor on the line and entering
+  ~C-c C-c~. You should see the message ~Local setup has been refreshed~
+  in the minibuffer at the bottom of the editor.
+
+- When you execute your first R code block, you'll be asked where you
+  want the session named ~*R*~ to run: enter the path to ~plot.org~
+
+- For plots, use the header ~:results graphics file :file plot.png~
+  
+- When you leave Emacs, you'll be warned that the session ~*R*~ is
+  active: you can ignore this warning
 * Extended example: US cereal data
 [[../img/cereal.jpg]]
 
 - Using: ~UScereal~ data frame from the ~MASS~ package
 - 11 characteristics of 65 breakfast cereals available for sale
 - Information mostly based on the package label required by US FDA
-  
+
 #+begin_src R :session :results output
-library(MASS)  # load MASS package
-data(UScereal) # load UScereal data frame
-str(UScereal)  # display data frame structure
+  library(MASS)  # load MASS package
+  data(UScereal) # load UScereal data frame
+  str(UScereal)  # display data frame structure
 #+end_src
 
 * Exploratory plot array
@@ -142,51 +164,331 @@ scatterplots to summarize the data frame.
   than any of the others.
 - The annotation of labels and text in the plot further aids the
   interpretation.
-#+end_notes 
+#+end_notes
 
 #+begin_src R :exports both :session :results output graphics file :file ../calories.png
 plot(data=UScereal, calories ~ sugars)
 #+end_src
 
-* TODO Base graphics plot functions
-* TODO ~grid~ package
-* TODO ~lattice~ package
-* TODO ~ggplot~ package
-* TODO Which package to use when
+* Base graphics plot functions
+
+- Base graphics is the system originally built into the R language
+- It's most common generic function is ~plot~
+- Base graphics are controlled by 72 graphics /parameters/
+- Displays can be customized by /low-level/ plotting functions
+- Examples: ~abline~, ~lines~, ~points~, ~text~, ~legend~ etc.
+
+#+name: tab:graphicsfunctions
+| FUNCTION      | OBJECT TYPE            | NATURE OF PLOT[fn:1]         |
+|---------------+------------------------+------------------------|
+| ~plot~          | Many                   | Depends on object type |
+| ~barplot~       | Numeric                | Bar plot               |
+| ~boxplot~       | Formula, numeric, list | Boxplot summary        |
+| ~hist~          | Numeric                | Histogram              |
+| ~sunflowerplot~ | Numeric + Numeric      | Sunflower plot         |
+| ~mosaicplot~    | Formula or table       | Mosaic plot            |
+| ~symbols~       | Multiple numeric       | Bubbleplots etc.       |
+
+* Many many types of built-in diagrams
+
+- There are more than 40 types of useful diagrams in R
+  #+caption: Source: R graph gallery
+  #+attr_html: :width 500px
+  [[../img/rgraph.png]]
+
+* ~grid~ graphics
+
+- The ~grid~ package uses the [[https://www.rdocumentation.org/packages/grDevices/versions/3.6.2][grDevices]] graphics engine
+
+- Some packages use it, e.g. [[https://cran.r-project.org/web/packages/vcd/index.html][vcd]] (for graphing categorical variables)
+
+- Nothing to do with the ~grid~ function of the base R package (which
+  draws a grid over the plot, see ~?grid~)
+
+- More info: [[https://www.stat.auckland.ac.nz/~paul/grid/grid.html#downloaddocs][Paul Murrell's documents]]
+
+#+attr_html: :width 500px  
+[[../img/grid.png]]
+
+* ~lattice~ graphics
+
+- Based on grid graphics, shipped with base R (needs to be loaded)
+
+- Alternative implementation to many standard plotting functions,
+  including scatterplots, bar charts, boxplots, histograms, QQ-plots
+
+- [[https://cran.r-project.org/web/packages/lattice/lattice.pdf][lattice]] has different default options for plot customization and
+  some additional features, like the /multipanel conditioning plot/
+
+  #+begin_src R :results graphics file :file ../img/lattice.png
+  library(MASS) # load MASS package for Cars93 data set
+  library(lattice) # load lattice package
+
+  ## plot MPG.city vs. Horsepower, conditioned by Cylinders
+  xyplot(MPG.city ~ Horsepower | Cylinders, data = Cars93)
+  #+end_src
+
+- You can ~group~ variables and get an automatic legend per group
+
+- Price to be paid: simple annotations are harder to do than base R
+  
+* Grammar of graphics with ~ggplot2~
+
+- Grammar of graphics construction based on human perception
+
+- Better support for multipanel conditioning plots
+
+- Highly extensible, complex, steep learning curve ([[https://ggplot2.tidyverse.org/][see here]])
+
+#+attr_html: :width 500px
+#+caption: Grammar of Graphics (gg) philosophy
+[[../img/gg.png]]
+
 * The ~plot~ function
 
-- [ ] Open a new Org-mode file ~plot.org~ in Emacs
-
-- [ ] Put this line at the top:
-  #+begin_example org
-  #+PROPERTY: 
-  #+end_example
-
-- ~plot~ is a /generic/ function - it adapts to its arguments: e.g.
+- ~plot(x,y)~ is a /generic/ function - it adapts to its arguments: e.g.
 
   | Plot type   | ~x~       | ~y~       |
   |-------------+---------+---------|
   | Scatterplot | ~numeric~ | ~numeric~ |
   | Boxplot     | ~factor~  | ~numeric~ |
-  | Histogram   | ~factor~  | ~NA~      |
+  | Bar chart   | ~factor~  | ~NA~      |
   | Mosaic plot | ~factor~  | ~factor~  |
 
 - For an overview of the different methods available, use ~methods~.
 
   #+name: methods
-  #+begin_src R :results output
+  #+begin_src R
     methods(plot)
   #+end_src
 
-* Histogram with ~plot~
+* Bar chart with ~plot~
 
-#+begin_src R :exports both :session :results output graphics file :file ../img/3_hist.png
+When only one categorical variable is given, ~plot~ generates a bar
+chart with one bar per factor level.
+
+#+begin_src R :results graphics file :file ../img/3_barchart.png
   x <- factor(c(1,2,2,3,3,3))
-plot(x)
+  plot(x)
 #+end_src
 
 #+RESULTS:
-[[file:../img/3_hist.png]]
+[[file:../img/3_barchart.png]]
+
+* Line plot with ~plot~
+
+When a time series is given like the data set ~Nile~, ~plot~ generates a
+line plot.
+
+#+begin_src R :results graphics file :file ../img/3_lineplot.png
+  plot(Nile)
+  grid()
+#+end_src
+
+#+RESULTS:
+[[file:../img/3_lineplot.png]]
+
+* Box plots with ~plot~
+
+- We used it in the extended example to visualize a data frame, a
+  numeric vector, a factor, and a pair of numeric variables
+
+- We used the ~boxplot~ function to create a boxplot summary of heating
+  gas consumption before and after installation of insulation.
+
+- The same result with ~plot~:
+  #+name: whitesideplot1
+  #+begin_src R :results graphics file :file ../img/3_whiteside1.png
+    plot(whiteside$Insul,whiteside$Gas)
+  #+end_src
+
+  #+RESULTS: whitesideplot1
+  [[file:../img/3_whiteside1.png]]
+
+- Customization is simple:
+  #+name: whitesideplot2
+  #+begin_src R :results graphics file :file ../img/3_whiteside2.png
+    plot(x=whiteside$Insul, xlab="Insulation",
+         y=whiteside$Gas,   ylab="Gas consumption",
+                            main="Whiteside data set")
+  #+end_src
+
+  #+RESULTS: whitesideplot2
+  [[file:../img/3_whiteside2.png]]
+
+* Decision tree models with ~plot~
+
+- Many modeling functions in R return a object that can be plotted
+
+- Example: /decision tree models/ from the ~whiteside~ data frame using
+  the ~rpart~ package.
+
+- This model predicts the average value of the dependent variable,
+  ~Gas~, from the values of the other variables, ~Insul~ and ~Temp~.
+
+- Build the model: the formula only has two parts. ~.~ stands for "all
+  other variables".
+  #+name: rpart1
+  #+begin_src R 
+    library(rpart)
+    rpartModel <- rpart(Gas ~ ., data = whiteside)
+    class(rpartModel)
+    rpartModel
+  #+end_src
+
+- Plot the model and add generic text using ~text~ for ~rpart~ models:
+
+  #+begin_src R :results graphics file :file ../img/3_rpart.png
+    plot(rpartModel)
+    text(rpartModel)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/3_rpart.png]]
+
+- What methods are available for ~rpart~ and ~text~?
+
+  #+begin_src R
+    methods(class = "rpart")
+    methods(text)
+  #+end_src
+
+  #+RESULTS:
+  :  [1] as.party    labels      meanvar     model.frame plot        post       
+  :  [7] predict     print       prune       residuals   summary     text       
+  : see '?methods' for accessing help and source code
+  : [1] text.default  text.formula* text.rpart*   text.Surv*    text.Surv2*  
+  : see '?methods' for accessing help and source code
+
+- Let's try ~summary~ - generated a 5-point-summary for data frames:
+  #+begin_src R
+    summary(rpartModel)
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  Call:
+  rpart(formula = Gas ~ ., data = whiteside)
+    n= 56 
+
+            CP nsplit rel error    xerror      xstd
+  1 0.30233737      0 1.0000000 1.0615528 0.2301661
+  2 0.15906314      2 0.3953253 1.0057712 0.1569430
+  3 0.03529048      3 0.2362621 0.6752795 0.1088506
+  4 0.01000000      4 0.2009716 0.6206699 0.1091587
+
+  Variable importance
+   Temp Insul 
+     67    33 
+
+  Node number 1: 56 observations,    complexity param=0.3023374
+    mean=4.071429, MSE=1.339541 
+    left son=2 (30 obs) right son=3 (26 obs)
+    Primary splits:
+        Insul splits as  RL,       improve=0.2979115, (0 missing)
+        Temp  < 7.05 to the right, improve=0.2905559, (0 missing)
+    Surrogate splits:
+        Temp < 5.35 to the left,  agree=0.679, adj=0.308, (0 split)
+
+  Node number 2: 30 observations,    complexity param=0.1590631
+    mean=3.483333, MSE=0.6287222 
+    left son=4 (8 obs) right son=5 (22 obs)
+    Primary splits:
+        Temp < 5.75 to the right, improve=0.6326062, (0 missing)
+
+  Node number 3: 26 observations,    complexity param=0.3023374
+    mean=4.75, MSE=1.300192 
+    left son=6 (16 obs) right son=7 (10 obs)
+    Primary splits:
+        Temp < 4.85 to the right, improve=0.6807166, (0 missing)
+
+  Node number 4: 8 observations
+    mean=2.4375, MSE=0.3723437 
+
+  Node number 5: 22 observations,    complexity param=0.03529048
+    mean=3.863636, MSE=0.1795868 
+    left son=10 (15 obs) right son=11 (7 obs)
+    Primary splits:
+        Temp < 2.4  to the right, improve=0.6700458, (0 missing)
+
+  Node number 6: 16 observations
+    mean=4.00625, MSE=0.3630859 
+
+  Node number 7: 10 observations
+    mean=5.94, MSE=0.4984 
+
+  Node number 10: 15 observations
+    mean=3.626667, MSE=0.04595556 
+
+  Node number 11: 7 observations
+    mean=4.371429, MSE=0.0877551
+  #+end_example
+
+* Model-based recursive partitioning with ~plot~
+
+- MOB models have tree-based structures like decision tree models
+
+- Each terminal node contains a linear regression model that generates
+  predictions from other covariates (independent variables)
+
+- The code to generate the model looks very similar to ~rpart~: the
+  formula has three parts - ~Gas~ is predicted, ~Temp~ is the covariate to
+  predict, and ~Insul~ is the partitioning variable used to build the
+  tree.
+  #+name: MOB1
+  #+begin_src R 
+    library(partykit) # this will load three other required packages
+    MOBmodel <- lmtree(Gas ~ Temp | Insul, data = whiteside)
+    class(MOBmodel)
+  #+end_src
+
+- In the plot, all records are assigned to one of the nodes, and a
+  separate linear regression model that predicts ~Gas~ from ~Temp~ is
+  built for each node.
+  #+name: MOB2
+  #+begin_src R :results graphics file :file 3_mob.png
+    plot(MOBmodel)
+  #+end_src
+
+  #+RESULTS: MOB2
+  [[file:3_mob.png]]
+
+- What methods are available for ~lmtree~?
+
+  #+begin_src R
+    methods(class = "lmtree")
+  #+end_src
+
+  #+RESULTS:
+  : [1] plot    predict print   prune  
+  : see '?methods' for accessing help and source code
+
+* What does this mean?
+
+- Enormous graphics flexibility even within the base R graphics package
+
+- You can define your own object classes and construct methods for
+  generic functions like ~plot~ or ~summary~ that make them generate
+  specialized results for our object classes.
+
+- ~methods~ reveals the "S3 Object" character of R, dependent on the
+  packages loaded into your R session. 
+  
+* Optional parameters for base graphics
+
+- There are 72 optional base graphics parameters set by the ~par~ function
+
+- Check out the help for ~par~ right now
+
+- ~par~ can also be called (like ~options~ and other system functions) 
+
+  #+begin_src R
+    names(par())n
+  #+end_src
+
+- Some of these parameters are read-only (i.e. their values are fixed)
+ 
+* NEXT Important parameters for ~plot~ customization
 
 * IN PROGRESS Concept summary
 
@@ -196,6 +498,12 @@ plot(x)
 
 - Exploratory/explanatory graphics have different challenges. EDA:
   separate signal from noise; storytelling: tell a good story!
+
+* IN PROGRESS Code summary
+
+| COMMAND | MEANING                                 |
+|---------+-----------------------------------------|
+| ~method~  | Available methods for generic functions |
 
 * IN PROGRESS Glossary
 
@@ -213,3 +521,10 @@ plot(x)
 - CRAN (27 April 2021). Visualize downloads from CRAN
   Packages. [[https://cran.r-project.org/web/packages/Visualize.CRAN.Downloads/vignettes/Visualize.CRAN.Downloads.html][Online: cran.r-project.org]].
 
+* Footnotes
+
+[fn:1]Plot types not seen in this lecture yet: sunflower plots
+(scatterplots that reduce overplotting by turning multiple points into
+petals); mosaic plots (mosaic of rectangles whose height represents
+the proportional value); bubbleplots (scatterplot with a third
+dimension represented with the size of the dots).

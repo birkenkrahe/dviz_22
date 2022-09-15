@@ -462,10 +462,10 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 [[../img/king.png]]
 
 - [X] Featured vizApp: [[https://hackaday.com/2022/09/07/organise-your-hacks-with-treesheets-an-open-source-hierarchical-spreadsheet/][TreeSheets hierarchical spreadsheet]]
-- [ ] DataCamp review - The color and the shape
-- [ ] Exploratory vs. explanatory graphics & R graphics systems
+- [X] DataCamp review - The color and the shape
+- [X] Exploratory vs. explanatory graphics & R graphics systems
+- [X] Complete 1st DataCamp course this week (add to your resume)
 - [ ] Test 4 review - color, plots, and comparison of data frames
-- [ ] Complete 1st DataCamp course this week (add to your resume)
 
 * DONE DataCamp review - The color and the shape
 
@@ -523,6 +523,8 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 * TODO [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
 #+attr_html: :width 500px
 [[../img/balloons.jpg]]
+
+
 
 * TODO Lab session with ~plot~ 
 * References

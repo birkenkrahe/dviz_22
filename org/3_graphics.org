@@ -226,7 +226,7 @@ plot(data=UScereal, calories ~ sugars)
 #+caption: Grammar of Graphics (gg) philosophy
 [[../img/gg.png]]
 
-* The ~plot~ function
+* NEXT The ~plot~ function
 
 - ~plot(x,y)~ is a /generic/ function - it adapts to its arguments: e.g.
 
@@ -261,6 +261,10 @@ plot(data=UScereal, calories ~ sugars)
   see '?methods' for accessing help and source code
   #+end_example
 
+- In the extended example, we already applied ~plot~ to a data frame, a
+  numeric vector, a factor, and a pair of numeric variables, leading
+  to an array of scatterplots, a bar chart, and a scatterplot.
+
 * TODO Preparations to code along
 
 [[../img/emacsprep.png]]
@@ -287,43 +291,41 @@ plot(data=UScereal, calories ~ sugars)
 When only one categorical variable is given, ~plot~ generates a bar
 chart with one bar per factor level.
 
-#+begin_src R :results graphics file :file ../img/3_barchart.png
-  x <- factor(c(1,2,2,3,3,3))
-  plot(x)
+#+begin_src R
+  x <- c(1,2,2,3,3,3)  # numeric vector
+  x_f <- factor(x)     # factor vector
+  x_f
 #+end_src
 
-#+RESULTS:
-[[file:../img/3_barchart.png]]
+#+begin_src R :results graphics file :file ../img/3_barchart.png
+  plot(x_f)
+#+end_src
 
 * Line plot with ~plot~
 
 When a time series is given like the data set ~Nile~, ~plot~ generates a
 line plot.
 
-#+begin_src R :results graphics file :file ../img/3_lineplot.png
-  plot(Nile)
-  grid()
+#+begin_src R
+  class(Nile)
+  str(Nile)
 #+end_src
 
-#+RESULTS:
-[[file:../img/3_lineplot.png]]
+#+begin_src R :results graphics file :file ../img/3_lineplot.png
+  plot(Nile)  # plotting a time series as line plot
+  grid()  # draw a grid to make it easier to read a plot
+#+end_src
 
 * Box plots with ~plot~
 
-- We used it in the extended example to visualize a data frame, a
-  numeric vector, a factor, and a pair of numeric variables
-
 - We used the ~boxplot~ function to create a boxplot summary of heating
-  gas consumption before and after installation of insulation.
+  gas consumption before and after installation of insulation 
 
 - The same result with ~plot~:
   #+name: whitesideplot1
   #+begin_src R :results graphics file :file ../img/3_whiteside1.png
-    plot(whiteside$Insul,whiteside$Gas)
+    plot(whiteside$Insul,whiteside$Gas) 
   #+end_src
-
-  #+RESULTS: whitesideplot1
-  [[file:../img/3_whiteside1.png]]
 
 - Customization is simple:
   #+name: whitesideplot2
@@ -333,12 +335,11 @@ line plot.
                             main="Whiteside data set")
   #+end_src
 
-  #+RESULTS: whitesideplot2
-  [[file:../img/3_whiteside2.png]]
-
 * Decision tree models with ~plot~
 
 - Many modeling functions in R return a object that can be plotted
+
+- You can store these objects and work with them during analysis
 
 - Example: /decision tree models/ from the ~whiteside~ data frame using
   the ~rpart~ package.
@@ -366,83 +367,17 @@ line plot.
   #+RESULTS:
   [[file:../img/3_rpart.png]]
 
-- What methods are available for ~rpart~ and ~text~?
+- [ ] What methods are available for ~rpart~ and ~text~?
 
   #+begin_src R
     methods(class = "rpart")
     methods(text)
   #+end_src
 
-  #+RESULTS:
-  :  [1] as.party    labels      meanvar     model.frame plot        post       
-  :  [7] predict     print       prune       residuals   summary     text       
-  : see '?methods' for accessing help and source code
-  : [1] text.default  text.formula* text.rpart*   text.Surv*    text.Surv2*  
-  : see '?methods' for accessing help and source code
-
-- Let's try ~summary~ - generated a 5-point-summary for data frames:
+- Let's try ~summary~, which generated Tukey's summary for data frames:
   #+begin_src R
     summary(rpartModel)
   #+end_src
-
-  #+RESULTS:
-  #+begin_example
-  Call:
-  rpart(formula = Gas ~ ., data = whiteside)
-    n= 56 
-
-            CP nsplit rel error    xerror      xstd
-  1 0.30233737      0 1.0000000 1.0615528 0.2301661
-  2 0.15906314      2 0.3953253 1.0057712 0.1569430
-  3 0.03529048      3 0.2362621 0.6752795 0.1088506
-  4 0.01000000      4 0.2009716 0.6206699 0.1091587
-
-  Variable importance
-   Temp Insul 
-     67    33 
-
-  Node number 1: 56 observations,    complexity param=0.3023374
-    mean=4.071429, MSE=1.339541 
-    left son=2 (30 obs) right son=3 (26 obs)
-    Primary splits:
-        Insul splits as  RL,       improve=0.2979115, (0 missing)
-        Temp  < 7.05 to the right, improve=0.2905559, (0 missing)
-    Surrogate splits:
-        Temp < 5.35 to the left,  agree=0.679, adj=0.308, (0 split)
-
-  Node number 2: 30 observations,    complexity param=0.1590631
-    mean=3.483333, MSE=0.6287222 
-    left son=4 (8 obs) right son=5 (22 obs)
-    Primary splits:
-        Temp < 5.75 to the right, improve=0.6326062, (0 missing)
-
-  Node number 3: 26 observations,    complexity param=0.3023374
-    mean=4.75, MSE=1.300192 
-    left son=6 (16 obs) right son=7 (10 obs)
-    Primary splits:
-        Temp < 4.85 to the right, improve=0.6807166, (0 missing)
-
-  Node number 4: 8 observations
-    mean=2.4375, MSE=0.3723437 
-
-  Node number 5: 22 observations,    complexity param=0.03529048
-    mean=3.863636, MSE=0.1795868 
-    left son=10 (15 obs) right son=11 (7 obs)
-    Primary splits:
-        Temp < 2.4  to the right, improve=0.6700458, (0 missing)
-
-  Node number 6: 16 observations
-    mean=4.00625, MSE=0.3630859 
-
-  Node number 7: 10 observations
-    mean=5.94, MSE=0.4984 
-
-  Node number 10: 15 observations
-    mean=3.626667, MSE=0.04595556 
-
-  Node number 11: 7 observations
-    mean=4.371429, MSE=0.0877551
-  #+end_example
 
 * Model-based recursive partitioning with ~plot~
 
@@ -470,30 +405,37 @@ line plot.
     plot(MOBmodel)
   #+end_src
 
-  #+RESULTS: MOB2
-  [[file:3_mob.png]]
-
-- What methods are available for ~lmtree~?
+- What methods are available for ~lmtree~ ?
 
   #+begin_src R
     methods(class = "lmtree")
   #+end_src
 
-  #+RESULTS:
-  : [1] plot    predict print   prune  
-  : see '?methods' for accessing help and source code
-
 * What does this mean?
 
-- Enormous graphics flexibility even within the base R graphics package
+1) Enormous graphics flexibility even within the base R graphics
+   package. Regrettably, there seems to be a "package envy" phenomenon
+   within the R community, fostered by RStudio's aggressive marketing
 
-- You can define your own object classes and construct methods for
-  generic functions like ~plot~ or ~summary~ that make them generate
-  specialized results for our object classes.
+2) You can define your own object classes and construct methods for
+   generic functions like ~plot~ or ~summary~ that make them generate
+   specialized results for our object classes.
 
-- ~methods~ reveals the "S3 Object" character of R, dependent on the
-  packages loaded into your R session. 
-  
+3) ~methods~ reveals the "S3 Object" character of R, dependent on the
+   packages loaded into your R session. S is the language that came
+   before R. In OOP, objects have /methods/ and /attributes/.
+
+   #+begin_src R
+     attributes(mtcars)
+     lmod <- lm(mtcars$wt ~ mtcars$mpg)
+     lmod
+     attributes(lmod)
+   #+end_src
+
+   #+begin_src R :session *R* :results graphics file :file ../img/lmod.png
+     plot(lmod)
+   #+end_src
+
 * Optional parameters for base graphics
 
 - There are 72 optional base graphics parameters set by the ~par~ function
@@ -509,7 +451,6 @@ line plot.
 - Some of these parameters are read-only (i.e. their values are fixed)
  
 * NEXT Important parameters for ~plot~ customization
-
 * IN PROGRESS Concept summary
 
 - Infographics are design-rich and built to inform, data

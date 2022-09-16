@@ -574,6 +574,12 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
      setdiff(y,x) # values in y that aren't in x
    #+end_src
 
+* NEXT DataCamp course: Data Visualization in R
+
+Can you access this course? https://tinyurl.com/bdm555rt
+
+https://app.datacamp.com/learn/courses/data-visualization-in-r
+
 * TODO Lecture on graphics/systems in R
 #+ATTR_HTML: :width 500px
 [[../img/3_matisse.png]]

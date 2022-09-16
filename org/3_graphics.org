@@ -93,27 +93,6 @@ Example: Creating a visual CV using R
 [[../img/3_cv.png]]
 
 Source: [[https://mmarteaga.github.io/post/VisualCV/][How to create a visual CV using R!]] (Arteaga, 2021)
-* DONE Preparations to code along
-
-[[../img/emacsprep.png]]
-
-- Open a new Org-mode file ~plot.org~ in Emacs
-
-- Put this line at the top of the file ~plot.org~:
-
-  ~#+PROPERTY: header-args:R :results output :session *R*~
-
-- Activate the code by putting your cursor on the line and entering
-  ~C-c C-c~. You should see the message ~Local setup has been refreshed~
-  in the minibuffer at the bottom of the editor.
-
-- When you execute your first R code block, you'll be asked where you
-  want the session named ~*R*~ to run: enter the path to ~plot.org~
-
-- For plots, use the header ~:results graphics file :file plot.png~
-  
-- When you leave Emacs, you'll be warned that the session ~*R*~ is
-  active: you can ignore this warning
 * Extended example: US cereal data
 [[../img/cereal.jpg]]
 
@@ -228,6 +207,9 @@ plot(data=UScereal, calories ~ sugars)
   xyplot(MPG.city ~ Horsepower | Cylinders, data = Cars93)
   #+end_src
 
+  #+RESULTS:
+  [[file:../img/lattice.png]]
+
 - You can ~group~ variables and get an automatic legend per group
 
 - Price to be paid: simple annotations are harder to do than base R
@@ -262,6 +244,44 @@ plot(data=UScereal, calories ~ sugars)
     methods(plot)
   #+end_src
 
+  #+RESULTS: methods
+  #+begin_example
+   [1] plot.acf*            plot.correspondence* plot.data.frame*    
+   [4] plot.decomposed.ts*  plot.default         plot.dendrogram*    
+   [7] plot.density*        plot.ecdf            plot.factor*        
+  [10] plot.formula*        plot.function        plot.hclust*        
+  [13] plot.histogram*      plot.HoltWinters*    plot.isoreg*        
+  [16] plot.lda*            plot.lm*             plot.mca*           
+  [19] plot.medpolish*      plot.mlm*            plot.ppr*           
+  [22] plot.prcomp*         plot.princomp*       plot.profile*       
+  [25] plot.profile.nls*    plot.raster*         plot.ridgelm*       
+  [28] plot.shingle*        plot.spec*           plot.stepfun        
+  [31] plot.stl*            plot.table*          plot.trellis*       
+  [34] plot.ts              plot.tskernel*       plot.TukeyHSD*      
+  see '?methods' for accessing help and source code
+  #+end_example
+
+* TODO Preparations to code along
+
+[[../img/emacsprep.png]]
+
+- Open a new Org-mode file ~plot.org~ in Emacs
+
+- Put this line at the top of the file ~plot.org~:
+
+  ~#+PROPERTY: header-args:R :results output :session *R*~
+
+- Activate the code by putting your cursor on the line and entering
+  ~C-c C-c~. You should see the message ~Local setup has been refreshed~
+  in the minibuffer at the bottom of the editor.
+
+- When you execute your first R code block, you'll be asked where you
+  want the session named ~*R*~ to run: enter the path to ~plot.org~
+
+- For plots, use the header ~:results graphics file :file plot.png~
+  
+- When you leave Emacs, you'll be warned that the session ~*R*~ is
+  active: you can ignore this warning
 * Bar chart with ~plot~
 
 When only one categorical variable is given, ~plot~ generates a bar
@@ -483,7 +503,7 @@ line plot.
 - ~par~ can also be called (like ~options~ and other system functions) 
 
   #+begin_src R
-    names(par())n
+    names(par())
   #+end_src
 
 - Some of these parameters are read-only (i.e. their values are fixed)

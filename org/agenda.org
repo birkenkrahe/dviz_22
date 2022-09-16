@@ -2,6 +2,7 @@
 #+AUTHOR:Marcus Birkenkrahe
 #+SUBTITLE:Agenda DSC 302 - Data Visualization, Fall 2022
 #+STARTUP:overview hideblocks indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
 #+OPTIONS: toc:nil num:nil ^:nil
 [[../img/2_brain.png]]
 * README
@@ -517,16 +518,67 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
    
 #+end_notes
 
-* TODO Lecture on graphics/systems in R
-#+ATTR_HTML: :width 500px
-[[../img/3_matisse.png]]
 * TODO [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
 #+attr_html: :width 500px
 [[../img/balloons.jpg]]
 
+1) What do you need to run R code blocks in Emacs?
+   #+begin_notes
+     - Org-mode file (.org)
+     - ESS package 
+     - R session (console)
+   #+end_notes
 
+2) Which command lists all packages loaded in your current R session?
+   #+begin_src R
+            # find all loaded packages
+            # load MASS and run again
+   #+end_src
 
-* TODO Lab session with ~plot~ 
+3) Why is "changing line type" not a scatterplot customization?
+
+4) What does a box plot visualize (best, and not what can it work with)?
+
+   #+begin_src R :session :results graphics file :file ../img/box_mtcars.png
+     boxplot(mtcars) # boxplot is generic and will digest data frames but
+                     # it won't be interesting or revealing in any way
+   #+end_src
+
+   #+begin_src R :session :results graphics file :file ../img/box_tg.png
+     boxplot(ToothGrowth) # depends on the data frame though: ToothGrowth
+                          # has got only one numeric variable
+   #+end_src
+
+   #+begin_src R :session :results graphics file :file ../img/box_tg1.png
+     boxplot(ToothGrowth$len ~ ToothGrowth$supp) # this works!
+   #+end_src
+
+5) What's the problem with 3-dimensional plots (of any kind)?
+
+6) What's HCL?
+   #+begin_notes
+     HCL = Hue-Chroma-Luminence, colorspaces:
+     - hue: color of the rainbow
+     - chroma: color intensity
+     - luminence: color brightness
+     [[../img/color.png]]
+   #+end_notes
+
+7) What do ~intersect(x,y)~ and ~setdiff(x,y)~ do for vectors ~x~, ~y~?
+   #+begin_src R
+     x <- c(1,2,3,4,6)
+     y <- c(1,2,3,4,5)
+     intersect(x,y)
+     intersect(y,x) # this function is symmetric
+     setdiff(x,y) # values in x that aren't in y
+     setdiff(y,x) # values in y that aren't in x
+   #+end_src
+
+* TODO Lecture on graphics/systems in R
+#+ATTR_HTML: :width 500px
+[[../img/3_matisse.png]]
+* Week 6: ~plot~
+** TODO Lab session with ~plot~ 
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI

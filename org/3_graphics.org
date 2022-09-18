@@ -121,7 +121,7 @@ scatterplots to summarize the data frame.
 #+begin_notes
 - The ~las~ parameter sets the position of the tick labels - ~las=2~ means
   always perpendicular to the axis.
-- Diagonal elements of the array lis the name of the variable in the
+- Diagonal elements of the array list the name of the variable in the
   x-axis of all plots in that column, and the y-axis of all plots in
   that row.
 - For 11 variables, 110 plots are shown. Some indicate strong
@@ -327,6 +327,9 @@ line plot.
     plot(whiteside$Insul,whiteside$Gas) 
   #+end_src
 
+  #+RESULTS: whitesideplot1
+  [[file:../img/3_whiteside1.png]]
+
 - Customization is simple:
   #+name: whitesideplot2
   #+begin_src R :results graphics file :file ../img/3_whiteside2.png
@@ -334,6 +337,9 @@ line plot.
          y=whiteside$Gas,   ylab="Gas consumption",
                             main="Whiteside data set")
   #+end_src
+
+  #+RESULTS: whitesideplot2
+  [[file:../img/3_whiteside2.png]]
 
 * Decision tree models with ~plot~
 
@@ -378,7 +384,7 @@ line plot.
   #+begin_src R
     summary(rpartModel)
   #+end_src
-
+  
 * Model-based recursive partitioning with ~plot~
 
 - MOB models have tree-based structures like decision tree models

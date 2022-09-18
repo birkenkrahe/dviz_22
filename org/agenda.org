@@ -466,7 +466,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - [X] DataCamp review - The color and the shape
 - [X] Exploratory vs. explanatory graphics & R graphics systems
 - [X] Complete 1st DataCamp course this week (add to your resume)
-- [ ] Test 4 review - color, plots, and comparison of data frames
+- [X] Test 4 review - color, plots, and comparison of data frames
 
 * DONE DataCamp review - The color and the shape
 
@@ -531,9 +531,20 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 2) Which command lists all packages loaded in your current R session?
    #+begin_src R
-            # find all loaded packages
-            # load MASS and run again
+     search() # find all loaded packages
+     library(MASS) # load MASS and run again
+     search()
    #+end_src
+
+   #+RESULTS:
+   :  [1] ".GlobalEnv"        "ESSR"              "package:stats"    
+   :  [4] "package:graphics"  "package:grDevices" "package:utils"    
+   :  [7] "package:datasets"  "package:methods"   "Autoloads"        
+   : [10] "package:base"
+   :  [1] ".GlobalEnv"        "package:MASS"      "ESSR"             
+   :  [4] "package:stats"     "package:graphics"  "package:grDevices"
+   :  [7] "package:utils"     "package:datasets"  "package:methods"  
+   : [10] "Autoloads"         "package:base"
 
 3) Why is "changing line type" not a scatterplot customization?
 
@@ -574,9 +585,15 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
      setdiff(y,x) # values in y that aren't in x
    #+end_src
 
+   #+RESULTS:
+   : [1] 1 2 3 4
+   : [1] 1 2 3 4
+   : [1] 6
+   : [1] 5
+
 * NEXT DataCamp course: Data Visualization in R
 
-Can you access this course? https://tinyurl.com/bdm555rt
+Can you access this course? *tinyurl.com/bdm555rt*
 
 https://app.datacamp.com/learn/courses/data-visualization-in-r
 

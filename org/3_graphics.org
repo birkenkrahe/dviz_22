@@ -93,6 +93,27 @@ Example: Creating a visual CV using R
 [[../img/3_cv.png]]
 
 Source: [[https://mmarteaga.github.io/post/VisualCV/][How to create a visual CV using R!]] (Arteaga, 2021)
+* DONE Preparations to code along
+
+[[../img/emacsprep.png]]
+
+- Open a new Org-mode file ~plot.org~ in Emacs
+
+- Put this line at the top of the file ~plot.org~:
+
+  ~#+PROPERTY: header-args:R :results output :session *R*~
+
+- Activate the code by putting your cursor on the line and entering
+  ~C-c C-c~. You should see the message ~Local setup has been refreshed~
+  in the minibuffer at the bottom of the editor.
+
+- When you execute your first R code block, you'll be asked where you
+  want the session named ~*R*~ to run: enter the path to ~plot.org~
+
+- For plots, use the header ~:results graphics file :file plot.png~
+
+- When you leave Emacs, you'll be warned that the session ~*R*~ is
+  active: you can ignore this warning
 * Extended example: US cereal data
 [[../img/cereal.jpg]]
 
@@ -186,7 +207,7 @@ plot(data=UScereal, calories ~ sugars)
 
 - More info: [[https://www.stat.auckland.ac.nz/~paul/grid/grid.html#downloaddocs][Paul Murrell's documents]]
 
-#+attr_html: :width 500px  
+#+attr_html: :width 500px
 [[../img/grid.png]]
 
 * ~lattice~ graphics
@@ -213,7 +234,7 @@ plot(data=UScereal, calories ~ sugars)
 - You can ~group~ variables and get an automatic legend per group
 
 - Price to be paid: simple annotations are harder to do than base R
-  
+
 * Grammar of graphics with ~ggplot2~
 
 - Grammar of graphics construction based on human perception
@@ -226,7 +247,7 @@ plot(data=UScereal, calories ~ sugars)
 #+caption: Grammar of Graphics (gg) philosophy
 [[../img/gg.png]]
 
-* NEXT The ~plot~ function
+* The ~plot~ function
 
 - ~plot(x,y)~ is a /generic/ function - it adapts to its arguments: e.g.
 
@@ -246,18 +267,18 @@ plot(data=UScereal, calories ~ sugars)
 
   #+RESULTS: methods
   #+begin_example
-   [1] plot.acf*            plot.correspondence* plot.data.frame*    
-   [4] plot.decomposed.ts*  plot.default         plot.dendrogram*    
-   [7] plot.density*        plot.ecdf            plot.factor*        
-  [10] plot.formula*        plot.function        plot.hclust*        
-  [13] plot.histogram*      plot.HoltWinters*    plot.isoreg*        
-  [16] plot.lda*            plot.lm*             plot.mca*           
-  [19] plot.medpolish*      plot.mlm*            plot.ppr*           
-  [22] plot.prcomp*         plot.princomp*       plot.profile*       
-  [25] plot.profile.nls*    plot.raster*         plot.ridgelm*       
-  [28] plot.shingle*        plot.spec*           plot.stepfun        
-  [31] plot.stl*            plot.table*          plot.trellis*       
-  [34] plot.ts              plot.tskernel*       plot.TukeyHSD*      
+   [1] plot.acf*            plot.correspondence* plot.data.frame*
+   [4] plot.decomposed.ts*  plot.default         plot.dendrogram*
+   [7] plot.density*        plot.ecdf            plot.factor*
+  [10] plot.formula*        plot.function        plot.hclust*
+  [13] plot.histogram*      plot.HoltWinters*    plot.isoreg*
+  [16] plot.lda*            plot.lm*             plot.mca*
+  [19] plot.medpolish*      plot.mlm*            plot.ppr*
+  [22] plot.prcomp*         plot.princomp*       plot.profile*
+  [25] plot.profile.nls*    plot.raster*         plot.ridgelm*
+  [28] plot.shingle*        plot.spec*           plot.stepfun
+  [31] plot.stl*            plot.table*          plot.trellis*
+  [34] plot.ts              plot.tskernel*       plot.TukeyHSD*
   see '?methods' for accessing help and source code
   #+end_example
 
@@ -265,27 +286,6 @@ plot(data=UScereal, calories ~ sugars)
   numeric vector, a factor, and a pair of numeric variables, leading
   to an array of scatterplots, a bar chart, and a scatterplot.
 
-* TODO Preparations to code along
-
-[[../img/emacsprep.png]]
-
-- Open a new Org-mode file ~plot.org~ in Emacs
-
-- Put this line at the top of the file ~plot.org~:
-
-  ~#+PROPERTY: header-args:R :results output :session *R*~
-
-- Activate the code by putting your cursor on the line and entering
-  ~C-c C-c~. You should see the message ~Local setup has been refreshed~
-  in the minibuffer at the bottom of the editor.
-
-- When you execute your first R code block, you'll be asked where you
-  want the session named ~*R*~ to run: enter the path to ~plot.org~
-
-- For plots, use the header ~:results graphics file :file plot.png~
-  
-- When you leave Emacs, you'll be warned that the session ~*R*~ is
-  active: you can ignore this warning
 * Bar chart with ~plot~
 
 When only one categorical variable is given, ~plot~ generates a bar
@@ -319,12 +319,12 @@ line plot.
 * Box plots with ~plot~
 
 - We used the ~boxplot~ function to create a boxplot summary of heating
-  gas consumption before and after installation of insulation 
+  gas consumption before and after installation of insulation
 
 - The same result with ~plot~:
   #+name: whitesideplot1
   #+begin_src R :results graphics file :file ../img/3_whiteside1.png
-    plot(whiteside$Insul,whiteside$Gas) 
+    plot(whiteside$Insul,whiteside$Gas)
   #+end_src
 
   #+RESULTS: whitesideplot1
@@ -353,15 +353,18 @@ line plot.
 - This model predicts the average value of the dependent variable,
   ~Gas~, from the values of the other variables, ~Insul~ and ~Temp~.
 
-- Build the model: the formula only has two parts. ~.~ stands for "all
-  other variables".
+- Build the model: the formula only has two parts. The period operator
+  ~.~ stands for "all other variables".
   #+name: rpart1
-  #+begin_src R 
-    library(rpart)
+  #+begin_src R
+    library(MASS)  # whiteside data set is in MASS
+    library(rpart) # rpart: Recursive Partitioning and Regression Trees
     rpartModel <- rpart(Gas ~ ., data = whiteside)
     class(rpartModel)
-    rpartModel
   #+end_src
+
+  #+RESULTS: rpart1
+  : [1] "rpart"
 
 - Plot the model and add generic text using ~text~ for ~rpart~ models:
 
@@ -374,7 +377,6 @@ line plot.
   [[file:../img/3_rpart.png]]
 
 - [ ] What methods are available for ~rpart~ and ~text~?
-
   #+begin_src R
     methods(class = "rpart")
     methods(text)
@@ -384,7 +386,7 @@ line plot.
   #+begin_src R
     summary(rpartModel)
   #+end_src
-  
+
 * Model-based recursive partitioning with ~plot~
 
 - MOB models have tree-based structures like decision tree models
@@ -397,22 +399,30 @@ line plot.
   predict, and ~Insul~ is the partitioning variable used to build the
   tree.
   #+name: MOB1
-  #+begin_src R 
+  #+begin_src R
     library(partykit) # this will load three other required packages
     MOBmodel <- lmtree(Gas ~ Temp | Insul, data = whiteside)
     class(MOBmodel)
   #+end_src
 
+  #+RESULTS: MOB1
+  : Loading required package: grid
+  : Loading required package: libcoin
+  : Loading required package: mvtnorm
+  : [1] "lmtree"     "modelparty" "party"
+
 - In the plot, all records are assigned to one of the nodes, and a
   separate linear regression model that predicts ~Gas~ from ~Temp~ is
   built for each node.
   #+name: MOB2
-  #+begin_src R :results graphics file :file 3_mob.png
+  #+begin_src R :results graphics file :file ../img/3_mob.png
     plot(MOBmodel)
   #+end_src
 
-- What methods are available for ~lmtree~ ?
+  #+RESULTS: MOB2
+  =[[file:../img/3_mob.png]]
 
+- What methods are available for ~lmtree~ ?
   #+begin_src R
     methods(class = "lmtree")
   #+end_src
@@ -438,9 +448,9 @@ line plot.
      attributes(lmod)
    #+end_src
 
-   #+begin_src R :session *R* :results graphics file :file ../img/lmod.png
-     plot(lmod)
-   #+end_src
+   For an example of the information stored in this model, run
+   ~plot(lmod)~ in the R console - this will produce several plots at
+   once (click on the graph to move to the next one).
 
 * Optional parameters for base graphics
 
@@ -448,15 +458,188 @@ line plot.
 
 - Check out the help for ~par~ right now
 
-- ~par~ can also be called (like ~options~ and other system functions) 
+- ~par~ can also be called (like ~options~ and other system functions)
 
   #+begin_src R
     names(par())
   #+end_src
 
-- Some of these parameters are read-only (i.e. their values are fixed)
- 
-* NEXT Important parameters for ~plot~ customization
+  #+RESULTS:
+  #+begin_example
+   [1] "xlog"      "ylog"      "adj"       "ann"       "ask"       "bg"
+   [7] "bty"       "cex"       "cex.axis"  "cex.lab"   "cex.main"  "cex.sub"
+  [13] "cin"       "col"       "col.axis"  "col.lab"   "col.main"  "col.sub"
+  [19] "cra"       "crt"       "csi"       "cxy"       "din"       "err"
+  [25] "family"    "fg"        "fig"       "fin"       "font"      "font.axis"
+  [31] "font.lab"  "font.main" "font.sub"  "lab"       "las"       "lend"
+  [37] "lheight"   "ljoin"     "lmitre"    "lty"       "lwd"       "mai"
+  [43] "mar"       "mex"       "mfcol"     "mfg"       "mfrow"     "mgp"
+  [49] "mkh"       "new"       "oma"       "omd"       "omi"       "page"
+  [55] "pch"       "pin"       "plt"       "ps"        "pty"       "smo"
+  [61] "srt"       "tck"       "tcl"       "usr"       "xaxp"      "xaxs"
+  [67] "xaxt"      "xpd"       "yaxp"      "yaxs"      "yaxt"      "ylbias"
+  #+end_example
+
+- As you can read in ~help(par)~, some of these parameters are
+  read-only (i.e. their values are fixed)
+
+* Important parameters for ~plot~ customization
+
+- ~mfrow~, a 2-dim vector that sets up an array of plots
+  #+name: mfrow
+  #+begin_src R :session *R* :results graphics file :file ../img/mfrow.png
+    par(mfrow=c(2,1))
+    plot(rnorm(100), type="l")
+    title("100 random numbers")
+    plot(rnorm(1000), type="l")
+    title("100 random numbers")
+  #+end_src
+
+- Several parameters come in groups:
+  1) The ~cex~ family scales text and symbols in relation to one
+     another, e.g. ~cex.main~ scales the main plot title relative to ~cex~
+     #+name: cex
+     #+begin_src R :session *R* :results graphics file :file ../img/cex.png
+       plot(rnorm(100),
+            main="Double the size",
+            cex=2,   # double point symbol size
+            cex.main=2 # scale title relative to cex
+            )
+     #+end_src
+
+  2) The ~col~ family specifies colors for points, lines, text[fn:2]
+     #+name: col
+     #+begin_src R :session *R* :results graphics file :file ../img/col.png
+       plot(rnorm(100),
+            main="Color me impressed",
+            col      = "purple",  # color points
+            col.main = "red",    # color title
+            col.axis = "blue"   # color axis labels
+            )
+     #+end_src
+
+  3) The ~font~ family specifies font types (plain = 1, bold = 2, italic
+     = 3, bold italic = 4).
+     #+name: font
+     #+begin_src R :session *R* :results graphics file :file ../img/font.png
+       plot(rnorm(100),
+            main="Fountain of font",
+            font.main = 4,  # title font bold italic
+            font.lab = 3,   # axis labels in italic
+            cex.main = 2    # double title font size
+            )
+     #+end_src
+
+     #+RESULTS: font
+     [[file:../img/font.png]]
+
+* Other parameters
+
+- ~adj~ specifies justification of the text (0=left,1=right, center=0.5)
+
+  #+begin_src R :session *R* :results graphics file :file ../img/adj.png
+    plot(rnorm(100), type="n")
+    text(x=40,y=0,labels="Right-justified text",adj=1,font=3)
+    text(x=40,y=-1,labels="Left-justified text",adj=0,font=3)
+    text(x=40,y=1.5,labels="Centered text",adj=0.5,font=3)
+  #+end_src
+
+  #+attr_html: :width 300px
+  [[file:../img/adj.png]]
+
+- ~lty~ and ~lwd~ specify line type and line width.
+  #+name: linewidth
+  #+begin_src R :session *R* :results graphics file :file ../img/lty.png
+    plot(Nile, lty=2)
+  #+end_src
+
+  #+RESULTS: linewidth
+  [[file:../img/lty.png]]
+
+  #+name: linewidth
+  #+begin_src R :session *R* :results graphics file :file ../img/lwd.png
+    plot(Nile, lwd=3)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/lwd.png]]
+
+- [ ] How can you see current values of these parameters? Remember how
+  to do this with ~options()~? What type of R object is ~par()~?
+
+  #+begin_src R
+    class(par())
+    par()$lty
+    par()$adj
+  #+end_src
+
+* Multiple plots and passing parameters
+
+- The ~ask~ parameter is a /logical/ flag (the default value is ~FALSE~)
+  that specifies whether the graphics system should wait for a user
+  response before displaying the next plot.
+
+- [ ] How can I confirm that ~ask~ is ~logical~, and see its value?
+
+  #+begin_src R
+    class(par()$ask)
+    par()$ask
+  #+end_src
+
+- [ ] See e.g. ~example(Nile)~ in the R console (not in Org-mode)
+
+- This option is not always set correctly after displaying multiple
+  plots - it must be set back by hand with ~par(ask = FALSE)~.
+
+- Some parameters cannot be set as passing parameters, e.g. ~las~ -
+  usually for different plot types (e.g. mosaic plots).
+
+* Adding points and lines to a scatterplot
+#+attr_html: :width 300px
+[[file:../img/cereals.png]]
+#+attr_html: :width 300px
+[[file:../img/cereals1.png]]
+
+* Starting plot without bells and whistles
+
+- Starting point is calories vs. sugars from the ~UScereal~ data frame
+  #+begin_src R :results graphics file :file ../img/cereal.png
+    par(mfrow=c(1,1))
+    x <- UScereal$sugars
+    y <- UScereal$calories
+    plot(x,y)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/cereal.png]]
+
+- ~mfrow~ creates a persistent 1x1 array (single plot)
+- Variables ~x~, ~y~ are defined because we use them again
+- ~plot(x,y)~ is invoked to get a simple scatterplot
+
+* Adding axis labels ~xlab~, ~ylab~, and ~type~ 
+
+- The next block invokes ~plot~ again, but with three optional
+  arguments:
+
+  1) ~xlab~: a ~character~ string for the x-axis label
+  2) ~ylab~: a ~character~ string for the y-axis label
+  3) ~type = "n"~: specifies that the plot is constructed but /not
+     displayed/
+
+  #+begin_src R :results graphics file :file ../img/cereal1.png
+    plot(x,y,
+         xlab="Grams of sugar per serving",
+         ylab="Calories per serving",
+         type = "n")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/cereal1.png]]
+  
+* TODO Highlighting outliers with ~points~
+* TODO Add reference lines with ~abline~
+* TODO Customizing point and line attributes
 * IN PROGRESS Concept summary
 
 - Infographics are design-rich and built to inform, data
@@ -489,6 +672,10 @@ line plot.
   Packages. [[https://cran.r-project.org/web/packages/Visualize.CRAN.Downloads/vignettes/Visualize.CRAN.Downloads.html][Online: cran.r-project.org]].
 
 * Footnotes
+
+[fn:2] "Color me impressed" is also a [[https://youtu.be/9_358OhIRqo][song by The Replacements]]. It
+contains the uplifting lines: Everybody at your party / They don't
+look depressed / And everybody's dressin' funny / Color me impressed.
 
 [fn:1]Plot types not seen in this lecture yet: sunflower plots
 (scatterplots that reduce overplotting by turning multiple points into

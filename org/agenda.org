@@ -468,7 +468,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - [X] Complete 1st DataCamp course this week (add to your resume)
 - [X] Test 4 review - color, plots, and comparison of data frames
 
-* DONE DataCamp review - The color and the shape
+* DataCamp review - The color and the shape
 
 1) What is GNI? Difference between GNI, GNP and GDP?
 2) Does it make sense to plot GNI vs. life expectancy vs. schooling?
@@ -518,7 +518,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 #+end_notes
 
-* TODO [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
+* [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
 #+attr_html: :width 500px
 [[../img/balloons.jpg]]
 
@@ -591,18 +591,11 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
    : [1] 6
    : [1] 5
 
-* NEXT DataCamp course: Data Visualization in R
-
-Can you access this course? *tinyurl.com/bdm555rt*
-
-https://app.datacamp.com/learn/courses/data-visualization-in-r
-
-* TODO Lecture on graphics/systems in R
+* Lecture on graphics/systems in R
 #+ATTR_HTML: :width 500px
 [[../img/3_matisse.png]]
 * Week 6: ~plot~
-** TODO Lab session with ~plot~
-** Featured: see [[https://github.com/birkenkrahe/dviz/issues][issues]]
+* Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][issues]]
 
 - INFOGRAPHIC OF THE HISTORY OF LANGUAGES
   #+attr_html: :width 400px
@@ -631,6 +624,22 @@ https://app.datacamp.com/learn/courses/data-visualization-in-r
   decisions and implementation strategies. Knuth is a computer
   scientist who understands that words matter."
   #+end_quote
+
+* DataCamp course: Data Visualization in R
+#+attr_html: :width 500px
+[[../img/dc_pearson1.png]]
+
+- Can you access this course? [[https://app.datacamp.com/learn/courses/data-visualization-in-r][tinyurl.com/bdm555rt]]
+- Can you open chapter 1 and 2 videos and play them?
+- I cannot add them to the DataCamp dashboard (archived)
+- Complete by Friday, September 23, 3 pm
+- *SEND ME A SCREENSHOT WITH TIME-STAMP TO PROVE IT*
+* NEXT Base graphics parameters
+#+attr_html: :width 500px
+[[../img/par.png]]
+
+* TODO Adding details to ~plot~
+[[../img/details.jpg]]
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI

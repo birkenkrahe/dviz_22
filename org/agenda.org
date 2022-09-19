@@ -348,13 +348,13 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 *** Example: Nile
 - Plot example: use ~Nile~ data set
   #+begin_src R :results output
-     # ?Nile ## what's in the data set?
-     str(Nile)
+                                            # ?Nile ## what's in the data set?
+    str(Nile)
   #+end_src
 
   #+RESULTS:
   :  Time-Series [1:100] from 1871 to 1970: 1120 1160 963 1210 1160 1160 813 1230 1370 1140 ...
-  
+
   #+begin_src R :file ../img/line.png :results output graphics file
     plot(Nile)
   #+end_src
@@ -375,19 +375,19 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   [[../img/boxbar.png]]
 
   #+begin_notes
-    - Box plots answer questions about value spread using measures of
-      spread, here: age spread (categorical variable splits data)
-    - Bar plots answer questions about the frequency of a single
-      continuous metric relative to zero, here: count.
-    - In bar plots, other single continuous variables can also be
-      plotted, but the results are less insightful than the box plot
+  - Box plots answer questions about value spread using measures of
+    spread, here: age spread (categorical variable splits data)
+  - Bar plots answer questions about the frequency of a single
+    continuous metric relative to zero, here: count.
+  - In bar plots, other single continuous variables can also be
+    plotted, but the results are less insightful than the box plot
   #+end_notes
-*** Bars vs stacks  
+*** Bars vs stacks
 
 - When would you rather show /stacked bar plots/ than bar plots?
 
   #+begin_notes
-    When you care about percentages. Each stack adds up to 100%
+  When you care about percentages. Each stack adds up to 100%
   #+end_notes
 *** Bars vs dots
 
@@ -402,7 +402,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
     log scale for bar plots
   - Display multiple numeric scores for each category
   #+end_notes
-  
+
 ** DONE Extended EDA example in R
 
 [[../img/2_analysis.svg]]
@@ -429,8 +429,8 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
      boxplot(Gas ~ Insul, data=whiteside)
    #+end_src
 
-    #+RESULTS:
-    [[file:../img/gas.png]]
+   #+RESULTS:
+   [[file:../img/gas.png]]
 
 3) Histograms show the distribution of a single continuous variable
 
@@ -515,7 +515,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
    #+attr_html: :width 400px
    #+caption: corr heatmap of customer satisfaction survey
    [[../img/heatmap.png]]
-   
+
 #+end_notes
 
 * TODO [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
@@ -524,9 +524,9 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 1) What do you need to run R code blocks in Emacs?
    #+begin_notes
-     - Org-mode file (.org)
-     - ESS package 
-     - R session (console)
+   - Org-mode file (.org)
+   - ESS package
+   - R session (console)
    #+end_notes
 
 2) Which command lists all packages loaded in your current R session?
@@ -537,13 +537,13 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
    #+end_src
 
    #+RESULTS:
-   :  [1] ".GlobalEnv"        "ESSR"              "package:stats"    
-   :  [4] "package:graphics"  "package:grDevices" "package:utils"    
-   :  [7] "package:datasets"  "package:methods"   "Autoloads"        
+   :  [1] ".GlobalEnv"        "ESSR"              "package:stats"
+   :  [4] "package:graphics"  "package:grDevices" "package:utils"
+   :  [7] "package:datasets"  "package:methods"   "Autoloads"
    : [10] "package:base"
-   :  [1] ".GlobalEnv"        "package:MASS"      "ESSR"             
+   :  [1] ".GlobalEnv"        "package:MASS"      "ESSR"
    :  [4] "package:stats"     "package:graphics"  "package:grDevices"
-   :  [7] "package:utils"     "package:datasets"  "package:methods"  
+   :  [7] "package:utils"     "package:datasets"  "package:methods"
    : [10] "Autoloads"         "package:base"
 
 3) Why is "changing line type" not a scatterplot customization?
@@ -552,12 +552,12 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
    #+begin_src R :session :results graphics file :file ../img/box_mtcars.png
      boxplot(mtcars) # boxplot is generic and will digest data frames but
-                     # it won't be interesting or revealing in any way
+                                             # it won't be interesting or revealing in any way
    #+end_src
 
    #+begin_src R :session :results graphics file :file ../img/box_tg.png
      boxplot(ToothGrowth) # depends on the data frame though: ToothGrowth
-                          # has got only one numeric variable
+                                             # has got only one numeric variable
    #+end_src
 
    #+begin_src R :session :results graphics file :file ../img/box_tg1.png
@@ -568,10 +568,10 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 6) What's HCL?
    #+begin_notes
-     HCL = Hue-Chroma-Luminence, colorspaces:
-     - hue: color of the rainbow
-     - chroma: color intensity
-     - luminence: color brightness
+   HCL = Hue-Chroma-Luminence, colorspaces:
+   - hue: color of the rainbow
+   - chroma: color intensity
+   - luminence: color brightness
      [[../img/color.png]]
    #+end_notes
 
@@ -601,7 +601,36 @@ https://app.datacamp.com/learn/courses/data-visualization-in-r
 #+ATTR_HTML: :width 500px
 [[../img/3_matisse.png]]
 * Week 6: ~plot~
-** TODO Lab session with ~plot~ 
+** TODO Lab session with ~plot~
+** Featured: see [[https://github.com/birkenkrahe/dviz/issues][issues]]
+
+- INFOGRAPHIC OF THE HISTORY OF LANGUAGES
+  #+attr_html: :width 400px
+  [[../img/languages.png]]
+  #+begin_quote
+  "The tree illustrates the ancient linguistic links between the
+  world’s languages. Trees and branches are often used by linguists
+  as a visual metaphor to explain language origination. This tree
+  model explains the connections between groups of languages, which
+  all descend from a common ancestral proto-language."
+  #+end_quote
+  
+- THE COMPUTER SCIENTIST WHO CAN'T STOP TELLING STORIES
+  #+attr_html: :width 400px
+  [[../img/knuth.jpg]]
+  #+begin_quote
+  "Knuth’s interest in storytelling also led him to develop a
+  philosophy of *literate programming* — a method for writing computer
+  programs as literary essays. A literate program intersperses source
+  code with elegant prose written in a familiar language, such as
+  English. The source code delivers functionality and efficiency,
+  while the exposition addresses a human reader, rather than the
+  computer’s compiler. Anyone who later updates or debugs a literate
+  program will avoid the often time-consuming and costly problem of
+  trying to understand the original programmer’s algorithms, design
+  decisions and implementation strategies. Knuth is a computer
+  scientist who understands that words matter."
+  #+end_quote
 * References
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI
@@ -631,4 +660,3 @@ values except GNI vary (this would suggest that it's not a very robust
 variable).
 #+attr_html: :width 600px
 [[../img/parallel.png]]
-

@@ -595,7 +595,15 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 #+ATTR_HTML: :width 500px
 [[../img/3_matisse.png]]
 * Week 6: ~plot~
-* Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][issues]]
+
+[[../img/cereal1.png]]
+
+- [ ] DataCamp - new course
+- [ ] Optional plot parameters
+- [ ] Adding details to scatterplots
+- [ ] Lab session with ~plot~
+
+* Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
 
 - INFOGRAPHIC OF THE HISTORY OF LANGUAGES
   #+attr_html: :width 400px
@@ -633,7 +641,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - Can you open chapter 1 and 2 videos and play them?
 - I cannot add them to the DataCamp dashboard (archived)
 - Complete by Friday, September 23, 3 pm
-- *SEND ME A SCREENSHOT WITH TIME-STAMP TO PROVE IT*
+- +*SEND ME A SCREENSHOT WITH TIME-STAMP TO PROVE IT*+
 * NEXT Base graphics parameters
 #+attr_html: :width 500px
 [[../img/par.png]]
@@ -641,6 +649,8 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 * TODO Adding details to ~plot~
 [[../img/details.jpg]]
 * References
+#+attr_html: :width 500px
+[[../img/books.jpg]]
 
 Microsoft (12/07/2021). Dashboards for business users of the Power BI
 service. [[https://docs.microsoft.com/en-us/power-bi/consumer/end-user-dashboards][URL: docs.microsoft.com]].

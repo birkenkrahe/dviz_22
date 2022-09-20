@@ -420,7 +420,7 @@ line plot.
   #+end_src
 
   #+RESULTS: MOB2
-  =[[file:../img/3_mob.png]]
+  [[file:../img/3_mob.png]]
 
 - What methods are available for ~lmtree~ ?
   #+begin_src R
@@ -454,7 +454,8 @@ line plot.
 
 * Optional parameters for base graphics
 
-- There are 72 optional base graphics parameters set by the ~par~ function
+- There are 72 optional base graphics parameters set by the ~par~
+  function
 
 - Check out the help for ~par~ right now
 

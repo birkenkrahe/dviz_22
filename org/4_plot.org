@@ -1,0 +1,395 @@
+#+TITLE:  Base R plot function
+#+AUTHOR: Marcus Birkenkrahe
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* The ~plot~ function
+
+- ~plot(x,y)~ is a /generic/ function - it adapts to its arguments: e.g.
+
+  | Plot type   | ~x~       | ~y~       |
+  |-------------+---------+---------|
+  | Scatterplot | ~numeric~ | ~numeric~ |
+  | Boxplot     | ~factor~  | ~numeric~ |
+  | Bar chart   | ~factor~  | ~NA~      |
+  | Mosaic plot | ~factor~  | ~factor~  |
+
+- For an overview of the different methods available, use ~methods~.
+
+  #+name: methods
+  #+begin_src R
+    methods(plot)
+  #+end_src
+
+  #+RESULTS: methods
+  #+begin_example
+   [1] plot.acf*            plot.correspondence* plot.data.frame*
+   [4] plot.decomposed.ts*  plot.default         plot.dendrogram*
+   [7] plot.density*        plot.ecdf            plot.factor*
+  [10] plot.formula*        plot.function        plot.hclust*
+  [13] plot.histogram*      plot.HoltWinters*    plot.isoreg*
+  [16] plot.lda*            plot.lm*             plot.mca*
+  [19] plot.medpolish*      plot.mlm*            plot.ppr*
+  [22] plot.prcomp*         plot.princomp*       plot.profile*
+  [25] plot.profile.nls*    plot.raster*         plot.ridgelm*
+  [28] plot.shingle*        plot.spec*           plot.stepfun
+  [31] plot.stl*            plot.table*          plot.trellis*
+  [34] plot.ts              plot.tskernel*       plot.TukeyHSD*
+  see '?methods' for accessing help and source code
+  #+end_example
+
+- In the extended example, we already applied ~plot~ to a data frame, a
+  numeric vector, a factor, and a pair of numeric variables, leading
+  to an array of scatterplots, a bar chart, and a scatterplot.
+* Bar chart with ~plot~
+
+When only one categorical variable is given, ~plot~ generates a bar
+chart with one bar per factor level.
+
+#+begin_src R
+  x <- c(1,2,2,3,3,3)  # numeric vector
+  x_f <- factor(x)     # factor vector
+  x_f
+#+end_src
+
+#+begin_src R :results graphics file :file ../img/3_barchart.png
+  plot(x_f)
+#+end_src
+* Line plot with ~plot~
+
+When a time series is given like the data set ~Nile~, ~plot~ generates a
+line plot.
+
+#+begin_src R
+  class(Nile)
+  str(Nile)
+#+end_src
+
+#+begin_src R :results graphics file :file ../img/3_lineplot.png
+  plot(Nile)  # plotting a time series as line plot
+  grid()  # draw a grid to make it easier to read a plot
+#+end_src
+* Box plots with ~plot~
+
+- We used the ~boxplot~ function to create a boxplot summary of heating
+  gas consumption before and after installation of insulation
+
+- The same result with ~plot~:
+  #+name: whitesideplot1
+  #+begin_src R :results graphics file :file ../img/3_whiteside1.png
+    plot(whiteside$Insul,whiteside$Gas)
+  #+end_src
+
+  #+RESULTS: whitesideplot1
+  [[file:../img/3_whiteside1.png]]
+
+- Customization is simple:
+  #+name: whitesideplot2
+  #+begin_src R :results graphics file :file ../img/3_whiteside2.png
+    plot(x=whiteside$Insul, xlab="Insulation",
+         y=whiteside$Gas,   ylab="Gas consumption",
+                            main="Whiteside data set")
+  #+end_src
+
+  #+RESULTS: whitesideplot2
+  [[file:../img/3_whiteside2.png]]
+* Decision tree models with ~plot~
+
+- Many modeling functions in R return a object that can be plotted
+
+- You can store these objects and work with them during analysis
+
+- Example: /decision tree models/ from the ~whiteside~ data frame using
+  the ~rpart~ package.
+
+- This model predicts the average value of the dependent variable,
+  ~Gas~, from the values of the other variables, ~Insul~ and ~Temp~.
+
+- Build the model: the formula only has two parts. The period operator
+  ~.~ stands for "all other variables".
+  #+name: rpart1
+  #+begin_src R
+    library(MASS)  # whiteside data set is in MASS
+    library(rpart) # rpart: Recursive Partitioning and Regression Trees
+    rpartModel <- rpart(Gas ~ ., data = whiteside)
+    class(rpartModel)
+  #+end_src
+
+  #+RESULTS: rpart1
+  : [1] "rpart"
+
+- Plot the model and add generic text using ~text~ for ~rpart~ models:
+
+  #+begin_src R :results graphics file :file ../img/3_rpart.png
+    plot(rpartModel)
+    text(rpartModel)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/3_rpart.png]]
+
+- [ ] What methods are available for ~rpart~ and ~text~?
+  #+begin_src R
+    methods(class = "rpart")
+    methods(text)
+  #+end_src
+
+- Let's try ~summary~, which generated Tukey's summary for data frames:
+  #+begin_src R
+    summary(rpartModel)
+  #+end_src
+* Model-based recursive partitioning with ~plot~
+
+- MOB models have tree-based structures like decision tree models
+
+- Each terminal node contains a linear regression model that generates
+  predictions from other covariates (independent variables)
+
+- The code to generate the model looks very similar to ~rpart~: the
+  formula has three parts - ~Gas~ is predicted, ~Temp~ is the covariate to
+  predict, and ~Insul~ is the partitioning variable used to build the
+  tree.
+  #+name: MOB1
+  #+begin_src R
+    library(partykit) # this will load three other required packages
+    MOBmodel <- lmtree(Gas ~ Temp | Insul, data = whiteside)
+    class(MOBmodel)
+  #+end_src
+
+  #+RESULTS: MOB1
+  : Loading required package: grid
+  : Loading required package: libcoin
+  : Loading required package: mvtnorm
+  : [1] "lmtree"     "modelparty" "party"
+
+- In the plot, all records are assigned to one of the nodes, and a
+  separate linear regression model that predicts ~Gas~ from ~Temp~ is
+  built for each node.
+  #+name: MOB2
+  #+begin_src R :results graphics file :file ../img/3_mob.png
+    plot(MOBmodel)
+  #+end_src
+
+  #+RESULTS: MOB2
+  [[file:../img/3_mob.png]]
+
+- What methods are available for ~lmtree~ ?
+  #+begin_src R
+    methods(class = "lmtree")
+  #+end_src
+* What does this mean?
+
+1) Enormous graphics flexibility even within the base R graphics
+   package. Regrettably, there seems to be a "package envy" phenomenon
+   within the R community, fostered by RStudio's aggressive marketing
+
+2) You can define your own object classes and construct methods for
+   generic functions like ~plot~ or ~summary~ that make them generate
+   specialized results for our object classes.
+
+3) ~methods~ reveals the "S3 Object" character of R, dependent on the
+   packages loaded into your R session. S is the language that came
+   before R. In OOP, objects have /methods/ and /attributes/.
+
+   #+begin_src R
+     attributes(mtcars)
+     lmod <- lm(mtcars$wt ~ mtcars$mpg)
+     lmod
+     attributes(lmod)
+   #+end_src
+
+   For an example of the information stored in this model, run
+   ~plot(lmod)~ in the R console - this will produce several plots at
+   once (click on the graph to move to the next one).
+* Optional parameters for base graphics
+
+- There are 72 optional base graphics parameters set by the ~par~
+  function
+
+- Check out the help for ~par~ right now
+
+- ~par~ can also be called (like ~options~ and other system functions)
+
+  #+begin_src R
+    names(par())
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+   [1] "xlog"      "ylog"      "adj"       "ann"       "ask"       "bg"
+   [7] "bty"       "cex"       "cex.axis"  "cex.lab"   "cex.main"  "cex.sub"
+  [13] "cin"       "col"       "col.axis"  "col.lab"   "col.main"  "col.sub"
+  [19] "cra"       "crt"       "csi"       "cxy"       "din"       "err"
+  [25] "family"    "fg"        "fig"       "fin"       "font"      "font.axis"
+  [31] "font.lab"  "font.main" "font.sub"  "lab"       "las"       "lend"
+  [37] "lheight"   "ljoin"     "lmitre"    "lty"       "lwd"       "mai"
+  [43] "mar"       "mex"       "mfcol"     "mfg"       "mfrow"     "mgp"
+  [49] "mkh"       "new"       "oma"       "omd"       "omi"       "page"
+  [55] "pch"       "pin"       "plt"       "ps"        "pty"       "smo"
+  [61] "srt"       "tck"       "tcl"       "usr"       "xaxp"      "xaxs"
+  [67] "xaxt"      "xpd"       "yaxp"      "yaxs"      "yaxt"      "ylbias"
+  #+end_example
+
+- As you can read in ~help(par)~, some of these parameters are
+  read-only (i.e. their values are fixed)
+* NEXT Important parameters for ~plot~ customization
+
+- ~mfrow~, a 2-dim vector that sets up an array of plots
+  #+name: mfrow
+  #+begin_src R :session *R* :results graphics file :file ../img/mfrow.png
+    par(mfrow=c(2,1))
+    plot(rnorm(100), type="l")
+    title("100 random numbers")
+    plot(rnorm(1000), type="l")
+    title("100 random numbers")
+  #+end_src
+
+- Several parameters come in groups:
+  1) The ~cex~ family scales text and symbols in relation to one
+     another, e.g. ~cex.main~ scales the main plot title relative to ~cex~
+     #+name: cex
+     #+begin_src R :session *R* :results graphics file :file ../img/cex.png
+       plot(rnorm(100),
+            main="Double the size",
+            cex=2,   # double point symbol size
+            cex.main=2 # scale title relative to cex
+            )
+     #+end_src
+
+  2) The ~col~ family specifies colors for points, lines, text[fn:2]
+     #+name: col
+     #+begin_src R :session *R* :results graphics file :file ../img/col.png
+       plot(rnorm(100),
+            main="Color me impressed",
+            col      = "purple",  # color points
+            col.main = "red",    # color title
+            col.axis = "blue"   # color axis labels
+            )
+     #+end_src
+
+  3) The ~font~ family specifies font types (plain = 1, bold = 2, italic
+     = 3, bold italic = 4).
+     #+name: font
+     #+begin_src R :session *R* :results graphics file :file ../img/font.png
+       plot(rnorm(100),
+            main="Fountain of font",
+            font.main = 4,  # title font bold italic
+            font.lab = 3,   # axis labels in italic
+            cex.main = 2    # double title font size
+            )
+     #+end_src
+
+     #+RESULTS: font
+     [[file:../img/font.png]]
+* Other parameters
+
+- ~adj~ specifies justification of the text (0=left,1=right, center=0.5)
+
+  #+begin_src R :session *R* :results graphics file :file ../img/adj.png
+    plot(rnorm(100), type="n")
+    text(x=40,y=0,labels="Right-justified text",adj=1,font=3)
+    text(x=40,y=-1,labels="Left-justified text",adj=0,font=3)
+    text(x=40,y=1.5,labels="Centered text",adj=0.5,font=3)
+  #+end_src
+
+  #+attr_html: :width 300px
+  [[file:../img/adj.png]]
+
+- ~lty~ and ~lwd~ specify line type and line width.
+  #+name: linewidth
+  #+begin_src R :session *R* :results graphics file :file ../img/lty.png
+    plot(Nile, lty=2)
+  #+end_src
+
+  #+RESULTS: linewidth
+  [[file:../img/lty.png]]
+
+  #+name: linewidth
+  #+begin_src R :session *R* :results graphics file :file ../img/lwd.png
+    plot(Nile, lwd=3)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/lwd.png]]
+
+- [ ] How can you see current values of these parameters? Remember how
+  to do this with ~options()~? What type of R object is ~par()~?
+
+  #+begin_src R
+    class(par())
+    par()$lty
+    par()$adj
+  #+end_src
+* Multiple plots and passing parameters
+
+- The ~ask~ parameter is a /logical/ flag (the default value is ~FALSE~)
+  that specifies whether the graphics system should wait for a user
+  response before displaying the next plot.
+
+- [ ] How can I confirm that ~ask~ is ~logical~, and see its value?
+
+  #+begin_src R
+    class(par()$ask)
+    par()$ask
+  #+end_src
+
+- [ ] See e.g. ~example(Nile)~ in the R console (not in Org-mode)
+
+- This option is not always set correctly after displaying multiple
+  plots - it must be set back by hand with ~par(ask = FALSE)~.
+
+- Some parameters cannot be set as passing parameters, e.g. ~las~ -
+  usually for different plot types (e.g. mosaic plots).
+* Adding points and lines to a scatterplot
+#+attr_html: :width 300px
+[[file:../img/cereals.png]]
+#+attr_html: :width 300px
+[[file:../img/cereals1.png]]
+* Starting plot without bells and whistles
+
+- Starting point is calories vs. sugars from the ~UScereal~ data frame
+  #+begin_src R :results graphics file :file ../img/cereal.png
+    par(mfrow=c(1,1))
+    x <- UScereal$sugars
+    y <- UScereal$calories
+    plot(x,y)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/cereal.png]]
+
+- ~mfrow~ creates a persistent 1x1 array (single plot)
+- Variables ~x~, ~y~ are defined because we use them again
+- ~plot(x,y)~ is invoked to get a simple scatterplot
+* Adding axis labels ~xlab~, ~ylab~, and ~type~ 
+
+- The next block invokes ~plot~ again, but with three optional
+  arguments:
+
+  1) ~xlab~: a ~character~ string for the x-axis label
+  2) ~ylab~: a ~character~ string for the y-axis label
+  3) ~type = "n"~: specifies that the plot is constructed but /not
+     displayed/
+
+  #+begin_src R :results graphics file :file ../img/cereal1.png
+    plot(x,y,
+         xlab="Grams of sugar per serving",
+         ylab="Calories per serving",
+         type = "n")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/cereal1.png]]
+  
+* TODO Highlighting outliers with ~points~
+* TODO Add reference lines with ~abline~
+* TODO Customizing point and line attributes
+* TODO Practice: adding details to plots
+
+[[../img/3_gnome.jpg]]
+
+- Open the practice file
+- Identify yourself as the author and pledge
+- Solve the problems using R code blocks
+- Submit the completed file to Canvas
+

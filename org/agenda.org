@@ -595,15 +595,15 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 #+ATTR_HTML: :width 500px
 [[../img/3_matisse.png]]
 * Week 6: ~plot~
-
+#+attr_html: :width 400px
 [[../img/cereal1.png]]
 
-- [ ] DataCamp - new course
-- [ ] Optional plot parameters
+- [X] Optional plot parameters
+- [ ] New course is hybrid DataCamp/Org-mode
 - [ ] Adding details to scatterplots
 - [ ] Lab session with ~plot~
 
-* Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
+* DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
 
 - INFOGRAPHIC OF THE HISTORY OF LANGUAGES
   #+attr_html: :width 400px
@@ -633,7 +633,29 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   scientist who understands that words matter."
   #+end_quote
 
-* DataCamp course: Data Visualization in R
+* READ Medieval university teaching
+
+
+
+
+* NEXT Base graphics parameters
+#+attr_html: :width 500px
+[[../img/par.png]]
+
+*Review questions:*
+
+1) Which function controls graphic parameters in base R?
+2) How can you create a panel of two plots on top of one another?
+3) How can you turn a scatterplot into a line plot?
+
+* TODO Adding details to ~plot~
+#+attr_html: :width 500px
+[[../img/details.jpg]]
+* TODO Practice: adding details to ~plot~
+
+[[../img/3_gnome.jpg]]
+
+* +DataCamp course: Data Visualization in R+
 #+attr_html: :width 500px
 [[../img/dc_pearson1.png]]
 
@@ -642,12 +664,6 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - I cannot add them to the DataCamp dashboard (archived)
 - Complete by Friday, September 23, 3 pm
 - +*SEND ME A SCREENSHOT WITH TIME-STAMP TO PROVE IT*+
-* NEXT Base graphics parameters
-#+attr_html: :width 500px
-[[../img/par.png]]
-
-* TODO Adding details to ~plot~
-[[../img/details.jpg]]
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

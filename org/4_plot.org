@@ -128,7 +128,7 @@ line plot.
   #+RESULTS:
   [[file:../img/3_rpart.png]]
 
-- [ ] What methods are available for ~rpart~ and ~text~?
+- [X] What methods are available for ~rpart~ and ~text~?
   #+begin_src R
     methods(class = "rpart")
     methods(text)
@@ -320,6 +320,7 @@ line plot.
     par()$lty
     par()$adj
   #+end_src
+
 * Multiple plots and passing parameters
 
 - The ~ask~ parameter is a /logical/ flag (the default value is ~FALSE~)
@@ -333,7 +334,8 @@ line plot.
     par()$ask
   #+end_src
 
-- [ ] See e.g. ~example(Nile)~ in the R console (not in Org-mode)
+- [ ] See e.g. ~example(Nile)~ in the R console (not in Org-mode -
+  because this involves OS shell commands which Emacs cannot render)
 
 - This option is not always set correctly after displaying multiple
   plots - it must be set back by hand with ~par(ask = FALSE)~.
@@ -341,26 +343,26 @@ line plot.
 - Some parameters cannot be set as passing parameters, e.g. ~las~ -
   usually for different plot types (e.g. mosaic plots).
 * Adding points and lines to a scatterplot
-#+attr_html: :width 300px
-[[file:../img/cereals.png]]
-#+attr_html: :width 300px
-[[file:../img/cereals1.png]]
-* Starting plot without bells and whistles
+#+attr_html: :width 700px
+[[../img/4_details.png]]
+* Starting ~plot~ without bells and whistles
 
 - Starting point is calories vs. sugars from the ~UScereal~ data frame
-  #+begin_src R :results graphics file :file ../img/cereal.png
+  #+begin_src R :results graphics file :file ../img/4_cereal.png
     par(mfrow=c(1,1))
+    library(MASS)
     x <- UScereal$sugars
     y <- UScereal$calories
     plot(x,y)
   #+end_src
 
   #+RESULTS:
-  [[file:../img/cereal.png]]
+  [[file:../img/4_cereal.png]]
 
 - ~mfrow~ creates a persistent 1x1 array (single plot)
 - Variables ~x~, ~y~ are defined because we use them again
 - ~plot(x,y)~ is invoked to get a simple scatterplot
+
 * Adding axis labels ~xlab~, ~ylab~, and ~type~ 
 
 - The next block invokes ~plot~ again, but with three optional
@@ -371,7 +373,7 @@ line plot.
   3) ~type = "n"~: specifies that the plot is constructed but /not
      displayed/
 
-  #+begin_src R :results graphics file :file ../img/cereal1.png
+  #+begin_src R :results graphics file :file ../img/4_cereal1.png
     plot(x,y,
          xlab="Grams of sugar per serving",
          ylab="Calories per serving",
@@ -379,16 +381,166 @@ line plot.
   #+end_src
 
   #+RESULTS:
-  [[file:../img/cereal1.png]]
+  [[file:../img/4_cereal1.png]]
   
-* TODO Highlighting outliers with ~points~
-* TODO Add reference lines with ~abline~
-* TODO Customizing point and line attributes
-* TODO Practice: adding details to plots
+* Highlighting outliers with ~points~
+
+- ~points~ behaves much like ~plot~. It adds points to an existing plot.
+
+- [ ] Is ~points~ a /generic/ R function?
+  #+begin_src R
+    methods(points)
+  #+end_src
+
+- The function takes the coordinate vectors of points to plot
+
+- We want to distinguish outliers and non-outliers. Our definition for
+  outliers: cereals with more than 300 calories per serving.
+
+- To extract the subvectors, we define an index vector - it contains
+  only the index value of the outliers.
+  #+begin_src R
+    index <- which(y > 300) # y is our calorie vector
+    index # vector of outlier value indices
+    x[index]  # UScereal$sugars[index] outliers
+    y[index]  # UScereal$calories[index] outliers
+    x[-index]  # UScereal$sugars[index] non-outliers
+    y[-index]  # UScereal$calories[index] non-outliers
+  #+end_src
+
+- We plot the non-outliers with one type of point (~pch=16~), the outliers
+  with another (~pch=18~) and twice as large (~cex=2~).
+
+x- Now we're ready to enhance our basic plot.
+  #+begin_src R :results graphics file :file ../img/4_cereal2.png
+    plot(x,y,
+         xlab="Grams of sugar per serving",
+         ylab="Calories per serving",
+         type = "n")
+    #######################################
+    index <- which(y > 300)
+    points(x[-index], y[-index], pch=16)
+    points(x[index], y[index], pch=18, cex=2)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_cereal2.png]]
+
+* Add reference lines with ~abline~
+
+- The final four lines of code add two reference lines using linear
+  regression models.
+
+- Now we're ready to enhance our basic plot.
+  #+begin_src R :results graphics file :file ../img/4_cereal3.png
+    plot(x,y,
+         xlab="Grams of sugar per serving",
+         ylab="Calories per serving",
+         type = "n")
+    index <- which(y > 300)
+    points(x[-index], y[-index], pch=16)
+    points(x[index], y[index], pch=18, cex=2)
+    #######################################
+    olsModel <- lm(y ~ x) # linear regression on y = f(x)
+    abline(olsModel, lty=3)  # draw thin dotted line
+    library(robustbase)
+    robustModel <- lmrob(y ~ x)  
+    abline(robustModel, lty=2, lwd=2)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_cereal3.png]]
+
+- ~lm~ is called to construct a linear regression model via the method
+  of [[https://www.r-bloggers.com/2017/07/ordinary-least-squares-ols-linear-regression-in-r/][ordinary least squares]] - this is the most popular linear model
+
+- ~abline~ is called to display the model prediction (based on intercept
+  and slope of the linear function generated). ~lty=3~ is a dotted line.
+
+- ~lmrob~ is a robust linear model from the ~robustbase~ package - it is
+  outlier-resistant. ~lty=2, ~lwd=2~ gives a thick dashed line
+
+- [ ] Do you think ~abline~ is a generic function?
+  #+begin_src R
+    methods(abline)
+  #+end_src
+
+* Customization with vectors
+
+- Consider the following code to plot ~whiteside~ variables
+  #+begin_src R :results graphics file :file ../img/4_pch.png
+  plot(
+    x = whiteside$Temp,
+    y = whiteside$Gas,
+    pch=c(6,16)[whiteside$Insul])
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_pch.png]]
+
+- ~c(6,16)~ defines a 2-dimensional vector of the same length as ~Insul~
+  but uses ~pch=6~ when ~Insul = "Before"~, and ~pch=16~ when ~Insul="After"~:
+  #+begin_src R
+    c(6,16)[whiteside$Insul]
+  #+end_src
+
+- The ~pch~ parameter will accept a vector argument of the same length
+  as the ~x~- and ~y~-vectors used to create the scatterplot
+  
+- Point sizes (~cex~) and colors (~col~) can also be specifed this way
+  
+* Adding text to a plot
+
+- The ~text~ function works similarly to the other customizing functions
+
+- ~text~ specifies: x- and y-position of the text, and the text itself.
+
+- Left-right alignment is specified by ~adj~ whose default is centered
+  (~0.5~). To justify right, we need to set it to ~adj=1~
+
+- R code:
+  #+begin_src R :results graphics file :file ../img/cereals4.png
+    plot(x,y,
+         xlab="Grams of sugar per serving",
+         ylab="Calories per serving",
+         type = "n")
+    #################################
+    index <- which(y > 300)
+    points(x[-index], y[-index], pch=16)
+    points(x[index], y[index], pch=18, cex=2)
+    #######################################
+    olsModel <- lm(y ~ x) # linear regression on y = f(x)
+    abline(olsModel, lty=3)  # draw thin dotted line
+    library(robustbase)
+    robustModel <- lmrob(y ~ x)  
+    abline(robustModel, lty=2, lwd=2)
+    #############################
+    pointLabels <- paste(rownames(UScereal)[index], "-->")
+    text(
+      x=11,
+      y=y[index],
+      labels=pointLabels,
+      adj=1,
+      font=2)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/cereals4.png]]
+
+- The ~paste~ function concatenates vectors after converting to
+  ~character~.
+  #+begin_src R
+    paste("Result: ", 100)
+    class(paste("Result: ", 100))
+  #+end_src
+
+* TODO Adding a legend to a plot
+* TODO Customizing axes
+* TODO Practice (home?): adding details to plots
 
 [[../img/3_gnome.jpg]]
 
-- Open the practice file
+- Open the raw practice file in GitHub
 - Identify yourself as the author and pledge
 - Solve the problems using R code blocks
 - Submit the completed file to Canvas

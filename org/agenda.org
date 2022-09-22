@@ -468,7 +468,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - [X] Complete 1st DataCamp course this week (add to your resume)
 - [X] Test 4 review - color, plots, and comparison of data frames
 
-* DataCamp review - The color and the shape
+** DataCamp review - The color and the shape
 
 1) What is GNI? Difference between GNI, GNP and GDP?
 2) Does it make sense to plot GNI vs. life expectancy vs. schooling?
@@ -518,7 +518,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 #+end_notes
 
-* [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
+** [[https://lyon.instructure.com/courses/568/assignments/2810/edit?quiz_lti][Test 4 review]]
 #+attr_html: :width 500px
 [[../img/balloons.jpg]]
 
@@ -591,10 +591,10 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
    : [1] 6
    : [1] 5
 
-* Lecture on graphics/systems in R
+** Lecture on graphics/systems in R
 #+ATTR_HTML: :width 500px
 [[../img/3_matisse.png]]
-* Week 6: ~plot~
+* Week 6: The ~plot~ function
 #+attr_html: :width 400px
 [[../img/cereal1.png]]
 
@@ -603,7 +603,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - [X] Adding details to scatterplots
 - [ ] Lab session with ~plot~
 
-* DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
+** DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
 
 - INFOGRAPHIC OF THE HISTORY OF LANGUAGES
   #+attr_html: :width 400px
@@ -633,7 +633,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   scientist who understands that words matter."
   #+end_quote
 
-* DONE Base graphics parameters
+** DONE Base graphics parameters
 #+attr_html: :width 500px
 [[../img/par.png]]
 
@@ -652,15 +652,14 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
      plot(x,y, type="l") # x and y are coordinate vectors
    #+end_example
 
-* TODO Adding details to ~plot~
+** TODO Adding details to ~plot~
 #+attr_html: :width 500px
 
 [[../img/details.jpg]]
-* TODO Practice: adding details to ~plot~
 
-[[../img/3_gnome.jpg]]
+The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
 
-* +DataCamp course: Data Visualization in R+
+** +DataCamp course: Data Visualization in R+
 #+attr_html: :width 500px
 [[../img/dc_pearson1.png]]
 
@@ -669,6 +668,18 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - I cannot add them to the DataCamp dashboard (archived)
 - Complete by Friday, September 23, 3 pm
 - +*SEND ME A SCREENSHOT WITH TIME-STAMP TO PROVE IT*+
+* Week 7: Adding details to plots
+** TODO Adding details to ~plot~ (cont'd)
+#+attr_html: :width 500px
+
+[[../img/details.jpg]]
+
+The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
+
+** TODO Practice: adding details to ~plot~
+
+[[../img/3_gnome.jpg]]
+
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

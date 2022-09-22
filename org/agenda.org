@@ -600,7 +600,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 - [X] Optional plot parameters
 - [ ] New course is hybrid DataCamp/Org-mode
-- [ ] Adding details to scatterplots
+- [X] Adding details to scatterplots
 - [ ] Lab session with ~plot~
 
 * DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
@@ -633,12 +633,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   scientist who understands that words matter."
   #+end_quote
 
-* READ Medieval university teaching
-
-
-
-
-* NEXT Base graphics parameters
+* DONE Base graphics parameters
 #+attr_html: :width 500px
 [[../img/par.png]]
 
@@ -646,10 +641,20 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 1) Which function controls graphic parameters in base R?
 2) How can you create a panel of two plots on top of one another?
+
+   #+begin_example R
+     par(mfrow=c(2,1))
+   #+end_example
+
 3) How can you turn a scatterplot into a line plot?
+
+   #+begin_example R
+     plot(x,y, type="l") # x and y are coordinate vectors
+   #+end_example
 
 * TODO Adding details to ~plot~
 #+attr_html: :width 500px
+
 [[../img/details.jpg]]
 * TODO Practice: adding details to ~plot~
 

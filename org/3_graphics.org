@@ -209,6 +209,43 @@ plot(data=UScereal, calories ~ sugars)
 
 #+attr_html: :width 500px
 [[../img/grid.png]]
+* ~grid~ graphics example
+
+- The following plot is generated with the base R (built-in)
+  package. Below you find the code to create this plot using the ~grid~
+  package, demonstrating the greater flexibility but also steeper
+  learning curve.
+
+- Scatterplot with base R ~plot~
+  #+begin_src R :results graphics file :file ../img/3_cereal.png
+    library(MASS)
+    plot(UScereal$sugars,UScereal$calories)
+    title("plot(UScereal$sugars,UScereal$calories)")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/3_cereal.png]]
+
+- Scatterplot with ~grid~ package:
+  #+begin_src R :results graphics file :file ../img/3_grid.png
+    library(MASS)
+    x <- UScereal$sugars
+    y <- UScereal$calories
+    library(grid)
+    pushViewport(plotViewport())
+    pushViewport(dataViewport(x,y))
+    grid.rect()
+    grid.xaxis()
+    grid.yaxis()
+    grid.points(x,y)
+    grid.text("UScereal$calories",x=unit(-3,"lines"),rot=90)
+    grid.text("UScereal$sugars",y=unit(-3,"lines"),rot=0)
+    popViewport(2)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/3_grid.png]]
+  
 
 * ~lattice~ graphics
 

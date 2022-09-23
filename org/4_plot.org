@@ -271,7 +271,7 @@ line plot.
             )
      #+end_src
 
-  2) The ~col~ family specifies colors for points, lines, text[fn:2]. To
+  2) The ~col~ family specifies colors for points, lines, text[fn:1]. To
      see the complete set of colors, enter ~colors()~.
 
      #+begin_src R :session *R* :results graphics file :file ../img/col.png
@@ -505,7 +505,7 @@ x- Now we're ready to enhance our basic plot.
   
 - Point sizes (~cex~) and colors (~col~) can also be specifed this way
   
-* Adding text to a plot
+* IN PROGRESS Adding text to a plot
 
 - The ~text~ function works similarly to the other customizing functions
 
@@ -518,7 +518,7 @@ x- Now we're ready to enhance our basic plot.
   #+begin_example R
     pointLabels <- paste(rownames(UScereal)[index], "-->") 
     text(
-      x=11,       # x-coordinate of text field
+      x=11,       # x-coordinate of text field, ca. x[which(y>300)]-0.5,
       y=y[index], # y-coordinate of text field
       labels=pointLabels,  # text for text field
       adj=1,  # text is right justified
@@ -534,12 +534,30 @@ x- Now we're ready to enhance our basic plot.
        class(paste("Result: ", 100))
      #+end_src
 
-  2) Let's pick the expression ~rownames(UScereal)[index]~ apart[fn:1]:
+  2) Let's take the expression ~rownames(UScereal)[index]~ apart[fn:2]:
      You've seen this indexing structure before, in ~par()$lty~.
 
+     ~rownames~ extracts the names of rows of a data frame:
      #+begin_src R
-
+     rownames(UScereal)  # all row names of data frame = all cereal types
      #+end_src
+
+     ~index~ was defined earlier as a subset of ~UScereal$calories~ values
+     greater than the outlier cutoff value 300: ~index <- which(y > 300)~
+
+     Hence, ~rownames(UScereal)[index]~ extracts the cereal names
+     associated with the outlying values and puts them in the text box:
+     #+begin_src R
+       rownames(UScereal)[index]
+     #+end_src
+
+  3) Inside the ~text~ function, we have three sections:
+     - coordinates x and y for the text field[fn:3]
+     - 
+
+#+begin_src R
+  x[which(y>300)]-0.5
+#+end_src
 
 
 - The complete R code block for printout looks like this now:
@@ -561,7 +579,7 @@ x- Now we're ready to enhance our basic plot.
     #############################
     pointLabels <- paste(rownames(UScereal)[index], "-->")
     text(
-      x=11,       
+      x=11
       y=y[index], 
       labels=pointLabels, 
       adj=1,  
@@ -623,8 +641,14 @@ x- Now we're ready to enhance our basic plot.
 
 * Footnotes
 
-[fn:1] The need to deconstruct, as it were, complex functional
+[fn:1] DEFINITION NOT FOUND.
+
+[fn:2] The need to deconstruct, as it were, complex functional
 expressions in R, is similar to getting a mathematical formula and
 having to take it apart using your knowledge of the laws of
 mathematics. If you don't enjoy this type of thing you probably won't
-study math (or you have to learn a lot more things by heart). 
+study math (or you have to learn a lot more things by heart).
+
+[fn:3] It would be better not to have to look at the plot to determine
+the place of the text box, e.g. with
+~(x[which(y>300)[2]]-x[which(y>300)[1]])~

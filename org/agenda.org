@@ -603,7 +603,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - [X] Adding details to scatterplots
 - [ ] Lab session with ~plot~
 
-** DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
+* DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
 
 - INFOGRAPHIC OF THE HISTORY OF LANGUAGES
   #+attr_html: :width 400px
@@ -633,7 +633,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   scientist who understands that words matter."
   #+end_quote
 
-** DONE Base graphics parameters
+* DONE Base graphics parameters
 #+attr_html: :width 500px
 [[../img/par.png]]
 
@@ -652,22 +652,37 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
      plot(x,y, type="l") # x and y are coordinate vectors
    #+end_example
 
-** TODO Adding details to ~plot~
+* TODO Adding details to ~plot~
 #+attr_html: :width 500px
 
 [[../img/details.jpg]]
 
 The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
 
-** +DataCamp course: Data Visualization in R+
+* TODO Assignment: a quick introduction to base R graphics
 #+attr_html: :width 500px
 [[../img/dc_pearson1.png]]
 
-- Can you access this course? [[https://app.datacamp.com/learn/courses/data-visualization-in-r][tinyurl.com/bdm555rt]]
-- Can you open chapter 1 and 2 videos and play them?
-- I cannot add them to the DataCamp dashboard (archived)
-- Complete by Friday, September 23, 3 pm
-- +*SEND ME A SCREENSHOT WITH TIME-STAMP TO PROVE IT*+
+- I have taken the lesson from DataCamp and souped it up a bit
+- Assignment requires some skill and independence
+- Complete this assignment by October 7 at 3 pm
+- Upload the completed Org-mode file [[https://lyon.instructure.com/courses/571/assignments/1655][to Canvas]]  
+* TODO About the 2nd sprint review
+[[../img/scrum.jpg]]
+
+ #+attr_html: :width 500px
+[[../img/scrum.png]]
+
+- Read my comments carefully and respond to them
+- If your topic spans > 1 course make sure the projects differ
+- Complete your literature review to identify methods
+- Highlight your method(s) (how you want to do it)
+- Make sure you have questions for the customer/other teams
+- Read the FAQ »[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-second-sprint][What should we do in the 2nd sprint]]«
+- Read the FAQ »[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-you-report-on-and-plan-a-research-method][How do you report on and plan a research “method”?]]«
+- Submit a text file or a PowerPoint presentation
+- Meet the deadline or lose all points
+   
 * Week 7: Adding details to plots
 ** TODO Adding details to ~plot~ (cont'd)
 #+attr_html: :width 500px

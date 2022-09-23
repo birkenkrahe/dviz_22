@@ -5,18 +5,18 @@
 #+PROPERTY: header-args:R :exports both :results output :session *R*
 * README
 
-  - This assignment is based on Pearson's (now archived) DataCamp course
-    "Data Visualization in R" (2016)
+  - This assignment is based on Pearson's (now archived) DataCamp
+    course "Data Visualization in R" (2016)
   - Make sure you add your name in the ~#+AUTHOR:~ meta headline for the
     honor pledge.
   - When you've completed the file, submit it in Canvas
   - You'll get solutions after the deadline has passed
 
-* The world of data visualization
+* TODO The world of data visualization
 
   Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
 
-* Creating an exploratory plot array
+* TODO Creating an exploratory plot array
 
   1) Create a code block that prints graphics output to ~plot1.png~
   2) Make the ~whiteside~ data set from the ~MASS~ package available in your
@@ -27,7 +27,7 @@
 
   ----- PUT YOUR CODE BELOW THIS LINE -----
 
-* Creating an explanatory scatterplot
+* TODO Creating an explanatory scatterplot
 
   1) Use the ~plot~ function to construct a scatterplot of the heating gas
      consumption, ~Gas~, versus the outside temperature, ~Temp~, from the
@@ -39,7 +39,7 @@
 
   ----- PUT YOUR CODE BELOW THIS LINE -----
 
-* The ~plot()~ function is generic
+* TODO The ~plot()~ function is generic
 
   1) Apply the ~plot~ function to the ~Insul~ variable from the ~whiteside~
      data frame in the ~MASS~ package.
@@ -48,11 +48,11 @@
 
   ----- PUT YOUR CODE BELOW THIS LINE -----
 
-* A preview of some more and less useful techniques
+* TODO A preview of some more and less useful techniques
 
   Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
 
-* Adding details to a plot using point shapes, color, and reference lines
+* TODO Adding details to a plot using point shapes, color, and reference lines
 
   1) Create an R code block to check that the data set ~Cars93~ from the
      ~MASS~ package is in your work space, and to look at its structure.
@@ -77,7 +77,7 @@
 
   ----- PUT YOUR CODE BELOW THIS LINE -----
 
-* Creating multiple plot arrays
+* TODO Creating multiple plot arrays
 
   1) Create an R code block and look at the structure of the ~Animals2~
      data set in the ~robustbase~ package.
@@ -96,7 +96,7 @@
 
   ----- PUT YOUR CODE BELOW THIS LINE -----
 
-* Avoid pie charts
+* TODO Avoid pie charts
 
   1) Create an R code block and look at the structure of the ~dataCar~
      data set in the ~insuranceData~ package. Remember that you may have

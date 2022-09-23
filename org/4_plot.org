@@ -236,7 +236,7 @@ line plot.
 
 - ~mfrow~, a 2-dim vector that sets up an array of plots
   #+name: mfrow
-  #+begin_src R :session *R* :results graphics file :file ../img/mfrow.png
+  #+begin_src R :session *R* :results graphics file :file ../img/4_mfrow.png
     par(mfrow=c(2,1))
     plot(rnorm(100), type="l")
     title("100 random numbers")
@@ -245,9 +245,9 @@ line plot.
   #+end_src
 
   #+RESULTS: mfrow
-  [[file:../img/mfrow.png]]
+  [[file:../img/4_mfrow.png]]
 
-  #+begin_src R :session *R* :results graphics file :file ../img/mfrow1.png
+  #+begin_src R :session *R* :results graphics file :file ../img/4_mfrow1.png
     par(mfrow=c(2,1))
     plot(rnorm(100))
     title("100 random numbers")
@@ -256,7 +256,7 @@ line plot.
   #+end_src
 
   #+RESULTS:
-  [[file:../img/mfrow1.png]]
+  [[file:../img/4_mfrow1.png]]
 
 - Several parameters come in groups:
 
@@ -514,8 +514,76 @@ x- Now we're ready to enhance our basic plot.
 - Left-right alignment is specified by ~adj~ whose default is centered
   (~0.5~). To justify right, we need to set it to ~adj=1~
 
-- R code:
-  #+begin_src R :results graphics file :file ../img/cereals4.png
+- The code block is growing, so let's look at the ~text~ addition alone:
+  #+begin_example R
+    pointLabels <- paste(rownames(UScereal)[index], "-->") 
+    text(
+      x=11,       # x-coordinate of text field
+      y=y[index], # y-coordinate of text field
+      labels=pointLabels,  # text for text field
+      adj=1,  # text is right justified
+      family="mono", # use mono spaced font family
+      font=1) # exact font depends on font family used
+  #+end_example
+
+  1) We define a text label. The ~paste~ function concatenates vectors
+     after converting to ~character~. Here, it concatenates a value of
+     the data frame and the character ~-->~ 
+     #+begin_src R
+       paste("Result: ", 100)
+       class(paste("Result: ", 100))
+     #+end_src
+
+  2) Let's pick the expression ~rownames(UScereal)[index]~ apart[fn:1]:
+     You've seen this indexing structure before, in ~par()$lty~.
+
+     #+begin_src R
+
+     #+end_src
+
+
+- The complete R code block for printout looks like this now:
+  #+begin_src R :results graphics file :file ../img/4_cereals4.png
+    plot(x,y,
+         xlab="Grams of sugar per serving",
+         ylab="Calories per serving",
+         type = "n")
+    #################################
+    index <- which(y > 300)
+    points(x[-index], y[-index], pch=16)
+    points(x[index], y[index], pch=18, cex=2)
+    #######################################
+    olsModel <- lm(y ~ x)
+    abline(olsModel, lty=3) 
+    library(robustbase)
+    robustModel <- lmrob(y ~ x)  
+    abline(robustModel, lty=2, lwd=2)
+    #############################
+    pointLabels <- paste(rownames(UScereal)[index], "-->")
+    text(
+      x=11,       
+      y=y[index], 
+      labels=pointLabels, 
+      adj=1,  
+      family="mono",
+      font=1) 
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/4_cereals4.png]]
+
+* TODO Adding a legend to a plot
+
+- The ~legend~ function adds a boxed explanatory text display
+
+- It can be used like the ~text~ function: box location and text
+
+- It has many more optional parameters (check out ~help(legend)~)
+  #+attr_html: :width 500px
+  [[../img/4_legend.png]]
+
+- Complete R code block:
+    #+begin_src R :results graphics file :file ../img/4_cereals4.png
     plot(x,y,
          xlab="Grams of sugar per serving",
          ylab="Calories per serving",
@@ -533,24 +601,15 @@ x- Now we're ready to enhance our basic plot.
     #############################
     pointLabels <- paste(rownames(UScereal)[index], "-->")
     text(
-      x=11,
-      y=y[index],
-      labels=pointLabels,
-      adj=1,
-      font=2)
+      x=11,       # x-coordinate of text field
+      y=y[index], # y-coordinate of text field
+      labels=pointLabels,  # text for text field
+      adj=1,  # text is right justified
+      family="mono", # use mono spaced font family
+      font=1) # exact font depends on font family used
   #+end_src
 
-  #+RESULTS:
-  [[file:../img/cereals4.png]]
 
-- The ~paste~ function concatenates vectors after converting to
-  ~character~.
-  #+begin_src R
-    paste("Result: ", 100)
-    class(paste("Result: ", 100))
-  #+end_src
-
-* TODO Adding a legend to a plot
 * TODO Customizing axes
 * TODO Lab session: adding details to plots
 
@@ -561,3 +620,11 @@ x- Now we're ready to enhance our basic plot.
 - Solve the problems using R code blocks
 - Submit the completed file to Canvas
 * TODO Summary: plotting symbols
+
+* Footnotes
+
+[fn:1] The need to deconstruct, as it were, complex functional
+expressions in R, is similar to getting a mathematical formula and
+having to take it apart using your knowledge of the laws of
+mathematics. If you don't enjoy this type of thing you probably won't
+study math (or you have to learn a lot more things by heart). 

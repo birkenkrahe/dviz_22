@@ -14,7 +14,7 @@
 - Why R?
 - R package management
 - Download R practice file
-* DONE WHY DO WE ANALYZE DATA?
+* WHY DO WE ANALYZE DATA?
 #+ATTR_HTML: :width 300px
 #+caption: Caspar David Friedrich, Wanderer above a sea of fog (1818)
 [[../img/2_wanderer.jpg]]
@@ -38,7 +38,7 @@
   3. to *guide* us in making decisions.
   #+end_quote
 
-* DONE DATA - CONCEPT
+* DATA - CONCEPT
 #+ATTR_HTML: :width 500px
 #+caption: collapsed data science pipeline
 [[../img/2_pipeline.png]]
@@ -55,7 +55,7 @@
   + manufacturing data from a production line
   + application information from a hiring process
 
-* DONE DATA - PRACTICE
+* DATA - PRACTICE
 
 - Data structures = rectangular array of observed values
 - Rows = observation of entity, event, or process
@@ -81,7 +81,7 @@
 - Meta data supplement data frame content
 #+end_notes
 
-* DONE META DATA
+* META DATA
 
 #+attr_html: :width 300px
 #+caption: Greek goddess of peace and spring "Eirene"
@@ -109,7 +109,7 @@
     available." (Pearson, 2018)
     #+end_quote
 
-* DONE PRACTICE: META OR NOT META?
+* PRACTICE: META OR NOT META?
 
 #+attr_html: :width 300px
 #+caption: datascience.codata.org/articles/10.5334/dsj-2022-010/
@@ -130,7 +130,7 @@ the screenshot of an online journal article.
    [[../img/2_meta_solution.png]]
 #+end_notes
 
-* DONE PROBLEM: MISSING VALUES
+* PROBLEM: MISSING VALUES
 #+attr_html: :width 500px
 #+caption: Pima Indians data sets in the MASS package
 [[../img/2_pima.png]]
@@ -198,7 +198,7 @@ Check out structure of Pima datasets:
   were not aware that data values were missing." (Pearson, 2018)
   #+end_quote
 
-* DONE PROBLEM: VARIABLE DEFINITIONS
+* PROBLEM: VARIABLE DEFINITIONS
 
 - How many planets are there orbiting the sun?
 
@@ -219,7 +219,7 @@ Check out structure of Pima datasets:
     the cause of death? When do two patients have the same disease?
   #+end_notes
 
-* DONE EXPLORATORY DATA ANALYSIS (EDA)
+* EXPLORATORY DATA ANALYSIS (EDA)
 
 #+attr_html: :width 500px
 [[../img/2_pattern.png]]
@@ -247,7 +247,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
   : [1] male   female
   : Levels: female male
 
-* DONE TYPES OF CATEGORICAL VARIABLES
+* TYPES OF CATEGORICAL VARIABLES
 #+caption: AI-generated outline for research topic (Source: OpenAI)
 #+attr_html: :width 500px
 [[../img/2_openai.png]]
@@ -258,7 +258,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 
 - Exploitable sub-structure (e.g. text data[fn:1])
 
-* DONE SOME ISSUES WITH GRAPHS
+* SOME ISSUES WITH GRAPHS
 
 - Humans are better at seeing patterns in graphs than numbers[fn:3]
   #+attr_html: :width 500px
@@ -271,7 +271,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
   - Usefulness of a graph depends on *how data* are displayed, and
     strongly on *which data* are chosen to be displayed
 
-* DONE PRACTICE: RAW VS. TRANSFORMED GRAPH DATA
+* PRACTICE: RAW VS. TRANSFORMED GRAPH DATA
 
 - The following two sets of plots are constructed from the ~brain~
   element of the ~mammals~ dataset from the ~MASS~ package that lists body
@@ -302,7 +302,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
     (normal) distribution
   #+end_notes
 
-* DONE R FOR EXPLORATORY ANALYSIS
+* R FOR EXPLORATORY ANALYSIS
 
 #+attr_html: :width 700px
 [[../img/2_xkcd_outlier.png]]
@@ -313,7 +313,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 
 - Important focus: searching for anomalies and outliers in the data
 
-* DONE DATA ANALYSIS WORKFLOW
+* DATA ANALYSIS WORKFLOW
 #+attr_html: :width 600px
 #+caption: Data analysis workflow (emanuelaf.github.io - modified)
 [[../img/2_workflow.png]]
@@ -331,7 +331,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
   support, hence the shift to storytelling and interpretation
 #+end_notes
 
-* DONE COMPUTERS
+* COMPUTERS
 #+attr_html: :width 500px
 #+caption: Von Neumann computer architecture (PSC Arivukal, 2020)
 [[../img/2_computer.jpg]]
@@ -340,7 +340,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 - Most R functions require raw data and results to fit in RAM
 - OS and Internet impose infrastructure constraints[fn:4]
 
-* DONE WHY R?
+* WHY R?
 
 #+attr_html: :width 200px
 [[../img/2_Rlogo.png]]
@@ -350,7 +350,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 - Unix-style package and version control system
 - Diverse, active community of users and developers
 
-* DONE THE STRUCTURE OF R
+* THE STRUCTURE OF R
 #+attr_html: :width 400px
 #+caption: ggplot2 downloads from CRAN 2012-2020
 [[../img/2_ggplot2.png]]
@@ -363,7 +363,7 @@ perceived, and experience with other data analyses." (Diaconis, 1985)
 more than 272 mio. times between 2012 and 2020, with a monthly average
 of > 800k downloads (Source: CRAN, 2021).
 
-* IN PROGRESS INSTALLATION AND LOADING R PACKAGES
+* INSTALLATION AND LOADING R PACKAGES
 
 - We'll do this directly on the command line ([[https://bookdown.org/ndphillips/YaRrr/packages.html][see e.g. here]]):
 
@@ -383,7 +383,7 @@ of > 800k downloads (Source: CRAN, 2021).
 
 - Alternatively, you can use the Rgui program, or the RStudio IDE
 
-* SOMEDAY OPTIONAL INSTALLATION IN THE RGUI
+* OPTIONAL INSTALLATION IN THE RGUI
 
 - Start the Rgui from the CMD line terminal
 - The Rgui includes a command line and graphics
@@ -404,7 +404,7 @@ of > 800k downloads (Source: CRAN, 2021).
 #+caption: Package management in the Rgui program
 [[../img/2_packages2.png]]
 
-* DONE QUESTIONS TO ASK FROM DATA
+* QUESTIONS TO ASK FROM DATA
 
 1. Where does the dataset come from, and how is it documented?
 2. How many records (rows) does this dataset contain?
@@ -417,7 +417,7 @@ of > 800k downloads (Source: CRAN, 2021).
 9. Are the variable values consistent with what we expect?
 10. Do the variables exhibit the relationships we expect?
 
-* IN PROGRESS PRACTICE: A REPRESENTATIVE R SESSION
+* PRACTICE: A REPRESENTATIVE R SESSION
 
 #+attr_html: :width 300px
 [[../img/2_github.png]]

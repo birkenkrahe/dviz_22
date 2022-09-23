@@ -1,7 +1,7 @@
 #+TITLE:Practice: A Representative R Session
 #+AUTHOR: [your name here]
 #+SUBTITLE: Data visualization (DSC 302) Fall 2022
-#+OPTIONS: toc:nil num:nil ^:nil
+#+OPTIONS: toc:1 num:1 ^:nil
 * README
 
   - Practice instructions for the data visualization lectures
@@ -97,7 +97,7 @@
      the ~MASS~ package with the ~library~ command and confirm with
      ~search()~, which lists all packages that have been loaded.
 
-     Run the code chunk [[loadMass]] below with ~C-c C-c~ [fn:4] - if you
+     Run the code chunk below with ~C-c C-c~ [fn:4] - if you
      cannot see the code but instead see a line ending with ~...~, bring
      the cursor to that line and open the section with the ~<TAB>~ key.
 
@@ -108,7 +108,7 @@
 
   6) Interactions with the OS like loading a package are not
      remembered by the system unless they are tied to a named R
-     session. In the code block [[loadMass1]] below, replace ~???~ with the
+     session. In the code block below, replace ~???~ with the
      name of the R session that you started in (1), e.g. ~*R*~. Then
      run the code block again with ~C-c C-c~.
 
@@ -169,7 +169,7 @@
   To get a more detailed view at the data frame, we display its
   structure using the generic[fn:5] ~str~ function.
 
-  1) Create a named R code block called [[structure]] by entering ~<s
+  1) Create a named R code block called ~structure~ by entering ~<s
      TAB~. Add the header arguments[fn:6]:
 
      #+begin_example
@@ -182,9 +182,9 @@
 
      ----- PUT YOUR CODE BELOW THIS LINE -----
 
-  2) In [[structure]], make a function call of ~str~ to the data frame
-     ~whiteside~ to compactly display its structure, and run the code with
-     ~C-c C-c~. Make sure you understand the output.
+  2) In the code block ~structure~, make a function call of ~str~ to the
+     data frame ~whiteside~ to compactly display its structure, and run
+     the code with ~C-c C-c~. Make sure you understand the output.
 
   3) The variable ~Insul~ is a /factor/, a vector used to represent
      /categorical/ variables. You can extract its values (called /levels/)
@@ -223,8 +223,9 @@
   R is strong on statistics. The ~summary~ function returns simple
   statistical properties of each variable.
 
-  Create a named code block [[summary]]. In it, call the function ~summary~ on
-  the ~whiteside~ data frame. Open the explanatory notes below with ~<TAB>~.
+  Create a named code block ~summary~. In it, call the function ~summary~
+  on the ~whiteside~ data frame. Open the explanatory notes below with
+  ~<TAB>~.
 
   ----- PUT YOUR CODE BELOW THIS LINE -----
 
@@ -354,7 +355,7 @@
      was consumed after insulation was installed than before.
      #+end_notes
 
-  2) Create another code block [[plot1]] that uses ~plot~ to plot only the
+  2) Create another code block ~plot1~ that uses ~plot~ to plot only the
      ~Temp~ variable of the ~whiteside~ data set. Can you explain the graph?
 
      ----- PUT YOUR CODE BELOW THIS LINE -----
@@ -381,7 +382,7 @@
       #+RESULTS: plot_solution
       [[file:./img/plot.png]]
 
-   2) Create another code block [[plot1]] that uses ~plot~ to plot only the
+   2) Create another code block ~plot1~ that uses ~plot~ to plot only the
       ~Temp~ variable of the ~whiteside~ data set.
 
       #+name: plot1_solution

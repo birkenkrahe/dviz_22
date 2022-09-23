@@ -93,7 +93,7 @@ Example: Creating a visual CV using R
 [[../img/3_cv.png]]
 
 Source: [[https://mmarteaga.github.io/post/VisualCV/][How to create a visual CV using R!]] (Arteaga, 2021)
-* DONE Preparations to code along
+* Preparations to code along
 
 [[../img/emacsprep.png]]
 
@@ -246,7 +246,6 @@ plot(data=UScereal, calories ~ sugars)
   #+RESULTS:
   [[file:../img/3_grid.png]]
   
-
 * ~lattice~ graphics
 
 - Based on grid graphics, shipped with base R (needs to be loaded)
@@ -284,7 +283,7 @@ plot(data=UScereal, calories ~ sugars)
 #+caption: Grammar of Graphics (gg) philosophy
 [[../img/gg.png]]
 
-* IN PROGRESS Concept summary
+* Concept summary
 
 - Infographics are design-rich and built to inform, data
   visualizations (and dashboards) are data-rich and built to be
@@ -293,14 +292,13 @@ plot(data=UScereal, calories ~ sugars)
 - Exploratory/explanatory graphics have different challenges. EDA:
   separate signal from noise; storytelling: tell a good story!
 
-* IN PROGRESS Code summary
+* Code summary
 
 | COMMAND | MEANING                                 |
 |---------+-----------------------------------------|
 | ~method~  | Available methods for generic functions |
 
-* IN PROGRESS Glossary
-
+* Glossary
 | TERM                 | MEANING |
 |----------------------+---------|
 | Infographics         |         |

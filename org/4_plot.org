@@ -361,6 +361,7 @@ line plot.
 * Adding points and lines to a scatterplot
 #+attr_html: :width 700px
 [[../img/4_details.png]]
+
 * Starting ~plot~ without bells and whistles
 
 - Starting point is calories vs. sugars from the ~UScereal~ data frame
@@ -395,7 +396,7 @@ line plot.
          ylab="Calories per serving",
          type = "n")
   #+end_src
-
+  
   #+RESULTS:
   [[file:../img/4_cereal1.png]]
 
@@ -505,7 +506,7 @@ x- Now we're ready to enhance our basic plot.
 
 - Point sizes (~cex~) and colors (~col~) can also be specifed this way
 
-* IN PROGRESS Adding text to a plot
+* Adding text to a plot
 
 - The ~text~ function works similarly to the other customizing functions
 
@@ -586,7 +587,7 @@ x- Now we're ready to enhance our basic plot.
   #+RESULTS:
   [[file:../img/4_cereals4.png]]
 
-* TODO Adding a legend to a plot
+* Adding a legend to a plot
 
 - The ~legend~ function adds a boxed explanatory text display
 
@@ -597,10 +598,21 @@ x- Now we're ready to enhance our basic plot.
   [[../img/4_legend.png]]
 
 - Let's look at the code fragment for the legend only:
+  #+begin_example R
+    legend(
+    x = "topright",  # set location in plot
+    legend = c("OLS line", "robust line")) # print legend labels
+    lty = c(3,2),   # set line type for 2 legend items
+    lwd = c(1,2))  # set line width for 2 legend items
+  #+end_example
 
+  1) The first (~x~) argument sets the location in the plot
+  2) The ~legend~ parameter prints the legend labels (text)
+  3) The next parameters link the legend to the plot:
+     - ~lty=3~, ~lwd=1~ is the dotted thin upper line (OLS fit)
+     - ~lty=2~, ~lwd=2~ is the dashed thick lower line (robust fit)
 
-
-- Complete R code block:
+- Our final R code block:
   #+begin_src R :results graphics file :file ../img/4_cereals5.png
     plot(x,y,
          xlab="Grams of sugar per serving",
@@ -626,13 +638,109 @@ x- Now we're ready to enhance our basic plot.
       family="mono", # use mono spaced font family
       font=1) # exact font depends on font family used
     #############################
-    
+    legend(
+    x = "topright", 
+    lty = c(3,2),
+    lwd = c(1,2),
+    legend = c("OLS line", "robust line"))
   #+end_src
 
   #+RESULTS:
   [[file:../img/4_cereals5.png]]
 
-* TODO Customizing axes
+* Customizing axes
+
+- You already know about labelling axes with ~xlab~ and ~ylab~
+
+- In addition, the limits of the axes can be set with ~xlim~ and ~ylim~
+
+- The ~par~ function offers additional parameters like ~las~ and ~side~
+
+- ~las~ specifies the orientation of the axis labels:
+  1) ~las=0~ : labels are displayed axis-parallel (default)
+  2) ~las=1~ : labels are always horizontal
+  3) ~las=2~ : labels are always perpendicular to the axis
+  4) ~las=3~ : labels are always vertical
+
+- To aid readability, you may also have to adjust ~cex.lab~
+
+- Example:
+  #+begin_src R :results graphics file :file 4_las.png
+    par(las=0, mfrow=c(2,2))
+    plot(Nile, main="las=0")
+    par(las=1)
+    plot(Nile, main="las=1")
+    par(las=2)
+    plot(Nile, main="las=2")
+    par(las=3)
+    plot(Nile, main="las=3")
+  #+end_src
+
+  #+RESULTS:
+  [[file:4_las.png]]
+
+* Specifying your own axes
+
+- You can specify your own axes in two steps:
+  1. execute the base graphics function with ~axes = FALSE~
+  2. Use the ~axis~ function to specify your own axes
+
+- The default axes are now suppressed and you need to set:
+  1) ~side = 1~ : creates (default) lower x-axis below the plot
+  2) ~side = 2~ : creates (default) y-axis left of the plot
+  3) ~side = 3~ : creates upper x-axis above theplot
+  4) ~side = 4~ : creates a y-axis right of the plot
+
+- Example: boxplot of the range of ~sugars~ values for each of the three
+  levels of ~shelf~ value in the ~UScereal~ dataframe:
+  1) ~shelf = 1~ is at the floor level
+  2) ~shelf = 2~ is the middle shelf (kid-eye-level)
+  3) ~shelf = 3~ is on the top shelf (adult-eye-level)
+
+- Box plot without axes: The ~varwidth~ parameter creates a boxplot of
+  variable width so that the width of each individual boxplot reflects
+  the number of different cereals on each shelf.
+  #+begin_src R :results graphics file :file 4_axis1.png
+    boxplot(
+      sugars ~ shelf,
+      data = UScereal,
+      axes = FALSE,  # this removes the default axes
+      xlab = "Shelf",
+      ylab = "Grams of sugar per serving",
+      varwidth = TRUE)
+  #+end_src
+
+  #+RESULTS:
+  [[file:4_axis1.png]]
+  
+- Box plot with axis specified using ~axis~: 
+  #+begin_src R :results graphics file :file 4_axis2.png
+    boxplot(
+      sugars ~ shelf,
+      data = UScereal,
+      axes = FALSE,  # this removes the default axes
+      xlab = "Shelf",
+      ylab = "Grams of sugar per serving",
+      varwidth = TRUE)
+    axis(              # construct bottom axis (shelf value)
+      side = 1,
+      at = c(1,2,3),
+      labels = c(1,2,3))
+    yRange <- seq(0, max(UScereal$sugars), by=5)
+      axis(             # construct y-axis
+      side = 2,
+      at = yRange,
+      labels = yRange)
+    axis(               # construct top axis (shelf location)
+      side = 3,
+      at = c(1,2,3),
+      labels = c("Floor", "Mid", "Top"))
+  #+end_src
+
+  #+RESULTS:
+  [[file:4_axis2.png]]
+  
+
 * TODO Lab session: adding details to plots
 
 [[../img/3_gnome.jpg]]
@@ -641,7 +749,6 @@ x- Now we're ready to enhance our basic plot.
 - Identify yourself as the author and pledge
 - Solve the problems using R code blocks
 - Submit the completed file to Canvas
-* TODO Summary: plotting symbols
 
 * Footnotes
 

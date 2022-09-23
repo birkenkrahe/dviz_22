@@ -595,13 +595,12 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 #+ATTR_HTML: :width 500px
 [[../img/3_matisse.png]]
 * Week 6: The ~plot~ function
-#+attr_html: :width 400px
-[[../img/cereal1.png]]
+#+attr_html: :width 600px
+[[../img/4_details.png]]
 
 - [X] Optional plot parameters
-- [ ] New course is hybrid DataCamp/Org-mode
+- [X] New course is hybrid DataCamp/Org-mode
 - [X] Adding details to scatterplots
-- [ ] Lab session with ~plot~
 
 * DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
 
@@ -652,13 +651,6 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
      plot(x,y, type="l") # x and y are coordinate vectors
    #+end_example
 
-* TODO Adding details to ~plot~
-#+attr_html: :width 500px
-
-[[../img/details.jpg]]
-
-The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
-
 * TODO Assignment: a quick introduction to base R graphics
 #+attr_html: :width 500px
 [[../img/dc_pearson1.png]]
@@ -688,8 +680,25 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
   2) Emphasis on storytelling with data
   3) Emphasis on insights from data
 
+- If you don't know what all this means - ASK ME!
+* TODO Adding details to plots
+#+attr_html: :width 500px
+
+[[../img/details.jpg]]
+
+The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
+
 * Week 7: Adding details to plots
-** TODO Adding details to ~plot~ (cont'd)
+
+- [ ] Adding details to plots
+- [ ] Lab session with ~plot~
+- [ ] Different plot types
+- [ ] Barplot summaries
+- [ ] The ~symbols~ function
+- [ ] Multiple plot arrays
+- [ ] Using the ~layout~ function
+
+** TODO Adding details to plots (cont'd)
 #+attr_html: :width 500px
 
 [[../img/details.jpg]]

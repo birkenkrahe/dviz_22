@@ -601,6 +601,8 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - [X] Optional plot parameters
 - [X] New course is hybrid DataCamp/Org-mode
 - [X] Adding details to scatterplots
+- [ ] 2nd sprint review - tips and hints
+- [ ] New DataCamp hybrid assignment
 
 * DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
 
@@ -660,8 +662,6 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - Complete this assignment by October 7 at 3 pm
 - Upload the completed Org-mode file [[https://lyon.instructure.com/courses/571/assignments/1655][to Canvas]]
 * TODO About the 2nd sprint review
-[[../img/scrum.jpg]]
-
 #+attr_html: :width 600px
 [[../img/scrum.png]]
 

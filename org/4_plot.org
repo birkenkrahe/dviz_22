@@ -404,7 +404,7 @@ line plot.
 
 - ~points~ behaves much like ~plot~. It adds points to an existing plot.
 
-- [ ] Is ~points~ a /generic/ R function?
+- [X] Is ~points~ a /generic/ R function?
   #+begin_src R
     methods(points)
   #+end_src
@@ -425,11 +425,11 @@ line plot.
     y[-index]  # UScereal$calories[index] non-outliers
   #+end_src
 
-- We plot the non-outliers with one type of point (~pch=16~), the outliers
-  with another (~pch=18~) and twice as large (~cex=2~).
+- We plot the non-outliers with one type of point (~pch=16~), the
+  outliers with another (~pch=18~) and twice as large (~cex=2~).
 
-x- Now we're ready to enhance our basic plot.
-#+begin_src R :results graphics file :file ../img/4_cereal2.png
+- Now we're ready to enhance our basic plot.
+  #+begin_src R :results graphics file :file ../img/4_cereal2.png
   plot(x,y,
        xlab="Grams of sugar per serving",
        ylab="Calories per serving",
@@ -438,9 +438,9 @@ x- Now we're ready to enhance our basic plot.
   index <- which(y > 300)
   points(x[-index], y[-index], pch=16)
   points(x[index], y[index], pch=18, cex=2)
-#+end_src
+  #+end_src
 
-#+RESULTS:
+  #+RESULTS:
 [[file:../img/4_cereal2.png]]
 
 * Add reference lines with ~abline~

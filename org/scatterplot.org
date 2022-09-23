@@ -1,0 +1,155 @@
+#+PROPERTY: header-args:R :export both :results output :session *R*
+#+STARTUP: overview hideblocks indent inlineimages
+#+AUTHOR:
+Time-stamp: <>
+
+* CUSTOMIZING A SCATTERPLOT
+
+#+begin_src R
+  par()$mfrow  
+#+end_src
+
+#+RESULTS:
+: [1] 1 1
+
+#+begin_src R :results graphics file :file cereal.png
+  par(mfrow=c(1,1))
+  library(MASS)
+  x <- UScereal$sugars
+  y <- UScereal$calories
+  plot(x,y)  # same as plot(y ~ x)
+#+end_src
+
+#+RESULTS:
+[[file:cereal.png]]
+* ADDING AXIS LABELS
+
+#+begin_src R :results graphics file :file axis.png
+  plot(x,y, xlab="Grams of sugar per serving",
+       ylab="Calories per serving", type="n")
+#+end_src
+
+#+RESULTS:
+[[file:axis.png]]
+
+Is ~points~ a generic function or not? If it is, then it has different
+~methods~ for different data input
+#+begin_src R
+  methods(points) # yes! points IS a generic function
+  methods(legend) # legends clearly is not a generic function
+#+end_src
+
+#+RESULTS:
+: [1] points.default  points.formula* points.table*  
+: see '?methods' for accessing help and source code
+: no methods found
+
+#+begin_src R
+  index <- which(y>300)
+  index
+  y
+  y[index]
+  y[-index]
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[1] 31 32
+ [1] 212.12121 212.12121 100.00000 146.66667 110.00000 173.33333 134.32836
+ [8] 134.32836 160.00000  88.00000 160.00000 220.00000 110.00000 110.00000
+[15] 100.00000 110.00000 110.00000 220.00000 110.00000 133.33333 133.33333
+[22] 110.00000 146.66667 125.00000 179.10448 179.10448 146.66667 113.63636
+[29] 146.66667 113.63636 440.00000 363.63636 120.00000 146.66667  82.70677
+[36] 186.66667  73.33333 149.25373 110.00000 238.80597 100.00000 179.10448
+[43] 208.95522 260.00000 179.10448 100.00000  50.00000 200.00000 160.00000
+[50] 200.00000 180.00000  97.34513 110.00000 134.32836 134.32836 146.66667
+[57] 110.00000 110.00000 140.00000 100.00000 146.66667 110.00000 149.25373
+[64] 100.00000 146.66667
+[1] 440.0000 363.6364
+ [1] 212.12121 212.12121 100.00000 146.66667 110.00000 173.33333 134.32836
+ [8] 134.32836 160.00000  88.00000 160.00000 220.00000 110.00000 110.00000
+[15] 100.00000 110.00000 110.00000 220.00000 110.00000 133.33333 133.33333
+[22] 110.00000 146.66667 125.00000 179.10448 179.10448 146.66667 113.63636
+[29] 146.66667 113.63636 120.00000 146.66667  82.70677 186.66667  73.33333
+[36] 149.25373 110.00000 238.80597 100.00000 179.10448 208.95522 260.00000
+[43] 179.10448 100.00000  50.00000 200.00000 160.00000 200.00000 180.00000
+[50]  97.34513 110.00000 134.32836 134.32836 146.66667 110.00000 110.00000
+[57] 140.00000 100.00000 146.66667 110.00000 149.25373 100.00000 146.66667
+#+end_example
+
+#+begin_src R
+  foo <- c(200,300,400,500)
+  findex <- which(foo > 300)
+  findex
+
+  foo[findex]
+  foo[-findex]
+
+  foo[foo>300]
+#+end_src
+
+#+RESULTS:
+: [1] 3 4
+: [1] 400 500
+: [1] 200 300
+: [1] 400 500
+
+Plot with outliers highlighted:
+#+begin_src R :results graphics file :file outliers.png
+  plot(x,y, xlab="Grams of sugar per serving",
+       ylab="Calories per serving", type="n")
+
+  index <- which(y > 300)   # indices of the outliers
+  points(x[-index], y[-index], pch=16) # all normal points
+  points(x[index], y[index], pch=18, cex=2) # 2 outlying points
+#+end_src
+
+#+RESULTS:
+[[file:outliers.png]]
+* ADD REFERENCE LINES
+
+#+begin_src R :results graphics file :file models.png
+  ## basic plot
+  plot(x,y, xlab="Grams of sugar per serving",
+       ylab="Calories per serving", type="n")
+  ## highlight outliers
+  index <- which(y > 300)   # indices of the outliers
+  points(x[-index], y[-index], pch=16) # all normal points
+  points(x[index], y[index], pch=18, cex=2) # 2 outlying points
+
+  ## trends lines
+  olsModel <- lm(y ~ x) # linear regression model 1
+  abline(olsModel, lty=3)
+  library(robustbase)
+  robustModel <- lmrob(y ~ x)
+  abline(robustModel, lty=2, lwd=2)
+#+end_src
+
+#+RESULTS:
+[[file:models.png]]
+
+#+begin_src R
+  methods(abline)
+  olsModel
+  robustModel
+#+end_src
+
+#+RESULTS:
+#+begin_example
+no methods found
+
+Call:
+lm(formula = y ~ x)
+
+Coefficients:
+(Intercept)            x  
+     96.164        5.298
+
+Call:
+lmrob(formula = y ~ x)
+ \--
+method = "MM"
+Coefficients:
+(Intercept)            x  
+     93.581        4.701
+#+end_example

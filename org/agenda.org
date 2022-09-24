@@ -601,10 +601,10 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - [X] Optional plot parameters
 - [X] New course is hybrid DataCamp/Org-mode
 - [X] Adding details to scatterplots
-- [ ] 2nd sprint review - tips and hints
-- [ ] New DataCamp hybrid assignment
+- [X] 2nd sprint review - tips and hints
+- [X] New DataCamp hybrid assignment
 
-* DONE Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
+** Featured data stories from [[https://github.com/birkenkrahe/dviz/issues][GitHub issues]]
 
 - INFOGRAPHIC OF THE HISTORY OF LANGUAGES
   #+attr_html: :width 400px
@@ -634,26 +634,27 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   scientist who understands that words matter."
   #+end_quote
 
-* DONE Base graphics parameters
+** Base graphics parameters
 #+attr_html: :width 500px
 [[../img/par.png]]
 
 *Review questions:*
 
 1) Which function controls graphic parameters in base R?
+
 2) How can you create a panel of two plots on top of one another?
 
    #+begin_example R
      par(mfrow=c(2,1))
    #+end_example
-
+   
 3) How can you turn a scatterplot into a line plot?
 
    #+begin_example R
      plot(x,y, type="l") # x and y are coordinate vectors
    #+end_example
 
-* TODO Assignment: a quick introduction to base R graphics
+** Assignment: a quick introduction to base R graphics
 #+attr_html: :width 500px
 [[../img/dc_pearson1.png]]
 
@@ -661,7 +662,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - Assignment requires some skill and independence
 - Complete this assignment by October 7 at 3 pm
 - Upload the completed Org-mode file [[https://lyon.instructure.com/courses/571/assignments/1655][to Canvas]]
-* TODO About the 2nd sprint review
+** About the 2nd sprint review
 #+attr_html: :width 600px
 [[../img/scrum.png]]
 
@@ -681,7 +682,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   3) Emphasis on insights from data
 
 - If you don't know what all this means - ASK ME!
-* TODO Adding details to plots
+** Adding details to plots
 #+attr_html: :width 500px
 
 [[../img/details.jpg]]

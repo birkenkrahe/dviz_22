@@ -380,7 +380,7 @@ line plot.
 - Variables ~x~, ~y~ are defined because we use them again
 - ~plot(x,y)~ is invoked to get a simple scatterplot
 
-* NEXT Adding axis labels ~xlab~, ~ylab~, and ~type~
+* Adding axis labels ~xlab~, ~ylab~, and ~type~
 
 - The next block invokes ~plot~ again, but with three optional
   arguments:
@@ -482,7 +482,7 @@ line plot.
     methods(abline)
   #+end_src
 
-* Customization with vectors
+* NEXT Customization with vectors
 
 - Consider the following code to plot ~whiteside~ variables
   #+begin_src R :results graphics file :file ../img/4_pch.png
@@ -507,6 +507,8 @@ line plot.
 - Point sizes (~cex~) and colors (~col~) can also be specifed this way
 
 * Adding text to a plot
+
+ -->> [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/org/scatterplot.org][IF YOU MISSED THE LAST 1-2 SESSIONS DOWNLOAD THIS]] <<--
 
 - The ~text~ function works similarly to the other customizing functions
 
@@ -665,7 +667,7 @@ line plot.
 - To aid readability, you may also have to adjust ~cex.lab~
 
 - Example:
-  #+begin_src R :results graphics file :file 4_las.png
+  #+begin_src R :results graphics file :file ../img/4_las.png
     par(las=0, mfrow=c(2,2))
     plot(Nile, main="las=0")
     par(las=1)
@@ -677,7 +679,7 @@ line plot.
   #+end_src
 
   #+RESULTS:
-  [[file:4_las.png]]
+  [[file:../img/4_las.png]]
 
 * Specifying your own axes
 
@@ -700,7 +702,7 @@ line plot.
 - Box plot without axes: The ~varwidth~ parameter creates a boxplot of
   variable width so that the width of each individual boxplot reflects
   the number of different cereals on each shelf.
-  #+begin_src R :results graphics file :file 4_axis1.png
+  #+begin_src R :results graphics file :file ../img/4_axis1.png
     boxplot(
       sugars ~ shelf,
       data = UScereal,
@@ -711,10 +713,10 @@ line plot.
   #+end_src
 
   #+RESULTS:
-  [[file:4_axis1.png]]
+  [[file:../img/4_axis1.png]]
   
 - Box plot with axis specified using ~axis~: 
-  #+begin_src R :results graphics file :file 4_axis2.png
+  #+begin_src R :results graphics file :file ../img/4_axis2.png
     boxplot(
       sugars ~ shelf,
       data = UScereal,
@@ -738,9 +740,8 @@ line plot.
   #+end_src
 
   #+RESULTS:
-  [[file:4_axis2.png]]
+  [[file:../img/4_axis2.png]]
   
-
 * TODO Lab session: adding details to plots
 
 [[../img/3_gnome.jpg]]

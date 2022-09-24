@@ -183,7 +183,7 @@ scatterplots to summarize the data frame.
 #+end_notes
 
 #+begin_src R :exports both :session :results output graphics file :file ../calories.png
-plot(data=UScereal, calories ~ sugars)
+  plot(data=UScereal, calories ~ sugars)
 #+end_src
 
 #+RESULTS:
@@ -276,11 +276,11 @@ plot(data=UScereal, calories ~ sugars)
   some additional features, like the /multipanel conditioning plot/
 
   #+begin_src R :results graphics file :file ../img/lattice.png
-  library(MASS) # load MASS package for Cars93 data set
-  library(lattice) # load lattice package
+    library(MASS) # load MASS package for Cars93 data set
+    library(lattice) # load lattice package
 
-  ## plot MPG.city vs. Horsepower, conditioned by Cylinders
-  xyplot(MPG.city ~ Horsepower | Cylinders, data = Cars93)
+    ## plot MPG.city vs. Horsepower, conditioned by Cylinders
+    xyplot(MPG.city ~ Horsepower | Cylinders, data = Cars93)
   #+end_src
 
   #+RESULTS:

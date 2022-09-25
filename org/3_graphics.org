@@ -110,7 +110,7 @@ Source: [[https://mmarteaga.github.io/post/VisualCV/][How to create a visual CV 
 - When you execute your first R code block, you'll be asked where you
   want the session named ~*R*~ to run: enter the path to ~plot.org~
 
-- For plots, use the header ~:results graphics file :file plot.png~
+- For plots, use the header ~:results output graphics file :file plot.png~
 
 - When you leave Emacs, you'll be warned that the session ~*R*~ is
   active: you can ignore this warning
@@ -236,7 +236,7 @@ scatterplots to summarize the data frame.
   learning curve.
 
 - Scatterplot with base R ~plot~
-  #+begin_src R :results graphics file :file ../img/3_cereal.png
+  #+begin_src R :results output graphics file :file ../img/3_cereal.png
     library(MASS)
     plot(UScereal$sugars,UScereal$calories)
     title("plot(UScereal$sugars,UScereal$calories)")
@@ -246,7 +246,7 @@ scatterplots to summarize the data frame.
   [[file:../img/3_cereal.png]]
 
 - Scatterplot with ~grid~ package:
-  #+begin_src R :results graphics file :file ../img/3_grid.png
+  #+begin_src R :results output graphics file :file ../img/3_grid.png
     library(MASS)
     x <- UScereal$sugars
     y <- UScereal$calories
@@ -275,7 +275,7 @@ scatterplots to summarize the data frame.
 - [[https://cran.r-project.org/web/packages/lattice/lattice.pdf][lattice]] has different default options for plot customization and
   some additional features, like the /multipanel conditioning plot/
 
-  #+begin_src R :results graphics file :file ../img/lattice.png
+  #+begin_src R :results output graphics file :file ../img/lattice.png
     library(MASS) # load MASS package for Cars93 data set
     library(lattice) # load lattice package
 

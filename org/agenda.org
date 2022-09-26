@@ -707,10 +707,15 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
 
-* TODO Practice: adding details to ~plot~
+* TODO WEDNESDAY - Practice: adding details to ~plot~
 
 [[../img/3_gnome.jpg]]
 
+
+* Week 8: Layout, symbols and plot arrays
+* Week 9: Different plot types
+* Week 10: Advanced plot customization
+* Week 11-15: ggplot2, Shiny, Tableau, projects
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

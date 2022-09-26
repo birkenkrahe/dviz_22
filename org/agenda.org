@@ -691,6 +691,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 * Week 7: Adding details to plots
 
+- [ ] Added [[https://github.com/birkenkrahe/dviz/blob/piHome/org/3_graphics.org#grid-graphics-example][grid package example]] to lecture
 - [ ] Adding details to plots
 - [ ] Lab session with ~plot~
 - [ ] Different plot types
@@ -699,14 +700,14 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - [ ] Multiple plot arrays
 - [ ] Using the ~layout~ function
 
-** TODO Adding details to plots (cont'd)
+* TODO Adding details to plots (cont'd)
 #+attr_html: :width 500px
 
 [[../img/details.jpg]]
 
 The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
 
-** TODO Practice: adding details to ~plot~
+* TODO Practice: adding details to ~plot~
 
 [[../img/3_gnome.jpg]]
 

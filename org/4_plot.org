@@ -589,7 +589,8 @@ line plot.
 
 * Adding a legend to a plot
 
- -->> [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/org/scatterplot.org][IF YOU MISSED THE LAST 1-2 SESSIONS DOWNLOAD THIS]] <<--
+ -->> [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/org/scatterplot.org][IF YOU MISSED THE LAST 1-2 SESSIONS DOWNLOAD THIS]]:
+      https://tinyurl.com/55p5yw6f <<--
 
 - The ~legend~ function adds a boxed explanatory text display
 
@@ -668,13 +669,13 @@ line plot.
 
 - Example:
   #+begin_src R :results graphics file :file ../img/4_las.png
-    par(las=0, mfrow=c(2,2))
-    plot(Nile, main="las=0")
-    par(las=1)
+    par(las=0, mfrow=c(2,2))   # labels are axis parallel
+    plot(Nile, main="las=0")  
+    par(las=1)                 # labels horizontal
     plot(Nile, main="las=1")
-    par(las=2)
+    par(las=2)                 # labels axis perpendicular
     plot(Nile, main="las=2")
-    par(las=3)
+    par(las=3)                 # labels vertical
     plot(Nile, main="las=3")
   #+end_src
 
@@ -690,7 +691,7 @@ line plot.
 - The default axes are now suppressed and you need to set:
   1) ~side = 1~ : creates (default) lower x-axis below the plot
   2) ~side = 2~ : creates (default) y-axis left of the plot
-  3) ~side = 3~ : creates upper x-axis above theplot
+  3) ~side = 3~ : creates upper x-axis above the plot
   4) ~side = 4~ : creates a y-axis right of the plot
 
 - Example: boxplot of the range of ~sugars~ values for each of the three
@@ -724,19 +725,19 @@ line plot.
       xlab = "Shelf",
       ylab = "Grams of sugar per serving",
       varwidth = TRUE)
-    axis(              # construct bottom axis (shelf value)
-      side = 1,
-      at = c(1,2,3),
-      labels = c(1,2,3))
+    axis(                # construct bottom axis (shelf value)
+      side = 1,          # lower axis below plot
+      at = c(1,2,3),     # tick marks
+      labels = c(1,2,3)) # number labels
     yRange <- seq(0, max(UScereal$sugars), by=5)
       axis(             # construct y-axis
-      side = 2,
-      at = yRange,
-      labels = yRange)
+      side = 2,         # y axis left of plot
+      at = yRange,      # tick marks
+      labels = yRange)  # number labels
     axis(               # construct top axis (shelf location)
-      side = 3,
-      at = c(1,2,3),
-      labels = c("Floor", "Mid", "Top"))
+      side = 3,         # upper axis above plot
+      at = c(1,2,3),    # tick marks
+      labels = c("Floor", "Mid", "Top"))  # text labels
   #+end_src
 
   #+RESULTS:

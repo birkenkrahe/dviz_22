@@ -702,6 +702,68 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - [ ] Multiple plot arrays
 - [ ] Using the ~layout~ function
 
+* TODO (Wed) Review test 6: base R parameters and ~plot~
+
+1) Which function controls graphic parameters for plots in R?
+
+2) How can you create a panel of four plots?
+
+3) How do you turn a scatterplot ~plot(x,y)~ into a line plot?
+
+4) Can every scatterplot be turned into a meaningful line plot?
+   #+begin_src R :results graphics file :file ../q61.png
+     par(mfrow=c(1,2))
+     plot(wt ~ mpg, data=mtcars, type="l")
+     plot(sort(wt) ~ sort(mpg), data=mtcars, type="l")
+   #+end_src
+
+5) What's the most important deliverable of your 2nd sprint review?
+   
+6) What do you get when plotting factor levels with ~plot~?
+   #+begin_src R :results graphics file :file ../q62.png
+     par(mfrow=c(1,1))
+     plot(ToothGrowth$supp)
+   #+end_src
+
+7) What's the difference between ~plot(Nile, type="l")~ and ~plot(Nile)~?
+   #+begin_src R :results graphics file :file ../q63.png
+     par(mfrow=c(2,1))
+     plot(Nile, type="l")
+     plot(Nile)
+   #+end_src
+
+8) When could you consider using ggplot2 instead of base R?
+   #+begin_quote
+   When presenting explanatory analysis results.
+
+   Personally, I would not use it because I find it too convoluted and
+   difficult to learn and use, and I don't buy its supposed
+   advantages.
+   #+end_quote
+   
+9) What are the default values of ~mfrow~ and ~col~?
+   #+begin_src R
+     par()$mfrow
+   #+end_src
+
+10) ~y~ is a vector of 10 random numbers. What's the difference between
+    ~which( y > 0)~ and ~(y > 0)~ ?
+    #+begin_src R
+      y <- rnorm(10)
+      y
+      which(y > 0)
+      y>0
+    #+end_src   
+
+11) What is the difference between ~y[y>0]~ and ~y[which(y>0)]~?
+    #+begin_src R
+      y <- rnorm(10)
+      y>0
+      y[y>0]
+      which(y > 0)
+      y[which(y>0)]
+    #+end_src
+
 * TODO Adding details to plots (cont'd)
 #+attr_html: :width 500px
 
@@ -709,7 +771,8 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 - The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]]
 - The customized file so far: https://tinyurl.com/mrx3txen
-
+- Submit completed practice file [[https://lyon.instructure.com/courses/571/assignments/2990][to Canvas]]
+  
 * TODO (Fri) - Practice: adding details to ~plot~
 
 [[../img/3_gnome.jpg]]

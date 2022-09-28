@@ -519,7 +519,7 @@ line plot.
   #+begin_example R
     pointLabels <- paste(rownames(UScereal)[index], "-->")
     text(
-      x=11,       # x-coordinate of text field, ca. x[which(y>300)]-0.5,
+      x=11,  # x-coordinate of text field, ca. x[which(y>300)]-0.5,
       y=y[index], # y-coordinate of text field
       labels=pointLabels,  # text for text field
       adj=1,  # text is right justified

@@ -704,6 +704,8 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 * TODO (Wed) Review test 6: base R parameters and ~plot~
 
+*ALL OF THESE QUESTIONS ARE DERIVED FROM TEST 6. TRY TO ANSWER THEM.*
+
 1) Which function controls graphic parameters for plots in R?
 
 2) How can you create a panel of four plots?

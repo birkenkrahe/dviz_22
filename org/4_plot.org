@@ -482,7 +482,7 @@ line plot.
     methods(abline)
   #+end_src
 
-* NEXT Customization with vectors
+* Customization with vectors
 
 - Consider the following code to plot ~whiteside~ variables
   #+begin_src R :results graphics file :file ../img/4_pch.png
@@ -507,8 +507,6 @@ line plot.
 - Point sizes (~cex~) and colors (~col~) can also be specifed this way
 
 * Adding text to a plot
-
- -->> [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/org/scatterplot.org][IF YOU MISSED THE LAST 1-2 SESSIONS DOWNLOAD THIS]] <<--
 
 - The ~text~ function works similarly to the other customizing functions
 
@@ -590,6 +588,8 @@ line plot.
   [[file:../img/4_cereals4.png]]
 
 * Adding a legend to a plot
+
+ -->> [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/org/scatterplot.org][IF YOU MISSED THE LAST 1-2 SESSIONS DOWNLOAD THIS]] <<--
 
 - The ~legend~ function adds a boxed explanatory text display
 

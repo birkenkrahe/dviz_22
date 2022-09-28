@@ -690,9 +690,11 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
 
 * Week 7: Adding details to plots
+#+attr_html: :width 600px
+[[../img/4_details.png]]
 
-- [ ] Added [[https://github.com/birkenkrahe/dviz/blob/piHome/org/3_graphics.org#grid-graphics-example][grid package example]] to lecture
-- [ ] Adding details to plots
+- [X] Added [[https://github.com/birkenkrahe/dviz/blob/piHome/org/3_graphics.org#grid-graphics-example][grid package example]] to lecture
+- [X] Adding details to plots
 - [ ] Lab session with ~plot~
 - [ ] Different plot types
 - [ ] Barplot summaries
@@ -705,12 +707,14 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 [[../img/details.jpg]]
 
-The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
+- The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]]
+- The customized file so far: https://tinyurl.com/mrx3txen
 
-* TODO WEDNESDAY - Practice: adding details to ~plot~
+* TODO (Fri) - Practice: adding details to ~plot~
 
 [[../img/3_gnome.jpg]]
 
+* TODO What did you learn so far?
 
 * Week 8: Layout, symbols and plot arrays
 * Week 9: Different plot types

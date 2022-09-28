@@ -2,7 +2,6 @@
 #+STARTUP: overview hideblocks indent inlineimages
 #+AUTHOR:
 Time-stamp: <>
-
 * CUSTOMIZING A SCATTERPLOT
 
 #+begin_src R
@@ -153,3 +152,193 @@ Coefficients:
 (Intercept)            x  
      93.581        4.701
 #+end_example
+
+* CUSTOMIZATION WITH VECTORS
+
+#+begin_src R :results graphics file :file pch.png
+  plot(
+    x = whiteside$Temp,
+    y = whiteside$Gas,
+    pch = c(6,16)[whiteside$Insul],
+    col = c("red","blue")[whiteside$Insul],
+    cex = c(1,2)[whiteside$Insul])
+#+end_src
+
+#+RESULTS:
+[[file:pch.png]]
+
+#+begin_src R
+  c(6,16)[whiteside$Insul]
+  whiteside$Insul
+#+end_src
+
+#+RESULTS:
+#+begin_example
+ [1]  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6  6
+[26]  6 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16 16
+[51] 16 16 16 16 16 16
+ [1] Before Before Before Before Before Before Before Before Before Before
+[11] Before Before Before Before Before Before Before Before Before Before
+[21] Before Before Before Before Before Before After  After  After  After 
+[31] After  After  After  After  After  After  After  After  After  After 
+[41] After  After  After  After  After  After  After  After  After  After 
+[51] After  After  After  After  After  After 
+Levels: Before After
+#+end_example
+* ADDING TEXT TO A PLOT
+
+** The ~paste~ function
+
+#+begin_src R
+  v <- paste(1, "one")
+  v
+  class(v)
+#+end_src
+
+#+RESULTS:
+: [1] "1 one"
+: [1] "character"
+
+#+begin_src R
+  result <- 100
+  paste("This is the result: ", result)
+#+end_src
+
+#+RESULTS:
+: [1] "This is the result:  100"
+
+** Index of a name vector
+
+#+begin_src R
+  par()$lty  # list $ list element
+
+#+end_src
+
+#+RESULTS:
+: [1] "solid"
+
+#+begin_src R
+  str(UScereal)
+  rownames(UScereal)
+#+end_src
+
+#+RESULTS:
+#+begin_example
+'data.frame':	65 obs. of  11 variables:
+ $ mfr      : Factor w/ 6 levels "G","K","N","P",..: 3 2 2 1 2 1 6 4 5 1 ...
+ $ calories : num  212 212 100 147 110 ...
+ $ protein  : num  12.12 12.12 8 2.67 2 ...
+ $ fat      : num  3.03 3.03 0 2.67 0 ...
+ $ sodium   : num  394 788 280 240 125 ...
+ $ fibre    : num  30.3 27.3 28 2 1 ...
+ $ carbo    : num  15.2 21.2 16 14 11 ...
+ $ sugars   : num  18.2 15.2 0 13.3 14 ...
+ $ shelf    : int  3 3 3 1 2 3 1 3 2 1 ...
+ $ potassium: num  848.5 969.7 660 93.3 30 ...
+ $ vitamins : Factor w/ 3 levels "100%","enriched",..: 2 2 2 2 2 2 2 2 2 2 ...
+ [1] "100% Bran"                            
+ [2] "All-Bran"                             
+ [3] "All-Bran with Extra Fiber"            
+ [4] "Apple Cinnamon Cheerios"              
+ [5] "Apple Jacks"                          
+ [6] "Basic 4"                              
+ [7] "Bran Chex"                            
+ [8] "Bran Flakes"                          
+ [9] "Cap'n'Crunch"                         
+[10] "Cheerios"                             
+[11] "Cinnamon Toast Crunch"                
+[12] "Clusters"                             
+[13] "Cocoa Puffs"                          
+[14] "Corn Chex"                            
+[15] "Corn Flakes"                          
+[16] "Corn Pops"                            
+[17] "Count Chocula"                        
+[18] "Cracklin' Oat Bran"                   
+[19] "Crispix"                              
+[20] "Crispy Wheat & Raisins"               
+[21] "Double Chex"                          
+[22] "Froot Loops"                          
+[23] "Frosted Flakes"                       
+[24] "Frosted Mini-Wheats"                  
+[25] "Fruit & Fibre: Dates Walnuts and Oats"
+[26] "Fruitful Bran"                        
+[27] "Fruity Pebbles"                       
+[28] "Golden Crisp"                         
+[29] "Golden Grahams"                       
+[30] "Grape Nuts Flakes"                    
+[31] "Grape-Nuts"                           
+[32] "Great Grains Pecan"                   
+[33] "Honey Graham Ohs"                     
+[34] "Honey Nut Cheerios"                   
+[35] "Honey-comb"                           
+[36] "Just Right Fruit & Nut"               
+[37] "Kix"                                  
+[38] "Life"                                 
+[39] "Lucky Charms"                         
+[40] "Mueslix Crispy Blend"                 
+[41] "Multi-Grain Cheerios"                 
+[42] "Nut&Honey Crunch"                     
+[43] "Nutri-Grain Almond-Raisin"            
+[44] "Oatmeal Raisin Crisp"                 
+[45] "Post Nat. Raisin Bran"                
+[46] "Product 19"                           
+[47] "Puffed Rice"                          
+[48] "Quaker Oat Squares"                   
+[49] "Raisin Bran"                          
+[50] "Raisin Nut Bran"                      
+[51] "Raisin Squares"                       
+[52] "Rice Chex"                            
+[53] "Rice Krispies"                        
+[54] "Shredded Wheat 'n'Bran"               
+[55] "Shredded Wheat spoon size"            
+[56] "Smacks"                               
+[57] "Special K"                            
+[58] "Total Corn Flakes"                    
+[59] "Total Raisin Bran"                    
+[60] "Total Whole Grain"                    
+[61] "Triples"                              
+[62] "Trix"                                 
+[63] "Wheat Chex"                           
+[64] "Wheaties"                             
+[65] "Wheaties Honey Gold"
+#+end_example
+
+#+begin_src R
+  index  #  values with calories > 300
+  UScereal$calories[index] # values > 300
+  rownames(UScereal)[index] # cereal names
+#+end_src
+
+#+RESULTS:
+: [1] 31 32
+: [1] 440.0000 363.6364
+: [1] "Grape-Nuts"         "Great Grains Pecan"
+
+** Create the text plot
+
+#+begin_src R :results graphics file :file text.png
+  ## basic plot
+  plot(x,y, xlab="Grams of sugar per serving",
+       ylab="Calories per serving", type="n")
+
+  ## highlight outliers
+  index <- which(y > 300)   # indices of the outliers
+  points(x[-index], y[-index], pch=16) # all normal points
+  points(x[index], y[index], pch=18, cex=2) # 2 outlying points
+
+  ## trends lines
+  olsModel <- lm(y ~ x) # linear regression model 1
+  abline(olsModel, lty=3)
+  library(robustbase)
+  robustModel <- lmrob(y ~ x)
+  abline(robustModel, lty=2, lwd=2)
+
+  pointlabels <- paste(rownames(UScereal)[index])
+  text(
+    x =11,
+    y=y[index],
+    labels= pointlabels)
+  #+end_src
+
+  #+RESULTS:
+  [[file:text.png]]

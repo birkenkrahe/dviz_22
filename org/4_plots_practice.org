@@ -1,0 +1,13 @@
+#+TITLE: Practice: Adding details to plots
+#+SUBTITLE: A quick introduction to base R graphics
+#+AUTHOR: [yourname] (pledged)
+#+STARTUP: overview hideblocks indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* README
+
+- Practice file for scatterplot customization (see GitHub lecture)
+- Make sure you add your name and ~(pledged)~ in the ~#+AUTHOR:~ meta
+  headline for the honor *pledge*.
+- When you've completed the file, submit it in Canvas
+- You'll get solutions after the deadline has passed
+

@@ -1035,20 +1035,26 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 #+attr_html: :width 500px
 [[../img/3_gnome.jpg]]
 
-*Scatterplot customization summary:*
+1) *Scatterplot customization summary:*
 
-- Plot dataframe ~df~ as multi-variable array with ~plot(df)~
+   - Plot dataframe ~df~ as multi-variable array with ~plot(df)~
 
-- Plot same length vectors x,y as ~plot(x,y)~ or ~plot(y ~ x)~
+   - Plot same length vectors x,y as ~plot(x,y)~ or ~plot(y ~ x)~
 
-- Add points with ~y>0~ with ~points(x[y>0],y[y>0])~
+   - To split data sets, use e.g. ~index <- which(y>0)~ and call
+     ~points(x[index],y[index])~ for points with ~y>0~
 
-- Add labels and title with ~xlab~, ~ylab~ and ~main~
+   - Add points with ~y<0~ with ~points(x[-index],y[-index])~
 
-*Download practice file from here:*
-*Download data set from here:* 
+   - Add labels and title with ~xlab~, ~ylab~ and ~main~
 
-*Upload the completed practice file to Canvas (practice 5)*
+   - Change default parameters ~pch~, ~cex~ inside the function calls
+
+2) *Download practice file [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plots_practice.org][from GitHub]]:* tinyurl.com/bdvb879r
+
+3) *Download data set [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/data/dataset.csv][from GitHub]]:* tinyurl.com/spdnvxbr
+
+4) *Upload the completed practice file to Canvas (practice 5)*
 
 * TODO Project Update - 2nd sprint
 #+attr_html: :width 500px

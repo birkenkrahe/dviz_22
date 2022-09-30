@@ -647,7 +647,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
    #+begin_example R
      par(mfrow=c(2,1))
    #+end_example
-   
+
 3) How can you turn a scatterplot into a line plot?
 
    #+begin_example R
@@ -702,14 +702,14 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - [ ] Multiple plot arrays
 - [ ] Using the ~layout~ function
 
-* TODO (Wed) Review test 6: base R parameters and ~plot~
+* DONE Review test 6: base R parameters and ~plot~
 
 *ALL OF THESE QUESTIONS ARE DERIVED FROM TEST 6. TRY TO ANSWER THEM.*
 
 1) [X] Which function controls graphic parameters for plots in R?
 
    #+begin_src R
-   par()
+     par()
    #+end_src
 
    #+RESULTS:
@@ -950,10 +950,10 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 5) [X] What's the most important deliverable of your 2nd sprint review?
    #+begin_quote
-  It's the "method" = e.g. how to make graphs, and where to get the
-  data from; has anyone else done this? How have they done.
+   It's the "method" = e.g. how to make graphs, and where to get the
+   data from; has anyone else done this? How have they done.
    #+end_quote
-   
+
 6) [X] What do you get when plotting factor levels with ~plot~?
    #+begin_src R :results graphics file :file ../q62.png
      par(mfrow=c(1,1))
@@ -981,7 +981,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
    difficult to learn and use, and I don't buy its supposed
    advantages.
    #+end_quote
-   
+
 9) [X] What are the default values of ~mfrow~ and ~col~?
    #+begin_src R
      par()$mfrow
@@ -998,8 +998,8 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
       y <- rnorm(10)
       y
       which(y > 0)  # index vector
-      y>0  # logical vector 
-    #+end_src   
+      y>0  # logical vector
+    #+end_src
 
     #+RESULTS:
     :  [1] -1.11897969  1.17464217 -0.00636334 -0.91818024  1.39170887 -0.68876140
@@ -1018,11 +1018,11 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
     #+RESULTS:
     :  [1]  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE  TRUE  TRUE FALSE
-    : [1] 0.9706462 0.7562431 0.1276132 1.1852212 
+    : [1] 0.9706462 0.7562431 0.1276132 1.1852212
     : [1] 1 6 8 9
     : [1] 0.9706462 0.7562431 0.1276132 1.1852212
 
-* TODO (Wed) Adding details to plots (cont'd)
+* DONE Adding details to plots (cont'd)
 #+attr_html: :width 500px
 
 [[../img/details.jpg]]
@@ -1030,12 +1030,64 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]]
 - The customized file so far: https://tinyurl.com/mrx3txen
 - Submit completed practice file [[https://lyon.instructure.com/courses/571/assignments/2990][to Canvas]]
-  
-* TODO (Fri) - Practice: adding details to ~plot~
 
+* TODO Practice: adding details to ~plot~
+#+attr_html: :width 500px
 [[../img/3_gnome.jpg]]
 
+*Scatterplot customization summary:*
+
+- Plot dataframe ~df~ as multi-variable array with ~plot(df)~
+
+- Plot same length vectors x,y as ~plot(x,y)~ or ~plot(y ~ x)~
+
+- Add points with ~y>0~ with ~points(x[y>0],y[y>0])~
+
+- Add labels and title with ~xlab~, ~ylab~ and ~main~
+
+*Download practice file from here:*
+*Download data set from here:* 
+
+*Upload the completed practice file to Canvas (practice 5)*
+
+* TODO Project Update - 2nd sprint
+#+attr_html: :width 500px
+[[../img/scrum.jpg]]
+
+*Let's hear from a few teams:*
+- How will your final deliverable look like?
+- What're you going to do in the NEXT sprint?
+- What're your sources?
+- What's are you most looking forward to in this project?
+
 * TODO What did you learn so far?
+#+attr_html: :width 500px
+[[../img/goal.jpg]]
+
+*What did you learnt in the first 1/2 of the term?*
+
+*What's on your list?*
+#+begin_src R :results output graphics file :file ../img/midterm.png
+  learning <- factor(c("a","b","b"))
+  plot(learning)
+#+end_src
+
+#+RESULTS:
+[[file:../img/midterm.png]]
+
+Here's my list: Here's my list - 3 x infrastructure + 7 x content
+#+begin_quote
+1) /Basic agile project management process (with Scrum)/
+2) /Principles and practice of Literate Programming/
+3) /Introduction to GNU Emacs + ESS + Org-mode infrastructure/
+4) The character and importance of meta data
+5) Problems with missing values, variable definitions, data quality
+6) EDA workflow and complete example
+7) Exploratory vs. explanatory data visualization
+8) Graphics devices and four different graphics packages in R
+9) Bar charts, box plots, line plots, scatterplots, and linear models
+10) Plot customization and graphical parameters
+#+end_quote
 
 * Week 8: Layout, symbols and plot arrays
 * Week 9: Different plot types

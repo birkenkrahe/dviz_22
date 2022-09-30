@@ -5,8 +5,7 @@
 #+PROPERTY: header-args:R :exports both :results output :session *R*
 * README
 
-- Practice file for scatterplot customization (see GitHub lecture)
-- Make sure you add your name and ~(pledged)~ in the ~#+AUTHOR:~ meta
-  headline for the honor *pledge*.
+- Practice file for scatterplot customization (see [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][GitHub lecture]])
+- Add your name and ~(pledged)~ in the ~#+AUTHOR:~ meta headline
 - When you've completed the file, submit it in Canvas
 - You'll get solutions after the deadline has passed

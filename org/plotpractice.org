@@ -106,19 +106,6 @@ add a suitable legend.
 1) To add a trendline, define a model using the ~lm~ function on the two
    coordinate vectors ~y~ and ~x~, and store it in ~trend~
 
-   #+begin_src R
-     trend <- lm(y ~ x)
-     trend
-   #+end_src
-
-   #+RESULTS:
-   :
-   : Call:
-   : lm(formula = y ~ x)
-   :
-   : Coefficients:
-   : (Intercept)            x
-   :    133.7424       0.5678
 
 2) Use the model's intercept and slope values to draw a red, dashed,
    thick trend line. Store the resulting graph in ~trend.png~.
@@ -132,11 +119,9 @@ add a suitable legend.
           ylab="Weight", xlab="Height")
      points(x[index], y[index], pch=18, cex=2)
      points(x[-index], y[-index], pch=6, cex=1.3)
-     abline(trend, lty = 2, lwd = 2, col = "red")
+
    #+end_src
 
-   #+RESULTS:
-   [[file:./img/4_practice_trend.png]]
 
 * TODO Add text for outliers
 
@@ -153,16 +138,9 @@ Use the previous code block and store the graph in ~text.png~.
   points(x[index], y[index], pch=18, cex=2)
   points(x[-index], y[-index], pch=6, cex=1.3)
   abline(trend, lty = 2, lwd = 2, col = "red")
-  outliers <- paste("Outlier -->")
-  text(
-    x=x[index]-2,
-    y=y[index],
-    labels=outliers,
-    adj=1)
-#+end_src
 
-#+RESULTS:
-[[file:./img/4_practice_text.png]]
+  #+end_src
+
 
 * TODO Add a legend
 

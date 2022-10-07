@@ -115,11 +115,11 @@ add a suitable legend.
 
    #+begin_src R :results graphics file :file ./img/4_practice_trend.png
      plot(y ~ x, type="n",
-          main="Weight vs. Height of 10 people",
-          ylab="Weight", xlab="Height")
+	  main="Weight vs. Height of 10 people",
+	  ylab="Weight", xlab="Height")
      points(x[index], y[index], pch=18, cex=2)
      points(x[-index], y[-index], pch=6, cex=1.3)
-
+     ...
    #+end_src
 
 
@@ -130,16 +130,6 @@ plot. You can use the following label: ~paste("Outlier -->")~. Use
 the parameter ~adj=1~ to align the text.
 
 Use the previous code block and store the graph in ~text.png~.
-
-#+begin_src R :results graphics file :file ./img/4_practice_text.png
-  plot(y ~ x, type="n",
-       main="Weight vs. Height of 10 people",
-       ylab="Weight", xlab="Height")
-  points(x[index], y[index], pch=18, cex=2)
-  points(x[-index], y[-index], pch=6, cex=1.3)
-  abline(trend, lty = 2, lwd = 2, col = "red")
-
-  #+end_src
 
 
 * TODO Add a legend

@@ -1103,7 +1103,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - [ ] Checking in: 2nd sprint review
 - [ ] Review home assignment "[[https://lyon.instructure.com/courses/571/assignments/1655][Quick introduction to base graphics]]"
 - [ ] Next home assignment: different plot types (by Fri Oct 21)
-- [ ] Scatterplot customization part II: trendline and legend
+- [ ] Scatterplot customization part II: trendline, text and legend
 - [ ] Lecture: Barplot summaries, ~symbols~, ~layout~, multiple plot arrays
 
 * NEXT Checking in: 2nd sprint review
@@ -1126,7 +1126,8 @@ Here's my list: 3 x infrastructure + 7 x content
 - Creating multiple plot arrays with log transformations
 - Pie chart creation and comparison with bar chart
 - You find the solution [[https://github.com/birkenkrahe/dviz/blob/piHome/pdf/3_graphics_practice.pdf][as a PDF in GitHub]]
-
+- You can still submit this until Monday 10 October 3 pm for 50% of
+  the points
 * Next home assignment: "Different plot types"
 
 - Three videos
@@ -1139,9 +1140,9 @@ Here's my list: 3 x infrastructure + 7 x content
 
 * Scatterplot customization part II
 
-Get the pre-filled practice file https://tinyurl.com/5fzh98vd
+Get the pre-filled practice file [[https://tinyurl.com/2p9h2azp][tinyurl.com/2p9h2azp]]
 
-You also need the dataset from https://tinyurl.com/spdnvxbr
+You also need the dataset from [[https://tinyurl.com/spdnvxbr][tinyurl.com/spdnvxbr]]
 
 * Week 9: Different plot types
 * Week 10: Advanced plot customization

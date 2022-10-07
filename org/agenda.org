@@ -1139,7 +1139,9 @@ Here's my list: 3 x infrastructure + 7 x content
 
 * Scatterplot customization part II
 
+Get the pre-filled practice file https://tinyurl.com/5fzh98vd
 
+You also need the dataset from https://tinyurl.com/spdnvxbr
 
 * Week 9: Different plot types
 * Week 10: Advanced plot customization

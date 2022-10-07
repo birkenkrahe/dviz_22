@@ -1140,9 +1140,11 @@ Here's my list: 3 x infrastructure + 7 x content
 
 * Scatterplot customization part II
 
-Get the pre-filled practice file [[https://tinyurl.com/2p9h2azp][tinyurl.com/2p9h2azp]]
+Second attempt!
 
-You also need the dataset from [[https://tinyurl.com/spdnvxbr][tinyurl.com/spdnvxbr]]
+1) Get the practice file [[https://tinyurl.com/mr27fyph][tinyurl.com/mr27fyph]] (GDrive)
+2) Run the ~#+PROPERTY~ and ~#+STATUS~ header with ~C-c C-c~
+3) Run the first code bloc: the data come from GDrive, too!
 
 * Week 9: Different plot types
 * Week 10: Advanced plot customization

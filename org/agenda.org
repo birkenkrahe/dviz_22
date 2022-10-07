@@ -697,7 +697,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - [X] Adding details to plots
 - [ ] Lab session with ~plot~
 
-* DONE Review test 6: base R parameters and ~plot~
+** DONE Review test 6: base R parameters and ~plot~
 
 *ALL OF THESE QUESTIONS ARE DERIVED FROM TEST 6. TRY TO ANSWER THEM.*
 
@@ -1017,16 +1017,16 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
     : [1] 1 6 8 9
     : [1] 0.9706462 0.7562431 0.1276132 1.1852212
 
-* DONE Adding details to plots (cont'd)
+** DONE Adding details to plots (cont'd)
 #+attr_html: :width 500px
 
 [[../img/details.jpg]]
 
 - The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]]
-- The customized file so far: https://tinyurl.com/mrx3txen
+- The customized file so far: [[https://tinyurl.com/mrx3txen][tinyurl.com/mrx3txen]]
 - Submit completed practice file [[https://lyon.instructure.com/courses/571/assignments/2990][to Canvas]]
 
-* TODO Practice: adding details to ~plot~
+** TODO Practice: adding details to ~plot~
 #+attr_html: :width 400px
 [[../img/3_gnome.jpg]]
 
@@ -1051,7 +1051,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 4) *Upload the completed practice file to Canvas (practice 5)*
 
-* TODO Project Update - 2nd sprint
+** TODO Project Update - 2nd sprint
 #+attr_html: :width 500px
 [[../img/scrum.jpg]]
 
@@ -1061,7 +1061,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - What're your sources?
 - What's are you most looking forward to in this project?
 
-* TODO What did you learn so far?
+** TODO What did you learn so far?
 #+attr_html: :width 500px
 [[../img/goal.jpg]]
 
@@ -1069,14 +1069,20 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 *What's on your list?*
 #+begin_src R :results output graphics file :file ../img/midterm.png
-  learning <- factor(c("scatterplot","customizing","points", "title"))
-  plot(learning)
+            learning <-
+              factor(
+                c(
+                  "scatterplot",
+                  "customizing",
+                  "points",
+                  "title"))
+            plot(learning)
 #+end_src
 
 #+RESULTS:
 [[file:../img/midterm.png]]
 
-Here's my list: Here's my list - 3 x infrastructure + 7 x content
+Here's my list: 3 x infrastructure + 7 x content
 #+begin_quote
 1) /Basic agile project management process (with Scrum)/
 2) /Principles and practice of Literate Programming/
@@ -1091,12 +1097,49 @@ Here's my list: Here's my list - 3 x infrastructure + 7 x content
 #+end_quote
 
 * Week 8: Layout, symbols and plot arrays
+#+attr_html: :width 500px
+[[../img/week8.jpg]]
 
-- [ ] Different plot types
-- [ ] Barplot summaries
-- [ ] The ~symbols~ function
-- [ ] Multiple plot arrays
-- [ ] Using the ~layout~ function
+- [ ] Checking in: 2nd sprint review
+- [ ] Review home assignment "[[https://lyon.instructure.com/courses/571/assignments/1655][Quick introduction to base graphics]]"
+- [ ] Next home assignment: different plot types (by Fri Oct 21)
+- [ ] Scatterplot customization part II: trendline and legend
+- [ ] Lecture: Barplot summaries, ~symbols~, ~layout~, multiple plot arrays
+
+* NEXT Checking in: 2nd sprint review
+#+attr_html: :width 500px
+[[../img/sprint2.jpg]]
+
+- Main issues with almost all submissions: no attempt at
+  *visualization*, few customer *questions*, no *references*
+- You need to validate your approach using other people's work:
+  especially in data visualization, you can learn a lot from that!
+- Does anybody have questions or comments on the sprint reviews?
+- The next sprint review will be at the end of October - focus is on
+  "results", and you will be required to give a short presentation
+
+* Review: home assignment "Quick intro to base graphics"
+
+- Explanatory vs. exploratory plots
+- Plot is a generic function (feeding it with a ~factor~)
+- Plot customization with point shapes, color, reference lines
+- Creating multiple plot arrays with log transformations
+- Pie chart creation and comparison with bar chart
+- You find the solution [[https://github.com/birkenkrahe/dviz/blob/piHome/pdf/3_graphics_practice.pdf][as a PDF in GitHub]]
+
+* Next home assignment: "Different plot types"
+
+- Three videos
+- Histograms with ~hist~
+- Density plots with ~density~
+- QQ-plots with ~qqPlot~
+- Sunflower plots with ~sunflowerplot~
+- Bag plots with ~bagplot~
+- Plotting ~rpart~ models
+
+* Scatterplot customization part II
+
+
 
 * Week 9: Different plot types
 * Week 10: Advanced plot customization

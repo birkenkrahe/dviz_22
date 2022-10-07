@@ -696,11 +696,6 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - [X] Added [[https://github.com/birkenkrahe/dviz/blob/piHome/org/3_graphics.org#grid-graphics-example][grid package example]] to lecture
 - [X] Adding details to plots
 - [ ] Lab session with ~plot~
-- [ ] Different plot types
-- [ ] Barplot summaries
-- [ ] The ~symbols~ function
-- [ ] Multiple plot arrays
-- [ ] Using the ~layout~ function
 
 * DONE Review test 6: base R parameters and ~plot~
 
@@ -1032,7 +1027,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - Submit completed practice file [[https://lyon.instructure.com/courses/571/assignments/2990][to Canvas]]
 
 * TODO Practice: adding details to ~plot~
-#+attr_html: :width 500px
+#+attr_html: :width 400px
 [[../img/3_gnome.jpg]]
 
 1) *Scatterplot customization summary:*
@@ -1050,7 +1045,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
    - Change default parameters ~pch~, ~cex~ inside the function calls
 
-2) *Download practice file [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plots_practice.org][from GitHub]]:* tinyurl.com/bdvb879r
+2) *Download practice file [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plots_practice.org][from GitHub]]:* tinyurl.com/2p9h2azp
 
 3) *Download data set [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/data/dataset.csv][from GitHub]]:* tinyurl.com/spdnvxbr
 
@@ -1074,7 +1069,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 *What's on your list?*
 #+begin_src R :results output graphics file :file ../img/midterm.png
-  learning <- factor(c("a","b","b"))
+  learning <- factor(c("scatterplot","customizing","points", "title"))
   plot(learning)
 #+end_src
 
@@ -1096,6 +1091,13 @@ Here's my list: Here's my list - 3 x infrastructure + 7 x content
 #+end_quote
 
 * Week 8: Layout, symbols and plot arrays
+
+- [ ] Different plot types
+- [ ] Barplot summaries
+- [ ] The ~symbols~ function
+- [ ] Multiple plot arrays
+- [ ] Using the ~layout~ function
+
 * Week 9: Different plot types
 * Week 10: Advanced plot customization
 * Week 11-15: ggplot2, Shiny, Tableau, projects

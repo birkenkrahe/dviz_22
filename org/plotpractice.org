@@ -16,14 +16,6 @@ Save data *from the web* to an R data frame ~df~:
   str(df)
 #+end_src
 
-#+RESULTS:
-: 'data.frame':	10 obs. of  4 variables:
-:  $ Weight: int  55 85 75 42 93 63 58 75 89 67
-:  $ Height: int  161 185 174 154 188 178 170 167 181 178
-:  $ Sex   : chr  "female" "male" "male" "female" ...
-:  $ Name  : chr  "Jane" "Jim" "Joe" "Carla" ...
-
-
 * TODO Plotting the data
 
 1) For the R code blocks with graphics output, you need these header
@@ -41,10 +33,6 @@ Save data *from the web* to an R data frame ~df~:
      y
    #+end_src
 
-   #+RESULTS:
-   :  [1] 55 85 75 42 93 63 58 75 89 67
-   :  [1] 161 185 174 154 188 178 170 167 181 178
-
 3) Create a scatterplot of the weight on the ~x~ axis and the height on
    the ~y~ axis. Save the plot as ~scatter.png~.
 
@@ -52,8 +40,6 @@ Save data *from the web* to an R data frame ~df~:
      plot(y ~ x)
    #+end_src
 
-   #+RESULTS:
-   [[file:scatter.png]]
 * TODO Customize the plot
 
 1) Customize the plot by using different point characters to identify
@@ -73,9 +59,6 @@ Save data *from the web* to an R data frame ~df~:
      points(x[-index], y[-index], pch=6, cex=1.3)
    #+end_src
 
-   #+RESULTS:
-   [[file:pch.png]]
-
 2) Label the axes and give the plot a suitable title. Save your final
    plot in ~final.png~.
 
@@ -87,9 +70,6 @@ Save data *from the web* to an R data frame ~df~:
      points(x[index], y[index], pch=18, cex=2)
      points(x[-index], y[-index], pch=6, cex=1.3)
    #+end_src
-
-   #+RESULTS:
-   [[file:final.png]]
 
 * TODO Add a trendline
 
@@ -110,20 +90,11 @@ add a suitable legend.
    You need to recreated the calls to ~plot~ and ~points~ for this
    graph. Draw this graph first, then add the trendline.
 
-   #+begin_src R :results graphics file :file trend.png
-     plot(y ~ x, type="n",
-          main="Weight vs. Height of 10 people",
-          ylab="Weight", xlab="Height")
-     points(x[index], y[index], pch=18, cex=2)
-     points(x[-index], y[-index], pch=6, cex=1.3)
-     ...
-   #+end_src
-
 * TODO Add text for outliers
 
-Add the text "Outlier" to the three outlying points of the
-plot. You can use the following label: ~paste("Outlier -->")~. Use
-the parameter ~adj=1~ to align the text.
+Add the text "Outlier" to the three outlying points of the plot. You
+can use the following label: ~paste("Outlier -->")~. Left-align the
+text and make sure that the text does not obscure the data.
 
 Use the previous code block and store the graph in ~text.png~.
 

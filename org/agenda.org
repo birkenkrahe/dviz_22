@@ -1106,7 +1106,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - [ ] Scatterplot customization part II: trendline, text and legend
 - [ ] Lecture: Barplot summaries, ~symbols~, ~layout~, multiple plot arrays
 
-* NEXT Checking in: 2nd sprint review
+** Checking in: 2nd sprint review
 #+attr_html: :width 500px
 [[../img/sprint2.jpg]]
 
@@ -1118,8 +1118,8 @@ Here's my list: 3 x infrastructure + 7 x content
 - The next sprint review will be at the end of October - focus is on
   "results", and you will be required to give a short presentation
 
-* Review: home assignment "Quick intro to base graphics"
-
+** Review: assignment "Quick intro to base graphics"
+*Finish this exercise!*
 - Explanatory vs. exploratory plots
 - Plot is a generic function (feeding it with a ~factor~)
 - Plot customization with point shapes, color, reference lines
@@ -1128,7 +1128,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - You find the solution [[https://github.com/birkenkrahe/dviz/blob/piHome/pdf/3_graphics_practice.pdf][as a PDF in GitHub]]
 - You can still submit this until Monday 10 October 3 pm for 50% of
   the points
-* Next home assignment: "Different plot types"
+** Next home assignment: "Different plot types"
 
 - Three videos
 - Histograms with ~hist~
@@ -1137,18 +1137,78 @@ Here's my list: 3 x infrastructure + 7 x content
 - Sunflower plots with ~sunflowerplot~
 - Bag plots with ~bagplot~
 - Plotting ~rpart~ models
+- Deadline Friday October 21, 3 pm (100%)
 
-* Scatterplot customization part II
+** Scatterplot customization part II
 
-Second attempt!
+*Second attempt!* I found out what the problem was last Friday: GitHub
+serves "raw" pages with ~Cache-Control: max-age=300~. That's specified
+in seconds, meaning the pages are intended to be cached for 5 minutes.
 
-1) Get the practice file [[https://tinyurl.com/mr27fyph][tinyurl.com/mr27fyph]] (GDrive)
+1) Get the practice file [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/org/plotpractice.org][from GitHub]]: [[https://tinyurl.com/86aychm3][tinyurl.com/86aychm3]]
 2) Run the ~#+PROPERTY~ and ~#+STATUS~ header with ~C-c C-c~
-3) Run the first code bloc: the data come from GDrive, too!
+3) Run the first code block to import the data from the web
 
-* Week 9: Different plot types
-* Week 10: Advanced plot customization
-* Week 11-15: ggplot2, Shiny, Tableau, projects
+* Week 9-10: Different plot types, external data
+** IN PROGRESS Assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Different plot types]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
+DEADLINE: <2022-10-19 Wed 15:00>
+
+Set of exercises based on Pearson's archived DataCamp course: "This
+chapter introduces several Base R supported plot types that are
+particularly useful for visualizing important features in a
+dataset. We start with simple tools like histograms and density plots
+for characterizing one variable at a time, move on to scatter plots
+and other useful tools for showing how two variables relate, and
+finally introduce some tools for visualizing more complex
+relationships in our dataset."
+** TODO Test 7 
+
+** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])
+** TODO Test 8
+* Week 11-13: ggplot2, Shiny, Tableau
+** TODO Assignment 9. [[https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2][Introduction to ggplot2]] ([[https://lyon.instructure.com/courses/571/assignments/1667][Canvas]])
+
+Go to your assignments dashboard in DataCamp and complete the *first*
+chapter of the course "[[https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2][Introduction to Data Visualization with
+ggplot2]]". ggplot2 is one of the most popular graphics packages in
+R. It is also practically and conceptually more complex than base R
+graphics. It is commonly bundled with the "Tidyverse" distribution
+though it predates this distribution by a number of years.
+
+"In this chapter we’ll get you into the right frame of mind for
+developing meaningful visualizations with R. You’ll understand that as
+a communications tool, visualizations require you to think about your
+audience first. You’ll also be introduced to the basics of ggplot2 -
+the 7 different grammatical elements (layers) and aesthetic mappings."
+
+*Note:* If you already did it for one of the other courses, you don't
+have to re-do the assignment.
+** TODO Test 9
+** TODO Assignment 10. [[https://campus.datacamp.com/courses/building-web-applications-with-shiny-in-r/get-started-with-shiny?ex=1][Building Web Applications with Shiny in R [DC]​]] ([[https://lyon.instructure.com/courses/571/assignments/1654][Canvas]])
+
+Go to your assignments dashboard in DataCamp and complete the *first*
+chapter of the course "[[https://campus.datacamp.com/courses/building-web-applications-with-shiny-in-r/get-started-with-shiny?ex=1][Building Web Applications with Shiny in R]]". R
+Shiny is an R package that makes it easy to build interactive web apps
+and dashboards directly in R.
+
+*** Video: Introduction to Shiny
+** TODO Test 10
+** TODO Assignment 11. [[https://campus.datacamp.com/courses/introduction-to-tableau/getting-started-with-tableau?ex=1][Getting started with Tableau​]] ([[https://lyon.instructure.com/courses/571/assignments/1668][Canvas]])
+
+Go to your assignments dashboard in DataCamp and complete the *first*
+chapter of the course "[[https://app.datacamp.com/learn/courses/introduction-to-tableau][Introduction to Tableau]]". Tableau is a widely
+used business intelligence (BI) and analytics software based largely
+on SQL queries.
+
+"You will get an understanding of Tableau's fundamental concepts and
+features: how to connect to data sources, use Tableau’s drag-and-drop
+interface, and create compelling visualizations. You will be explore
+an Airbnb dataset for the city of Amsterdam."
+
+As part of the academic alliance with DataCamp, you have access to all
+Tableau courses until the end of term (usually, all lessons except the
+first are only accessible to enterprise clients).
+* Week 14-15: projects, final exam
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

@@ -367,23 +367,27 @@ behind.
   |    | 23 | Wed-12-Oct |            |                                    |                    |
   |    | 24 | Fri-14-Oct |            |                                    |                    |
   |----+----+------------+------------+------------------------------------+--------------------|
-  | 10 | 25 | Mon-24-Oct | Test 9     | 11. Intro to ggplot [DC]           | 3.2 Numerical data |
-  |    | 26 | Wed-26-Oct |            |                                    |                    |
-  |    | 27 | Fri-28-Oct |            |                                    |                    |
+  | 10 | 25 | Mon-17-Oct |            | 11. Intro to ggplot [DC]           | 3.2 Numerical data |
+  |    | 26 | Wed-19-Oct |            |                                    |                    |
+  |    | 27 | Fri-21-Oct |            |                                    |                    |
   |----+----+------------+------------+------------------------------------+--------------------|
-  | 11 | 28 | Mon-31-Oct | Test 10    | 12. Building web apps w/shiny [DC] | 3.3 Anomalies      |
-  |    | 29 | Wed-02-Nov |            | 3rd Sprint Review                  |                    |
+  | 10 | 28 | Mon-24-Oct | Test 9     | 12. Building web apps w/shiny [DC] | 3.3 Anomalies      |
+  |    | 29 | Wed-26-Oct |            |                                    |                    |
+  |    | 30 | Fri-28-Oct |            |                                    |                    |
+  |----+----+------------+------------+------------------------------------+--------------------|
+  | 11 | 28 | Mon-31-Oct | Test 10    | 3rd Sprint Review                  | 3.4 Relationships  |
+  |    | 29 | Wed-02-Nov |            | 13. Introduction to Tableau [DC]   |                    |
   |    | 30 | Fri-04-Nov |            |                                    |                    |
   |----+----+------------+------------+------------------------------------+--------------------|
-  | 12 | 31 | Mon-07-Nov | Test 11    | 13. Introduction to Tableau [DC]   | 3.4 Relationships  |
+  | 12 | 31 | Mon-07-Nov | Test 11    | 14. External data                  | 4 External data    |
   |    | 32 | Wed-09-Nov |            |                                    |                    |
   |    | 33 | Fri-11-Nov |            |                                    |                    |
   |----+----+------------+------------+------------------------------------+--------------------|
-  | 13 | 34 | Mon-14-Nov | Test 12    | 14. External data                  | 4 External data    |
+  | 13 | 34 | Mon-14-Nov | Test 12    | 15. RSQLite                        | 4.74. RSQLite      |
   |    | 35 | Wed-16-Nov |            |                                    |                    |
   |    | 36 | Fri-18-Nov |            |                                    |                    |
   |----+----+------------+------------+------------------------------------+--------------------|
-  | 14 | 37 | Mon-21-Nov | Test 13    | 15. RSQLite                        | 4.74. RSQLite      |
+  | 14 | 37 | Mon-21-Nov | Test 13    |                                    |                    |
   |----+----+------------+------------+------------------------------------+--------------------|
   | 15 | 38 | Mon-28-Nov | Test 14    | Final Sprint review                |                    |
   |    | 39 | Wed-30-Nov |            | Final Sprint review                |                    |

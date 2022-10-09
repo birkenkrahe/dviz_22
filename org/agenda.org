@@ -1128,16 +1128,26 @@ Here's my list: 3 x infrastructure + 7 x content
 - You find the solution [[https://github.com/birkenkrahe/dviz/blob/piHome/pdf/3_graphics_practice.pdf][as a PDF in GitHub]]
 - You can still submit this until Monday 10 October 3 pm for 50% of
   the points
-** Next home assignment: "Different plot types"
+** Next home assignment: "Different plot types 1"
+#+attr_html: :width 400px
+[[../img/geyser.png]]
 
-- Three videos
-- Histograms with ~hist~
-- Density plots with ~density~
-- QQ-plots with ~qqPlot~
-- Sunflower plots with ~sunflowerplot~
-- Bag plots with ~bagplot~
-- Plotting ~rpart~ models
-- Deadline Friday October 21, 3 pm (100%)
+- Three assignments based on three short video lessons
+
+- Plotting single variables:
+  1. Histograms with ~hist~
+  2. Density plots with ~density~
+  3. QQ-plots with ~qqPlot~
+
+- Plotting two variables:
+  1. Sunflower plots with ~sunflowerplot~
+  2. Bag plots with ~bagplot~
+  3. Mosaic plots with ~mosaicplot~
+
+- Showing more complex relations between variables:
+  1. Boxplots with two numerical variables with ~bagplot~
+  2. Correlation matrices with ~corrplot~
+  3. Building and plotting ~rpart~ models
 
 ** Scatterplot customization part II
 

@@ -1,0 +1,226 @@
+#+TITLE: Assignment: different plot types I
+#+SUBTITLE: A quick introduction to base R graphics
+#+AUTHOR: [yourname] (pledged)
+#+STARTUP: overview hideblocks indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* READ README
+
+- This assignment is based on Pearson's archived DataCamp course "Data
+  Visualization in R" (2016), chapter 2, "Different plot types".
+- For the exercises, create or complete R code blocks as needed. If
+  you use the Org-mode header ~#+PROPERTY~ and ~#+STATUS~ remember that
+  you have may have to activate these with ~C-c C-c~.
+- If you don't see plots in the Org-mode file, it may be that your
+  session is not linked to the directory of the Org-mode file. Use
+  ~setwd~ to set the working directory as needed.
+- When you completed all exercises and watched all videos, update the
+  ~#+AUTHOR:~ information with your name and ~(pledged)~, and submit.
+
+* TODO Characterizing a single variable (video)
+
+- [[https://drive.google.com/file/d/17Sn9k73WLcl44M37P4cZl8Juh87JzgA2/view?usp=sharing][Watch the video]] (4 min) and the [[https://drive.google.com/file/d/17SdhG6UGLGVgO3m_aCzEMVWZY7zki-4x/view?usp=sharing][PDF slides]] (GDrive).
+
+* TODO The ~hist~ and ~truehist~ functions
+
+Histograms are probably the best-known way of looking at how the
+values of a numerical variable are distributed over their range, and R
+provides several different histogram implementations.
+
+The purpose of this exercise is to introduce two of these:
+
+~hist~ is part of base R and its default option yields a histogram based
+on the number of times a record falls into each of the bins on which
+the histogram is based.  ~truehist~ is from the ~MASS~ package and scales
+these counts to give an estimate of the probability density.
+
+1) Use the ~par~ function to set the ~mfrow~ parameter for a side-by-side
+   array of two plots and display the value of ~mfrow~.
+
+   #+begin_src R
+     ...
+     ...
+   #+end_src
+
+2) Look at the structure of the ~Cars93~ data frame.
+
+   #+begin_src R
+     ...
+   #+end_src
+
+3) Use the ~hist~ function to generate a histogram of the ~Horsepower~
+   variable from the ~Cars93~ data frame in the ~MASS~ package. Set its
+   ~main~ argument equal to the title of the plot ~"hist plot"~.
+
+   #+begin_src R :file a5hist.png :results graphics file
+     ...
+   #+end_src
+
+4) Use the ~truehist~ function to generate an alternative histogram of
+   the same variable. Title this plot ~"truehist plot"~ using its ~main~
+   argument.
+
+   #+begin_src R :file truehist.png :results graphics file
+     ...
+   #+end_src
+
+* TODO Density plots as smoothed histograms
+
+While they are probably not as well known as the histogram, *density
+estimates* may be regarded as smoothed histograms, designed to give a
+better estimate of the density function for a random variable.
+
+In this exercise, you'll use the built-in ~ChickWeight~ dataset, which
+contains a collection of chicks' weights. You will first select for
+the chicks that are 16 weeks old. Then, you'll create a histogram
+using the ~truehist~ function, and add its density plot on top, using
+the ~lines~ and ~density~ functions with their default options.
+
+The density plot of this type of variable is often expected to conform
+approximately to the bell-shaped curve, otherwise known as the
+Gaussian distribution. Let's find out whether that's the case for this
+dataset.
+
+1) Display the first few lines of ~ChickWeight~ to get an idea of the
+   data set.
+
+   #+begin_src R
+     ...
+   #+end_src
+
+2) Create an index vector ~index16~ using the ~which~ function that
+   selects records from the ~ChickWeight~ data frame with ~Time~ equal
+   to 16.
+
+   #+begin_src R :results silent
+     ...
+   #+end_src
+
+3) Create a variable ~weights~ that gives the weights of the 16-week old
+   chicks by using the index vector you just defined on the respective
+   variable of ~ChickWeight~.
+
+   #+begin_src R :results silent
+     ...
+   #+end_src
+
+4) Use ~truehist~ to generate a histogram from ~weights~ and title it
+   ~"Weights of 16-week old chicks"~.
+
+   #+begin_src R :file truehist1.png :results graphics file
+     ...
+   #+end_src
+
+5) Use the ~lines~ and ~density~ functions to overlay a density plot of
+   the ~weights~ values on the histogram with three lines of code:
+   1. Call the ~truehist~ function again for ~weights~, but set the
+      parameters ~main~ and ~xlab~ to ~""~ and the parameter ~axes~ to ~FALSE~
+   2. Call ~par(new=TRUE)~ to plot over the histogram
+   3. Call ~lines~ with the argument ~plot(density(weights))~
+
+   #+begin_src R :file density.png :results graphics file
+     ...
+     ...
+     ...
+   #+end_src
+
+* READ Using ~qqPlot~ to see many details in data
+
+A practical limitation of both histograms and density estimates is
+that, if we want to know whether the Gaussian distribution assumption
+is reasonable for our data, it is difficult to tell.
+
+The quantile-quantile plot, or QQ-plot, is a useful alternative. For
+such a plot, the data are sorted, then they are plotted against a
+specially-designed x-axis based on our reference distribution (e.g.,
+the Gaussian "bell curve"), and finally we look to see whether the
+points lie approximately on a straight line.
+
+In R, several QQ-plot implementations are available, but the most
+convenient one is the ~qqPlot~ function in the ~car~ package.
+
+* TODO Using ~qqPlot~ to show that the Gaussian assumption is a good fit
+
+The first part of this exercise applies this function to the 16-week
+chick weight data considered in the last exercise, to show that the
+Gaussian distribution appears to be reasonable here.
+
+1) Load the ~car~ package to make the ~qqPlot~ function available for use,
+   and call ~qqPlot~ on the vector ~1:100~
+
+   #+begin_src R :file qqPlot.png :results graphics file
+     ...
+     ...
+   #+end_src
+
+2) Create an index vector ~index16~ using the ~which~ function that
+   selects records from the ~ChickWeight~ data frame with ~Time~ equal
+   ~16~.
+
+   #+begin_src R :results silent
+     ...
+   #+end_src
+
+3) Create the variable ~weights~ that gives the weights of 16-week old
+   chicks.  Print the weights of the chicks that are heavier than 250
+   grams. Then print the indices of these outliers.
+
+   #+begin_src R
+     ...
+     ...
+     ...
+   #+end_src
+
+4) Apply the ~qqPlot~ function to the ~weights~ data. Note that almost all
+   points fall within the confidence intervals around the reference
+   line. This indicates conformance with the Gaussian
+   distribution. The indices of the outliers with weight greater than
+   250 grams are referenced.
+
+
+#+begin_src R :file qqPlot1.png :results graphics file
+  ...
+#+end_src
+
+* TODO Using ~qqPlot~ to show that the Gaussian assumption is a poor fit
+
+The second part of the exercise applies this function to another
+variable where the Gaussian distribution is obviously a poor fit, but
+the results also show the presence of repeated values (flat stretches
+in the plot) and portions of the data range where there are no
+observations (vertical "jumps" in the plot).
+
+1) Make the ~MASS~ package available for use, load the ~Boston~ data frame
+   from the ~MASS~ package, and look at the structure of the data frame.
+
+   #+begin_src R
+     ...
+     ...
+     ...
+   #+end_src
+
+2) The ~Boston~ data set contains 14 different housing values of 506
+   houses in suburbs of Boston, MA. Show the dimensions of the data
+   frame using the function ~dim~ on the argument ~Boston~.
+
+   #+begin_src R
+     ...
+   #+end_src
+
+3) Make the ~qqPlot~ function available by loading the ~car~ package into
+   the current session.
+
+   #+begin_src R :results silent
+     ...
+   #+end_src
+
+4) Show the normal QQ-plot of the tax data from the ~Boston~ data
+   frame.
+
+   The result shows that the Gaussian assumption is not
+   justified for this data set. Horizontal stretches in the plot
+   indicate repeated values, and vertical jumps indicate missing
+   observations - the evenness of the bell curve is lost here.
+
+   #+begin_src R :file bostontax.png :results graphics file
+     ...
+   #+end_src

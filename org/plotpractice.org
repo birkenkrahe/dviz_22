@@ -103,4 +103,9 @@ Use the previous code block and store the graph in ~text.png~.
 Add a legend for the trendline and for the two plot point types. Store
 the plot in the file ~people.png~.
 
+Tip: specify vectors for ~pch~, ~lty~ and ~lwd~ and specify irrelevant
+values (e.g. point size for the trendline, or line type for the
+points) as ~NA~.
+
+
  

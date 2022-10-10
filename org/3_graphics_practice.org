@@ -5,120 +5,128 @@
 #+PROPERTY: header-args:R :exports both :results output :session *R*
 * README
 
-  - This assignment is based on Pearson's (now archived) DataCamp
-    course "Data Visualization in R" (2016)
-  - Make sure you add your name in the ~#+AUTHOR:~ meta headline for the
-    honor pledge.
-  - When you've completed the file, submit it in Canvas
-  - You'll get solutions after the deadline has passed
+- This assignment is based on Pearson's archived DataCamp course
+  "Data Visualization in R" (2016), chapter 1, "A quick introduction
+  to graphics in base R", which in turn is based on Pearson's book
+  "Exploratory Data Analysis" (CRC Press, 2017).
+
+- For the exercises, create or complete R code blocks as needed. If
+  you use the Org-mode header ~#+PROPERTY~ and ~#+STATUS~ remember that
+  you have may have to activate these with ~C-c C-c~.
+
+- If you don't see plots in the Org-mode file, it may be that your
+  session is not linked to the directory of the Org-mode file. Use
+  ~setwd~ to set the working directory as needed.
+
+- When you completed all exercises and watched all videos, update the
+  ~#+AUTHOR:~ information with your name and ~(pledged)~, and submit.
 
 * TODO The world of data visualization
 
-  Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
+Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
 
 * TODO Creating an exploratory plot array
 
-  1) Create a code block that prints graphics output to ~plot1.png~
-  2) Make the ~whiteside~ data set from the ~MASS~ package available in your
-     R session
-  3) Display the structure of the ~whiteside~ data set
-  4) Apply the ~plot~ function to the ~whiteside~ data frame
-  5) Title the plot "Exploratory plot array"
+1) Create a code block that prints graphics output to ~plot1.png~
+2) Make the ~whiteside~ data set from the ~MASS~ package available in your
+   R session
+3) Display the structure of the ~whiteside~ data set
+4) Apply the ~plot~ function to the ~whiteside~ data frame
+5) Title the plot "Exploratory plot array"
 
-  ----- PUT YOUR CODE BELOW THIS LINE -----
+   ----- PUT YOUR CODE BELOW THIS LINE -----
 
 * TODO Creating an explanatory scatterplot
 
-  1) Use the ~plot~ function to construct a scatterplot of the heating gas
-     consumption, ~Gas~, versus the outside temperature, ~Temp~, from the
-     ~whiteside~ data frame in the ~MASS~ package.
-  2) Label the x- and y-axes to indicate the variables in the plot,
-     e.g. ~"Outside temperature", and "Heating gas consumption", resp.
-  3) Title the plot "Explanatory scatterplot"
-  4) Print the plot to a file ~plot2.png~
+1) Use the ~plot~ function to construct a scatterplot of the heating gas
+   consumption, ~Gas~, versus the outside temperature, ~Temp~, from the
+   ~whiteside~ data frame in the ~MASS~ package.
+2) Label the x- and y-axes to indicate the variables in the plot,
+   e.g. ~"Outside temperature", and "Heating gas consumption", resp.
+3) Title the plot "Explanatory scatterplot"
+4) Print the plot to a file ~plot2.png~
 
-  ----- PUT YOUR CODE BELOW THIS LINE -----
+   ----- PUT YOUR CODE BELOW THIS LINE -----
 
 * TODO The ~plot()~ function is generic
 
-  1) Apply the ~plot~ function to the ~Insul~ variable from the ~whiteside~
-     data frame in the ~MASS~ package.
-  2) Title the plot "Insulation"
-  3) Name the resulting plot ~plot3.png~
+1) Apply the ~plot~ function to the ~Insul~ variable from the ~whiteside~
+   data frame in the ~MASS~ package.
+2) Title the plot "Insulation"
+3) Name the resulting plot ~plot3.png~
 
-  ----- PUT YOUR CODE BELOW THIS LINE -----
+   ----- PUT YOUR CODE BELOW THIS LINE -----
 
 * TODO A preview of some more and less useful techniques
 
-  Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
+Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
 
 * TODO Adding details to a plot using point shapes, color, and reference lines
 
-  1) Create an R code block to check that the data set ~Cars93~ from the
-     ~MASS~ package is in your work space, and to look at its structure.
-  2) Create another R code block that stores output in the file
-     ~plot4.png~
-  3) Use ~plot~ to create a scatterplot of the ~Max.Price~ variable vs. the
-     ~Price~ variable.
-  4) Specify ~pch~ and ~col~ parameters so that the data points are
-     represented as red solid triangles. The ~pch~ value for solid
-     triangle symbols is 17.
-  5) Use the ~points~ function to add a second set of points to your
-     scatterplot, representing ~Min.Price~ versus ~Price~.
-  6) Specify the new data points as blue solid circles. The ~pch~ value
-     for solid circles is 16.
-  7) Use the ~abline~ function to add a dashed equality reference line
-     (i.e. a line with y-intercept 0 and slope 1). Check ~help(abline)~ to
-     find out what its arguments refer to. The ~lty~ value for a dashed
-     line is 2.
-  8) Give your plot a suitable title, and label the axis
-     appropriately. You can either do this in the ~plot~ function as a
-     ~main~ parameter, or use the ~title~ function.
+1) Create an R code block to check that the data set ~Cars93~ from the
+   ~MASS~ package is in your work space, and to look at its structure.
+2) Create another R code block that stores output in the file
+   ~plot4.png~
+3) Use ~plot~ to create a scatterplot of the ~Max.Price~ variable vs. the
+   ~Price~ variable.
+4) Specify ~pch~ and ~col~ parameters so that the data points are
+   represented as red solid triangles. The ~pch~ value for solid
+   triangle symbols is 17.
+5) Use the ~points~ function to add a second set of points to your
+   scatterplot, representing ~Min.Price~ versus ~Price~.
+6) Specify the new data points as blue solid circles. The ~pch~ value
+   for solid circles is 16.
+7) Use the ~abline~ function to add a dashed equality reference line
+   (i.e. a line with y-intercept 0 and slope 1). Check ~help(abline)~ to
+   find out what its arguments refer to. The ~lty~ value for a dashed
+   line is 2.
+8) Give your plot a suitable title, and label the axis
+   appropriately. You can either do this in the ~plot~ function as a
+   ~main~ parameter, or use the ~title~ function.
 
-  ----- PUT YOUR CODE BELOW THIS LINE -----
+   ----- PUT YOUR CODE BELOW THIS LINE -----
 
 * TODO Creating multiple plot arrays
 
-  1) Create an R code block and look at the structure of the ~Animals2~
-     data set in the ~robustbase~ package.
-  2) Create another R code block that writes graphics output to a file
-     ~plot5.png~.
-  3) Use the ~par~ function and set the ~mfrow~ parameter to create a
-     side-by-side plot array with 1 row and 2 columns.
-  4) Use the ~plot~ function to create a scatterplot of the variables
-     ~brain~ vs. ~body~ from the ~Animals2~ data frame, without customization.
-  5) Add the title "Original representation" to the plot using the ~title~
-     function.
-  6) Add another ~plot~ command in the same code block, with the same
-     variables, but add the parameter ~log="xy"~ to the arguments. This
-     creates a plot of both variables in log scale.
-  7) Add the title "Log-log plot" to the plot using the ~title~ function.
+1) Create an R code block and look at the structure of the ~Animals2~
+   data set in the ~robustbase~ package.
+2) Create another R code block that writes graphics output to a file
+   ~plot5.png~.
+3) Use the ~par~ function and set the ~mfrow~ parameter to create a
+   side-by-side plot array with 1 row and 2 columns.
+4) Use the ~plot~ function to create a scatterplot of the variables
+   ~brain~ vs. ~body~ from the ~Animals2~ data frame, without customization.
+5) Add the title "Original representation" to the plot using the ~title~
+   function.
+6) Add another ~plot~ command in the same code block, with the same
+   variables, but add the parameter ~log="xy"~ to the arguments. This
+   creates a plot of both variables in log scale.
+7) Add the title "Log-log plot" to the plot using the ~title~ function.
 
-  ----- PUT YOUR CODE BELOW THIS LINE -----
+   ----- PUT YOUR CODE BELOW THIS LINE -----
 
 * TODO Avoid pie charts
 
-  1) Create an R code block and look at the structure of the ~dataCar~
-     data set in the ~insuranceData~ package. Remember that you may have
-     to install packages (on the R console, not in the Org-mode file),
-     and that you must load packages (with ~library~) and sometimes load
-     data sets, too (with ~data~).
-  2) Create a new R code block that writes graphics output to the file
-     ~plot6.png~.
-  3) Set up a side-by-side plot array with 1 row and 2 columns.
-  4) Use ~table~ to create a table ~tbl~ of counts of the distinct levels
-     of the ~veh_body~ variable in the ~dataCar~ data frame.
-  5) Use ~sort~ to sort the table ~tbl~, and set the parameter
-     ~decreasing=TRUE~ to sort in descending order. Store the sorted table
-     in ~tbl_sorted~.
-  6) Pass ~tbl_sorted~ as the argument to the plotting function ~pie~. This
-     will create a pie chart.
-  7) Use ~title~ to title this plot "Pie chart".
-  8) Use the plotting function ~barplot~ and the function ~title~ to create
-     a barplot titled "Bar chart" from the data of ~tbl_sorted~.
-  9) Inside ~barplot~, set the parameters ~las=2~ to make the sets of x- and
-     y-labels perpendicular to the axes, and ~cex.names=0.5~ to make the
-     name labels half the default size.
+1) Create an R code block and look at the structure of the ~dataCar~
+   data set in the ~insuranceData~ package. Remember that you may have
+   to install packages (on the R console, not in the Org-mode file),
+   and that you must load packages (with ~library~) and sometimes load
+   data sets, too (with ~data~).
+2) Create a new R code block that writes graphics output to the file
+   ~plot6.png~.
+3) Set up a side-by-side plot array with 1 row and 2 columns.
+4) Use ~table~ to create a table ~tbl~ of counts of the distinct levels
+   of the ~veh_body~ variable in the ~dataCar~ data frame.
+5) Use ~sort~ to sort the table ~tbl~, and set the parameter
+   ~decreasing=TRUE~ to sort in descending order. Store the sorted table
+   in ~tbl_sorted~.
+6) Pass ~tbl_sorted~ as the argument to the plotting function ~pie~. This
+   will create a pie chart.
+7) Use ~title~ to title this plot "Pie chart".
+8) Use the plotting function ~barplot~ and the function ~title~ to create
+   a barplot titled "Bar chart" from the data of ~tbl_sorted~.
+9) Inside ~barplot~, set the parameters ~las=2~ to make the sets of x- and
+   y-labels perpendicular to the axes, and ~cex.names=0.5~ to make the
+   name labels half the default size.
 
-  ----- PUT YOUR CODE BELOW THIS LINE -----
-
+   ----- PUT YOUR CODE BELOW THIS LINE -----

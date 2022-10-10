@@ -1106,7 +1106,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - [ ] Scatterplot customization part II: trendline, text and legend
 - [ ] Lecture: Barplot summaries, ~symbols~, ~layout~, multiple plot arrays
 
-** Checking in: 2nd sprint review
+* Checking in: 2nd sprint review
 #+attr_html: :width 500px
 [[../img/sprint2.jpg]]
 
@@ -1118,7 +1118,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - The next sprint review will be at the end of October - focus is on
   "results", and you will be required to give a short presentation
 
-** Review: assignment "Quick intro to base graphics"
+* Review: assignment "Quick intro to base graphics"
 *Finish this exercise!*
 - Explanatory vs. exploratory plots
 - Plot is a generic function (feeding it with a ~factor~)
@@ -1128,7 +1128,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - You find the solution [[https://github.com/birkenkrahe/dviz/blob/piHome/pdf/3_graphics_practice.pdf][as a PDF in GitHub]]
 - You can still submit this until Monday 10 October 3 pm for 50% of
   the points
-** Next home assignment: "Different plot types 1"
+* Next home assignment: "Different plot types 1"
 #+attr_html: :width 400px
 [[../img/geyser.png]]
 
@@ -1149,7 +1149,7 @@ Here's my list: 3 x infrastructure + 7 x content
   2. Correlation matrices with ~corrplot~
   3. Building and plotting ~rpart~ models
 
-** Scatterplot customization part II
+* Scatterplot customization part II
 
 *Second attempt!* I found out what the problem was last Friday: GitHub
 serves "raw" pages with ~Cache-Control: max-age=300~. That's specified

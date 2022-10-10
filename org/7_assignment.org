@@ -6,13 +6,18 @@
 * READ README
 
 - This assignment is based on Pearson's archived DataCamp course "Data
-  Visualization in R" (2016), chapter 2, "Different plot types".
+  Visualization in R" (2016), chapter 2, "Different plot types", which
+  in turn is based on Pearson's book "Exploratory Data Analysis" (CRC
+  Press, 2017). 
+  
 - For the exercises, create or complete R code blocks as needed. If
   you use the Org-mode header ~#+PROPERTY~ and ~#+STATUS~ remember that
   you have may have to activate these with ~C-c C-c~.
+
 - If you don't see plots in the Org-mode file, it may be that your
   session is not linked to the directory of the Org-mode file. Use
   ~setwd~ to set the working directory as needed.
+
 - When you completed all exercises and watched all videos, update the
   ~#+AUTHOR:~ information with your name and ~(pledged)~, and submit.
 

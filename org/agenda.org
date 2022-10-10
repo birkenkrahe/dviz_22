@@ -1217,7 +1217,10 @@ pairs (help your neighbor when you're done or check if you're stuck).
 
 - [ ] Solutions will be available as PDF from Wednesday
 
+* TODO Wed Layout, symbols and plot arrays
 * TODO Fri review: assignment (single variable plots)
+
+Review of assignment derived from Pearson's archived course ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
 
 * Week 9-10: Different plot types, external data
 ** IN PROGRESS Assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Different plot types]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])

@@ -1164,7 +1164,7 @@ Here's my list: 3 x infrastructure + 7 x content
   2. Correlation matrices with ~corrplot~
   3. Building and plotting ~rpart~ models
 
-* TODO Waterloo
+* TODO Waterloo, Friday October 7, 2022
 #+attr_html: :width 600px
 #+caption: Napoleon in the battle of Waterloo 1815
 [[../img/waterloo.png]]
@@ -1174,48 +1174,52 @@ Friday: GitHub serves "raw" pages with ~Cache-Control:
 max-age=300~. That's specified in seconds, meaning the pages are
 intended to be cached for 5 minutes. /Painting by Crofts (1847-1911)/
 #+end_notes
-* TODO Scatterplot customization part II
+* DONE Scatterplot customization part II
 
 Let's start over by (1) getting into Emacs in a different way, (2) by
 downloading the data set straight from the web, and (3) by working in
 pairs (help your neighbor when you're done or check if you're stuck).
 
-- [ ] Open the practice file [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/org/plotpractice.org][from GitHub]] in your browser at
+- [X] Open the practice file [[https://raw.githubusercontent.com/birkenkrahe/dviz/piHome/org/plotpractice.org][from GitHub]] in your browser at
   [[https://tinyurl.com/86aychm3][tinyurl.com/86aychm3]] and save it (it will be saved as a ~.txt~ file)
 
-- [ ] Open an Org-mode file in Emacs for R code blocks to code along:
+- [X] Open an Org-mode file in Emacs for R code blocks to code along:
   on the (Windows) command line, enter ~emacs --file custom2.org~ to load
   the file into the 1st buffer (it'll be created if it doesn't exist).
 
-- [ ] In ~custom2.org~ insert the ~txt~ file you downloaded with ~C-x i~
+- [X] In ~custom2.org~ insert the ~txt~ file you downloaded with ~C-x i~
   followed by the file name (type ~TAB~ to see available files)
 
-- [ ] Run *each* header line in ~custom2.org~ to activate it, then go to
+- [X] Run *each* header line in ~custom2.org~ to activate it, then go to
   the first code block in the ~Getting the data~ section and run it to
   get the data set from the web via URL.
   #+attr_html: :width 400px
   [[../img/df.png]]
 
-- [ ] Run the block in ~Plotting the data~ to get the coordinate vectors
+- [X] Run the block in ~Plotting the data~ to get the coordinate vectors
   ~x~ and ~y~:
   #+attr_html: :width 400px
   [[../img/coordinates.png]]
 
-- [ ] Collapse all headings with ~SHIFT-TAB~ (toggles)
+- [X] Collapse all headings with ~SHIFT-TAB~ (toggles)
 
-- [ ] Go to the heading ~Customize the plot~ and run the second (2) code
+- [X] Go to the heading ~Customize the plot~ and run the second (2) code
   block to generated the file ~final.png~
   #+attr_html: :width 400px
   [[../img/final.png]]
 
-- [ ] Save the file ~custom2.org~ with ~C-x C-s~
+- [X] Save the file ~custom2.org~ with ~C-x C-s~
 
-- [ ] Complete the sections ~Add a trendline~, ~Add text for outliers~,
-  and ~Add a legend~ using ~4_plot.org~ in GitHub: [[https://tinyurl.com/5etspdyr][tinyurl.com/5etspdyr]]
+- [X] Complete the sections ~Add a trendline~, ~Add text for outliers~,
+  and ~Add a legend~ using ~4_plot.org~ in GnitHub: [[https://tinyurl.com/5etspdyr][tinyurl.com/5etspdyr]]
 
-- [ ] Upload your completed Org-mode file in Canvas ([[https://lyon.instructure.com/courses/571/assignments/3201][Practice 6]])
+- [X] Upload your completed Org-mode file in Canvas ([[https://lyon.instructure.com/courses/571/assignments/3201][Practice 6]])
 
-- [ ] Solutions will be available as PDF from Wednesday
+- [X] Solutions will be available as PDF from Wednesday. Your final
+  prototype should look like this:
+  #+attr_html: :width 400px
+  [[../img/legend.png]]
+
 
 * TODO Wed Layout, symbols and plot arrays
 * TODO Fri review: assignment (single variable plots)

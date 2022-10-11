@@ -120,7 +120,7 @@ dataset.
    1. Call the ~truehist~ function again for ~weights~, but set the
       parameters ~main~ and ~xlab~ to ~""~ and the parameter ~axes~ to ~FALSE~
    2. Call ~par(new=TRUE)~ to plot over the histogram
-   3. Call ~lines~ with the argument ~plot(density(weights))~
+   3. Call ~lines~ with the argument ~density(weights)~
 
    #+begin_src R :file density.png :results graphics file
      ...

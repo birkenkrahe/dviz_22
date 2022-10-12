@@ -1220,8 +1220,7 @@ pairs (help your neighbor when you're done or check if you're stuck).
   #+attr_html: :width 400px
   [[../img/legend.png]]
 
-
-* TODO Wed Layout, symbols and plot arrays
+* TODO Wed/Fri Layout, symbols and plot arrays
 * TODO Fri review: assignment (single variable plots)
 
 Review of assignment derived from Pearson's archived course ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])

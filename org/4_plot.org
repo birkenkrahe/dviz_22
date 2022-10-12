@@ -743,7 +743,7 @@ line plot.
   #+RESULTS:
   [[file:../img/4_axis2.png]]
   
-* TODO Lab session: adding details to plots
+* Lab session: adding details to plots
 
 [[../img/3_gnome.jpg]]
 

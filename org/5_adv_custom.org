@@ -1,0 +1,208 @@
+#+TITLE:  Advanced base R plot customization
+#+AUTHOR: Marcus Birkenkrahe
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* ~pie~ charts and why they should be avoided
+
+- When should we use pie charts instead of rectangular plots?
+  #+begin_quote
+  »Pie graphs are best used when precision isn't particularly
+  important, and when there are relatively few wedges to compare (or
+  few that matter to the story).«
+  #+end_quote
+
+- Dataset: ~dataCar~ in the ~insuranceData~ package with lots of factors
+  #+begin_src R
+    library(insuranceData)
+    data(dataCar)
+    str(dataCar)
+  #+end_src
+
+- Create a contingency table of the categorical ~veh_body~ variable,
+  which has 13 different distinct levels, and sort its frequencies
+  #+begin_src R
+    xTab <- table(dataCar$veh_body)
+    xTab
+    length(xTab)
+  #+end_src
+
+- Compare pie chart and barplot for this variable: what do you see?
+  #+begin_src R :results graphics file :file ../img/pie.png
+    par(mfrow=c(1,2))
+    pie(xTab)
+    title("Pie chart")
+    barplot(xTab, las=2, cex.names=0.5)
+    title("Bar chart")
+  #+end_src
+  #+begin_notes
+  - Labels of the pie chart overlap badly to be unreadable
+  - Barplot summarizes the relative frequencies much more effectively
+  - Barplot offers options for further exploration e.g. of modality
+  - Barplot output can be customized further
+  #+end_notes
+
+* ~barplot~ summaries
+
+- You can also obtain a bar plot by applying ~plot~ to a ~factor~
+  #+begin_src R :results graphics file :file ../img/bar1.png
+    par(mfrow=c(1,1))
+    plot(dataCar$veh_body, las=2, cex.names=0.5)
+    title("Bar chart with plot()")
+  #+end_src
+
+  - The ~barplot~ functions allows creation of customizable
+    vertical/horizontal or stacked bar charts (how to check?)
+    #+begin_example R
+      example(barplot) # run this in an R console then click the graph
+    #+end_example
+
+  - Horizontal barplot of ~veh_body~ values from the ~dataCar~ data frame
+    in decreasing order of frequency from top to bottom
+    #+begin_src R :results graphics file :file ../img/bar2.png
+      par(mfrow=c(1,1))
+      barplot(
+        sort(xTab),
+        las=1,
+        cex.names=0.7,
+        horiz=TRUE,
+        main="Relative frequencies of veh_body from dataCar")
+    #+end_src
+
+  - The function ~sort~ sorts vector values in decreasing or increasing
+    order. To reverse the order, add the parameter ~decreasing=TRUE~
+    #+begin_src R :results graphics file :file ../img/bar3.png
+      par(mfrow=c(1,1))
+      barplot(
+        sort(xTab, decreasing=TRUE),
+        las=1,
+        cex.names=0.7,
+        horiz=TRUE,
+        main="Relative frequencies of veh_body from dataCar")
+    #+end_src
+
+* The ~symbol~ function
+
+- The ~symbol~ function flexibly supports plots of more than two numeric
+  variables /(generally, which ways are there to plot such data?)/
+
+- Example: bubbleplot, a scatterplot with points as circles where
+  circle size is determined by a third numeric variable (same length)
+
+- [ ] Does ~symbols~ allow any symbols other than circles for plotting?
+
+- [ ] Bubbleplot of ~MPG.city~ vs. ~Horsepower~ from the ~Cars93~ data frame in
+  the ~MASS~ package. - /What's the third variable?/
+  #+begin_src R
+    library(MASS)
+    data(Cars93)
+    str(Cars93)
+  #+end_src
+
+  #+begin_src R :results graphics file :file ../img/bubbleplot.png
+    symbols(
+      x = Cars93$Horsepower,
+      y = Cars93$MPG.city,
+      circles = as.numeric(Cars93$Cylinders)
+    )
+  #+end_src
+  
+- This is not a very clear graph. Studying the documentation, you find
+  the important parameter ~inches~ - its default is ~TRUE~: the largest
+  size of any drawn symbol is 1 inch
+  #+name: bubbleplot
+  #+begin_src R :results graphics file :file ../img/bubbleplot1.png
+    symbols(
+      x = Cars93$Horsepower,
+      y = Cars93$MPG.city,
+      circles = as.numeric(Cars93$Cylinders),
+      inches = TRUE
+    )
+  #+end_src
+
+- [ ] To get most from this third dimension, we use ~text~:
+  - /What is the parameter ~srt~?/
+  #+begin_src R :noweb yes :results graphics file :file ../img/bubbleplot2.png
+    <<bubbleplot>>
+    text(
+      x = Cars93$Horsepower,
+      y = Cars93$MPG.city,
+      Cars93$Cylinders,
+      srt = 30)
+  #+end_src
+
+- What insights can we get from this bubbleplot?
+  #+begin_quote
+  1) The smallest circles correspond to cars with 3 cylinders: they
+     exhibit the best city gas mileage but the lowest horsepower
+  2) One vehicle stands out with 4 cylinders, the second-lowest gas
+     mileage, and a horsepower of more than 100
+  3) One (of two) 5-cylinder car has a similar horsepower but much worth
+     mileage
+  #+end_quote
+
+  #+begin_src R
+    table(Cars93$Cylinders)
+  #+end_src
+
+  #+RESULTS:
+  : 
+  :      3      4      5      6      8 rotary 
+  :      3     49      2     31      7      1
+
+- The ~symbols~ function allows to show relationships of three or more
+  numerical variables:
+  1) ~circles~ generates plots for three variables
+  2) ~squares~ generates plots for three variables
+  3) ~rectangles~ generates plots for four variables (2 for length, and
+     2 for width of the rectangles) etc.
+
+* TODO Multiple plot arrays
+
+- We want to see the relationships between mileages and cylinders in
+  different driving environments using the ~Cars93~ data set from the
+  ~MASS~ package
+  #+begin_src R
+    library(MASS)
+    data(Cars93)
+    cyl <- Cars93$Cylinders
+    city <- Cars93$MPG.city
+    highway <- Cars93$MPG.highway
+    range(highway)
+    range(city)   
+  #+end_src  
+
+  #+RESULTS:
+  : [1] 20 50
+  : [1] 15 46
+
+- [ ] Build and interpret the following plot!
+  #+begin_src R :results graphics file :file ../img/multiple.png
+    par(mfrow=c(2,2))
+
+    plot(city ~ cyl, las = 2, ylim = c(15,50))
+    title("MPG.city vs. Cylinders")
+
+    plot(highway ~ cyl, las = 2, ylim = c(15,50))
+    title("MPG.highway vs. Cylinders")
+
+    plot( highway ~ city, xlim = c(15,50), ylim = c(15,50))
+    title("MPG.highway vs. MPG.city")
+    abline(a = 0, b = 1, lty = 2, lwd = 2)
+
+    plot(highway-city ~ cyl, las = 2)
+    title("Mileage difference vs. Cylinders")
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/multiple.png]]
+
+  #+begin_notes
+  1) Mileage declines as number of cylinders increase
+  2) Highway mileage is always greater than city mileage
+  3) Mileage difference increases with cylinder number
+  4) Labeling with ~las~ and ~xlim~, ~ylim~ aids comparability/readability
+  #+end_notes
+* TODO Using the ~layout~ function
+
+* TODO Color graphics

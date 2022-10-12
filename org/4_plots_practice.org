@@ -57,7 +57,6 @@
    plot in ~final.png~. 
   
 
-
 * TODO Add a trendline
 
 In the last plot, we indexed all male participants taller than or

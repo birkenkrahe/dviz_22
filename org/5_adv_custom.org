@@ -96,6 +96,9 @@
       main="Relative frequencies of veh_body from dataCar")
   #+end_src
 
+* TODO Stacked and grouped barplots
+
+- [[https://r-graph-gallery.com/211-basic-grouped-or-stacked-barplot.html][Source: R Graph Gallery]]
 * The ~symbol~ function
 
 - The ~symbol~ function flexibly supports plots of more than two numeric
@@ -106,7 +109,8 @@
 
 - [ ] Does ~symbols~ allow any symbols other than circles for plotting?
 
-- [ ] Bubbleplot of ~MPG.city~ vs. ~Horsepower~ from the ~Cars93~ data frame in the ~MASS~ package. - /What's the third variable?/
+- [ ] Bubbleplot of ~MPG.city~ vs. ~Horsepower~ from the ~Cars93~ data frame
+  in the ~MASS~ package. - /What's the third variable?/
   #+begin_src R
     library(MASS)
     data(Cars93)
@@ -251,6 +255,3 @@
   #+end_notes
 * TODO Using the ~layout~ function
 * TODO Color graphics
-* TODO Stacked and grouped barplots
-
-- [[https://r-graph-gallery.com/211-basic-grouped-or-stacked-barplot.html][Source: R Graph Gallery]]

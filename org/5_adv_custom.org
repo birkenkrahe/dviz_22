@@ -11,13 +11,28 @@
   important, and when there are relatively few wedges to compare (or
   few that matter to the story).«
   #+end_quote
-
 - Dataset: ~dataCar~ in the ~insuranceData~ package with lots of factors
   #+begin_src R
     library(insuranceData)
     data(dataCar)
     str(dataCar)
   #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  'data.frame': 67856 obs. of  11 variables:
+   $ veh_value: num  1.06 1.03 3.26 4.14 0.72 2.01 1.6 1.47 0.52 0.38 ...
+   $ exposure : num  0.304 0.649 0.569 0.318 0.649 ...
+   $ clm      : int  0 0 0 0 0 0 0 0 0 0 ...
+   $ numclaims: int  0 0 0 0 0 0 0 0 0 0 ...
+   $ claimcst0: num  0 0 0 0 0 0 0 0 0 0 ...
+   $ veh_body : Factor w/ 13 levels "BUS","CONVT",..: 4 4 13 11 4 5 8 4 4 4 ...
+   $ veh_age  : int  3 2 2 2 4 3 3 2 4 4 ...
+   $ gender   : Factor w/ 2 levels "F","M": 1 1 1 1 1 2 2 2 1 1 ...
+   $ area     : Factor w/ 6 levels "A","B","C","D",..: 3 1 5 4 3 3 1 2 1 2 ...
+   $ agecat   : int  2 4 2 2 2 4 4 6 3 4 ...
+   $ X_OBSTAT_: Factor w/ 1 level "01101    0    0    0": 1 1 1 1 1 1 1 1 1 1 ...
+  #+end_example
 
 - Create a contingency table of the categorical ~veh_body~ variable,
   which has 13 different distinct levels, and sort its frequencies
@@ -51,35 +66,35 @@
     title("Bar chart with plot()")
   #+end_src
 
-  - The ~barplot~ functions allows creation of customizable
-    vertical/horizontal or stacked bar charts (how to check?)
-    #+begin_example R
-      example(barplot) # run this in an R console then click the graph
-    #+end_example
+- The ~barplot~ functions allows creation of customizable
+  vertical/horizontal or stacked bar charts (how to check?)
+  #+begin_example R
+    example(barplot) # run this in an R console then click the graph
+  #+end_example
 
-  - Horizontal barplot of ~veh_body~ values from the ~dataCar~ data frame
-    in decreasing order of frequency from top to bottom
-    #+begin_src R :results graphics file :file ../img/bar2.png
-      par(mfrow=c(1,1))
-      barplot(
-        sort(xTab),
-        las=1,
-        cex.names=0.7,
-        horiz=TRUE,
-        main="Relative frequencies of veh_body from dataCar")
-    #+end_src
+- Horizontal barplot of ~veh_body~ values from the ~dataCar~ data frame
+  in decreasing order of frequency from top to bottom
+  #+begin_src R :results graphics file :file ../img/bar2.png
+    par(mfrow=c(1,1))
+    barplot(
+      sort(xTab),
+      las=1,
+      cex.names=0.7,
+      horiz=TRUE,
+      main="Relative frequencies of veh_body from dataCar")
+  #+end_src
 
-  - The function ~sort~ sorts vector values in decreasing or increasing
-    order. To reverse the order, add the parameter ~decreasing=TRUE~
-    #+begin_src R :results graphics file :file ../img/bar3.png
-      par(mfrow=c(1,1))
-      barplot(
-        sort(xTab, decreasing=TRUE),
-        las=1,
-        cex.names=0.7,
-        horiz=TRUE,
-        main="Relative frequencies of veh_body from dataCar")
-    #+end_src
+- The function ~sort~ sorts vector values in decreasing or increasing
+  order. To reverse the order, add the parameter ~decreasing=TRUE~
+  #+begin_src R :results graphics file :file ../img/bar3.png
+    par(mfrow=c(1,1))
+    barplot(
+      sort(xTab, decreasing=TRUE),
+      las=1,
+      cex.names=0.7,
+      horiz=TRUE,
+      main="Relative frequencies of veh_body from dataCar")
+  #+end_src
 
 * The ~symbol~ function
 
@@ -91,13 +106,44 @@
 
 - [ ] Does ~symbols~ allow any symbols other than circles for plotting?
 
-- [ ] Bubbleplot of ~MPG.city~ vs. ~Horsepower~ from the ~Cars93~ data frame in
-  the ~MASS~ package. - /What's the third variable?/
+- [ ] Bubbleplot of ~MPG.city~ vs. ~Horsepower~ from the ~Cars93~ data frame in the ~MASS~ package. - /What's the third variable?/
   #+begin_src R
     library(MASS)
     data(Cars93)
     str(Cars93)
   #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  'data.frame': 93 obs. of  27 variables:
+   $ Manufacturer      : Factor w/ 32 levels "Acura","Audi",..: 1 1 2 2 3 4 4 4 4 5 ...
+   $ Model             : Factor w/ 93 levels "100","190E","240",..: 49 56 9 1 6 24 54 74 73 35 ...
+   $ Type              : Factor w/ 6 levels "Compact","Large",..: 4 3 1 3 3 3 2 2 3 2 ...
+   $ Min.Price         : num  12.9 29.2 25.9 30.8 23.7 14.2 19.9 22.6 26.3 33 ...
+   $ Price             : num  15.9 33.9 29.1 37.7 30 15.7 20.8 23.7 26.3 34.7 ...
+   $ Max.Price         : num  18.8 38.7 32.3 44.6 36.2 17.3 21.7 24.9 26.3 36.3 ...
+   $ MPG.city          : int  25 18 20 19 22 22 19 16 19 16 ...
+   $ MPG.highway       : int  31 25 26 26 30 31 28 25 27 25 ...
+   $ AirBags           : Factor w/ 3 levels "Driver & Passenger",..: 3 1 2 1 2 2 2 2 2 2 ...
+   $ DriveTrain        : Factor w/ 3 levels "4WD","Front",..: 2 2 2 2 3 2 2 3 2 2 ...
+   $ Cylinders         : Factor w/ 6 levels "3","4","5","6",..: 2 4 4 4 2 2 4 4 4 5 ...
+   $ EngineSize        : num  1.8 3.2 2.8 2.8 3.5 2.2 3.8 5.7 3.8 4.9 ...
+   $ Horsepower        : int  140 200 172 172 208 110 170 180 170 200 ...
+   $ RPM               : int  6300 5500 5500 5500 5700 5200 4800 4000 4800 4100 ...
+   $ Rev.per.mile      : int  2890 2335 2280 2535 2545 2565 1570 1320 1690 1510 ...
+   $ Man.trans.avail   : Factor w/ 2 levels "No","Yes": 2 2 2 2 2 1 1 1 1 1 ...
+   $ Fuel.tank.capacity: num  13.2 18 16.9 21.1 21.1 16.4 18 23 18.8 18 ...
+   $ Passengers        : int  5 5 5 6 4 6 6 6 5 6 ...
+   $ Length            : int  177 195 180 193 186 189 200 216 198 206 ...
+   $ Wheelbase         : int  102 115 102 106 109 105 111 116 108 114 ...
+   $ Width             : int  68 71 67 70 69 69 74 78 73 73 ...
+   $ Turn.circle       : int  37 38 37 37 39 41 42 45 41 43 ...
+   $ Rear.seat.room    : num  26.5 30 28 31 27 28 30.5 30.5 26.5 35 ...
+   $ Luggage.room      : int  11 15 14 17 13 16 17 21 14 18 ...
+   $ Weight            : int  2705 3560 3375 3405 3640 2880 3470 4105 3495 3620 ...
+   $ Origin            : Factor w/ 2 levels "USA","non-USA": 2 2 2 2 2 1 1 1 1 1 ...
+   $ Make              : Factor w/ 93 levels "Acura Integra",..: 1 2 4 3 5 6 7 9 8 10 ...
+  #+end_example
 
   #+begin_src R :results graphics file :file ../img/bubbleplot.png
     symbols(
@@ -106,7 +152,7 @@
       circles = as.numeric(Cars93$Cylinders)
     )
   #+end_src
-  
+
 - This is not a very clear graph. Studying the documentation, you find
   the important parameter ~inches~ - its default is ~TRUE~: the largest
   size of any drawn symbol is 1 inch
@@ -146,8 +192,8 @@
   #+end_src
 
   #+RESULTS:
-  : 
-  :      3      4      5      6      8 rotary 
+  :
+  :      3      4      5      6      8 rotary
   :      3     49      2     31      7      1
 
 - The ~symbols~ function allows to show relationships of three or more
@@ -169,8 +215,8 @@
     city <- Cars93$MPG.city
     highway <- Cars93$MPG.highway
     range(highway)
-    range(city)   
-  #+end_src  
+    range(city)
+  #+end_src
 
   #+RESULTS:
   : [1] 20 50
@@ -204,5 +250,7 @@
   4) Labeling with ~las~ and ~xlim~, ~ylim~ aids comparability/readability
   #+end_notes
 * TODO Using the ~layout~ function
-
 * TODO Color graphics
+* TODO Stacked and grouped barplots
+
+- [[https://r-graph-gallery.com/211-basic-grouped-or-stacked-barplot.html][Source: R Graph Gallery]]

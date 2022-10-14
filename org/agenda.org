@@ -1096,7 +1096,8 @@ Here's my list: 3 x infrastructure + 7 x content
 10) Plot customization and graphical parameters
 #+end_quote
 
-* Week 8: Layout, symbols and plot arrays
+* Week 8: Adding more details to plots
+* Week 9: Layout, symbols and plot arrays
 #+attr_html: :width 500px
 [[../img/week8.jpg]]
 
@@ -1107,7 +1108,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - [ ] Scatterplot customization part II: trendline, text and legend
 - [ ] Lecture: Barplot summaries, ~symbols~, ~layout~, multiple plot arrays
 
-* Checking in: 2nd sprint review
+* DONE Checking in: 2nd sprint review
 #+attr_html: :width 500px
 [[../img/sprint2.jpg]]
 
@@ -1119,7 +1120,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - The next sprint review will be at the end of October - focus is on
   "results", and you will be required to give a short presentation
 
-* READ Review: assignment "Quick intro to base graphics"
+* DONE Review: assignment "Quick intro to base graphics"
 
 *Finish this exercise!*
 - Explanatory vs. exploratory plots
@@ -1131,7 +1132,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - You can still submit this until Monday 10 October 3 pm for 50% of
   the points
 
-* TODO Lyon College Career Expo
+* DONE Lyon College Career Expo
 #+attr_html: :width 300px
 [[../img/recruit.jpg]]
 
@@ -1143,7 +1144,7 @@ Here's my list: 3 x infrastructure + 7 x content
 
 - Bring back one or more good company stories for bonus points!
 
-* TODO Next home assignment: Single variable plots
+* DONE Next home assignment: Single variable plots
 #+attr_html: :width 400px
 [[../img/geyser.png]]
 
@@ -1164,7 +1165,7 @@ Here's my list: 3 x infrastructure + 7 x content
   2. Correlation matrices with ~corrplot~
   3. Building and plotting ~rpart~ models
 
-* TODO Waterloo, Friday October 7, 2022
+* DONE Waterloo, Friday October 7, 2022
 #+attr_html: :width 600px
 #+caption: Napoleon in the battle of Waterloo 1815
 [[../img/waterloo.png]]
@@ -1222,12 +1223,8 @@ pairs (help your neighbor when you're done or check if you're stuck).
 
 * TODO Wed/Fri Layout, symbols and plot arrays
 [[../img/multiple.png]]
-* TODO Fri review: assignment (single variable plots)
-
-Review of assignment derived from Pearson's archived course ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
-
-* Week 9-10: Different plot types, external data
-** IN PROGRESS Assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Different plot types]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
+* Week 10: Different plot types, external data
+** Review Assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Different plot types]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
 DEADLINE: <2022-10-19 Wed 15:00>
 
 Set of exercises based on Pearson's archived DataCamp course: "This
@@ -1238,6 +1235,7 @@ for characterizing one variable at a time, move on to scatter plots
 and other useful tools for showing how two variables relate, and
 finally introduce some tools for visualizing more complex
 relationships in our dataset."
+
 ** TODO Test 7
 
 ** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])

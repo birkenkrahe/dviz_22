@@ -1108,7 +1108,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - [ ] Scatterplot customization part II: trendline, text and legend
 - [ ] Lecture: Barplot summaries, ~symbols~, ~layout~, multiple plot arrays
 
-* DONE Checking in: 2nd sprint review
+** Checking in: 2nd sprint review
 #+attr_html: :width 500px
 [[../img/sprint2.jpg]]
 
@@ -1120,7 +1120,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - The next sprint review will be at the end of October - focus is on
   "results", and you will be required to give a short presentation
 
-* DONE Review: assignment "Quick intro to base graphics"
+** Review: assignment "Quick intro to base graphics"
 
 *Finish this exercise!*
 - Explanatory vs. exploratory plots
@@ -1132,7 +1132,7 @@ Here's my list: 3 x infrastructure + 7 x content
 - You can still submit this until Monday 10 October 3 pm for 50% of
   the points
 
-* DONE Lyon College Career Expo
+** Lyon College Career Expo
 #+attr_html: :width 300px
 [[../img/recruit.jpg]]
 
@@ -1144,7 +1144,7 @@ Here's my list: 3 x infrastructure + 7 x content
 
 - Bring back one or more good company stories for bonus points!
 
-* DONE Next home assignment: Single variable plots
+** Next home assignment: Single variable plots
 #+attr_html: :width 400px
 [[../img/geyser.png]]
 
@@ -1165,7 +1165,7 @@ Here's my list: 3 x infrastructure + 7 x content
   2. Correlation matrices with ~corrplot~
   3. Building and plotting ~rpart~ models
 
-* DONE Waterloo, Friday October 7, 2022
+** Waterloo, Friday October 7, 2022
 #+attr_html: :width 600px
 #+caption: Napoleon in the battle of Waterloo 1815
 [[../img/waterloo.png]]
@@ -1175,7 +1175,7 @@ Friday: GitHub serves "raw" pages with ~Cache-Control:
 max-age=300~. That's specified in seconds, meaning the pages are
 intended to be cached for 5 minutes. /Painting by Crofts (1847-1911)/
 #+end_notes
-* DONE Scatterplot customization part II
+** Scatterplot customization part II
 
 Let's start over by (1) getting into Emacs in a different way, (2) by
 downloading the data set straight from the web, and (3) by working in
@@ -1221,9 +1221,13 @@ pairs (help your neighbor when you're done or check if you're stuck).
   #+attr_html: :width 400px
   [[../img/legend.png]]
 
-* TODO Wed/Fri Layout, symbols and plot arrays
+* Wed/Fri ~symbols~ and ~mfrow~ multi plot arrays
 [[../img/multiple.png]]
-* Week 10: Different plot types, external data
+* Week 10: ~layout~ matrix and ~color~ graphics
+#+attr_html: :width 400px
+[[../img/chile.jpg]]
+
+** Article: [[https://www.nature.com/articles/s41467-020-19160-7][the misuse of color in science publications]]
 ** Review Assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Different plot types]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
 DEADLINE: <2022-10-19 Wed 15:00>
 
@@ -1236,11 +1240,9 @@ and other useful tools for showing how two variables relate, and
 finally introduce some tools for visualizing more complex
 relationships in our dataset."
 
-** TODO Test 7
-
+** TODO Test 7: customization of base R plots
 ** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])
-** TODO Test 8
-* Week 11-13: ggplot2, Shiny, Tableau
+* Week 11-13: ggplot2, Shiny, Tableau, D3, Processing
 ** TODO Assignment 9. [[https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2][Introduction to ggplot2]] ([[https://lyon.instructure.com/courses/571/assignments/1667][Canvas]])
 
 Go to your assignments dashboard in DataCamp and complete the *first*
@@ -1283,7 +1285,7 @@ an Airbnb dataset for the city of Amsterdam."
 As part of the academic alliance with DataCamp, you have access to all
 Tableau courses until the end of term (usually, all lessons except the
 first are only accessible to enterprise clients).
-* Week 14-15: projects, final exam
+* Week 14-16: projects, final exam
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

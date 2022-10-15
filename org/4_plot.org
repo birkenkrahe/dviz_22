@@ -52,9 +52,17 @@ chart with one bar per factor level.
   x_f
 #+end_src
 
-#+begin_src R :results graphics file :file ../img/3_barchart.png
+#+RESULTS:
+: [1] 1 2 2 3 3 3
+: Levels: 1 2 3
+
+#+begin_src R :results graphics file :file ../img/4_barchart.png :exports both
   plot(x_f)
 #+end_src
+
+#+RESULTS:
+[[file:../img/4_barchart.png]]
+
 * Line plot with ~plot~
 
 When a time series is given like the data set ~Nile~, ~plot~ generates a
@@ -65,10 +73,14 @@ line plot.
   str(Nile)
 #+end_src
 
-#+begin_src R :results graphics file :file ../img/3_lineplot.png
+#+begin_src R :results graphics file :file ../img/4_lineplot.png :exports both
   plot(Nile)  # plotting a time series as line plot
   grid()  # draw a grid to make it easier to read a plot
 #+end_src
+
+#+RESULTS:
+[[file:../img/4_lineplot.png]]
+
 * Box plots with ~plot~
 
 - We used the ~boxplot~ function to create a boxplot summary of heating
@@ -76,23 +88,23 @@ line plot.
 
 - The same result with ~plot~:
   #+name: whitesideplot1
-  #+begin_src R :results graphics file :file ../img/3_whiteside1.png
+  #+begin_src R :results graphics file :file ../img/4_whiteside1.png
     plot(whiteside$Insul,whiteside$Gas)
   #+end_src
 
   #+RESULTS: whitesideplot1
-  [[file:../img/3_whiteside1.png]]
+  [[file:../img/4_whiteside1.png]]
 
 - Customization is simple:
   #+name: whitesideplot2
-  #+begin_src R :results graphics file :file ../img/3_whiteside2.png
+  #+begin_src R :results graphics file :file ../img/4_whiteside2.png :exports both
     plot(x=whiteside$Insul, xlab="Insulation",
          y=whiteside$Gas,   ylab="Gas consumption",
          main="Whiteside data set")
   #+end_src
 
   #+RESULTS: whitesideplot2
-  [[file:../img/3_whiteside2.png]]
+  [[file:../img/4_whiteside2.png]]
 * Decision tree models with ~plot~
 
 - Many modeling functions in R return a object that can be plotted
@@ -120,13 +132,13 @@ line plot.
 
 - Plot the model and add generic text using ~text~ for ~rpart~ models:
 
-  #+begin_src R :results graphics file :file ../img/3_rpart.png
+  #+begin_src R :results graphics file :file ../img/4_rpart.png :exports both
     plot(rpartModel)
     text(rpartModel)
   #+end_src
 
   #+RESULTS:
-  [[file:../img/3_rpart.png]]
+  [[file:../img/4_rpart.png]]
 
 - [X] What methods are available for ~rpart~ and ~text~?
   #+begin_src R
@@ -166,12 +178,12 @@ line plot.
   separate linear regression model that predicts ~Gas~ from ~Temp~ is
   built for each node.
   #+name: MOB2
-  #+begin_src R :results graphics file :file ../img/3_mob.png
+  #+begin_src R :results graphics file :file ../img/4_mob.png :exports both
     plot(MOBmodel)
   #+end_src
 
   #+RESULTS: MOB2
-  [[file:../img/3_mob.png]]
+  [[file:../img/4_mob.png]]
 
 - What methods are available for ~lmtree~ ?
   #+begin_src R
@@ -236,7 +248,7 @@ line plot.
 
 - ~mfrow~, a 2-dim vector that sets up an array of plots
   #+name: mfrow
-  #+begin_src R :session *R* :results graphics file :file ../img/4_mfrow.png
+  #+begin_src R :session *R* :results graphics file :file ../img/4_mfrow.png :exports both
     par(mfrow=c(2,1))
     plot(rnorm(100), type="l")
     title("100 random numbers")
@@ -247,7 +259,7 @@ line plot.
   #+RESULTS: mfrow
   [[file:../img/4_mfrow.png]]
 
-  #+begin_src R :session *R* :results graphics file :file ../img/4_mfrow1.png
+  #+begin_src R :session *R* :results graphics file :file ../img/4_mfrow1.png :exports both
     par(mfrow=c(2,1))
     plot(rnorm(100))
     title("100 random numbers")
@@ -263,7 +275,7 @@ line plot.
   1) The ~cex~ family scales text and symbols in relation to one
      another, e.g. ~cex.main~ scales the main plot title relative to ~cex~
      #+name: cex
-     #+begin_src R :session *R* :results graphics file :file ../img/cex.png
+     #+begin_src R :session *R* :results graphics file :file ../img/4_cex.png :exports both
        plot(rnorm(100),
             main="Double the size",
             cex=2,   # double point symbol size
@@ -271,10 +283,13 @@ line plot.
             )
      #+end_src
 
+     #+RESULTS: cex
+     [[file:../img/4_cex.png]]
+
   2) The ~col~ family specifies colors for points, lines, text[fn:1]. To
      see the complete set of colors, enter ~colors()~.
 
-     #+begin_src R :session *R* :results graphics file :file ../img/col.png
+     #+begin_src R :session *R* :results graphics file :file ../img/4_col.png :exports both
        plot(rnorm(100),
             main="Color me impressed",
             col      = "purple",  # color points
@@ -283,10 +298,13 @@ line plot.
             )
      #+end_src
 
+     #+RESULTS:
+     [[file:../img/4_col.png]]
+
   3) The ~font~ family specifies font types (plain = 1, bold = 2, italic
      = 3, bold italic = 4).
      #+name: font
-     #+begin_src R :session *R* :results graphics file :file ../img/font.png
+     #+begin_src R :session *R* :results graphics file :file ../img/4_font.png :exports both
        plot(rnorm(100),
             main="Fountain of font",
             font.main = 4,  # title font bold italic
@@ -296,32 +314,35 @@ line plot.
      #+end_src
 
      #+RESULTS: font
-     [[file:../img/font.png]]
+     [[file:../img/4_font.png]]
 * Other parameters
 
 - ~adj~ specifies justification of the text (0=left,1=right, center=0.5)
 
-  #+begin_src R :session *R* :results graphics file :file ../img/adj.png
+  #+begin_src R :session *R* :results graphics file :file ../img/4_adj.png :exports both
     plot(rnorm(100), type="n")
     text(x=40,y=0,labels="Right-justified text",adj=1,font=3)
     text(x=40,y=-1,labels="Left-justified text",adj=0,font=3)
     text(x=40,y=1.5,labels="Centered text",adj=0.5,font=3)
   #+end_src
 
+  #+RESULTS:
+  [[file:../img/4_adj.png]]
+
   #+attr_html: :width 300px
   [[file:../img/adj.png]]
 
 - ~lty~ and ~lwd~ specify line type and line width.
   #+name: linewidth
-  #+begin_src R :session *R* :results graphics file :file ../img/lty.png
+  #+begin_src R :session *R* :results graphics file :file ../img/4_lty.png :exports both
     plot(Nile, lty=2)
   #+end_src
 
   #+RESULTS: linewidth
-  [[file:../img/lty.png]]
+  [[file:../img/4_lwd.png]]
 
   #+name: linewidth
-  #+begin_src R :session *R* :results graphics file :file ../img/lwd.png
+  #+begin_src R :session *R* :results graphics file :file ../img/4_lwd.png :exports both
     plot(Nile, lwd=3)
   #+end_src
 
@@ -337,6 +358,11 @@ line plot.
     par()$adj
   #+end_src
 
+  #+RESULTS:
+  : [1] "list"
+  : [1] "solid"
+  : [1] 0.5
+
 * Multiple plots and passing parameters
 
 - The ~ask~ parameter is a /logical/ flag (the default value is ~FALSE~)
@@ -349,6 +375,10 @@ line plot.
     class(par()$ask)
     par()$ask
   #+end_src
+
+  #+RESULTS:
+  : [1] "logical"
+  : [1] FALSE
 
 - [ ] See e.g. ~example(Nile)~ in the R console (not in Org-mode -
   because this involves OS shell commands which Emacs cannot render)
@@ -365,7 +395,8 @@ line plot.
 * Starting ~plot~ without bells and whistles
 
 - Starting point is calories vs. sugars from the ~UScereal~ data frame
-  #+begin_src R :results graphics file :file ../img/4_cereal.png
+  #+name: cerealplot
+  #+begin_src R :results graphics file :file ../img/4_cereal.png :exports both
     par(mfrow=c(1,1))
     library(MASS)
     x <- UScereal$sugars
@@ -389,8 +420,8 @@ line plot.
   2) ~ylab~: a ~character~ string for the y-axis label
   3) ~type = "n"~: specifies that the plot is constructed but /not
      displayed/
-
-  #+begin_src R :results graphics file :file ../img/4_cereal1.png
+  #+name: cerealplot_nothing
+  #+begin_src R :results graphics file :file ../img/4_cereal1.png :exports both
     plot(x,y,
          xlab="Grams of sugar per serving",
          ylab="Calories per serving",
@@ -429,19 +460,16 @@ line plot.
   outliers with another (~pch=18~) and twice as large (~cex=2~).
 
 - Now we're ready to enhance our basic plot.
-  #+begin_src R :results graphics file :file ../img/4_cereal2.png
-  plot(x,y,
-       xlab="Grams of sugar per serving",
-       ylab="Calories per serving",
-       type = "n")
-  #######################################
-  index <- which(y > 300)
-  points(x[-index], y[-index], pch=16)
-  points(x[index], y[index], pch=18, cex=2)
+  #+name: cerealplot_outliers
+  #+begin_src R :results graphics file :file ../img/4_cereal2.png :exports both :noweb yes
+    <<cerealplot_nothing>>
+    index <- which(y > 300)
+    points(x[-index], y[-index], pch=16)
+    points(x[index], y[index], pch=18, cex=2)
   #+end_src
 
   #+RESULTS:
-[[file:../img/4_cereal2.png]]
+  [[file:../img/4_cereal2.png]]
 
 * Add reference lines with ~abline~
 
@@ -449,21 +477,18 @@ line plot.
   regression models.
 
 - Now we're ready to enhance our basic plot.
-  #+begin_src R :results graphics file :file ../img/4_cereal3.png
-    plot(x,y,
-         xlab="Grams of sugar per serving",
-         ylab="Calories per serving",
-         type = "n")
-    index <- which(y > 300)
-    points(x[-index], y[-index], pch=16)
-    points(x[index], y[index], pch=18, cex=2)
-    #######################################
+  #+name: cerealplot_trends
+  #+begin_src R :results graphics file :file ../img/4_cereal3.png :exports both :noweb yes
+    <<cerealplot_outliers>>
     olsModel <- lm(y ~ x) # linear regression on y = f(x)
     abline(olsModel, lty=3)  # draw thin dotted line
     library(robustbase)
     robustModel <- lmrob(y ~ x)
     abline(robustModel, lty=2, lwd=2)
   #+end_src
+
+  #+RESULTS: cerealplot_models
+  [[file:../img/4_cereal3.png]]
 
   #+RESULTS:
   [[file:../img/4_cereal3.png]]
@@ -485,7 +510,7 @@ line plot.
 * Customization with vectors
 
 - Consider the following code to plot ~whiteside~ variables
-  #+begin_src R :results graphics file :file ../img/4_pch.png
+  #+begin_src R :results graphics file :file ../img/4_pch.png :exports both
     plot(
       x = whiteside$Temp,
       y = whiteside$Gas,
@@ -558,25 +583,12 @@ line plot.
      - formatting parameters like text justification, font type etc.
 
 - The complete R code block for printout looks like this now:
-  #+begin_src R :results graphics file :file ../img/4_cereals4.png
-    plot(x,y,
-         xlab="Grams of sugar per serving",
-         ylab="Calories per serving",
-         type = "n")
-    #################################
-    index <- which(y > 300)
-    points(x[-index], y[-index], pch=16)
-    points(x[index], y[index], pch=18, cex=2)
-    #######################################
-    olsModel <- lm(y ~ x)
-    abline(olsModel, lty=3)
-    library(robustbase)
-    robustModel <- lmrob(y ~ x)
-    abline(robustModel, lty=2, lwd=2)
-    #############################
+  #+name: cerealplot_text
+  #+begin_src R :results graphics file :file ../img/4_cereals4.png :exports both :noweb yes
+    <<cerealplot_trends>>
     pointLabels <- paste(rownames(UScereal)[index], "-->")
     text(
-      x=11
+      x=11,
       y=y[index],
       labels=pointLabels,
       adj=1,
@@ -616,36 +628,13 @@ line plot.
      - ~lty=2~, ~lwd=2~ is the dashed thick lower line (robust fit)
 
 - Our final R code block:
-  #+begin_src R :results graphics file :file ../img/4_cereals5.png
-    plot(x,y,
-         xlab="Grams of sugar per serving",
-         ylab="Calories per serving",
-         type = "n")
-    #################################
-    index <- which(y > 300)
-    points(x[-index], y[-index], pch=16)
-    points(x[index], y[index], pch=18, cex=2)
-    #######################################
-    olsModel <- lm(y ~ x) # linear regression on y = f(x)
-    abline(olsModel, lty=3)  # draw thin dotted line
-    library(robustbase)
-    robustModel <- lmrob(y ~ x)
-    abline(robustModel, lty=2, lwd=2)
-    #############################
-    pointLabels <- paste(rownames(UScereal)[index], "-->")
-    text(
-      x=11,       # x-coordinate of text field
-      y=y[index], # y-coordinate of text field
-      labels=pointLabels,  # text for text field
-      adj=1,  # text is right justified
-      family="mono", # use mono spaced font family
-      font=1) # exact font depends on font family used
-    #############################
+  #+begin_src R :results graphics file :file ../img/4_cereals5.png :exports both :noweb yes
+    <<cerealplot_text>>
     legend(
-    x = "topright", 
-    lty = c(3,2),
-    lwd = c(1,2),
-    legend = c("OLS line", "robust line"))
+      x = "topright", 
+      lty = c(3,2),
+      lwd = c(1,2),
+      legend = c("OLS line", "robust line"))
   #+end_src
 
   #+RESULTS:
@@ -668,7 +657,7 @@ line plot.
 - To aid readability, you may also have to adjust ~cex.lab~
 
 - Example:
-  #+begin_src R :results graphics file :file ../img/4_las.png
+  #+begin_src R :results graphics file :file ../img/4_las.png :exports both
     par(las=0, mfrow=c(2,2))   # labels are axis parallel
     plot(Nile, main="las=0")  
     par(las=1)                 # labels horizontal
@@ -703,7 +692,7 @@ line plot.
 - Box plot without axes: The ~varwidth~ parameter creates a boxplot of
   variable width so that the width of each individual boxplot reflects
   the number of different cereals on each shelf.
-  #+begin_src R :results graphics file :file ../img/4_axis1.png
+  #+begin_src R :results graphics file :file ../img/4_axis1.png :exports both
     boxplot(
       sugars ~ shelf,
       data = UScereal,
@@ -717,7 +706,7 @@ line plot.
   [[file:../img/4_axis1.png]]
   
 - Box plot with axis specified using ~axis~: 
-  #+begin_src R :results graphics file :file ../img/4_axis2.png
+  #+begin_src R :results graphics file :file ../img/4_axis2.png :exports both
     boxplot(
       sugars ~ shelf,
       data = UScereal,
@@ -744,8 +733,8 @@ line plot.
   [[file:../img/4_axis2.png]]
   
 * Lab session: adding details to plots
-
-[[../img/3_gnome.jpg]]
+#+attr_html: :width 400px
+[[../img/4_gnome.jpg]]
 
 - Open the raw practice file in GitHub
 - Identify yourself as the author and pledge

@@ -182,7 +182,7 @@ scatterplots to summarize the data frame.
   interpretation.
 #+end_notes
 
-#+begin_src R :exports both :session :results output graphics file :file ../img/3_calories.png
+#+begin_src R :exports both :session :results output graphics file :file ../img/3_calories.png :exports both
   plot(data=UScereal, calories ~ sugars)
 #+end_src
 

@@ -490,9 +490,6 @@ line plot.
   #+RESULTS: cerealplot_models
   [[file:../img/4_cereal3.png]]
 
-  #+RESULTS:
-  [[file:../img/4_cereal3.png]]
-
 - ~lm~ is called to construct a linear regression model via the method
   of [[https://www.r-bloggers.com/2017/07/ordinary-least-squares-ols-linear-regression-in-r/][ordinary least squares]] - this is the most popular linear model
 

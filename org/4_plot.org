@@ -487,7 +487,7 @@ line plot.
     abline(robustModel, lty=2, lwd=2)
   #+end_src
 
-  #+RESULTS: cerealplot_models
+
   [[file:../img/4_cereal3.png]]
 
 - ~lm~ is called to construct a linear regression model via the method
@@ -517,8 +517,8 @@ line plot.
   #+RESULTS:
   [[file:../img/4_pch.png]]
 
-- ~c(6,16)~ defines a 2-dimensional vector of the same length as ~Insul~
-  but uses ~pch=6~ when ~Insul = "Before"~, and ~pch=16~ when ~Insul="After"~:
+- ~c(6,16)~ defines a vector of the same length as ~Insul~ but uses ~pch=6~
+  when ~Insul = "Before"~, and ~pch=16~ when ~Insul="After"~:
   #+begin_src R
     c(6,16)[whiteside$Insul]
   #+end_src

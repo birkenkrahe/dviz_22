@@ -1227,8 +1227,11 @@ pairs (help your neighbor when you're done or check if you're stuck).
 #+attr_html: :width 400px
 [[../img/chile.jpg]]
 
-** Article: [[https://www.nature.com/articles/s41467-020-19160-7][the misuse of color in science publications]]
-** Review Assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Different plot types]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
+- [ ] Finish basic graphics (~layout~ and color)
+- [ ] Review assignment yourself (solutions in GitHub)
+
+* Article: [[https://www.nature.com/articles/s41467-020-19160-7][the misuse of color in science publications]]
+* Assgmt 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Plots to characterize single variables]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
 DEADLINE: <2022-10-19 Wed 15:00>
 
 Set of exercises based on Pearson's archived DataCamp course: "This
@@ -1240,9 +1243,9 @@ and other useful tools for showing how two variables relate, and
 finally introduce some tools for visualizing more complex
 relationships in our dataset."
 
-** TODO Test 7: customization of base R plots
-** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])
+* Test 7: [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][customization base R plots]]
 * Week 11-13: ggplot2, Shiny, Tableau, D3, Processing
+** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])
 ** TODO Assignment 9. [[https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2][Introduction to ggplot2]] ([[https://lyon.instructure.com/courses/571/assignments/1667][Canvas]])
 
 Go to your assignments dashboard in DataCamp and complete the *first*

@@ -353,9 +353,3 @@
   
 * TODO Using the ~layout~ function
 * TODO Color graphics
-* TODO Stacked and grouped barplots
-
-- This [[https://r-graph-gallery.com/211-basic-grouped-or-stacked-barplot.html][Source (R Graph Gallery)]] really overcomplicates things. For
-  stacked/grouped barplots simply look into the documentation: the
-  ~barplot~ parameters ~height~ (~numeric~) and ~besides~ (~logical~) determine
-  the grouping of the bars.

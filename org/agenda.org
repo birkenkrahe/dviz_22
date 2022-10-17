@@ -1221,15 +1221,16 @@ pairs (help your neighbor when you're done or check if you're stuck).
   #+attr_html: :width 400px
   [[../img/legend.png]]
 
-* Wed/Fri ~symbols~ and ~mfrow~ multi plot arrays
+** Wed/Fri ~symbols~ and ~mfrow~ multi plot arrays
 [[../img/multiple.png]]
 * Week 10: ~layout~ matrix and ~color~ graphics
 #+attr_html: :width 400px
 [[../img/chile.jpg]]
 
 - [ ] Review assignment 7 (solutions in GitHub / [[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
-- [ ] Finish basic graphics (~layout~ and color)
-- [ ] Complete test 7 (customizing base R plots / [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][Canvas]])
+- [ ] Learn how to print plots directly from code 
+- [ ] Finish basic graphics (~mfrow~, ~layout~ and color)
+- [ ] @Home: complete test 7 (customizing base R plots / [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][Canvas]])
 
 * Article FYI: [[https://www.nature.com/articles/s41467-020-19160-7][the misuse of color in science publications]]
 #+attr_html: :width 500px
@@ -1249,16 +1250,11 @@ science communication. Nat Commun 11, 5444
 
 * Review assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Plots to characterize single variables]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
 
-Set of exercises based on Pearson's archived DataCamp course (ch 1):
-#+begin_quote
-"This chapter introduces several Base R supported plot types that are
-particularly useful for visualizing important features in a
-dataset. We start with simple tools like histograms and density plots
-for characterizing one variable at a time, move on to scatter plots
-and other useful tools for showing how two variables relate, and
-finally introduce some tools for visualizing more complex
-relationships in our dataset."
-#+end_quote
+- ~hist~ and ~truehist~ functions
+- ~density~ estimates from histograms
+- ~qqplot~ to test the Gaussian assumption
+
+*=> Open any practice file with the necessary Org-mode header lines <=*
 
 1) What do the data in these four plots have in common, and what is
    measured in each case?
@@ -1270,9 +1266,68 @@ relationships in our dataset."
    - Scatterplot: x = index ("observation no."), y = value
    - Histogram: x = values in fixed bins, y = counts
    - Density estimate: x = values, y = smoothed counts
-   - Normal QQ-plot: 
+   - Normal QQ-plot: how Gaussian is the distribution?
    #+end_quote
 
+2) In which way does ~truehist~ plot a "true" histogram?
+   #+begin_quote
+   In a regular histogram, the counts are displayed in absolute
+   values. A true histogram converts the counts to proportions (part
+   of 1 or 100%). 
+
+   #+end_quote
+   #+begin_src R
+     prop.table(c(1,1,2))
+   #+end_src
+   #+begin_src R :results graphics file :file ../img/true.png
+     par(mfrow=c(1,2),pty='s')
+     hist(Nile)
+     library(MASS)
+     truehist(Nile, prob=FALSE, main="True histogram of Nile")
+   #+end_src
+
+3) How would you look at a subset of the histogram? E.g. between the
+   values 800 and 1000?
+   #+begin_src R :results graphics file :file ../img/true1.png
+     hist(Nile[Nile > 800 & Nile < 1000])
+   #+end_src
+
+4) What's the index vector for the last question? 
+   #+begin_src R
+     index <- which(Nile > 800 & Nile < 1000)
+     Nile[index]
+
+     ## plotting to file without the help of Org-mode and Emacs
+     png(file="../img/true2.png")  # opens graphics device
+     hist(Nile[index])
+     dev.off()  # closes last graphics device (returns its number)
+   #+end_src
+
+   #+RESULTS:
+   :  [1] 963 813 995 935 994 960 958 840 874 940 833 916 969 831 824 832 821 845 864
+   : [20] 862 845 865 845 944 984 897 822 846 812 801 860 874 848 890 838 918 986 923
+   : [39] 975 815 906 901 912 919
+   : png 
+   :   2
+
+5) What does ~par(new=TRUE)~ do? 
+   #+begin_quote
+   ~par()$new~ is "logical, defaulting to FALSE. If set to TRUE, the
+   next high-level plotting command (actually ~plot.new~) should *not
+   clean* the frame before drawing as if it were on a new device."
+   #+end_quote
+
+6) What is a QQ-plot good for?
+   #+begin_quote
+     1) The data are sorted and plotted against a special x-axis, in our    case stemming from the Gaussian distribution or bell curve.
+     2) A Gaussian fit (comparison with the Gaussian distribution) is
+        attempted.
+     3) Outliers are highlighed using the index number of the resp. values
+   #+end_quote
+   #+begin_src R
+     summary(ChickWeight$weight) # contains 5 quantiles or percentiles
+   #+end_src
+   
 * Complete Test 7: [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][customization base R plots]]
 * Week 11-13: ggplot2, Shiny, Tableau, D3, Processing
 ** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])

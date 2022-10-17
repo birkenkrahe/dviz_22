@@ -238,7 +238,7 @@
     plot(Cars93$MPG.highway ~ Cars93$Horsepower,ylim=c(15,50),xlab="",ylab="")
     title("Highway mileage", xlab="Horsepower", ylab="Highway gas mileage")
   #+end_src
-
+  
 * NEXT Disadvantage of plot arrays
 
 - We just saw one disadvantage: you have to pay attention to scales

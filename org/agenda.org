@@ -1227,23 +1227,53 @@ pairs (help your neighbor when you're done or check if you're stuck).
 #+attr_html: :width 400px
 [[../img/chile.jpg]]
 
+- [ ] Review assignment 7 (solutions in GitHub / [[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
 - [ ] Finish basic graphics (~layout~ and color)
-- [ ] Review assignment yourself (solutions in GitHub)
+- [ ] Complete test 7 (customizing base R plots / [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][Canvas]])
 
-* Article: [[https://www.nature.com/articles/s41467-020-19160-7][the misuse of color in science publications]]
-* Assgmt 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Plots to characterize single variables]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
-DEADLINE: <2022-10-19 Wed 15:00>
+* Article FYI: [[https://www.nature.com/articles/s41467-020-19160-7][the misuse of color in science publications]]
+#+attr_html: :width 500px
+#+caption: fig. 1 superiority of scientifically derived color maps
+[[../img/colormap.png]]
 
-Set of exercises based on Pearson's archived DataCamp course: "This
-chapter introduces several Base R supported plot types that are
+#+begin_quote
+»For the casual reader, it might appear curious that the community of
+scientists, a group of people who are usually more critically
+inclined, fail to condemn the proliferation among themselves of
+rainbow and other, similarly unfit, colour maps.«
+#+end_quote
+
+Ref.Crameri, F., Shephard, G.E. & Heron, P.J. The misuse of colour in
+science communication. Nat Commun 11, 5444
+(2020). https://doi.org/10.1038/s41467-020-19160-7
+
+* Review assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Plots to characterize single variables]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
+
+Set of exercises based on Pearson's archived DataCamp course (ch 1):
+#+begin_quote
+"This chapter introduces several Base R supported plot types that are
 particularly useful for visualizing important features in a
 dataset. We start with simple tools like histograms and density plots
 for characterizing one variable at a time, move on to scatter plots
 and other useful tools for showing how two variables relate, and
 finally introduce some tools for visualizing more complex
 relationships in our dataset."
+#+end_quote
 
-* Test 7: [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][customization base R plots]]
+1) What do the data in these four plots have in common, and what is
+   measured in each case?
+
+   [[../img/single.png]]
+
+   #+begin_quote
+   - All data are contained in a single variable.
+   - Scatterplot: x = index ("observation no."), y = value
+   - Histogram: x = values in fixed bins, y = counts
+   - Density estimate: x = values, y = smoothed counts
+   - Normal QQ-plot: 
+   #+end_quote
+
+* Complete Test 7: [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][customization base R plots]]
 * Week 11-13: ggplot2, Shiny, Tableau, D3, Processing
 ** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])
 ** TODO Assignment 9. [[https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2][Introduction to ggplot2]] ([[https://lyon.instructure.com/courses/571/assignments/1667][Canvas]])

@@ -54,14 +54,14 @@ these counts to give an estimate of the probability density.
 
 3) Use the ~hist~ function to generate a histogram of the ~Horsepower~
    variable from the ~Cars93~ data frame in the ~MASS~ package. Set its
-   ~main~ argument equal to the title of the plot ~"hist plot"~.
+   ~main~ argument equal to the title of the plot: ~hist plot~.
 
    #+begin_src R :file a5hist.png :results graphics file
      ...
    #+end_src
 
 4) Use the ~truehist~ function to generate an alternative histogram of
-   the same variable. Title this plot ~"truehist plot"~ using its ~main~
+   the same variable. Title this plot ~truehist plot~ using its ~main~
    argument.
 
    #+begin_src R :file truehist.png :results graphics file

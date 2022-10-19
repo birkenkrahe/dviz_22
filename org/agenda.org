@@ -1227,12 +1227,12 @@ pairs (help your neighbor when you're done or check if you're stuck).
 #+attr_html: :width 400px
 [[../img/chile.jpg]]
 
-- [ ] Review assignment 7 (solutions in GitHub / [[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
-- [ ] Learn how to print plots directly from code 
-- [ ] Finish basic graphics (~mfrow~, ~layout~ and color)
-- [ ] @Home: complete test 7 (customizing base R plots / [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][Canvas]])
+- [X] Review assignment 7 (solutions in GitHub / [[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
+- [X] Learn how to print plots directly from code 
+- [X] Finish basic graphics (~mfrow~, ~layout~ and color)
+- [X] @Home: complete test 7 (customizing base R plots / [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][Canvas]])
 
-* Article FYI: [[https://www.nature.com/articles/s41467-020-19160-7][the misuse of color in science publications]]
+** Article FYI: [[https://www.nature.com/articles/s41467-020-19160-7][the misuse of color in science publications]]
 #+attr_html: :width 500px
 #+caption: fig. 1 superiority of scientifically derived color maps
 [[../img/colormap.png]]
@@ -1248,7 +1248,7 @@ Ref.Crameri, F., Shephard, G.E. & Heron, P.J. The misuse of colour in
 science communication. Nat Commun 11, 5444
 (2020). https://doi.org/10.1038/s41467-020-19160-7
 
-* Review assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Plots to characterize single variables]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
+** Review assignment 7. [[https://app.datacamp.com/learn/courses/data-visualization-in-r][Plots to characterize single variables]] ([[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
 
 - ~hist~ and ~truehist~ functions
 - ~density~ estimates from histograms
@@ -1264,7 +1264,7 @@ science communication. Nat Commun 11, 5444
    #+begin_quote
    - All data are contained in a single variable.
    - Scatterplot: x = index ("observation no."), y = value
-   - Histogram: x = values in fixed bins, y = counts
+   - Histogram: x = values in fixed bins, y = binned counts
    - Density estimate: x = values, y = smoothed counts
    - Normal QQ-plot: how Gaussian is the distribution?
    #+end_quote
@@ -1274,11 +1274,14 @@ science communication. Nat Commun 11, 5444
    In a regular histogram, the counts are displayed in absolute
    values. A true histogram converts the counts to proportions (part
    of 1 or 100%). 
-
    #+end_quote
    #+begin_src R
      prop.table(c(1,1,2))
    #+end_src
+
+   #+RESULTS:
+   : [1] 0.25 0.25 0.50
+
    #+begin_src R :results graphics file :file ../img/true.png
      par(mfrow=c(1,2),pty='s')
      hist(Nile)
@@ -1302,21 +1305,14 @@ science communication. Nat Commun 11, 5444
      hist(Nile[index])
      dev.off()  # closes last graphics device (returns its number)
    #+end_src
-
-   #+RESULTS:
-   :  [1] 963 813 995 935 994 960 958 840 874 940 833 916 969 831 824 832 821 845 864
-   : [20] 862 845 865 845 944 984 897 822 846 812 801 860 874 848 890 838 918 986 923
-   : [39] 975 815 906 901 912 919
-   : png 
-   :   2
-
+   
 5) What does ~par(new=TRUE)~ do? 
    #+begin_quote
    ~par()$new~ is "logical, defaulting to FALSE. If set to TRUE, the
    next high-level plotting command (actually ~plot.new~) should *not
    clean* the frame before drawing as if it were on a new device."
    #+end_quote
-
+   
 6) What is a QQ-plot good for?
    #+begin_quote
      1) The data are sorted and plotted against a special x-axis, in our    case stemming from the Gaussian distribution or bell curve.
@@ -1327,8 +1323,23 @@ science communication. Nat Commun 11, 5444
    #+begin_src R
      summary(ChickWeight$weight) # contains 5 quantiles or percentiles
    #+end_src
+
+   #+RESULTS:
+   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   :    35.0    63.0   103.0   121.8   163.8   373.0
    
-* Complete Test 7: [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][customization base R plots]]
+** Complete Test 7: [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][customization base R plots]]
+* TODO [[https://r-charts.com/][R Charts examples: base R and ggplot2]]
+* TODO Advanced plotting
+#+attr_html: :width 400px
+[[../img/chile.jpg]]
+
+What did you learn so far?
+- Pie charts, how and why to avoid them with ~pie~
+- Summaries for factor variables with ~barplot~
+- Plots with more than two numeric variables with ~symbols~
+- Graphic display setup with ~mfrow~
+  
 * Week 11-13: ggplot2, Shiny, Tableau, D3, Processing
 ** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])
 ** TODO Assignment 9. [[https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2][Introduction to ggplot2]] ([[https://lyon.instructure.com/courses/571/assignments/1667][Canvas]])

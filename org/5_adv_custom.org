@@ -243,7 +243,7 @@
     title("Highway mileage", xlab="Horsepower", ylab="Highway gas mileage")
   #+end_src
   
-* NEXT Disadvantage of plot arrays
+* Disadvantage of plot arrays
 
 - We just saw one disadvantage: you have to pay attention to scales
 
@@ -264,8 +264,6 @@
   #+begin_src R
     par()$pty
   #+end_src
-
-  #+RESULTS:
 
 * Different relationships in one array
 
@@ -348,14 +346,14 @@
     title("MPG.highway vs. MPG.city")
     abline(a = 0, b = 1, lty = 2, lwd = 2)
 
-    plot(highway-city ~ cyl, las=0)
+    plot(highway-city ~ cyl, las=0, cex=0.7)
     title("Mileage difference vs. Cylinders")
   #+end_src
 
   #+RESULTS:
   [[file:../img/multiple1.png]]
   
-* TODO Using the ~layout~ function
+* Using the ~layout~ function
 
 - The ~layout~ function provides more flexibility to creating plot
   arrays
@@ -376,6 +374,7 @@
       rep(x=0, times=4),
       rep(c(1,1,2,2), times=2),
       rep(x=0, times=4))
+
     layoutMatrix <- matrix(
       vectorOfNumbers,
       nrow = 4,
@@ -410,7 +409,7 @@
     ## plot data and title plots
     plot(x=Cars93$Horsepower, y=Cars93$MPG.city, ylim=c(15,50))
     title("Plot no. 1")
-    plot(x=Cars93$Horsepower, y=Cars93$MPG.city, ylim=c(15,50))
+    plot(x=Cars93$Horsepower, y=Cars93$MPG.highway, ylim=c(15,50))
     title("Plot no. 2")
   #+end_src
 

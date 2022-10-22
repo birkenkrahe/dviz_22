@@ -10,7 +10,7 @@
 - DSC 302 focuses on data visualization, and especially EDA
   (Exploratory Data Analysis).
 - We use R as a language, GNU Emacs as editor, ESS as statistics
-  extension, and Org-mode for literate programming
+  extension, and Org-mode for [[http://www.literateprogramming.com/][literate programming]]
 - For details on objectives, audience, grading, schedule, check the
   [[https://github.com/birkenkrahe/dviz/blob/piHome/org/syllabus.org][syllabus]] or the [[https://github.com/birkenkrahe/org/blob/master/FAQ.org][FAQ]] on GitHub.
 - This file contains a (dynamically updated) agenda for each session
@@ -622,7 +622,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   [[../img/knuth.jpg]]
   #+begin_quote
   "Knuth’s interest in storytelling also led him to develop a
-  philosophy of *literate programming* — a method for writing computer
+  philosophy of *[[http://www.literateprogramming.com/][literate programming]]* — a method for writing computer
   programs as literary essays. A literate program intersperses source
   code with elegant prose written in a familiar language, such as
   English. The source code delivers functionality and efficiency,
@@ -1085,7 +1085,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 Here's my list: 3 x infrastructure + 7 x content
 #+begin_quote
 1) /Basic agile project management process (with Scrum)/
-2) /Principles and practice of Literate Programming/
+2) /Principles and practice of [[http://www.literateprogramming.com/][Literate Programming]]/
 3) /Introduction to GNU Emacs + ESS + Org-mode infrastructure/
 4) The character and importance of meta data
 5) Problems with missing values, variable definitions, data quality
@@ -1361,6 +1361,9 @@ the 7 different grammatical elements (layers) and aesthetic mappings."
 have to re-do the assignment.
 ** TODO Test 9
 ** TODO Assignment 10. [[https://campus.datacamp.com/courses/building-web-applications-with-shiny-in-r/get-started-with-shiny?ex=1][Building Web Applications with Shiny in R [DC]​]] ([[https://lyon.instructure.com/courses/571/assignments/1654][Canvas]])
+#+attr_html: :width 300px
+[[../img/R_shiny_example.png]]
+([[https://campus.datacamp.com/courses/introduction-to-statistics/more-distributions-and-the-central-limit-theorem-a8aab65d-8a14-455e-89fa-073556150346?ex=11][Example from DataCamp, Introduction to statistics]])
 
 Go to your assignments dashboard in DataCamp and complete the *first*
 chapter of the course "[[https://campus.datacamp.com/courses/building-web-applications-with-shiny-in-r/get-started-with-shiny?ex=1][Building Web Applications with Shiny in R]]". R

@@ -38,6 +38,6 @@
      ...
    #+end_src
 
-   Here is the final plot you're looking for.
+   [[https://github.com/birkenkrahe/dviz/blob/piHome/img/5_nilelayout.png][Here is the final plot you're looking for.]]
 
    

@@ -1349,7 +1349,7 @@ What did you learn so far?
 - [ ] Prepare the 3rd sprint review with an "abstract" ([[https://lyon.instructure.com/courses/571/assignments/1691][Nov 2]])
 - [ ] Using color graphics
 - [ ] Using the ~tableplot~ function
-- [ ] Lab session with exercises
+- [ ] Lab session with exercises for advanced customization
 
 * Week 14-16: projects, final exam
 * References

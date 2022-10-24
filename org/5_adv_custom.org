@@ -501,7 +501,110 @@
 Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl.com/yvnjkt42]])
 
 * TODO Color graphics
+** Why color?
+#+attr_html: :width 400px
+[[../img/5_rainbow.jpg]]
+
+- Color can help or obstruct enormously
+
+- Color is not always available
+
+- Color plots can lose their meaning when rendered in b/w: [[https://drive.google.com/file/d/17qIKL2iW4O3LI1tBGZ8i6Y99BVfUZFgO/view?usp=sharing][example]]
+  from a recent paper (Khan/Birkenkrahe, 2022)
+
+- Here: stacked barplots and tableplots
+
 ** General guidelines
-** Color options in R
-** The ~tableplot~ function
-** Practice exercises
+
+- Three attributes of color:
+  1) hue (color itself) - *not ordered*
+  2) saturation (intensity) - *ordered*
+  3) brightness (luminence/tint) - *ordered* 
+
+- Types of color scale:
+  1) /sequential/: increasing saturation levels of the same hue are used
+     to represent increasing values of the non-negative variable
+  2) /diverging/: two contrasting hues are used, one for positive, the
+     other for negative values. Saturation represents degree, and a
+     third color indicates zero
+  3) /qualitative/: contrasting hues are used to represent different
+     levels of an un-ordered categorical variable
+
+- When using hue for different levels, don't use too many colors
+  typically limit the selection to ideally six, never more than 20
+
+- Color blindness will introduce additional difficulties (see special
+  packages)
+
+** Chart of the top 12 colors  
+
+- The plot generated shows the top 12 colors
+  #+begin_src R :results graphics file :file ../img/5_colors.png
+    Top12Colors <- c(
+      "red",
+      "green",
+      "yellow",
+      "blue",
+      "black",
+      "white",
+      "pink",
+      "cyan",
+      "gray",
+      "orange",
+      "brown",
+      "purple")
+
+    colorVector <- rev(Top12Colors)
+
+    barLengths <- c(
+      rep(x=1, times=6),
+      rep(x=2, times=6))
+
+    barplot(
+      height=barLengths,
+      col = colorVector,
+      horiz = TRUE,
+      axes = FALSE)
+
+    axis(
+      side = 2,
+      at = yvec,
+      labels = colorVector,
+      las = 2)
+      #+end_src
+
+  #+RESULTS:
+  [[file:../img/5_colors.png]]
+
+- ~rev~ reverses ~Top12Colors~ because ~barplot~ constructs from bottom up
+  by default, and we want top-ranked colors to appear at the top
+
+- ~barLengths~ has two heights - longer bars for the preferred 6 colors
+  #+begin_src R
+    (barLengths <- c(rep(x=1, times=6),rep(x=2, times=6)))
+  #+end_src
+
+  #+RESULTS:
+  :  [1] 1 1 1 1 1 1 2 2 2 2 2 2
+
+- ~yvec~ retrieves the positions of the center of each bar in the plot,
+  which is then used in the ~axis~ function to position the y-axis
+  labels
+  #+begin_src R :results graphics file :file 5_yvec.png
+    barplot(
+      height=barLengths,
+      col = colorVector)
+#      horiz = TRUE)
+#      axes = FALSE)
+  #+end_src
+
+  #+RESULTS:
+  [[file:5_yvec.png]]
+
+** TODO Color options in R
+
+
+
+** TODO Stacked barplots
+** TODO The ~tableplot~ function
+** TODO Lab session: advanced plot customization

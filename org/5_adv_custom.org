@@ -496,7 +496,9 @@
 - Giving different emphasis to plots is not possible with ~mfrow~
 
 * TODO Practice exercise
+[[../img/5_nilelayout.png]]
 
+Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl.com/yvnjkt42]])
 
 * TODO Color graphics
 ** General guidelines

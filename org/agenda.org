@@ -1223,7 +1223,7 @@ pairs (help your neighbor when you're done or check if you're stuck).
 
 ** Wed/Fri ~symbols~ and ~mfrow~ multi plot arrays
 [[../img/multiple.png]]
-* Week 10: ~layout~ matrix and ~color~ graphics
+* Week 10-11: ~layout~ matrix and ~color~ graphics
 #+attr_html: :width 400px
 [[../img/chile.jpg]]
 
@@ -1329,8 +1329,8 @@ science communication. Nat Commun 11, 5444
    :    35.0    63.0   103.0   121.8   163.8   373.0
    
 ** Complete Test 7: [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][customization base R plots]]
-* TODO [[https://r-charts.com/][R Charts examples: base R and ggplot2]]
-* TODO Advanced plotting
+** [[https://r-charts.com/][R Charts examples: base R and ggplot2]]
+** Advanced plotting
 #+attr_html: :width 400px
 [[../img/chile.jpg]]
 
@@ -1340,53 +1340,17 @@ What did you learn so far?
 - Plots with more than two numeric variables with ~symbols~
 - Graphic display setup with ~mfrow~
   
-* Week 11-13: ggplot2, Shiny, Tableau, D3, Processing
-** TODO Assignment 8. External data ([[https://lyon.instructure.com/courses/571/assignments/1673][Canvas]])
-** TODO Assignment 9. [[https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2][Introduction to ggplot2]] ([[https://lyon.instructure.com/courses/571/assignments/1667][Canvas]])
+* Week 11-13: color, ggplot2, Shiny, Tableau
+#+attr_html: :width 600px
+[[../img/ggplot2.png]]
 
-Go to your assignments dashboard in DataCamp and complete the *first*
-chapter of the course "[[https://app.datacamp.com/learn/courses/introduction-to-data-visualization-with-ggplot2][Introduction to Data Visualization with
-ggplot2]]". ggplot2 is one of the most popular graphics packages in
-R. It is also practically and conceptually more complex than base R
-graphics. It is commonly bundled with the "Tidyverse" distribution
-though it predates this distribution by a number of years.
+- [ ] DataCamp assignment: introduction to ~ggplot2~ ([[https://lyon.instructure.com/courses/571/assignments/1667][Oct 31]])
+- [ ] Continue learning about and using ~layout~
+- [ ] Prepare the 3rd sprint review with an "abstract" ([[https://lyon.instructure.com/courses/571/assignments/1691][Nov 2]])
+- [ ] Using color graphics
+- [ ] Using the ~tableplot~ function
+- [ ] Lab session with exercises
 
-"In this chapter we’ll get you into the right frame of mind for
-developing meaningful visualizations with R. You’ll understand that as
-a communications tool, visualizations require you to think about your
-audience first. You’ll also be introduced to the basics of ggplot2 -
-the 7 different grammatical elements (layers) and aesthetic mappings."
-
-*Note:* If you already did it for one of the other courses, you don't
-have to re-do the assignment.
-** TODO Test 9
-** TODO Assignment 10. [[https://campus.datacamp.com/courses/building-web-applications-with-shiny-in-r/get-started-with-shiny?ex=1][Building Web Applications with Shiny in R [DC]​]] ([[https://lyon.instructure.com/courses/571/assignments/1654][Canvas]])
-#+attr_html: :width 300px
-[[../img/R_shiny_example.png]]
-([[https://campus.datacamp.com/courses/introduction-to-statistics/more-distributions-and-the-central-limit-theorem-a8aab65d-8a14-455e-89fa-073556150346?ex=11][Example from DataCamp, Introduction to statistics]])
-
-Go to your assignments dashboard in DataCamp and complete the *first*
-chapter of the course "[[https://campus.datacamp.com/courses/building-web-applications-with-shiny-in-r/get-started-with-shiny?ex=1][Building Web Applications with Shiny in R]]". R
-Shiny is an R package that makes it easy to build interactive web apps
-and dashboards directly in R.
-
-*** Video: Introduction to Shiny
-** TODO Test 10
-** TODO Assignment 11. [[https://campus.datacamp.com/courses/introduction-to-tableau/getting-started-with-tableau?ex=1][Getting started with Tableau​]] ([[https://lyon.instructure.com/courses/571/assignments/1668][Canvas]])
-
-Go to your assignments dashboard in DataCamp and complete the *first*
-chapter of the course "[[https://app.datacamp.com/learn/courses/introduction-to-tableau][Introduction to Tableau]]". Tableau is a widely
-used business intelligence (BI) and analytics software based largely
-on SQL queries.
-
-"You will get an understanding of Tableau's fundamental concepts and
-features: how to connect to data sources, use Tableau’s drag-and-drop
-interface, and create compelling visualizations. You will be explore
-an Airbnb dataset for the city of Amsterdam."
-
-As part of the academic alliance with DataCamp, you have access to all
-Tableau courses until the end of term (usually, all lessons except the
-first are only accessible to enterprise clients).
 * Week 14-16: projects, final exam
 * References
 #+attr_html: :width 500px

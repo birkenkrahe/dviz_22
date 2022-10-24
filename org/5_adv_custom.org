@@ -495,59 +495,8 @@
 
 - Giving different emphasis to plots is not possible with ~mfrow~
 
-* Practice exercise
+* TODO Practice exercise
 
-- Create a layout matrix for two plots of equal size in the upper
-  right and in the lower left corner, using two 2 x 2 blocks:
-  #+begin_example
-  0 0 1 1 
-  0 0 1 1
-  2 2 0 0 
-  2 2 0 0 
-#+end_example
-
-- Use this layout to plot a line plot for ~Nile~ (upper right) and the
-  histogram for ~Nile~ (lower left)
-
-- Create the layout vector:
-  #+begin_src R
-    layoutVector <-
-      c(rep(c(0,1), times=2, each=2),
-        rep(c(2,0), times=2, each=2))
-    layoutVector
-  #+end_src
-
-  #+RESULTS:
-  :  [1] 0 0 1 1 0 0 1 1 2 2 0 0 2 2 0 0
-
-- Create the layout matrix:
-  #+begin_src R
-    layoutMatrix <- matrix(layoutVector,
-                           nrow=4,
-                           byrow=TRUE)
-    layoutMatrix
-  #+end_src
-
-  #+RESULTS:
-  :      [,1] [,2] [,3] [,4]
-  : [1,]    0    0    1    1
-  : [2,]    0    0    1    1
-  : [3,]    2    2    0    0
-  : [4,]    2    2    0    0
-
-- Plot the data:
-  #+begin_src R :results graphics file :file ../img/nilelayout.png
-    layout(layoutMatrix)
-
-    plot(Nile)
-    title("Scatterplot")
-
-    hist(Nile)
-    title("Histogram")
-  #+end_src
-
-  #+RESULTS:
-  [[file:../img/nilelayout.png]]
 
 * TODO Color graphics
 ** General guidelines

@@ -1347,8 +1347,8 @@ What did you learn so far?
 - [ ] DataCamp assignment: introduction to ~ggplot2~ ([[https://lyon.instructure.com/courses/571/assignments/1667][Oct 31]])
 - [ ] Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl.com/yvnjkt42]])
 - [ ] Prepare the 3rd sprint review with an "abstract" ([[https://lyon.instructure.com/courses/571/assignments/1691][Nov 2]])
-- [ ] Using color graphics
-- [ ] Using the ~tableplot~ function
+- [ ] Using color graphics with examples
+- [ ] Using the ~tableplot~ function and stacked barplots
 - [ ] Lab session with exercises for advanced customization
 
 * Week 14-16: projects, final exam

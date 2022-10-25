@@ -501,7 +501,7 @@
 Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl.com/yvnjkt42]])
 
 * TODO Color graphics
-** Why color?
+* Why color?
 #+attr_html: :width 400px
 [[../img/5_rainbow.jpg]]
 
@@ -511,10 +511,12 @@ Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl
 
 - Color plots can lose their meaning when rendered in b/w: [[https://drive.google.com/file/d/17qIKL2iW4O3LI1tBGZ8i6Y99BVfUZFgO/view?usp=sharing][example]]
   from a recent paper (Khan/Birkenkrahe, 2022)
+  #+attr_html: :width 400px
+  [[../img/khan22.png]]
 
-- Here: stacked barplots and tableplots
+- Here: stacked barplots and ~tableplots~
 
-** General guidelines
+* General guidelines
 
 - Three attributes of color:
   1) hue (color itself) - *not ordered*
@@ -536,7 +538,7 @@ Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl
 - Color blindness will introduce additional difficulties (see special
   packages)
 
-** Chart of the top 12 colors  
+* Chart of the top 12 colors  
 
 - The plot generated shows the top 12 colors
   #+begin_src R :results graphics file :file ../img/5_colors.png

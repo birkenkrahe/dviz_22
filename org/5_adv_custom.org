@@ -498,9 +498,12 @@
 * TODO Practice exercise
 [[../img/5_nilelayout.png]]
 
-Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl.com/yvnjkt42]])
+- Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl.com/yvnjkt42]])
 
-* TODO Color graphics
+- Create a layout matrix
+- Plot a line plot and a histogram of ~Nile~
+
+* IN PROGRESS Color graphics
 * Why color?
 #+attr_html: :width 400px
 [[../img/5_rainbow.jpg]]
@@ -513,8 +516,6 @@ Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl
   from a recent paper (Khan/Birkenkrahe, 2022)
   #+attr_html: :width 400px
   [[../img/khan22.png]]
-
-- Here: stacked barplots and ~tableplots~
 
 * General guidelines
 
@@ -556,7 +557,7 @@ Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl
       "brown",
       "purple")
 
-    colorVector <- rev(Top12Colors)
+    colorVector <- rev(Top12Colors) # same as sort(X,decreasing=TRUE)
 
     barLengths <- c(
       rep(x=1, times=6),
@@ -603,10 +604,10 @@ Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl
   #+RESULTS:
   [[file:5_yvec.png]]
 
-** TODO Color options in R
+* TODO Color options in R
 
 
 
-** TODO Stacked barplots
-** TODO The ~tableplot~ function
-** TODO Lab session: advanced plot customization
+* TODO Stacked barplots
+* TODO The ~tableplot~ function
+* TODO Lab session: advanced plot customization

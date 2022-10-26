@@ -563,7 +563,7 @@
       rep(x=1, times=6),
       rep(x=2, times=6))
 
-    barplot(
+    yvec <- barplot(
       height=barLengths,
       col = colorVector,
       horiz = TRUE,
@@ -576,9 +576,6 @@
       las = 2)
       #+end_src
 
-  #+RESULTS:
-  [[file:../img/5_colors.png]]
-
 - ~rev~ reverses ~Top12Colors~ because ~barplot~ constructs from bottom up
   by default, and we want top-ranked colors to appear at the top
 
@@ -587,13 +584,10 @@
     (barLengths <- c(rep(x=1, times=6),rep(x=2, times=6)))
   #+end_src
 
-  #+RESULTS:
-  :  [1] 1 1 1 1 1 1 2 2 2 2 2 2
-
 - ~yvec~ retrieves the positions of the center of each bar in the plot,
   which is then used in the ~axis~ function to position the y-axis
   labels
-  #+begin_src R :results graphics file :file 5_yvec.png
+  #+begin_src R :results graphics file :file ../img/5_yvec.png
     barplot(
       height=barLengths,
       col = colorVector)
@@ -601,11 +595,13 @@
 #      axes = FALSE)
   #+end_src
 
-  #+RESULTS:
-  [[file:5_yvec.png]]
-
 * TODO Color options in R
 
+- Base R supports 657 colors addressable with ~col~
+
+- The ~col~ parameter family is structured like the ~cex~ parameters:
+  + ~col~ specifies the color of text and plotting symbols
+  + 
 
 
 * TODO Stacked barplots

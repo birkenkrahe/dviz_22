@@ -4,7 +4,7 @@
 #+STARTUP: hideblocks overview indent inlineimages
 #+ATTR_HTML: :width 600px
 [[../img/2_analysis.svg]]
-
+* README
 - Why do we analyze data?
 - Data as a concept and as a practice
 - The importance of metadata
@@ -14,7 +14,7 @@
 - Why R?
 - R package management
 - Download R practice file
-* WHY DO WE ANALYZE DATA?
+* Why do we analyze data?
 #+ATTR_HTML: :width 300px
 #+caption: Caspar David Friedrich, Wanderer above a sea of fog (1818)
 [[../img/2_wanderer.jpg]]
@@ -38,7 +38,7 @@
   3. to *guide* us in making decisions.
   #+end_quote
 
-* DATA - CONCEPT
+* Data - concept
 #+ATTR_HTML: :width 500px
 #+caption: collapsed data science pipeline
 [[../img/2_pipeline.png]]

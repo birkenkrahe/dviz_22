@@ -146,7 +146,7 @@
       x = Cars93$Horsepower,
       y = Cars93$MPG.city,
       Cars93$Cylinders,
-      srt = 30) 
+      srt = 30)
   #+end_src
 
 - What insights can we get from this bubbleplot?
@@ -242,7 +242,7 @@
     plot(Cars93$MPG.highway ~ Cars93$Horsepower,ylim=c(15,50),xlab="",ylab="")
     title("Highway mileage", xlab="Horsepower", ylab="Highway gas mileage")
   #+end_src
-  
+
 * Disadvantage of plot arrays
 
 - We just saw one disadvantage: you have to pay attention to scales
@@ -329,9 +329,9 @@
   #+end_src
 
   #+RESULTS:
-  : [1] "3"               "4"               "5"               "6"              
+  : [1] "3"               "4"               "5"               "6"
   : [5] "8"               "rotary_cylinder"
-  
+
 - Compare with the result without re-scaling or re-labeling
   #+begin_src R :results graphics file :file ../img/multiple1.png
     par(mfrow=c(2,2))  # define a 2 x 2 plot array
@@ -352,7 +352,7 @@
 
   #+RESULTS:
   [[file:../img/multiple1.png]]
-  
+
 * Using the ~layout~ function
 
 - The ~layout~ function provides more flexibility to creating plot
@@ -433,7 +433,7 @@
 
   #+RESULTS:
   [[file:../img/5_mfrow.png]]
-  
+
 * Example from ~PimaIndiansDiabetes~
 
 - We want to set up the layout matrix for this output, which includes
@@ -464,13 +464,13 @@
   : [4,]    0    0    2    2    2    2
   : [5,]    0    0    2    2    2    2
   : [6,]    0    0    2    2    2    2
-  
+
 - The data consists of the ~insulin~ and ~triceps~ variables from the
   ~PimaIndiansDiabetes~ data set in the ~mlbench~ package of benchmark
   data sets.
   #+begin_src R :results graphics file :file ../img/pimalayout.png
     library(mlbench)  # you may have to install this package - if you do
-                      # this in Emacs, use your .Rprofile file for repos
+                                            # this in Emacs, use your .Rprofile file for repos
     data(PimaIndiansDiabetes)
     pima <- PimaIndiansDiabetes # copy data frame
 
@@ -495,7 +495,7 @@
 
 - Giving different emphasis to plots is not possible with ~mfrow~
 
-* TODO Practice exercise
+* Practice exercise
 [[../img/5_nilelayout.png]]
 
 - Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl.com/yvnjkt42]])
@@ -503,8 +503,7 @@
 - Create a layout matrix
 - Plot a line plot and a histogram of ~Nile~
 
-* IN PROGRESS Color graphics
-* Why color?
+* Color graphics
 #+attr_html: :width 400px
 [[../img/5_rainbow.jpg]]
 
@@ -522,7 +521,7 @@
 - Three attributes of color:
   1) hue (color itself) - *not ordered*
   2) saturation (intensity) - *ordered*
-  3) brightness (luminence/tint) - *ordered* 
+  3) brightness (luminence/tint) - *ordered*
 
 - Types of color scale:
   1) /sequential/: increasing saturation levels of the same hue are used
@@ -539,7 +538,7 @@
 - Color blindness will introduce additional difficulties (see special
   packages)
 
-* Chart of the top 12 colors  
+* NEXT Chart of the top 12 colors
 
 - The plot generated shows the top 12 colors
   #+begin_src R :results graphics file :file ../img/5_colors.png
@@ -574,7 +573,7 @@
       at = yvec,
       labels = colorVector,
       las = 2)
-      #+end_src
+  #+end_src
 
 - ~rev~ reverses ~Top12Colors~ because ~barplot~ constructs from bottom up
   by default, and we want top-ranked colors to appear at the top
@@ -591,19 +590,160 @@
     barplot(
       height=barLengths,
       col = colorVector)
-#      horiz = TRUE)
-#      axes = FALSE)
+                                            #      horiz = TRUE)
+                                            #      axes = FALSE)
   #+end_src
 
-* TODO Color options in R
+* Color options in R
 
 - Base R supports 657 colors addressable with ~col~
 
 - The ~col~ parameter family is structured like the ~cex~ parameters:
   + ~col~ specifies the color of text and plotting symbols
-  + 
+  + ~col.axis~ specifies the color of the axes
+  + ~col.lab~ specifies the color of the axis labels
+  + ~col.main~ specifies the color of the main plot title
+  + ~col.sub~ specifies the color of the plot subtitle
 
+- You can specify color in different ways: using the color name, or
+  with the Red-Green-Blue hexadecimal code as ~#RRGGBB~
+x
+- Verify the numbers of colors available in R via the vector ~colors()~
+  #+begin_src R
+    length(colors())
+  #+end_src
 
-* TODO Stacked barplots
-* TODO The ~tableplot~ function
+* Plots with ~colors~
+
+- Plot 50 randomly selected colors:
+  #+name: plotcolors
+  #+begin_src R :results graphics file :file ../img/5_50colors.png
+    set.seed(3) # ensure replicability by setting a seed
+    colorNames <- sort(sample(colors(), size = 50))
+    plot(
+      x = seq(from=1, to=10, by=1),
+      y = rep(5,10),
+      ylim = c(0,6),
+      xlab = "",
+      ylab = "",
+      axes = FALSE,
+      type = "n")
+  #+end_src
+
+- Print the color name in its color on every plot point:
+  #+begin_src R :noweb yes :results graphics file :file :file ../img/5_50colors1.png
+    <<plotcolors>>
+    for (i in 1:5) {
+      index <- seq(1,10,1) + (i-1) * 10
+      angle <- (-1)^(i+1) * 45
+      text(
+        seq(1,10,1), i,
+        colorNames[index],
+        col = colorNames[index],
+        srt = angle)
+    }
+  #+end_src
+
+- In the plot, alternate rows are oriented at +/-45 degrees to
+  minimize overlap of the text
+
+- Some colors are hard to distinguish with a light background, and the
+  grey hues are hard to distinguish from one another
+
+- The function ~rainbow~ returns a vector of ~n~ color specs in RGB format
+  spaced along the rainbow from red, through orange, yellow, green,
+  and blue, to violet.
+  #+begin_src R
+    rainbow(10)
+  #+end_src
+
+- Plot the ~rainbow~ colors
+  #+begin_src R :results graphics file :file ../img/5_rainbow.png
+    x <- seq(from=1, to=10, by=1)
+    xColors <- rainbow(10)
+    plot(x, x,
+         xlim = c(0,11), ylim = c(0,11),
+         xlab = "", ylab = "Element of rainbow(10)",
+         type = "n",
+         axes = FALSE)
+    text(x, x,
+         labels=xColors,
+         col = xColors)
+    axis(
+      side = 2,
+      at = x,
+      labels = x) 
+  #+end_src
+  
+* Stacked barplots in b/w and color
+
+- A stacked barplot is an extension of the bar chart to represent an
+  arbitrary two-categorical-variable contingency table
+
+- Example: ~region~ and ~vote~ from the ~Chile~ data set in the ~car~ package,
+  which characterizes voter attitudes and stated intentions prior to
+  an election in Chile.
+  #+begin_src R
+    library(car)
+    data(Chile)
+    str(Chile)
+  #+end_src
+
+- The contingency table:
+  #+begin_src R
+    tbl <- table(Chile$region, Chile$vote)
+    tbl
+  #+end_src
+
+- The table shows the number of rows with the respective ~(region,vote)~
+  pair: it shows e.g. that the City of Santiago (~SA~) had the largest
+  number of "No" votes (to Pinochet)
+
+- The function ~barplot~ will now automatically print a stacked
+  barplot. The x-axis represents ~vote~, the y-axis ~region~. The only
+  customization is ~las=1~ to reorient y-axis labels
+  #+begin_src R :results graphics file :file ../img/5_chile.png
+    barplot(tbl, las=1)
+  #+end_src
+
+- The next plot shows the same plot color-coded using the recommended
+  top 5 colors and includes a legend for the ~region~
+  #+begin_src R :results graphics file :file ../img/5_chilecolor.png
+    barplot(tbl, las=1,
+            col=c("red","green","yellow","blue","black"))
+    legend(x = "topleft",
+         legend = levels(Chile$region),
+         pch = 16,
+         col = c("red","green","yellow","blue","black"))
+  #+end_src
+
+- In the color plot, the relationship between the variables is much
+  easier to see
+
+- Details difficult to see in the b/w version include: the values for
+  x = ~A~ and y = ~M~, and that ~SA~ (Santiago de Chile) is generally the
+  largest region among all voters except those who intend to vote
+  "Yes".
+  
+* The ~tableplot~ function (deprecated)
+
+  - This function allows graphical characterization of data sets with
+    an arbitrarily large number of records ('big data')
+
+  - Can be applied to mixed data sets with both numerical and
+    categorical variables
+
+  - Makes extensive use of color
+
+  - Example: default tableplot of the ~PimaIndiansDiabetes~ database,
+    which only one categorical variable, using ~tableplot~.
+    #+attr_html: :width 600px
+    [[../img/5_tableplot.png]]
+
+  - Example: Summary of the ~Chile~ data frame with ~tableplot~.
+    #+attr_html: :width 600px
+    [[../img/5_tableplot1.png]]
+
+  
 * TODO Lab session: advanced plot customization
+  [[../img/customize.jpg]]

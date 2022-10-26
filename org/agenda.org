@@ -1430,6 +1430,20 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
    can show if this hope will pan out.
    #+end_quote
    
+* TODO It's time to fake being a good programmer
+  #+attr_html: :width 500px
+  [[../img/fake.jpeg]]
+
+  - "The secret: it's not what you know, it's what you show."
+  - [[https://towardsdatascience.com/how-to-fake-being-a-good-programmer-cbef2c39764c][I thought this was funny:]] "First, you have *vim*, a highly
+    configurable text editor so hard to use millions of developers
+    have been inadvertently trapped in its claws, unable to figure out
+    how to close the damn thing. The mere fact that you have the
+    audacity to use it elevates your status among your colleagues. You
+    seem downright mythical, illuminating others about subjects as
+    historical as the holy Editor war and stirring up support for your
+    crusade against the Church of Emacs."
+
 * Week 12-16: EDA, projects, final exam
 * References
 #+attr_html: :width 500px

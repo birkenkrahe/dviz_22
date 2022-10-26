@@ -725,25 +725,5 @@ x
   largest region among all voters except those who intend to vote
   "Yes".
   
-* The ~tableplot~ function (deprecated)
-
-  - This function allows graphical characterization of data sets with
-    an arbitrarily large number of records ('big data')
-
-  - Can be applied to mixed data sets with both numerical and
-    categorical variables
-
-  - Makes extensive use of color
-
-  - Example: default tableplot of the ~PimaIndiansDiabetes~ database,
-    which only one categorical variable, using ~tableplot~.
-    #+attr_html: :width 600px
-    [[../img/5_tableplot.png]]
-
-  - Example: Summary of the ~Chile~ data frame with ~tableplot~.
-    #+attr_html: :width 600px
-    [[../img/5_tableplot1.png]]
-
-  
 * TODO Lab session: advanced plot customization
   [[../img/customize.jpg]]

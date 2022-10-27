@@ -1348,9 +1348,8 @@ What did you learn so far?
 - [X] Practice creating a plot array ~layout~ ([[https://tinyurl.com/yvnjkt42][tinyurl.com/yvnjkt42]])
 - [ ] Prepare the 3rd sprint review with an "abstract" ([[https://lyon.instructure.com/courses/571/assignments/1691][Nov 2]])
 - [ ] Using color graphics with examples
-- [ ] Using the ~tableplot~ function and stacked barplots
 - [ ] Lab session with exercises for advanced customization
-* TODO 3rd sprint review - write an abstract
+* 3rd sprint review - write an abstract
 
 Complete this review and submit it [[https://lyon.instructure.com/courses/571/assignments/1691][in Canvas]] by Nov 2, 3 pm!
 
@@ -1430,7 +1429,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
    can show if this hope will pan out.
    #+end_quote
    
-* TODO It's time to fake being a good programmer
+* It's time to fake being a good programmer
   #+attr_html: :width 500px
   [[../img/fake.jpeg]]
 
@@ -1443,6 +1442,15 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
     seem downright mythical, illuminating others about subjects as
     historical as the holy Editor war and stirring up support for your
     crusade against the Church of Emacs."
+
+* Lab session: advanced plot customization
+#+attr_html: :width 600px
+[[../img/advanced.png]]
+
+- Download the practice file from here:
+- Complete the file and upload it in Canvas ([[https://lyon.instructure.com/courses/571/assignments/3556][Practice 7]])
+- You can find the solutions in the PDF repository
+
 
 * Week 12-16: EDA, projects, final exam
 * References

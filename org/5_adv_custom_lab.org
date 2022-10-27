@@ -1,0 +1,48 @@
+#+TITLE:  Advanced base R plot customization - practice
+#+AUTHOR: [yourName] (pledged)
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+
+1) Create a layout matrix for two plots of equal size in the upper
+   right and in the lower left corner, using two 2 x 2 blocks. Just
+   type the matrix into the example block below.
+
+   #+begin_example
+   . . . .
+   . . . .
+   . . . .
+   . . . .
+   #+end_example
+
+2) Use this layout to plot a line plot for ~Nile~ (upper right) and the
+   histogram for ~Nile~ (lower left)
+
+3) Create the layout vector:
+   #+begin_src R
+     layoutVector <- ...
+     layoutVector
+   #+end_src
+
+4) Create the layout matrix:
+   #+begin_src R
+     layoutMatrix <- ...
+     layoutMatrix
+   #+end_src
+
+- Plot the data:
+  #+begin_src R :results graphics file :file "./img/nilelayout.png"
+    ...
+    ...
+    ...
+    ...
+    ...
+    ...
+  #+end_src
+
+- Customize the plot further if you like and if you have spare time
+  before the end of the exercise!
+
+   [[https://github.com/birkenkrahe/dviz/blob/piHome/img/5_nilelayout.png][The final plot should look like this.]]
+
+   

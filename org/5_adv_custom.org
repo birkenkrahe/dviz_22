@@ -538,7 +538,7 @@
 - Color blindness will introduce additional difficulties (see special
   packages)
 
-* NEXT Chart of the top 12 colors
+* Chart of the top 12 colors
 
 - The plot generated shows the top 12 colors
   #+begin_src R :results graphics file :file ../img/5_colors.png
@@ -594,6 +594,10 @@
                                             #      axes = FALSE)
   #+end_src
 
+  
+  #+RESULTS:
+  [[file:../img/5_yvec.png]]
+
 * Color options in R
 
 - Base R supports 657 colors addressable with ~col~
@@ -607,7 +611,7 @@
 
 - You can specify color in different ways: using the color name, or
   with the Red-Green-Blue hexadecimal code as ~#RRGGBB~
-x
+
 - Verify the numbers of colors available in R via the vector ~colors()~
   #+begin_src R
     length(colors())
@@ -643,6 +647,9 @@ x
         srt = angle)
     }
   #+end_src
+
+  #+RESULTS:
+  [[file:../img/5_50colors1.png]]
 
 - In the plot, alternate rows are oriented at +/-45 degrees to
   minimize overlap of the text
@@ -683,6 +690,7 @@ x
 - Example: ~region~ and ~vote~ from the ~Chile~ data set in the ~car~ package,
   which characterizes voter attitudes and stated intentions prior to
   an election in Chile.
+  #+name: loadChile
   #+begin_src R
     library(car)
     data(Chile)
@@ -690,6 +698,7 @@ x
   #+end_src
 
 - The contingency table:
+  #+name: tbl
   #+begin_src R
     tbl <- table(Chile$region, Chile$vote)
     tbl
@@ -724,6 +733,21 @@ x
   x = ~A~ and y = ~M~, and that ~SA~ (Santiago de Chile) is generally the
   largest region among all voters except those who intend to vote
   "Yes".
+
+- You can also turn the stacked bar plot into a grouped bar plot by
+  adding the ~beside=TRUE~ parameter:
+  #+begin_src R :results graphics file :file ../img/5_chilecolor1.png :noweb yes
+    <<loadChile>>
+    <<tbl>>
+    colorVector <- c("red","green","yellow","blue","black")
+    barplot(tbl, las=1,
+            col = colorVector,
+            beside=TRUE)
+    legend(x = "topleft",
+           legend = levels(Chile$region),
+           pch = 16,
+           col = c("red","green","yellow","blue","black"))
+  #+end_src
   
 * TODO Lab session: advanced plot customization
   [[../img/customize.jpg]]

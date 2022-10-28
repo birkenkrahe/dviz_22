@@ -61,7 +61,7 @@
    - Use the ~las~ parameter to make the ~type~ name labels horizontal
    - Use the ~font.lab~ parameter to make the x-label bold face
    - Use the ~paste~ function to create a string ~tstring~ for the title
-     consisting of:
+     consisting of[fn:1]:
      1) the text ~"Horizontal barplot of the"~,
      2) the number of ~levels~ of the ~type~ variable,
      3) the text ~"glass types"~
@@ -73,3 +73,13 @@
    #+begin_src R :results graphics file :file fgl3.png
      ...
    #+end_src
+
+* Footnotes
+
+[fn:1]The function ~paste~ in action looks like this:
+     #+begin_example
+     > n <- 50
+     > paste("I am", n, "years old")
+     [1] "I am 50 years old"
+     #+end_example
+ 

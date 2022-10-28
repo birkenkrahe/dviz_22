@@ -1447,10 +1447,9 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 #+attr_html: :width 600px
 [[../img/advanced.png]]
 
-- Download the practice file from here:
+- Download the practice file from here: [[https://tinyurl.com/bdd5adjn][tinyurl.com/bdd5adjn]]
 - Complete the file and upload it in Canvas ([[https://lyon.instructure.com/courses/571/assignments/3556][Practice 7]])
-- You can find the solutions in the PDF repository
-
+- You can find the solutions in the [[https://github.com/birkenkrahe/dviz/tree/piHome/pdf][GitHub PDF]] repository
 
 * Week 12-16: EDA, projects, final exam
 * References

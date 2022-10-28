@@ -17,6 +17,9 @@
    #+end_src
 
 3) How many samples in this data frame come from vehicle headlamps?
+
+   Tip: check out the documentation for the dataset! The answer is in
+   there but you should still run the code to make sure!
    #+begin_src R
      ...
    #+end_src

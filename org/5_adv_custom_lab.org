@@ -4,5 +4,69 @@
 #+STARTUP: hideblocks overview indent inlineimages
 #+PROPERTY: header-args:R :exports both :results output :session *R*
 
+1) The ~fgl~ data frame from the ~MASS~ package characterizes 214 forensic
+   glass samples in terms of their refractive index (RI), a type
+   designation (type), and percentages by weight of eight different
+   elemental oxides.
 
-   
+2) Load ~fgl~ and display its structure.
+   #+begin_src R
+     ...
+     ...
+     ...
+   #+end_src
+
+3) How many samples in this data frame come from vehicle headlamps?
+   #+begin_src R
+     ...
+   #+end_src
+
+4) Generate a plot of the magnesium oxide concentration (~Mg~) versus
+   record number, with these features:
+   - x-axis label "Record number"
+   - y-axis label: "Mg concentration"
+   - title: "Magnesium oxide concentration in the fgl dataset"
+   - use the ~las~ parameter to make the labels horizontal for both axis
+
+   #+begin_src R :results graphics file :file fgl1.png
+     ...
+   #+end_src
+
+5) The generic function ~plot(x,y)~ generates a boxplot when ~x~ is a
+   categorical variable and ~y~ is a numerical variable. Create a
+   boxplot summary showing how the magnesium concentration in the ~fgl~
+   dataset varies with the different values of the categorical ~type~
+   variable. Customize as follows:
+   - Specify the x-axis label as "Forensice glass type"
+   - Specify the y-axis label as "Mg concentration",
+   - Title the plot "Mg concentration for different glass types in the
+     fgl data set". Use ~\n~ to break titles that are too long to fit
+   - Make the labels horizontal for both axes
+
+     #+begin_src R :results graphics file :file fgl2.png
+       ...
+     #+end_src
+
+6) Using the ~barplot~ function, construct the following summary for the
+   ~type~ variable from the ~fgl~ data frame in the ~MASS~ package:
+   - Create a horizontal barplot of the ~type~ variable record
+     frequencies (counts) using ~table~
+   - Display the frequencies sorted from largest (top) to smallest
+     (bottom)
+   - Label the x-axis "Record listing glass type"
+   - Remove the y-axis label
+   - Use the ~las~ parameter to make the ~type~ name labels horizontal
+   - Use the ~font.lab~ parameter to make the x-label bold face
+   - Use the ~paste~ function to create a string ~tstring~ for the title
+     consisting of:
+     1) the text ~"Horizontal barplot of the"~,
+     2) the number of ~levels~ of the ~type~ variable,
+     3) the text ~"glass types"~
+   - Add a title to the plot using ~title~ and the ~tstring~ variable, and
+     change the font to /italics/ with the ~font.main~ parameter
+
+   Tip: plot the the simple ~barplot(height=)~ first before customizing!
+
+   #+begin_src R :results graphics file :file fgl3.png
+     ...
+   #+end_src

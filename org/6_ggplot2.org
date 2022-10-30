@@ -3,6 +3,9 @@
 #+Subtitle: Introduction to Data Visualization
 #+STARTUP: hideblocks overview indent inlineimages
 #+PROPERTY: header-args:R :exports both :results output :session *R*
+* Grammar of graphics
+
+
 * WAITING The ~tableplot~ function (part of ggplot2?)
 
   - This function allows graphical characterization of data sets with

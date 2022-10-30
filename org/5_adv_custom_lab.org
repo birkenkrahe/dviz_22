@@ -83,3 +83,8 @@
      [1] "I am 50 years old"
      #+end_example
  
+
+* References
+
+ The exercise is taken from Pearson, "Exploratory Data Analysis Using
+ R", CRC Press (2019), chapter 2.8, p.69-70.

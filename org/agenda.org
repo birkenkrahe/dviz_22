@@ -1228,7 +1228,7 @@ pairs (help your neighbor when you're done or check if you're stuck).
 [[../img/chile.jpg]]
 
 - [X] Review assignment 7 (solutions in GitHub / [[https://lyon.instructure.com/courses/571/assignments/1656][Canvas]])
-- [X] Learn how to print plots directly from code 
+- [X] Learn how to print plots directly from code
 - [X] Finish basic graphics (~mfrow~, ~layout~ and color)
 - [X] @Home: complete test 7 (customizing base R plots / [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][Canvas]])
 
@@ -1273,7 +1273,7 @@ science communication. Nat Commun 11, 5444
    #+begin_quote
    In a regular histogram, the counts are displayed in absolute
    values. A true histogram converts the counts to proportions (part
-   of 1 or 100%). 
+   of 1 or 100%).
    #+end_quote
    #+begin_src R
      prop.table(c(1,1,2))
@@ -1295,7 +1295,7 @@ science communication. Nat Commun 11, 5444
      hist(Nile[Nile > 800 & Nile < 1000])
    #+end_src
 
-4) What's the index vector for the last question? 
+4) What's the index vector for the last question?
    #+begin_src R
      index <- which(Nile > 800 & Nile < 1000)
      Nile[index]
@@ -1305,29 +1305,29 @@ science communication. Nat Commun 11, 5444
      hist(Nile[index])
      dev.off()  # closes last graphics device (returns its number)
    #+end_src
-   
-5) What does ~par(new=TRUE)~ do? 
+
+5) What does ~par(new=TRUE)~ do?
    #+begin_quote
    ~par()$new~ is "logical, defaulting to FALSE. If set to TRUE, the
    next high-level plotting command (actually ~plot.new~) should *not
    clean* the frame before drawing as if it were on a new device."
    #+end_quote
-   
+
 6) What is a QQ-plot good for?
    #+begin_quote
-     1) The data are sorted and plotted against a special x-axis, in our    case stemming from the Gaussian distribution or bell curve.
-     2) A Gaussian fit (comparison with the Gaussian distribution) is
-        attempted.
-     3) Outliers are highlighed using the index number of the resp. values
+   1) The data are sorted and plotted against a special x-axis, in our    case stemming from the Gaussian distribution or bell curve.
+   2) A Gaussian fit (comparison with the Gaussian distribution) is
+      attempted.
+   3) Outliers are highlighed using the index number of the resp. values
    #+end_quote
    #+begin_src R
      summary(ChickWeight$weight) # contains 5 quantiles or percentiles
    #+end_src
 
    #+RESULTS:
-   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
    :    35.0    63.0   103.0   121.8   163.8   373.0
-   
+
 ** Complete Test 7: [[https://lyon.instructure.com/courses/571/assignments/3275/edit?quiz_lti][customization base R plots]]
 ** [[https://r-charts.com/][R Charts examples: base R and ggplot2]]
 ** Advanced plotting
@@ -1339,7 +1339,7 @@ What did you learn so far?
 - Summaries for factor variables with ~barplot~
 - Plots with more than two numeric variables with ~symbols~
 - Graphic display setup with ~mfrow~
-  
+
 * Week 11: color graphics and big data plots
 #+attr_html: :width 600px
 [[../img/ggplot2.png]]
@@ -1382,7 +1382,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
    data science is highly fragmented - it involves different
    programming languages, data visualization techniques, mathematical
    and process modeling, and knowledge of computing infrastructure
-   (???). 
+   (???).
    #+end_quote
 
 3) "One sentence clearly stating the general *problem* being addressed
@@ -1428,20 +1428,20 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
    least as successful if not more successful. Only followup studies
    can show if this hope will pan out.
    #+end_quote
-   
-* It's time to fake being a good programmer
-  #+attr_html: :width 500px
-  [[../img/fake.jpeg]]
 
-  - "The secret: it's not what you know, it's what you show."
-  - [[https://towardsdatascience.com/how-to-fake-being-a-good-programmer-cbef2c39764c][I thought this was funny:]] "First, you have *vim*, a highly
-    configurable text editor so hard to use millions of developers
-    have been inadvertently trapped in its claws, unable to figure out
-    how to close the damn thing. The mere fact that you have the
-    audacity to use it elevates your status among your colleagues. You
-    seem downright mythical, illuminating others about subjects as
-    historical as the holy Editor war and stirring up support for your
-    crusade against the Church of Emacs."
+* It's time to fake being a good programmer
+#+attr_html: :width 500px
+[[../img/fake.jpeg]]
+
+- "The secret: it's not what you know, it's what you show."
+- [[https://towardsdatascience.com/how-to-fake-being-a-good-programmer-cbef2c39764c][I thought this was funny:]] "First, you have *vim*, a highly
+  configurable text editor so hard to use millions of developers
+  have been inadvertently trapped in its claws, unable to figure out
+  how to close the damn thing. The mere fact that you have the
+  audacity to use it elevates your status among your colleagues. You
+  seem downright mythical, illuminating others about subjects as
+  historical as the holy Editor war and stirring up support for your
+  crusade against the Church of Emacs."
 
 * Lab session: advanced plot customization
 #+attr_html: :width 600px
@@ -1451,7 +1451,131 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 - Complete the file and upload it in Canvas ([[https://lyon.instructure.com/courses/571/assignments/3556][Practice 7]])
 - You can find the solutions in the [[https://github.com/birkenkrahe/dviz/tree/piHome/pdf][GitHub PDF]] repository
 
-* Week 12-16: EDA, projects, final exam
+* Week 12: ~ggplot2~ review, EDA revisited
+#+attr_html: :width 600px
+[[../img/exploreexplain.png]]
+(Image source: DataCamp)
+
+- [ ] [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-keep-my-knowledge-of-r-current][New FAQ: how can you keep your R knowledge current?]]
+- [ ] Review: ~ggplot2~ [DataCamp]
+
+** ~ggplot2~ review [DC]
+
+- Prepare and check data
+  #+begin_src R
+    library(MASS)
+    str(mammals)
+  #+end_src
+
+- Scatterplot of ~brain~ vs ~body~ of the ~mammals~ data set in ggplot2
+  #+begin_src R :results graphics file :file ../img/mammalsgg.png
+    library(ggplot2)
+    ggplot(mammals, aes(x=body,y=brain)) +
+      geom_point()
+  #+end_src  
+
+  #+RESULTS:
+  [[file:../img/mammalsgg.png]]
+  
+- Scatterplot of ~brain~ vs ~body~ of the ~mammals~ data set in base R
+  #+begin_src R :results graphics file :file ../img/mammals.png
+    plot(mammals)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/mammals.png]]
+
+- Scatterplot with logarithmically transformed data in ggplot2
+  #+begin_src R :results graphics file :file ../img/mammalsloggg.png
+    ggplot(mammals, aes(x=body,y=brain)) +
+      geom_point(alpha = 0.6) +
+      coord_fixed() +
+      scale_x_log10() +
+      scale_y_log10()
+  #+end_src  
+
+  #+RESULTS:
+  [[file:../img/mammalsloggg.png]]
+
+- Scatterplot with logarithmically transformed data in base R
+  #+begin_src R :results graphics file :file ../img/mammalslog.png
+      plot(log10(mammals))
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/mammalslog.png]]
+
+- Trendline in logarithmically transformed model in ggplot2
+  #+begin_src R :results graphics file :file ../img/mammals1gg.png
+    ggplot(mammals, aes(x=body,y=brain)) +
+      geom_point(alpha = 0.6) +
+      coord_fixed() +
+      scale_x_log10() +
+      scale_y_log10() +
+      stat_smooth(
+        method = "lm",
+        color = "#C42126",
+        se = FALSE,
+        size = 1)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/mammals1gg.png]]
+  
+- Trendline in logarithmically transformed model in base R
+   #+begin_src R :results graphics file :file ../img/mammals1.png
+     plot(log10(mammals))
+     abline(
+       lm(brain ~ body, data=log10(mammals)),
+       col="red", lwd=2)
+    #+end_src
+
+    #+RESULTS:
+    [[file:../img/mammals1.png]]
+  
+- Fancy version of scatterplot with original/log10 data in base R:
+  #+begin_src R :results graphics file :file ../img/mammals_fancy.png
+    par(mfrow=c(1,2),pty='s')
+    plot(
+      mammals,
+      main="Original data (mammals)",
+      las=1)
+    plot(
+      log10(mammals),
+      xlab="log10(body)",
+      ylab="log10(brain)",
+      main="Log data (mammals)",
+      las=1)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/mammals_fancy.png]]
+
+- Fancy version of linear model of ~brain~ vs ~body~ of the ~mammals~ data
+  set in base R
+  #+begin_src R :results graphics file :file ../img/mammals1_fancy.png
+    par(mfrow=c(1,1))
+    plot(
+      log10(mammals),
+        xlab="log10(body)",
+      ylab="log10(brain)",
+        main="Log-transformed data (mammals)",
+        las=1)
+    abline(
+      lm(brain ~ body, data=log10(mammals)),
+      col="red", lwd=2, lty=3)
+  #+end_src
+
+  #+RESULTS:
+  [[file:../img/mammals1_fancy.png]]
+
+** R ~shiny~ review [DC]
+** Tableau review [DC]
+** Exploring new data sets
+** Summarizing numerical data
+** The Gaussian assumption
+** Anomalies in numerical data
+** Visualizing relations between variables
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

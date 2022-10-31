@@ -1457,125 +1457,31 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 (Image source: DataCamp)
 
 - [ ] [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-keep-my-knowledge-of-r-current][New FAQ: how can you keep your R knowledge current?]]
-- [ ] Review: ~ggplot2~ [DataCamp]
+- [ ] Review: ~ggplot2~ [DataCamp] - practice file: 
+- [ ] New assignment: data visualization in spreadsheets [DataCamp]
+- [ ] EDA: exploring new data sets - strategy and statistics
 
-** ~ggplot2~ review [DC]
+* ~ggplot2~ review [DC]
+[[../img/ggplot2github.png]]
+([[https://github.com/tidyverse/ggplot2][Source: GitHub]])
 
-- Prepare and check data
-  #+begin_src R
-    library(MASS)
-    str(mammals)
-  #+end_src
+- Download the review practice file
+- Open the file in GitHub
+- Upload the completed file to Canvas
 
-- Scatterplot of ~brain~ vs ~body~ of the ~mammals~ data set in ggplot2
-  #+begin_src R :results graphics file :file ../img/mammalsgg.png
-    library(ggplot2)
-    ggplot(mammals, aes(x=body,y=brain)) +
-      geom_point()
-  #+end_src  
 
-  #+RESULTS:
-  [[file:../img/mammalsgg.png]]
-  
-- Scatterplot of ~brain~ vs ~body~ of the ~mammals~ data set in base R
-  #+begin_src R :results graphics file :file ../img/mammals.png
-    plot(mammals)
-  #+end_src
-
-  #+RESULTS:
-  [[file:../img/mammals.png]]
-
-- Scatterplot with logarithmically transformed data in ggplot2
-  #+begin_src R :results graphics file :file ../img/mammalsloggg.png
-    ggplot(mammals, aes(x=body,y=brain)) +
-      geom_point(alpha = 0.6) +
-      coord_fixed() +
-      scale_x_log10() +
-      scale_y_log10()
-  #+end_src  
-
-  #+RESULTS:
-  [[file:../img/mammalsloggg.png]]
-
-- Scatterplot with logarithmically transformed data in base R
-  #+begin_src R :results graphics file :file ../img/mammalslog.png
-      plot(log10(mammals))
-  #+end_src
-
-  #+RESULTS:
-  [[file:../img/mammalslog.png]]
-
-- Trendline in logarithmically transformed model in ggplot2
-  #+begin_src R :results graphics file :file ../img/mammals1gg.png
-    ggplot(mammals, aes(x=body,y=brain)) +
-      geom_point(alpha = 0.6) +
-      coord_fixed() +
-      scale_x_log10() +
-      scale_y_log10() +
-      stat_smooth(
-        method = "lm",
-        color = "#C42126",
-        se = FALSE,
-        size = 1)
-  #+end_src
-
-  #+RESULTS:
-  [[file:../img/mammals1gg.png]]
-  
-- Trendline in logarithmically transformed model in base R
-   #+begin_src R :results graphics file :file ../img/mammals1.png
-     plot(log10(mammals))
-     abline(
-       lm(brain ~ body, data=log10(mammals)),
-       col="red", lwd=2)
-    #+end_src
-
-    #+RESULTS:
-    [[file:../img/mammals1.png]]
-  
-- Fancy version of scatterplot with original/log10 data in base R:
-  #+begin_src R :results graphics file :file ../img/mammals_fancy.png
-    par(mfrow=c(1,2),pty='s')
-    plot(
-      mammals,
-      main="Original data (mammals)",
-      las=1)
-    plot(
-      log10(mammals),
-      xlab="log10(body)",
-      ylab="log10(brain)",
-      main="Log data (mammals)",
-      las=1)
-  #+end_src
-
-  #+RESULTS:
-  [[file:../img/mammals_fancy.png]]
-
-- Fancy version of linear model of ~brain~ vs ~body~ of the ~mammals~ data
-  set in base R
-  #+begin_src R :results graphics file :file ../img/mammals1_fancy.png
-    par(mfrow=c(1,1))
-    plot(
-      log10(mammals),
-        xlab="log10(body)",
-      ylab="log10(brain)",
-        main="Log-transformed data (mammals)",
-        las=1)
-    abline(
-      lm(brain ~ body, data=log10(mammals)),
-      col="red", lwd=2, lty=3)
-  #+end_src
-
-  #+RESULTS:
-  [[file:../img/mammals1_fancy.png]]
-
+* EDA: Exploring new data sets
+* EDA: Summarizing numerical data
+* Week 13
 ** R ~shiny~ review [DC]
+** EDA: The Gaussian assumption
+** EDA: Anomalies in numerical data
+* Week 14
 ** Tableau review [DC]
-** Exploring new data sets
-** Summarizing numerical data
-** The Gaussian assumption
-** Anomalies in numerical data
-** Visualizing relations between variables
+** EDA: Visualizing relations between variables
+* Week 15
+** Data Visualization in Spreadsheets [DC]
+** Projects
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

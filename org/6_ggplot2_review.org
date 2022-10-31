@@ -1,0 +1,22 @@
+#+TITLE:  DataCamp Review: introduction to data visualization with ggplot2
+#+AUTHOR: [yourname]
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* README
+
+- Review of the 1st chapter of the DataCamp course
+- Add your name and ~(pledged)~ in the ~#+AUTHOR:~ meta headline
+- When you've completed the file, submit it in Canvas
+- You'll get solutions after the deadline has passed
+
+* TODO Identify yourself
+
+1) Add your name and ~(pledged)~ at the top
+2) Run the ~#+PROPERTY~ and ~#+STARTUP~ lines with ~C-c C-c~
+
+
+
+
+* TODO Lab session: ggplot2
+  [[../img/customize.jpg]]

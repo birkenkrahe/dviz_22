@@ -1457,18 +1457,17 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 (Image source: DataCamp)
 
 - [ ] [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-keep-my-knowledge-of-r-current][New FAQ: how can you keep your R knowledge current?]]
-- [ ] Review: ~ggplot2~ [DataCamp] - practice file: 
+- [ ] Review: ~ggplot2~ [DataCamp] - complete practice file in class
 - [ ] New assignment: data visualization in spreadsheets [DataCamp]
 - [ ] EDA: exploring new data sets - strategy and statistics
 
-* ~ggplot2~ review [DC]
+* ~ggplot2~ [[https://campus.datacamp.com/courses/introduction-to-data-visualization-with-ggplot2/][DataCamp chapter]] review
 [[../img/ggplot2github.png]]
 ([[https://github.com/tidyverse/ggplot2][Source: GitHub]])
 
-- Download the review practice file
-- Open the file in GitHub
-- Upload the completed file to Canvas
-
+- Download the review practice file: [[https://tinyurl.com/3ahbp8bt][tinyurl.com/3ahbp8bt]]
+- Open the file in Emacs with ~--file ggplot.org~
+- Upload the completed file to Canvas as [[https://lyon.instructure.com/courses/571/assignments/3583][practice 8]]
 
 * EDA: Exploring new data sets
 * EDA: Summarizing numerical data

@@ -14,9 +14,130 @@
 
 1) Add your name and ~(pledged)~ at the top
 2) Run the ~#+PROPERTY~ and ~#+STARTUP~ lines with ~C-c C-c~
+3) You should open the R session in the same directory as this file
+4) To check, run ~getwd()~ in the R console window
+
+* TODO Answer conceptual questions
+
+- What is the requirement for this course and where can you find this
+  information?
+  
+- What is the "Tidyverse"?
+
+- What are the layers of the 'Grammar of Graphics'?
+
+- What are some examples for these elements in ~ggplot2~?
+
+- Can you save a ~ggplot2~ plot as an R object?
+
+- Can you save a ~base R~ plot as an R object?
+
+- Can you combine ~ggplot2~ and ~base R~ graphics in one plot array?
+
+* TODO Create simple scatterplots
+
+We're going to work with ~MASS::mammals~ using ~ggplot2~ and ~base R~.
+
+1) Load the relevant packages.
+
+   #+begin_src R :results silent
 
 
+   #+end_src
 
+2) Show the data structure of ~mammals~.
 
-* TODO Lab session: ggplot2
-  [[../img/customize.jpg]]
+   #+begin_src R
+
+   #+end_src
+
+3) Create a scatterplot of ~brain~ vs ~body~ of the ~mammals~ data set in
+   ~ggplot2~.
+
+   #+begin_src R :results graphics file :file mammals_gg.png
+
+   #+end_src
+
+4) Create a scatterplot of ~brain~ vs ~body~ of the ~mammals~ data set in
+   ~base R~.
+
+   #+begin_src R :results graphics file :file mammals.png
+
+   #+end_src
+
+* TODO Transform plots
+
+1) What's the problem with these plots and what could you do about it?
+
+   #+begin_quote
+   *The problem:* ...
+
+   *The solution:* ...
+   #+end_quote
+
+2) Implement the solution with ~plot~.
+   #+begin_src R :results graphics file :file mammals1.png
+     
+   #+end_src
+
+3) Implement the solution with ~ggplot~ - save the plot as ~gg~ for later,
+   and print it.
+   #+begin_src R :results graphics file :file ./img/mammals1_gg.png
+     # get the solution via chat from me
+   #+end_src
+
+4) What does the ~geom_point~ argument ~alpha~ do?
+
+   #+begin_quote
+   Answer: ...
+   #+end_quote
+   
+* TODO Create trendlines
+
+1) Create a linear trendline for the ~ggplot2~ plot ~gg~. Inside the
+   smoothing geometry, use ~method="lm"~ to fix the model.
+
+   #+begin_src R :results graphics file :file mammalslog_gg_lm.png
+
+   #+end_src
+
+2) Create a linear model in ~base R~ using ~lm~ and
+   ~data-log10(mammals)~. Save it as ~line~ and print it.
+
+   #+begin_src R
+
+   #+end_src
+
+3) Create a trendline plot in ~base R~ using the linear model. The line
+   should be red, dashed and double wide.
+
+   #+begin_src R :results graphics file :file mammals_lm.png
+
+   #+end_src
+
+* TODO Map 'aesthetics' to variables
+
+Recall that the ~mtcars~ data frame lists the characteristics mileage
+(~mpg~), weight (~wt~) and number of cylinders (~cyl~) as ~numeric~ variables.
+
+1) Create a ~ggplot~ of mileage vs. weight using ~ggplot2~, save it as ~gg~
+   and print it.
+
+   #+begin_src R :results graphics file :file mtcars_gg_aes.png
+
+   #+end_src
+
+2) Create a scatterplot where the color 'aesthetic' is mapped to the
+   number of cylinders by adding a 'geometry' to ~gg~.
+
+   #+begin_src R :results graphics file :file mtcars_gg_col.png
+
+   #+end_src
+
+3) What's the difference between mapping 'aesthetics' inside the
+   'geometry' or inside the ~ggplot~ function?
+
+   #+begin_quote
+   Answer: ...
+   #+end_quote
+   

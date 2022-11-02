@@ -1456,8 +1456,9 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 [[../img/exploreexplain.png]]
 (Image source: DataCamp)
 
-- [ ] [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-keep-my-knowledge-of-r-current][New FAQ: how can you keep your R knowledge current?]]
-- [ ] Review: ~ggplot2~ [DataCamp] - complete practice file in class
+- [X] [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-keep-my-knowledge-of-r-current][New FAQ: how can you keep your R knowledge current?]]
+- [ ] Review: ~ggplot2~ [DataCamp] - complete practice file in class:
+      [[https://tinyurl.com/3ahbp8bt][tinyurl.com/3ahbp8bt]]
 - [ ] New assignment: data visualization in spreadsheets [DataCamp]
 - [ ] EDA: exploring new data sets - strategy and statistics
 

@@ -1,0 +1,101 @@
+#+TITLE: Exploring a new data set
+#+AUTHOR: Marcus Birkenkrahe
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* README
+
+This and the next few sections of the course provide a more detailed
+description of the objectives of EDA, the reasons for its importance,
+and some useful tools and techniques. Based on: Pearson, ch. 3 (2016).
+
+* Key concepts in exploring data
+#+attr_html: :width 500px
+#+caption: Spanish resistance against Napoleon's army, May 3, 1808.
+[[../img/El_Tres_de_Mayo,_by_Francisco_de_Goya_Prado.jpg]]
+(Image: May 3, 1808 - Francisco de Goya)
+
+- Velleman and Hoaglin (1991) suggest four R's of EDA:
+  1) Revelation
+  2) Residuals
+  3) Re-expression
+  4) Resistance
+
+- *Revelation* refers to data visualization as a way of revealing
+  underlying patterns in the data. All the graphs we've created so far
+  were examples of this activity.
+
+- *Residuals* refers to the differences between observed values of a
+  variable and its predictions from some mathematical model. Models
+  used in EDA (like ~mean~ and ~median~) can reveal patterns but such
+  simple models would not be sufficient for predictive modeling.
+
+- *Re-expression* refers to the application of mathematical
+  transformations to one or more variables. The log transformation is
+  an example but there are many more.
+
+- *Resistance* refers to the presence of outliers or other data
+  anomalies, which alter the analysis results and need to be
+  explained, or removed, or both.
+
+* Exploration strategy
+#+attr_html: :width 500px
+[[../img/age-of-exploration-image.jpg]]
+
+- The most general advice is "take the data seriously" and not just
+  the models and tools used to analyse them (Strickland, 2022).
+
+- In the era of Gauss (1777-1855), data were either collected directly
+  (/primary data/), or obtained from a trusted friend or colleague
+  (/secondary data/). Data sets were small and easy to know.
+
+- Today, datasets are typically much larger, collected by people with
+  whom we have no connection, or (like event logs) by machines that we
+  did not build ourselves.
+
+- General EDA strategy:
+  1) Assess general dataset characteristics
+  2) Examine descriptive statistics for each variable
+  3) Examine exploratory visualizations
+  4) Look for data anomalies
+  5) Look at relations between key variables
+  6) Summarize the results in form of a /data dictionary/
+
+* Assess general dataset characteristics
+
+This step can often be achieved with built-in R functions like
+~summary~, ~head~, or ~str~. 
+
+- How many records do we have?
+- How many variables do we have?
+- What type is each variable? Numeric, categorical, logical?
+- How many unique values does each variable have?
+- What value occurs most frequently, and how often does it occur?
+- Are there missing observations? If so, how many?
+- Do the values look like what we were expecting?
+- Do you understand what the variables mean?
+- Do you understand how they observations were obtained?
+
+But the intrepid explorer knows how to build his own functions!
+
+* TODO Custom function ~BasicSummary~
+
+- The function generates a preliminary data summary for a data frame ~df~
+
+- Results are returned to precision ~dgts~ (default value ~3~)
+
+  The function returns a data frame with one row for each column of ~df~
+  and the following columns:
+  1. ~variable~: the name of the corresponding column of ~df~
+  2. 
+
+* References
+
+ - Pearson RK (2016). Exploratory Data Analysis. CRC Press.
+
+ - [[https://spectrum.ieee.org/andrew-ng-data-centric-ai][Strickland E (9 Feb 2022). Andrew Ng: Unbiggen AI. IEEE Spectrum.]]
+
+ - Velleman PF, Hoaglin DC (1991). Data analysis. In: Hoaglin and
+   Moore (eds.) Perspectives on Contemporary Statistics 21(2),
+   Math. Assoc. of America.
+ 

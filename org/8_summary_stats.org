@@ -1,0 +1,22 @@
+#+TITLE: Exploring summary statistics
+#+AUTHOR: Marcus Birkenkrahe
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* README
+
+This and the next few sections of the course provide a more detailed
+description of the objectives of EDA, the reasons for its importance,
+and some useful tools and techniques. Based on: Pearson, ch. 3 (2016).
+
+* [[https://youtu.be/MtiGnSZGSQs][Basic summary statistics in RStudio]]
+* References
+
+ - Pearson RK (2016). Exploratory Data Analysis. CRC Press.
+
+ - [[https://spectrum.ieee.org/andrew-ng-data-centric-ai][Strickland E (9 Feb 2022). Andrew Ng: Unbiggen AI. IEEE Spectrum.]]
+
+ - Velleman PF, Hoaglin DC (1991). Data analysis. In: Hoaglin and
+   Moore (eds.) Perspectives on Contemporary Statistics 21(2),
+   Math. Assoc. of America.
+ 

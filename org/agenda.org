@@ -1457,21 +1457,50 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 (Image source: DataCamp)
 
 - [X] [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-keep-my-knowledge-of-r-current][New FAQ: how can you keep your R knowledge current?]]
-- [ ] Review: ~ggplot2~ [DataCamp] - complete practice file in class:
+- [X] Review: ~ggplot2~ [DataCamp] - complete practice file in class:
       [[https://tinyurl.com/3ahbp8bt][tinyurl.com/3ahbp8bt]]
-- [ ] New assignment: data visualization in spreadsheets [DataCamp]
+- [X] New assignment: data visualization in spreadsheets [DataCamp]
 - [ ] EDA: exploring new data sets - strategy and statistics
 
 * ~ggplot2~ [[https://campus.datacamp.com/courses/introduction-to-data-visualization-with-ggplot2/][DataCamp chapter]] review
-[[../img/ggplot2github.png]]
-([[https://github.com/tidyverse/ggplot2][Source: GitHub]])
+  #+attr_html: :width 600px
+  [[../img/ggplot2github.png]]
+  ([[https://github.com/tidyverse/ggplot2][Source: GitHub]])
 
 - Download the review practice file: [[https://tinyurl.com/3ahbp8bt][tinyurl.com/3ahbp8bt]]
 - Open the file in Emacs with ~--file ggplot.org~
 - Upload the completed file to Canvas as [[https://lyon.instructure.com/courses/571/assignments/3583][practice 8]]
 
+* Updating your version of R and your packages
+
+- On your own PC update R if you can ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-update-r-on-my-computer][FAQ]]) w/admin rights only
+- On the Lyon PCs update your packages with ~update.packages()~
+- Updating R with the ~installr~ packages will copy and update all your
+  upgradable packages in one go (upon request)
+
 * NEXT EDA: Exploring new data sets
+#+attr_html: :width 600px
+[[../img/age-of-exploration-image.jpg]]
+
+- Data-centric vs. model-centric approach ([[https://fortune.com/2022/06/21/andrew-ng-data-centric-ai/][Ng, 2022]]): conversation
+  with Stone Ward yesterday on "multivariate time series analysis":
+
+  /'The client wants to know how the price of Oreos affects his sales.'/
+  
+  #+begin_quote
+  »The real differentiator between businesses that are successful at
+  A.I. and those that aren’t, Ng argues, is down to data: What data is
+  used to train the algorithm, how it is gathered and processed, and
+  how it is governed? *Data-centric* A.I., Ng tells me, is the practice
+  of “smartsizing” data so that a successful A.I. system can be built
+  using the least amount of data possible.«
+  #+end_quote
+
 * EDA: Summarizing numerical data
+
+- RStudio example ([[https://youtu.be/MtiGnSZGSQs][YouTube]]) with ~HollywoodMovies2011~ from the
+  ~Lock5withR~ package
+
 * Week 13
 ** R ~shiny~ review [DC]
 ** EDA: The Gaussian assumption
@@ -1486,8 +1515,12 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 #+attr_html: :width 500px
 [[../img/books.jpg]]
 
-Microsoft (12/07/2021). Dashboards for business users of the Power BI
-service. [[https://docs.microsoft.com/en-us/power-bi/consumer/end-user-dashboards][URL: docs.microsoft.com]].
+- Kahn J (June 21, 2022). Deep learning pioneer Andrew Ng says
+  companies should get ‘data-centric’ to achieve
+  A.I. success. [[https://fortune.com/2022/06/21/andrew-ng-data-centric-ai/][URL: fortune.com]].
+
+- Microsoft (12/07/2021). Dashboards for business users of the Power
+  BI service. [[https://docs.microsoft.com/en-us/power-bi/consumer/end-user-dashboards][URL: docs.microsoft.com]].
 
 * Footnotes
 

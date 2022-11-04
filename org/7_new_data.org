@@ -64,7 +64,8 @@ and some useful tools and techniques. Based on: Pearson, ch. 3 (2016).
 * Assess general dataset characteristics
 
 This step can often be achieved with built-in R functions like
-~summary~, ~head~, or ~str~. 
+~summary~, ~head~, or ~str~. But the intrepid explorer knows how to build
+his own functions (or he/she can learn it @Lyon in DSC 205)!
 
 - How many records do we have?
 - How many variables do we have?
@@ -76,19 +77,151 @@ This step can often be achieved with built-in R functions like
 - Do you understand what the variables mean?
 - Do you understand how they observations were obtained?
 
-But the intrepid explorer knows how to build his own functions!
+* Using a custom function for exploration
 
-* TODO Custom function ~BasicSummary~
-
-- The function generates a preliminary data summary for a data frame ~df~
+- The function ~BasicSummar~ defined below generates a preliminary data
+  summary for a data frame ~df~.
 
 - Results are returned to precision ~dgts~ (default value ~3~)
 
   The function returns a data frame with one row for each column of ~df~
   and the following columns:
   1. ~variable~: the name of the corresponding column of ~df~
-  2. 
+  2. ~type~: the ~class~ of the variable
+  3. ~levels~: the number of distinct values of the variable
+  4. ~topLevel~: the most frequently occurring value
+  5. ~topCount~: the number of times the most frequent value occurs
+  6. ~topFrac~: the fraction of records represented by ~topCount~
+  7. ~missFreq~: the number of missing values of the variable
+  8. ~missFrac~: the fraction of records represented by ~missFreq~
 
+  #+begin_src R :results silent
+    BasicSummary <- function(df, dgts = 3) {
+      m <- ncol(df)
+      varNames <- colnames(df)
+      varType <- vector("character", m)
+      topLevel <- vector("character", m)
+      topCount <- vector("numeric", m)
+      missCount <- vector("numeric", m)
+      levels <- vector("numeric", m)
+      for (i in 1:m) {
+        x <- df[,i]
+        varType[i] <- class(x)
+        xtab <- table(x, useNA="ifany")
+        levels[i] <- length(xtab)
+        nums <- as.numeric(xtab)
+        maxnum <- max(nums)
+        topCount[i] <- maxnum
+        maxIndex <- which.max(nums)
+        lvls <- names(xtab)
+        topLevel[i] <- lvls[maxIndex]
+        missIndex <- which((is.na(x)) | (x=="") | (x==" "))
+        missCount[i] <- length(missIndex)
+      }
+      n <- nrow(df)
+      topFrac <- round(topCount/n, digits = dgts)
+      missFrac <- round(missCount/n, digits = dgts)
+
+      summaryFrame <- data.frame(
+        variable = varNames,
+        type = varType,
+        levels = levels,
+        topLevel = topLevel,
+        topCount = topCount,
+        topFrac = topFrac,
+        missFreq = missCount,
+        missFrac = missFrac)
+      return(summaryFrame)
+    }
+  #+end_src
+
+- This function is only defined for this session. To save it, use ~save~
+  and then import it with ~load~:
+  #+begin_src R :results silent
+    save(BasicSummary,file="../data/BasicSummary")
+  #+end_src
+
+- Remove function from session objects, then reload it
+  #+begin_src R
+    ls()
+    rm(BasicSummary)
+    ls()
+    load(file="../data/BasicSummary")
+    ls()
+  #+end_src
+* Running ~BasicSummary~ on different datasets  
+
+- Run ~BasicSummary~ on the imported data set ~df~
+  #+begin_src R
+    df <- read.csv(file="https://tinyurl.com/spdnvxbr",
+                   header=TRUE,
+                   stringsAsFactors=TRUE)
+    BasicSummary(df)
+  #+end_src
+
+  #+RESULTS:
+  :   variable    type levels topLevel topCount topFrac missFreq missFrac
+  : 1   Weight integer      9       75        2     0.2        0        0
+  : 2   Height integer      9      178        2     0.2        0        0
+  : 3      Sex  factor      2     male        6     0.6        0        0
+  : 4     Name  factor     10     Carl        1     0.1        0        0
+
+- Run ~BasicSummary~ on a real data set from the web,
+  ~HollywoodMovies2011~ from the ~Lock5withR~ packagex:
+  #+begin_src R
+    library(Lock5withR)  # you may have to install this package
+    data(HollywoodMovies2011)
+    options(width=100)
+    hw <- BasicSummary(HollywoodMovies2011)
+    head(hw)
+  #+end_src
+
+  #+RESULTS:
+  :         variable    type levels           topLevel topCount topFrac missFreq missFrac
+  : 1          Movie  factor    136 30 Minutes or Less        1   0.007        0    0.000
+  : 2     LeadStudio  factor     34        Independent       32   0.235        0    0.000
+  : 3 RottenTomatoes integer     76                 38        5   0.037        2    0.015
+  : 4  AudienceScore integer     61                 50        7   0.051        1    0.007
+  : 5          Story  factor     22      Monster Force       19   0.140        1    0.007
+  : 6          Genre  factor      9             Action       32   0.235        0    0.000
+
+- Run ~BasicSummary~ on the ~Chile~ data frame from the ~car~ package
+  #+begin_src R
+    library(car)
+    data(Chile)
+    BasicSummary(Chile,dgts=3)
+  #+end_src
+
+  #+RESULTS:
+  :     variable    type levels topLevel topCount topFrac missFreq missFrac
+  : 1     region  factor      5       SA      960   0.356        0    0.000
+  : 2 population integer     10   250000     1300   0.481        0    0.000
+  : 3        sex  factor      2        F     1379   0.511        0    0.000
+  : 4        age integer     54       21       96   0.036        1    0.000
+  : 5  education  factor      4        S     1120   0.415       11    0.004
+  : 6     income integer      8    15000      768   0.284       98    0.036
+  : 7  statusquo numeric   2093 -1.29617      201   0.074       17    0.006
+  : 8       vote  factor      5        N      889   0.329      168    0.062
+
+- A closer look at the last result:
+  1) Most of the variables have good explanatory names (except ~statusquo~)
+  2) R distinguishes ~integer~ and ~numeric~ (decimal) numbers
+  3) Missing values are counted as a single level: e.g. ~income~ has ~8~
+     levels but the ~table~ only lists 7 because of the ~NA~. 
+     
+     #+begin_src R
+       table(Chile$income)  # useNA="no" or "ifany"
+     #+end_src
+
+     #+RESULTS:
+     : 
+     :   2500   7500  15000  35000  75000 125000 200000 
+     :    160    494    768    747    269     88     76
+  4) Missing values may have to be removed - if they show up depends
+     on the precision of the record: add ~dgts=5~ in the function call.
+* TODO Variable types in practice
+* TODO Numerical vs. ordinal variables
+* TODO Text data vs. character strings
 * References
 
  - Pearson RK (2016). Exploratory Data Analysis. CRC Press.

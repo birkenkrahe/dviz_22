@@ -1462,7 +1462,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 - [X] New assignment: data visualization in spreadsheets [DataCamp]
 - [ ] EDA: exploring new data sets - strategy and statistics
 
-* ~ggplot2~ [[https://campus.datacamp.com/courses/introduction-to-data-visualization-with-ggplot2/][DataCamp chapter]] review
+** ~ggplot2~ [[https://campus.datacamp.com/courses/introduction-to-data-visualization-with-ggplot2/][DataCamp chapter]] review
   #+attr_html: :width 600px
   [[../img/ggplot2github.png]]
   ([[https://github.com/tidyverse/ggplot2][Source: GitHub]])
@@ -1471,7 +1471,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 - Open the file in Emacs with ~--file ggplot.org~
 - Upload the completed file to Canvas as [[https://lyon.instructure.com/courses/571/assignments/3583][practice 8]]
 
-* Updating your version of R and your packages
+** Updating your version of R and your packages
 
 - On your own PC update R if you can ([[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-update-r-on-my-computer][FAQ]]) w/admin rights only
 - On the Lyon PCs update your packages with ~update.packages()~
@@ -1479,7 +1479,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   upgradable packages in one go (upon request)
 - Afterwards you have to update your Windows ~PATH~ 
 
-* NEXT EDA: Exploring new data sets
+** NEXT EDA: Exploring new data sets
 #+attr_html: :width 600px
 [[../img/age-of-exploration-image.jpg]]
 
@@ -1497,15 +1497,16 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   using the least amount of data possible.«
   #+end_quote
 
+* Week 13
+** TODO New test available
+** R ~shiny~ review [DC]
+** EDA: The Gaussian assumption
+** EDA: Anomalies in numerical data
 * EDA: Summarizing numerical data
 
 - RStudio example ([[https://youtu.be/MtiGnSZGSQs][YouTube]]) with ~HollywoodMovies2011~ from the
   ~Lock5withR~ package
 
-* Week 13
-** R ~shiny~ review [DC]
-** EDA: The Gaussian assumption
-** EDA: Anomalies in numerical data
 * Week 14
 ** Tableau review [DC]
 ** EDA: Visualizing relations between variables

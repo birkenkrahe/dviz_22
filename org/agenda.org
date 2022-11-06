@@ -1513,6 +1513,15 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 * Week 15
 ** Data Visualization in Spreadsheets [DC]
 ** Projects
+* Week 16: final sprint reviews
+#+attr_html: :width 550px
+[[../img/leonardo.jpg]]
+[[https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)][Image: Leonardo da Vinci, Last Supper (1495), Milano]][fn:3]
+
+- *Present* final project prototype in no particular order!
+- *Submit* all material prior to the presentation!
+- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
+
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]
@@ -1525,6 +1534,9 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   BI service. [[https://docs.microsoft.com/en-us/power-bi/consumer/end-user-dashboards][URL: docs.microsoft.com]].
 
 * Footnotes
+
+[fn:3]Can you figure out the connection between the three paintings
+selected for this term's final presentation announcement?
 
 [fn:2]The heatmap correlates different marketing variables from a
 customer survey, indicating which characteristics are correlated to

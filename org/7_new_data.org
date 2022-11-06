@@ -67,15 +67,15 @@ This step can often be achieved with built-in R functions like
 ~summary~, ~head~, or ~str~. But the intrepid explorer knows how to build
 his own functions (or he/she can learn it @Lyon in DSC 205)!
 
-- How many records do we have?
-- How many variables do we have?
-- What type is each variable? Numeric, categorical, logical?
-- How many unique values does each variable have?
-- What value occurs most frequently, and how often does it occur?
-- Are there missing observations? If so, how many?
-- Do the values look like what we were expecting?
-- Do you understand what the variables mean?
-- Do you understand how they observations were obtained?
+1) How many records do we have?
+2) How many variables do we have?
+3) What type is each variable? Numeric, categorical, logical?
+4) How many unique values does each variable have?
+5) What value occurs most frequently, and how often does it occur?
+6) Are there missing observations? If so, how many?
+7) Do the values look like what we were expecting?
+8) Do you understand what the variables mean?
+9) Do you understand how they observations were obtained?
 
 * Using a custom function for exploration
 

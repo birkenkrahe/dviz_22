@@ -1477,6 +1477,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 - On the Lyon PCs update your packages with ~update.packages()~
 - Updating R with the ~installr~ packages will copy and update all your
   upgradable packages in one go (upon request)
+- Afterwards you have to update your Windows ~PATH~ 
 
 * NEXT EDA: Exploring new data sets
 #+attr_html: :width 600px

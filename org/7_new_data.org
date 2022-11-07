@@ -77,10 +77,10 @@ his own functions (or he/she can learn it @Lyon in DSC 205)!
 8) Do you understand what the variables mean?
 9) Do you understand how they observations were obtained?
 
-* Using a custom function for exploration
+* NEXT Using a custom function for exploration
 
 - The function ~BasicSummar~ defined below generates a preliminary data
-  summary for a data frame ~df~.
+  summary for a data frame ~df~. ([[https://github.com/birkenkrahe/dviz/blob/piHome/org/7_new_data.org#using-a-custom-function-for-exploration][On GitHub]]: [[https://tinyurl.com/45n7yub2][tinyurl.com/45n7yub2]])
 
 - Results are returned to precision ~dgts~ (default value ~3~)
 

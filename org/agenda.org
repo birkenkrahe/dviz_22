@@ -1458,14 +1458,14 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 
 - [X] [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-keep-my-knowledge-of-r-current][New FAQ: how can you keep your R knowledge current?]]
 - [X] Review: ~ggplot2~ [DataCamp] - complete practice file in class:
-      [[https://tinyurl.com/3ahbp8bt][tinyurl.com/3ahbp8bt]]
+  [[https://tinyurl.com/3ahbp8bt][tinyurl.com/3ahbp8bt]]
 - [X] New assignment: data visualization in spreadsheets [DataCamp]
-- [ ] EDA: exploring new data sets - strategy and statistics
+- [X] EDA: exploring new data sets - strategy and statistics
 
 ** ~ggplot2~ [[https://campus.datacamp.com/courses/introduction-to-data-visualization-with-ggplot2/][DataCamp chapter]] review
-  #+attr_html: :width 600px
-  [[../img/ggplot2github.png]]
-  ([[https://github.com/tidyverse/ggplot2][Source: GitHub]])
+#+attr_html: :width 600px
+[[../img/ggplot2github.png]]
+([[https://github.com/tidyverse/ggplot2][Source: GitHub]])
 
 - Download the review practice file: [[https://tinyurl.com/3ahbp8bt][tinyurl.com/3ahbp8bt]]
 - Open the file in Emacs with ~--file ggplot.org~
@@ -1477,9 +1477,9 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 - On the Lyon PCs update your packages with ~update.packages()~
 - Updating R with the ~installr~ packages will copy and update all your
   upgradable packages in one go (upon request)
-- Afterwards you have to update your Windows ~PATH~ 
+- Afterwards you have to update your Windows ~PATH~
 
-** NEXT EDA: Exploring new data sets
+** EDA: Exploring new data sets
 #+attr_html: :width 600px
 [[../img/age-of-exploration-image.jpg]]
 
@@ -1487,7 +1487,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   with Stone Ward yesterday on "multivariate time series analysis":
 
   /'The client wants to know how the price of Oreos affects his sales.'/
-  
+
   #+begin_quote
   »The real differentiator between businesses that are successful at
   A.I. and those that aren’t, Ng argues, is down to data: What data is
@@ -1497,15 +1497,62 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   using the least amount of data possible.«
   #+end_quote
 
-* Week 13
-** TODO New test available
-** R ~shiny~ review [DC]
-** EDA: The Gaussian assumption
-** EDA: Anomalies in numerical data
-* EDA: Summarizing numerical data
+* Week 13: Summarizing numerical data
+#+attr_html: :width 500px
+[[../img/shiny.png]]
 
-- RStudio example ([[https://youtu.be/MtiGnSZGSQs][YouTube]]) with ~HollywoodMovies2011~ from the
+- [ ] New test available [[https://lyon.instructure.com/courses/571/assignments/3570?display=full_width][in Canvas]] - do it!
+- [ ] Easter egg: what do the paintings have in common?
+  - Goya, The Clothed Maja
+  - Da Vinci, The Last Supper
+  - van Gogh, Sunflowers 
+  - Botticelli, La Primvera
+- [ ] RStudio demo and practice
+- [ ] R ~shiny~ review [DC]
+- [ ] EDA: Variable types
+- [ ] EDA: The Gaussian assumption
+- [ ] EDA: Anomalies in numerical data
+
+* EDA: Summarizing numerical data (RStudio demo)
+#+attr_html: :width 500px#+attr_html: :width 500px
+[[../img/rstudio.png]]
+
+- Using the RStudio demo ([[https://youtu.be/MtiGnSZGSQs][YouTube]]) with ~HollywoodMovies2011~ from the
   ~Lock5withR~ package
+
+- *RStudio IDE* overview (more at posit.co - rebranded company)
+  1) RStudio looks much like the DataCamp lesson dashboard
+  2) Significant time investment especially for documentation
+  3) Well known among some R developers and package builders
+  4) Non-extensible compared to Emacs + ESS + Org-mode
+  5) Other choices: [[https://colab.to/r][Google Colaboratory]], [[https://www.datacamp.com/workspace][DataCamp workspace]], [[https://www.kaggle.com/code][Kaggle]]
+
+- *Practice:*
+  1) Open rstudio.cloud in a browser
+  2) Choose "Get started for free"
+  3) Sign up using Google (@lyon.edu)
+  4) Look at ~Primers > Visualize Data > Bar Charts~
+  5) Create new project (name it ~Rstudio Demo~)
+  6) Open RStudio
+     - Create new R Markdown file
+     - Run template code chunk
+     - Knit markdown file and view HTML output
+  7) In the R console 
+     - Install ~Lock5withR~ package
+     - Load ~Lock5withR~ package
+     - Load ~HollywoodMovies2011~ data frame
+     - Check environment
+     - Check package information
+     - Look up ~help(mean)~
+     - Check the R version with ~version~
+  8) In Markdown file
+     - Create safe copy ~movies~ in markdown file
+     - Compute statistical summary for data frame
+     - Compute summary for ~Rottentomatoes~ feature
+     - Compute mean for ~Rottentomatoes~ feature with/without ~NA~
+     - Knit markdown file and view HTML output
+  9) Change to ~Terminal~ and check shell with ~echo $SHELL~
+  10) Check the settings (cog button top right): which OS?
 
 * Week 14
 ** Tableau review [DC]

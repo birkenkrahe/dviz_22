@@ -1498,34 +1498,42 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   #+end_quote
 
 * Week 13: Summarizing numerical data
-#+attr_html: :width 500px
+#+attr_html: :width 600px
 [[../img/shiny.png]]
 
-- [ ] New test available [[https://lyon.instructure.com/courses/571/assignments/3570?display=full_width][in Canvas]] - do it!
+- [X] New test available [[https://lyon.instructure.com/courses/571/assignments/3570?display=full_width][in Canvas]] - do it!
+- [X] R ~shiny~ review [DataCamp] - deadline Wed 9 Nov
+- [X] Reminder: final presentations in 3 weeks!
+- [X] RStudio demo and practice (using rstudio.cloud)
 - [ ] Easter egg: what do the paintings have in common?
   - Goya, The Clothed Maja
   - Da Vinci, The Last Supper
   - van Gogh, Sunflowers 
-  - Botticelli, La Primvera
-- [ ] RStudio demo and practice
-- [ ] R ~shiny~ review [DC]
-- [ ] EDA: Variable types
-- [ ] EDA: The Gaussian assumption
-- [ ] EDA: Anomalies in numerical data
+  - Botticelli, La Primavera
+- [ ] EDA: Variable types / Gaussian assumption / anomalies
 
-* EDA: Summarizing numerical data (RStudio demo)
-#+attr_html: :width 500px#+attr_html: :width 500px
-[[../img/rstudio.png]]
+* EDA: Summarizing numerical data (Notebook demo)
+#+attr_html: :width 500px
+[[../img/workspace.png]]
+(Image: DataCamp workspace - R + SQL integration)
 
 - Using the RStudio demo ([[https://youtu.be/MtiGnSZGSQs][YouTube]]) with ~HollywoodMovies2011~ from the
   ~Lock5withR~ package
 
+#+attr_html: :width 500px#+attr_html: :width 500px
+[[../img/rstudio.png]]
+(Image: RStudio IDE with R console and R notebook)
+  
 - *RStudio IDE* overview (more at posit.co - rebranded company)
   1) RStudio looks much like the DataCamp lesson dashboard
   2) Significant time investment especially for documentation
   3) Well known among some R developers and package builders
   4) Non-extensible compared to Emacs + ESS + Org-mode
   5) Other choices: [[https://colab.to/r][Google Colaboratory]], [[https://www.datacamp.com/workspace][DataCamp workspace]], [[https://www.kaggle.com/code][Kaggle]]
+
+#+attr_html: :width 500px
+[[../img/kaggle.png]]
+(Image: Kaggle code dashboard with project samples)
 
 - *Practice:*
   1) Open rstudio.cloud in a browser
@@ -1554,6 +1562,10 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   9) Change to ~Terminal~ and check shell with ~echo $SHELL~
   10) Check the settings (cog button top right): which OS?
 
+  #+attr_html: :width 500px
+  [[../img/emacsorg.png]]
+  (Image: Buffers in the fully extensible Emacs editor)
+      
 * Week 14
 ** Tableau review [DC]
 ** EDA: Visualizing relations between variables

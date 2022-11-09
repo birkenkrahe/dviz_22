@@ -1606,6 +1606,10 @@ Are you comfy?
 - Since we only have MWF available, are you OK if we go over and
   extend the sessions to 65 min? (Giving us 3 x 65 = 195 min).
 
+* Practice R Shiny
+
+https://tinyurl.com/yaan4dwk
+
 * Week 14 - Tableau
 ** Tableau review [DC]
 ** EDA: Visualizing relations between variables

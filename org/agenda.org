@@ -1576,9 +1576,10 @@ Are you comfy?
   right now?
 
 - How happy are you with what you learnt in this course for your
-  project?
+  project, and what else would you like to know in order to improve
+  your project?
 
-- What would you like to know in order to improve your project?
+- Final presentations: we need to extend the session time, alas
 
 * Week 14
 ** Tableau review [DC]
@@ -1586,7 +1587,7 @@ Are you comfy?
 * Week 15
 ** Data Visualization in Spreadsheets [DC]
 ** Projects
-* Week 16: final sprint reviews
+* Week 16: final sprint reviews (Nov 28,30, Dec 2)
 #+attr_html: :width 550px
 [[../img/leonardo.jpg]]
 [[https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)][Image: Leonardo da Vinci, Last Supper (1495), Milano]][fn:3]
@@ -1594,6 +1595,13 @@ Are you comfy?
 - *Present* final project prototype in no particular order!
 - *Submit* all material prior to the presentation!
 - *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
+
+- There are currently 10 projects and we only have 3 sessions with 50
+  minutes each = 150 minutes. Teams get 25', individuals get 15'. We
+  have 4 teams (ca. 100') and 6 individuals (ca. 90').
+
+- Since we only have MWF available, are you OK if we go over and
+  extend the sessions to 65 min? (Giving us 3 x 65 = 195 min).
 
 * References
 #+attr_html: :width 500px

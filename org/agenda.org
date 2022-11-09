@@ -1513,15 +1513,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 - [ ] EDA: Variable types / Gaussian assumption / anomalies
 - [ ] Rendering HTML pages from Emacs Org-mode files
 
-* TODO Rendering HTML pages from Emacs Org-mode
-
-1) Open one of your practice files (preferably with images) in Emacs
-2) In the ~#+PROPERTY~ header, add the parameter ~:exports both~
-3) Enter ~C-c C-e~ - this opens the ~Org Export Dispatcher~ dashboard
-4) Enter ~h o RET~ to render the file in a browser
-5) You can also export to WORD (OpenOffice), PDF, LaTeX etc.
-
-* EDA: Summarizing numerical data (Notebook demo)
+* DONE EDA: Summarizing numerical data (Notebook demo)
 #+attr_html: :width 500px
 [[../img/workspace.png]]
 (Image: DataCamp workspace - R + SQL integration)
@@ -1575,7 +1567,15 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   [[../img/emacsorg.png]]
   (Image: Buffers in the fully extensible Emacs editor)
       
-* NEXT Comments: 3rd sprint review (abstract/results)
+* DONE Rendering HTML pages from Emacs Org-mode
+
+1) Open one of your practice files (preferably with images) in Emacs
+2) In the ~#+PROPERTY~ header, add the parameter ~:exports both~
+3) Enter ~C-c C-e~ - this opens the ~Org Export Dispatcher~ dashboard
+4) Enter ~h o RET~ to render the file in a browser
+5) You can also export to WORD (OpenOffice), PDF, LaTeX etc.
+
+* DONE Comments: 3rd sprint review (abstract/results)
 #+attr_html: :width 400px
 [[../img/nanny.png]]
 
@@ -1590,7 +1590,34 @@ Are you comfy?
 
 - Final presentations: we need to extend the session time, alas
 
-* TODO Final sprint reviews (Nov 28,30, Dec 2)
+* IN PROGRESS Review R Shiny
+#+attr_html: :width 300px
+[[../img/shiny2.png]]
+
+1) Download the review file from: [[https://tinyurl.com/yaan4dwk][tinyurl.com/yaan4dwk]]
+2) Open it in GNU Emacs as an Org-mode file ~shiny.org~
+3) Cover cnceptual review questions on R Shiny
+4) Building a hello world app with R Shiny
+5) Building a simple input/output app with R Shiny
+6) Building a simple EDA app with R Shiny
+
+* Week 14: Tableau
+** Tableau review [DC]
+** EDA: Visualizing relations between variables
+* Week 15: spreadsheets & evaluation
+** Data Visualization in Spreadsheets [DC]
+** Projects
+** TODO Course evaluation now! Hit me! Hard!
+#+attr_html: :width 480px
+[[../img/eval.png]]
+
+#+attr_html: :width 700px
+[[../img/eval1.png]]
+- *If you'd like for me to stick around, please evaluate (fairly) now*
+- *Extra credit for completing this in class today (send proof)!*
+- *A couple of examples of useful feedback for me from past surveys:*
+
+* Week 16: Final sprint reviews (Nov 28,30, Dec 2)
 #+attr_html: :width 550px
 [[../img/leonardo.jpg]]
 [[https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)][Image: Leonardo da Vinci, Last Supper (1495), Milano]][fn:3]
@@ -1605,28 +1632,6 @@ Are you comfy?
 
 - Since we only have MWF available, are you OK if we go over and
   extend the sessions to 65 min? (Giving us 3 x 65 = 195 min).
-
-* Practice R Shiny
-
-https://tinyurl.com/yaan4dwk
-
-* Week 14 - Tableau
-** Tableau review [DC]
-** EDA: Visualizing relations between variables
-* Week 15 - spreadsheets & evaluation
-** Data Visualization in Spreadsheets [DC]
-** Projects
-** TODO Course evaluation now! Hit me! Hard!
-#+attr_html: :width 480px
-[[../img/eval.png]]
-
-#+attr_html: :width 700px
-[[../img/eval1.png]]
-- *If you'd like for me to stick around, please evaluate (fairly) now*
-- *Extra credit for completing this in class today (send proof)!*
-- *A couple of examples of useful feedback for me from past surveys:*
-
-
 
 * References
 #+attr_html: :width 500px

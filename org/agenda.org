@@ -1566,6 +1566,20 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   [[../img/emacsorg.png]]
   (Image: Buffers in the fully extensible Emacs editor)
       
+* NEXT Comments: 3rd sprint review (abstract/results)
+#+attr_html: :width 400px
+[[../img/nanny.png]]
+
+Are you comfy?
+
+- Which visualization are you visualizing for the final presentation
+  right now?
+
+- How happy are you with what you learnt in this course for your
+  project?
+
+- What would you like to know in order to improve your project?
+
 * Week 14
 ** Tableau review [DC]
 ** EDA: Visualizing relations between variables

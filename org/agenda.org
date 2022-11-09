@@ -1590,6 +1590,22 @@ Are you comfy?
 
 - Final presentations: we need to extend the session time, alas
 
+* TODO Final sprint reviews (Nov 28,30, Dec 2)
+#+attr_html: :width 550px
+[[../img/leonardo.jpg]]
+[[https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)][Image: Leonardo da Vinci, Last Supper (1495), Milano]][fn:3]
+
+- *Present* final project prototype in no particular order!
+- *Submit* all material prior to the presentation!
+- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
+
+- There are currently 10 projects and we only have 3 sessions with 50
+  minutes each = 150 minutes. Teams get 25', individuals get 15'. We
+  have 4 teams (ca. 100') and 6 individuals (ca. 90').
+
+- Since we only have MWF available, are you OK if we go over and
+  extend the sessions to 65 min? (Giving us 3 x 65 = 195 min).
+
 * Week 14 - Tableau
 ** Tableau review [DC]
 ** EDA: Visualizing relations between variables
@@ -1607,22 +1623,6 @@ Are you comfy?
 - *A couple of examples of useful feedback for me from past surveys:*
 
 
-
-* Week 16: final sprint reviews (Nov 28,30, Dec 2)
-#+attr_html: :width 550px
-[[../img/leonardo.jpg]]
-[[https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)][Image: Leonardo da Vinci, Last Supper (1495), Milano]][fn:3]
-
-- *Present* final project prototype in no particular order!
-- *Submit* all material prior to the presentation!
-- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
-
-- There are currently 10 projects and we only have 3 sessions with 50
-  minutes each = 150 minutes. Teams get 25', individuals get 15'. We
-  have 4 teams (ca. 100') and 6 individuals (ca. 90').
-
-- Since we only have MWF available, are you OK if we go over and
-  extend the sessions to 65 min? (Giving us 3 x 65 = 195 min).
 
 * References
 #+attr_html: :width 500px

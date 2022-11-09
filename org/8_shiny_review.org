@@ -1,0 +1,86 @@
+#+TITLE:  DataCamp Review: get started with R Shiny
+#+AUTHOR: [yourname]
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* README
+
+- Review of the 1st chapter of the DataCamp course
+- Add your name and ~(pledged)~ in the ~#+AUTHOR:~ meta headline
+- When you've completed the file, submit it in Canvas
+- You'll get solutions after the deadline has passed
+
+* TODO Identify yourself
+
+1) Add your name and ~(pledged)~ at the top
+2) Run the ~#+PROPERTY~ and ~#+STARTUP~ lines with ~C-c C-c~
+3) You should open the R session in the same directory as this file
+4) To check, run ~getwd()~ in the R console window
+
+
+* TODO Answer conceptual questions
+
+
+- What is the order of functions to create and call a Shiny app?
+
+- What is the client/server model?
+
+- Why should you learn R Shiny? What's the scenario?
+
+- What exactly do you need to create and run a Shiny app?
+  #+begin_notes
+
+  #+end_notes
+
+- What is the order of function to create a Shiny app?
+  [[./img/shiny4.png]]
+  #+begin_notes
+
+  #+end_notes
+
+- What happens exactly when you call ~shinyApp~?
+  #+begin_notes
+
+  #+end_notes
+
+- Where exactly do you see the app when you do this on your PC?
+  #+begin_notes
+
+  #+end_notes
+
+- What else do you need to build an app for the Internet?
+  #+begin_notes
+
+  #+end_notes
+
+* TODO Create a 'hello world!' app
+
+1) Load the Shiny package
+2) In a code block, create the ~ui~ with ~fluidPage~
+3) ~"Hello, world!"~ should be the input for ~ui~  
+3) Create the ~server~ function with ~input~, ~output~ and ~session~ arguments
+4) call ~shinyApp~ on ~ui~ and ~server~
+5) To stop the app, enter ~C-g~ in Emacs
+
+#+begin_src R
+
+#+end_src
+
+* TODO Create an input/output app
+
+1) Load the Shiny package
+2) Create the ~ui~ with ~fluidPage~ and arguments ~textInput~, ~textOutput~
+3) ~textInput~ should accept your ~name~ and ask for your name
+4) Format ~textOutput~ should define ~greeting~
+5) Create the ~server~ with ~input~ and ~output~ arguments
+6) Inside the ~server~, generate ~output$greeting~
+7) ~output$greeting~ is ~renderText~
+8) ~renderText~ uses ~paste~ to add ~"hello"~ to ~input$name~
+9) Run the app and stop it in Emacs with ~C-g~
+
+#+begin_src R
+
+#+end_src
+
+
+

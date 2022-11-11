@@ -70,15 +70,21 @@
 
 * TODO Save the app and run it on the shell
 
-1) Move the cursor on the last code block and enter ~C-c '~
+1) Move the cursor to the hello world code block and enter ~C-c '~
 2) In the new buffer, enter ~C-x h M-x write-region~ to write the code
-   to a file ~app.R~ (or copy the code there).
+   to a file ~hello.R~ (or copy the code to that file).
 3) Return to the code block with ~C-c C-k~
 4) Open a terminal (CMD line shell)
 5) Navigate to the directory where ~app.R~ resides
 6) Run app.R with the command ~Rscript app.R~
 7) Open the URL after ~Listening on~ in a browser
 8) In the shell, stop the process with ~C-c C-c~
+
+* TODO Run the app from an R script in Emacs
+
+1) In Emacs, open ~hello.R~ using ~Dired~ (~C-x C-f~)
+2) Run it straight from there with ~C-c C-c~
+3) Close the process in the R console ~*R*~ with ~C-c C-c~
 
 * TODO Create an input/output app
 

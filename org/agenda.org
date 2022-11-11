@@ -1599,7 +1599,9 @@ Are you comfy?
 3) Cover cnceptual review questions on R Shiny
 4) Building a hello world app with R Shiny
 5) Building a simple input/output app with R Shiny
-6) Building a simple EDA app with R Shiny
+6) Building a simple histogram app with R Shiny
+
+More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io/run-shiny-apps-locally/][analythium.io]]
 
 * Week 14: Tableau
 ** Tableau review [DC]

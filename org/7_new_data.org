@@ -149,7 +149,7 @@ his own functions (or he/she can learn it @Lyon in DSC 205)!
     load(file="../data/BasicSummary")
     ls()
   #+end_src
-* Running ~BasicSummary~ on different datasets  
+* NEXT Running ~BasicSummary~ on different datasets  
 
 - Run ~BasicSummary~ on the imported data set ~df~
   #+begin_src R
@@ -175,7 +175,7 @@ his own functions (or he/she can learn it @Lyon in DSC 205)!
     hw <- BasicSummary(HollywoodMovies2011)
     head(hw)
   #+end_src
-
+  
   #+RESULTS:
   :         variable    type levels           topLevel topCount topFrac missFreq missFrac
   : 1          Movie  factor    136 30 Minutes or Less        1   0.007        0    0.000

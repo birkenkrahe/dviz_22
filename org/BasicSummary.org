@@ -1,3 +1,0 @@
-The function *BasicSummary* generates a preliminary data summary for a
-data frame ~df~ (required argument). The other argument is ~dgts~, an
-~integer~ specifying the precision of the fractional results returned, 

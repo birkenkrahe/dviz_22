@@ -1,5 +1,5 @@
 #+TITLE:  DataCamp Review: get started with R Shiny
-#+AUTHOR: [yourname]
+#+AUTHOR: [your name]
 #+Subtitle: Introduction to Data Visualization
 #+STARTUP: hideblocks overview indent inlineimages
 #+PROPERTY: header-args:R :exports both :results output :session *R*
@@ -18,7 +18,6 @@
 4) To check, run ~getwd()~ in the R console window
 
 * TODO Answer conceptual questions
-
 
 - What is the order of functions to create and call a Shiny app?
 
@@ -59,6 +58,10 @@
 4) To run, call ~shinyApp~ on ~ui~ and ~server~
 5) To stop the app, enter ~C-g~ here and ~C-c C-c~ in ~*R*~
 
+#+begin_src R
+
+#+end_src
+
 * TODO Break the app
 
 1) After starting the app, open the R console: you can see that the
@@ -75,8 +78,8 @@
    to a file ~hello.R~ (or copy the code to that file).
 3) Return to the code block with ~C-c C-k~
 4) Open a terminal (CMD line shell)
-5) Navigate to the directory where ~app.R~ resides
-6) Run app.R with the command ~Rscript app.R~
+5) Navigate to the directory where ~hello.R~ resides
+6) Run ~hello.R~ with the command ~Rscript hello.R~
 7) Open the URL after ~Listening on~ in a browser
 8) In the shell, stop the process with ~C-c C-c~
 

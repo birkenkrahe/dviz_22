@@ -1612,14 +1612,16 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 #+attr_html: :width 500px
 [[../img/tableau.png]]
 
+** NEXT Running ~BasicSummary~ on different datasets
 ** TODO Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
 #+attr_html: :width 250px
 [[../img/paratrooper.png]]
 
 ~present-demo.org~ ([[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]])
 
-** Tableau review [DC]
-** EDA: Visualizing relations between variables
+** TODO Working with external data (RSQLite)
+** TODO Tableau review [DataCamp]
+
 * Week 15: Spreadsheets & evaluation
 #+attr_html: :width 500px
 [[../img/sheets.jpg]]

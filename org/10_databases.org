@@ -1,0 +1,27 @@
+#+TITLE: Working with external SQLite databases (RSQLite)
+#+AUTHOR: Marcus Birkenkrahe
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* README
+
+This lecture gives a brief introduction relational databases, with an
+emphasis on either interacting with them /from/ R, or using them /within/
+R via the ~sqldf~ and ~RSQLite~ packages. Largely based on: Pearson,
+chapter 4 (2016).
+
+* Relational databases, queries, and SQL
+
+* The ~sqldf~ package
+
+* Database support in R
+
+* The ~RSQLite~ package
+
+* Practicing R with relational databases
+
+* References
+
+ - Pearson RK (2016). Exploratory Data Analysis. CRC Press.
+
+ 

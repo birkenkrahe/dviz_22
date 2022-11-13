@@ -1,0 +1,59 @@
+#+TITLE: Working with external data
+#+AUTHOR: Marcus Birkenkrahe
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: black
+#+REVEAL_INIT_OPTIONS: transition: 'cube'
+:END:
+* Overview
+#+attr_html: :width 500px
+[[../img/winter.jpg]]
+
+Introduction to some useful tools to get external data not yet loaded
+in one of the many R packages, into our R session, as well as saving
+results to external data files that can be used by others.
+
+* External data and R
+
+- Data used in an interactive R session is stored in RAM and is
+  volatile (disappears at ~quit~)
+- External data can be read from or written to with ~read.table~
+- Data rendered in HTML on web pages can be extracted
+
+* File management in R
+
+- All functions to read external data assume these files exist in our
+  /working directory/
+
+  #+begin_src R
+  getwd()  # return working directory
+  #+end_src
+
+  #+RESULTS:
+  : [1] "c:/Users/birkenkrahe/Documents/GitHub/dviz/org"
+
+- Notice the use of ~/~ in the ~PATH~ by R (Linux, MacOS) vs. ~\~ by Windows
+- Check out where you are with ~M-x shell~ (Windows) and ~M-x eshell~
+  (Linux)
+  
+** Windows ~shell~ and Emacs ~eshell~
+
+[[../img/shells.png]]
+
+** xxx
+
+* Manual data entry
+
+* Interacting with the Internet
+
+* Working with CSV files
+
+* Working with other file types
+
+* References
+
+- Pearson RK (2016). Exploratory Data Analysis. CRC Press.

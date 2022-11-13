@@ -4,7 +4,12 @@
 #+STARTUP:overview hideblocks indent inlineimages
 #+PROPERTY: header-args:R :exports both :results output :session *R*
 #+OPTIONS: toc:nil num:nil ^:nil
-[[../img/2_brain.png]]
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: black
+#+REVEAL_INIT_OPTIONS: transition: 'cube'
+:END:
 * README
 
 - DSC 302 focuses on data visualization, and especially EDA
@@ -28,6 +33,8 @@
 - FAQ is regularly updated with new content
 
 * Week 1: Introduction to the course
+#+attr_hmtl: :width 400px
+ [[../img/2_brain.png]]
 ** Objectives
 
 - [X] Mutual introductions
@@ -458,7 +465,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - When you have completed the exercise, submit the Org-file [[https://lyon.instructure.com/courses/571/assignments/2806][in Canvas]]
 
 - If you missed this class session, you can submit the file late
-* Week 5: Graphics systems in R
+* Week 5: R graphics
 #+attr_html: :width 300px
 [[../img/king.png]]
 
@@ -596,7 +603,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 [[../img/3_matisse.png]]
 * Week 6: The ~plot~ function
 #+attr_html: :width 600px
-[[../img/4_details.png]]
+[[../img/plot1.png]]
 
 - [X] Optional plot parameters
 - [X] New course is hybrid DataCamp/Org-mode
@@ -689,7 +696,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/org/4_plot.org][this lecture on GitHub]].
 
-* Week 7: Adding details to plots
+* Week 7-8: Adding details to base R plots
 #+attr_html: :width 600px
 [[../img/4_details.png]]
 
@@ -1096,7 +1103,6 @@ Here's my list: 3 x infrastructure + 7 x content
 10) Plot customization and graphical parameters
 #+end_quote
 
-* Week 8: Adding more details to plots
 * Week 9: Layout, symbols and plot arrays
 #+attr_html: :width 500px
 [[../img/week8.jpg]]
@@ -1349,7 +1355,7 @@ What did you learn so far?
 - [ ] Prepare the 3rd sprint review with an "abstract" ([[https://lyon.instructure.com/courses/571/assignments/1691][Nov 2]])
 - [ ] Using color graphics with examples
 - [ ] Lab session with exercises for advanced customization
-* 3rd sprint review - write an abstract
+** 3rd sprint review - write an abstract
 
 Complete this review and submit it [[https://lyon.instructure.com/courses/571/assignments/1691][in Canvas]] by Nov 2, 3 pm!
 
@@ -1429,7 +1435,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
    can show if this hope will pan out.
    #+end_quote
 
-* It's time to fake being a good programmer
+** It's time to fake being a good programmer
 #+attr_html: :width 500px
 [[../img/fake.jpeg]]
 
@@ -1443,7 +1449,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   historical as the holy Editor war and stirring up support for your
   crusade against the Church of Emacs."
 
-* Lab session: advanced plot customization
+** Lab session: advanced plot customization
 #+attr_html: :width 600px
 [[../img/advanced.png]]
 
@@ -1453,8 +1459,8 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 
 * Week 12: ~ggplot2~ review, EDA revisited
 #+attr_html: :width 600px
+#+caption: Image source: DataCamp
 [[../img/exploreexplain.png]]
-(Image source: DataCamp)
 
 - [X] [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-keep-my-knowledge-of-r-current][New FAQ: how can you keep your R knowledge current?]]
 - [X] Review: ~ggplot2~ [DataCamp] - complete practice file in class:
@@ -1497,7 +1503,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   using the least amount of data possible.«
   #+end_quote
 
-* Week 13: RStudio, data storytelling
+* Week 13: RStudio, Web apps with R Shiny
 #+attr_html: :width 600px
 [[../img/shiny.png]]
 
@@ -1505,15 +1511,14 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 - [X] R ~shiny~ review [DataCamp] - deadline Wed 9 Nov
 - [X] Reminder: final presentations in 3 weeks!
 - [X] RStudio demo and practice (using rstudio.cloud)
+- [X] Rendering HTML pages from Emacs Org-mode files
 - [ ] Easter egg: what do the paintings have in common?
   - Goya, The Clothed Maja
   - Da Vinci, The Last Supper
   - van Gogh, Sunflowers 
   - Botticelli, La Primavera
-- [ ] EDA: Variable types / Gaussian assumption / anomalies
-- [ ] Rendering HTML pages from Emacs Org-mode files
 
-* DONE EDA: Summarizing numerical data (Notebook demo)
+** EDA: Summarizing numerical data (Notebook demo)
 #+attr_html: :width 500px
 [[../img/workspace.png]]
 (Image: DataCamp workspace - R + SQL integration)
@@ -1567,7 +1572,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   [[../img/emacsorg.png]]
   (Image: Buffers in the fully extensible Emacs editor)
       
-* DONE Rendering HTML pages from Emacs Org-mode
+** Rendering HTML pages from Emacs Org-mode
 
 1) Open one of your practice files (preferably with images) in Emacs
 2) In the ~#+PROPERTY~ header, add the parameter ~:exports both~
@@ -1575,7 +1580,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 4) Enter ~h o RET~ to render the file in a browser
 5) You can also export to WORD (OpenOffice), PDF, LaTeX etc.
 
-* DONE Comments: 3rd sprint review (abstract/results)
+** Comments: 3rd sprint review (abstract/results)
 #+attr_html: :width 400px
 [[../img/nanny.png]]
 
@@ -1590,9 +1595,9 @@ Are you comfy?
 
 - Final presentations: we need to extend the session time, alas
 
-* IN PROGRESS Review R Shiny
-#+attr_html: :width 300px
-[[../img/shiny2.png]]
+** Review R Shiny
+#+attr_html: :width 400px
+[[../img/shinyapp.jpg]]
 
 1) Download the review file from: [[https://tinyurl.com/yaan4dwk][tinyurl.com/yaan4dwk]]
 2) Open it in GNU Emacs as an Org-mode file ~shiny.org~
@@ -1603,10 +1608,22 @@ Are you comfy?
 
 More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io/run-shiny-apps-locally/][analythium.io]]
 
-* Week 14: Tableau
+* Week 14: Data visualization with Tableau
+#+attr_html: :width 500px
+[[../img/tableau.png]]
+
+** TODO Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
+#+attr_html: :width 250px
+[[../img/paratrooper.png]]
+
+~present-demo.org~ ([[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]])
+
 ** Tableau review [DC]
 ** EDA: Visualizing relations between variables
-* Week 15: spreadsheets & evaluation
+* Week 15: Spreadsheets & evaluation
+#+attr_html: :width 500px
+[[../img/sheets.jpg]]
+
 ** Data Visualization in Spreadsheets [DC]
 ** Projects
 ** TODO Course evaluation now! Hit me! Hard!

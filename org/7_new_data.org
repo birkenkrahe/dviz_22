@@ -149,6 +149,7 @@ his own functions (or he/she can learn it @Lyon in DSC 205)!
     load(file="../data/BasicSummary")
     ls()
   #+end_src
+
 * NEXT Running ~BasicSummary~ on different datasets  
 
 - Run ~BasicSummary~ on the imported data set ~df~

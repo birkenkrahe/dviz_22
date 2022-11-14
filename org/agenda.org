@@ -1621,7 +1621,7 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - Show: speaker notes / themes (moon, serif)
 - Extensive documentation on GitHub ([[reveal.js)][org-reveal]])
 
-** NEXT Running ~BasicSummary~ on different datasets
+** NEXT Save/load/run ~BasicSummary~ on different datasets
 ** TODO Working with external data (towards RSQLite)
 ** TODO Tableau review [DataCamp]
 

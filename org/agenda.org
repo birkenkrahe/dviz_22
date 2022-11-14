@@ -1612,7 +1612,12 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 #+attr_html: :width 500px
 [[../img/tableau.png]]
 
-** TODO Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
+- [ ] Presenting Org-mode files
+- [ ] Save/load/run summary function
+- [ ] DataCamp review: Tableau
+- [ ] Working with external data: file management
+
+* Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
 #+attr_html: :width 250px
 [[../img/paratrooper.png]]
 
@@ -1621,9 +1626,28 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - Show: speaker notes / themes (moon, serif)
 - Extensive documentation on GitHub ([[reveal.js)][org-reveal]])
 
-** NEXT Save/load/run ~BasicSummary~ on different datasets
-** TODO Working with external data (towards RSQLite)
-** TODO Tableau review [DataCamp]
+* Save/load/run ~BasicSummary~ on different datasets
+#+attr_html: :width 600px
+[[../img/eastwest.jpg]]
+
+- Image: East Berlin before and after the wall fell
+- Though probably taken in the 1950s, most of East Berlin looked like
+  this all the way up to 2003 when I moved there
+- Communism vs. beauty: "[[https://intellectualtakeout.org/2021/07/beauty-and-the-brutalist-the-architectural-effect-on-our-souls/][Beauty and the brutalist: the architectural
+  effect on our souls.]]" - this is what I was talking about
+  (Holmquist, 2021)
+  
+* IN PROGRESS Working with external data
+#+attr_html: :width 400px
+[[../img/rsqlite.png]]
+
+- [X] File and shell management: ~shell~, ~dir.create~, ~getwd~, ~setwd~
+- [ ] Manual data entry
+- [ ] CSV and other file types (~read.csv~)
+- [ ] Data on the Internet
+- [ ] Data in relational databases (~sqldf~, ~RSQLite~)
+
+* TODO Tableau review [DataCamp]
 
 * Week 15: Spreadsheets & evaluation
 #+attr_html: :width 500px
@@ -1661,6 +1685,9 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 #+attr_html: :width 500px
 [[../img/books.jpg]]
 
+- Holmquist A (July 16, 2021). Beauty and the Brutalist: The
+  Architectural Effect on Our Souls. [[https://intellectualtakeout.org/2021/07/beauty-and-the-brutalist-the-architectural-effect-on-our-souls/https://intellectualtakeout.org/2021/07/beauty-and-the-brutalist-the-architectural-effect-on-our-souls/][URL: intellectualtakeout.org]]
+  
 - Kahn J (June 21, 2022). Deep learning pioneer Andrew Ng says
   companies should get ‘data-centric’ to achieve
   A.I. success. [[https://fortune.com/2022/06/21/andrew-ng-data-centric-ai/][URL: fortune.com]].

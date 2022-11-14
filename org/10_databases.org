@@ -12,6 +12,8 @@ chapter 4 (2016).
 
 * Relational databases, queries, and SQL
 
+https://blog.rsquaredacademy.com/working-with-databases-using-r/
+
 * The ~sqldf~ package
 
 * Database support in R

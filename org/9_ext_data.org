@@ -37,14 +37,14 @@ results to external data files that can be used by others.
   : [1] "c:/Users/birkenkrahe/Documents/GitHub/dviz/org"
 
 - Notice the use of ~/~ in the ~PATH~ by R (Linux, MacOS) vs. ~\~ by Windows
-- Check out where you are with ~M-x shell~ (Windows) and ~M-x eshell~
-  (Linux)
+
+- [ ] Where are you? Use ~M-x shell~ (Windows) and ~M-x eshell~ (Linux)
   
 ** Windows ~shell~ and Emacs ~eshell~
 
 [[../img/shells.png]]
 
-** xxx
+** 
 
 * Manual data entry
 

@@ -3,6 +3,7 @@
 #+Subtitle: Introduction to Data Visualization
 #+STARTUP: hideblocks overview indent inlineimages
 #+PROPERTY: header-args:R :exports both :results output :session *R*
+#+OPTIONS: toc:nil num:nil
 :REVEAL_PROPERTIES:
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+REVEAL_REVEAL_JS_VERSION: 4
@@ -21,7 +22,9 @@ results to external data files that can be used by others.
 
 - Data used in an interactive R session is stored in RAM and is
   volatile (disappears at ~quit~)
+
 - External data can be read from or written to with ~read.table~
+
 - Data rendered in HTML on web pages can be extracted
 
 * File management in R
@@ -30,30 +33,145 @@ results to external data files that can be used by others.
   /working directory/
 
   #+begin_src R
-  getwd()  # return working directory
+    getwd()  # return working directory
   #+end_src
 
   #+RESULTS:
   : [1] "c:/Users/birkenkrahe/Documents/GitHub/dviz/org"
 
-- Notice the use of ~/~ in the ~PATH~ by R (Linux, MacOS) vs. ~\~ by Windows
-
-- [ ] Where are you? Use ~M-x shell~ (Windows) and ~M-x eshell~ (Linux)
+- To code along, open your R console ~*R*~ in an Emacs window
   
-** Windows ~shell~ and Emacs ~eshell~
+** The slash
 
-[[../img/shells.png]]
+- Notice the use of ~/~ in the ~PATH~ by R (Linux, MacOS, Emacs) vs. ~\~ by
+  Windows
 
-** 
+- Where are you? Use ~M-x shell~ (~DIR/W~) and ~M-x eshell~ (~pwd~)
+  #+attr_html: :width 400px
+  [[../img/shells.png]]
 
-* Manual data entry
+** Set working directory
 
-* Interacting with the Internet
+- ~setwd("d")~ changes the current working directory to ~d~
 
-* Working with CSV files
+- If ~d~ does not exist, an error is returned
 
-* Working with other file types
+- ~dir.create~ can create a directory for you: ~dir.create('test')~
 
-* References
+- ~shell~ executes shell (Windows OS) commands: ~shell('DIR/W')~
+
+** Relative and absolute path
+
+- Path (re-) direction is OS navigation
+
+- Relative path: ~./~ is here, ~../~ goes up
+
+- Absolute path: start with disk location ~C:/~
+
+* Practice: navigation
+
+1) In Emacs, change to ~~/~ and open an R shell
+2) Print working directory files: ~shell('DIR/W')~
+3) Get current working directory with ~getwd~
+4) Get current directory (Windows: ~CD~) with ~shell~
+5) Set working directory to ~..~ (one level up)
+6) Check current working directory with ~getwd~, ~shell~
+7) Set working directory to ~C:/~
+8) Check current working directory with ~getwd~, ~shell~
+9) Return to the original working directory ~~/~
+10) Create a new directory ~navtest~ with ~dir.create~
+11) Create an Org-file ~navtest.org~ that creates new R session ~*R2*~
+12) In the code block, save ~plot(Nile)~ to the
+    file ~nile1.png~ in ~navtest~ using the relative path to ~navtest~
+13) In another code block, change to ~~~ and save ~hist(Nile)~ to the file
+    ~nile2.png~ in ~navtest~ using the absolute path to ~navtest~
+14) Print content of ~navtest~ with ~shell~ from the R shell
+
+1-8
+#+begin_src R :session *R*
+    setwd('~')      # go home
+  #  shell('DIR/W')  # print directory content
+    getwd()
+    shell('CD')
+    setwd('..')
+    getwd()
+    shell('CD')
+    setwd('c:/')
+    getwd()
+    shell('CD')
+#+end_src
+
+#+RESULTS:
+: [1] "C:/Users/birkenkrahe"
+: C:\Users\birkenkrahe
+: [1] "C:/Users"
+: C:\Users
+: [1] "c:/"
+: c:\
+
+9-10
+#+begin_src R
+  setwd('~')
+  getwd()
+  shell('CD')
+  dir.create('navtest')
+  getwd()
+  shell('CD')
+#+end_src
+
+#+RESULTS:
+: [1] "C:/Users/birkenkrahe"
+: C:\Users\birkenkrahe
+: [1] "C:/Users/birkenkrahe"
+: C:\Users\birkenkrahe
+
+11-14
+#+begin_src R :session *R2* :results graphics file :file ./navtest/nile1.png
+  setwd('~')
+  plot(Nile)
+#+end_src
+
+#+RESULTS:
+[[file:./navtest/nile1.png]]
+
+#+begin_src R :session *R2* :results graphics file :file c:/Users/birkenkrahe/navtest/nile2.png
+  hist(Nile)
+#+end_src
+
+#+RESULTS:
+[[file:c:/Users/birkenkrahe/navtest/nile2.png]]
+
+#+begin_src R :session *R2* :results graphics file :file ~/navtest/nile3.png
+  hist(Nile)
+#+end_src
+
+#+RESULTS:
+[[file:~/navtest/nile3.png]]
+
+#+begin_src R
+  shell('CD')
+  shell('DIR/W navtest')
+#+end_src
+
+#+RESULTS:
+: C:\Users\birkenkrahe
+:  Volume in drive C is OS
+:  Volume Serial Number is 0654-135C
+: 
+:  Directory of C:\Users\birkenkrahe\navtest
+: 
+: [.]         [..]        nile1.png   nile2.png   nile3.png   
+:                3 File(s)         12,522 bytes
+:                2 Dir(s)  347,487,109,120 bytes free
+
+* TODO Manual data entry
+
+* TODO Interacting with the Internet
+
+* TODO Working with CSV files
+
+* TODO Working with other file types
+
+* TODO References
 
 - Pearson RK (2016). Exploratory Data Analysis. CRC Press.

@@ -1608,18 +1608,21 @@ Are you comfy?
 
 More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io/run-shiny-apps-locally/][analythium.io]]
 
-* Week 14: Data visualization with Tableau
+* IN PROGRESS Week 14: Data visualization with Tableau
 #+attr_html: :width 500px
 [[../img/tableau.png]]
 
-** NEXT Running ~BasicSummary~ on different datasets
 ** TODO Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
 #+attr_html: :width 250px
 [[../img/paratrooper.png]]
 
-~present-demo.org~ ([[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]])
+- Demo file ~present-demo.org~
+- [[https://github.com/birkenkrahe/org/blob/master/emacs/present_demo.org][GitHub]] - [[https://raw.githubusercontent.com/birkenkrahe/org/master/emacs/present_demo.org][raw Org-mode file]]: [[https://tinyurl.com/556k452p][tinyurl.com/556k452p]]
+- Show: speaker notes / themes (moon, serif)
+- Extensive documentation on GitHub ([[reveal.js)][org-reveal]])
 
-** TODO Working with external data (RSQLite)
+** NEXT Running ~BasicSummary~ on different datasets
+** TODO Working with external data (towards RSQLite)
 ** TODO Tableau review [DataCamp]
 
 * Week 15: Spreadsheets & evaluation

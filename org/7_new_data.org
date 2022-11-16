@@ -77,7 +77,7 @@ his own functions (or he/she can learn it @Lyon in DSC 205)!
 8) Do you understand what the variables mean?
 9) Do you understand how they observations were obtained?
 
-* NEXT Using a custom function for exploration
+* Using a custom function for exploration
 
 - The function ~BasicSummary~ defined below generates a preliminary data
   summary for a data frame ~df~. ([[https://github.com/birkenkrahe/dviz/blob/piHome/org/7_new_data.org#using-a-custom-function-for-exploration][On GitHub]]: [[https://tinyurl.com/45n7yub2][tinyurl.com/45n7yub2]])
@@ -150,7 +150,7 @@ his own functions (or he/she can learn it @Lyon in DSC 205)!
     ls()
   #+end_src
 
-* NEXT Running ~BasicSummary~ on different datasets  
+* Running ~BasicSummary~ on different datasets  
 
 - Run ~BasicSummary~ on the imported data set ~df~
   #+begin_src R

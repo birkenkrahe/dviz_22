@@ -1,0 +1,88 @@
+#+property: header-args:R :session *R* :results output
+* Get data records
+
+  - Get raw data file using ~download.file~
+    #+begin_src R
+      URL <- "http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data"
+      download.file(URL, "UCIautoMpg.txt")
+      shell('DIR/W UCIautoMpg.txt')
+    #+end_src
+
+  - View file with ~notepad~ in Windows using ~shell~
+    #+begin_src R
+      shell('notepad UCIautoMpg.txt')
+    #+end_src
+
+  - Read raw data into R data using ~readLines~
+    #+begin_src R
+      autoMpgRecords <- readLines("UCIautoMpg.txt")
+      head(autoMpgRecords,1)
+      x <- autoMpgRecords[1]  # store first record in x
+      nchar(x) # characters
+      substr(x, start=1, stop=56) # numbers
+      substr(x, start=57, stop=84) # text
+    #+end_src
+
+    #+RESULTS:
+    : [1] "18.0   8   307.0      130.0      3504.      12.0   70  1\t\"chevrolet chevelle malibu\""
+    : [1] 84
+    : [1] "18.0   8   307.0      130.0      3504.      12.0   70  1"
+    : [1] "\t\"chevrolet chevelle malibu\""
+
+* Get data variable names
+
+  - Get raw data names file using ~download.file~
+    #+begin_src R
+      URL1 <- "http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.names"
+      download.file(URL1, "UCIautoMpgNames.txt")
+      shell("DIR/W UCIautoMpgNames.txt")
+    #+end_src
+
+  - View file with ~notepad~ in Windows using ~shell~
+    #+begin_src R :results silent
+      shell("UCIautoMpgNames.txt")
+    #+end_src
+
+  - Read raw data text file into R data using ~readLines~
+    #+begin_src R
+      autoMpgNames <- readLines("UCIautoMpgNames.txt")
+      autoMpgNames[32:44]
+    #+end_src
+
+* Create data frame
+
+  - Define conversion function ~ConvertAutoMpgRecords~
+    #+begin_src R :results silent
+      ConvertAutoMpgRecords <- function(rawRecords) {
+        noQuotes <- gsub('\"', '', rawRecords)
+        n <- length(noQuotes)
+        outFrame <- NULL
+        for (i in 1:n) {
+          x <- noQuotes[i]
+          twoParts <- unlist(strsplit(x,split="\t"))
+          partOne <- unlist(strsplit(twoParts[1],split="[ ]+"))
+          numbers <- as.numeric(partOne)
+          upFrame <- data.frame(mpg = numbers[1],
+                                cylinders = numbers[2],
+                                displacement = numbers[3],
+                                horsepower = numbers[4],
+                                weight = numbers[5],
+                                acceleration = numbers[6],
+                                modelYear = numbers[7],
+                                origin = numbers[8],
+                                carName = twoParts[2])
+          outFrame <- rbind.data.frame(outFrame, upFrame)
+        }
+        return(outFrame)
+      }
+    #+end_src
+
+  - Convert R data into data frame
+    #+begin_src R
+      autoMpgFrame <- ConvertAutoMpgRecords(autoMpgRecords)
+      head(autoMpgFrame)
+    #+end_src
+
+* References
+ 
+  - Pearson RK (2016). Exploratory Data Analysis. CRC Press.

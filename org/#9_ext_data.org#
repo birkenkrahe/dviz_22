@@ -235,24 +235,17 @@ o* NEXT Practice: navigation
   #+RESULTS:
   #+begin_example
   Could Not Find c:\Users\birkenkrahe\Documents\GitHub\dviz\org\UCIautoMpg.txt
-  trying URL 'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-
-  mpg/auto-mpg.data'
-  Error in download.file(URL, "UCIautoMpg.txt") : 
-    cannot open URL 'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-
-  mpg/auto-mpg.data'
-  In addition: Warning message:
-  In download.file(URL, "UCIautoMpg.txt") :
-    URL 'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-
-  mpg/auto-mpg.data': status was 'URL using bad/illegal format or missing URL'
+  trying URL 'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data'
+  Content type 'application/x-httpd-php' length 30286 bytes (29 KB)
+  downloaded 29 KB
    Volume in drive C is OS
    Volume Serial Number is 0654-135C
 
    Directory of c:\Users\birkenkrahe\Documents\GitHub\dviz\org
 
-  File Not Found
-  Warning message:
-  In shell("DIR/W UCIautoMpg.txt") :
-    'DIR/W UCIautoMpg.txt' execution failed with error code 1
+  UCIautoMpg.txt   
+                 1 File(s)         30,684 bytes
+                 0 Dir(s)  346,691,833,856 bytes free
   #+end_example
 
 - View the file using the Windows ~notepad~ app:

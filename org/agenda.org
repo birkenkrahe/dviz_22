@@ -1642,9 +1642,9 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 [[../img/rsqlite.png]]
 
 - [X] File and shell management: ~shell~, ~dir.create~, ~getwd~, ~setwd~
-- [ ] Manual data entry
+- [ ] Manual data entry (~fix~)
 - [ ] CSV and other file types (~read.csv~)
-- [ ] Data on the Internet
+- [ ] Data on the Internet (~download.file~, ~browseURL~)
 - [ ] Data in relational databases (~sqldf~, ~RSQLite~)
 
 * TODO Tableau review [DataCamp]

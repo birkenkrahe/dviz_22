@@ -68,7 +68,7 @@ results to external data files that can be used by others.
 
 - Absolute path: start with disk location ~C:/~
 
-* Practice: navigation
+* NEXT Practice: navigation
 
 1) In Emacs, change to ~~/~ and open an R shell
 2) Print working directory files: ~shell('DIR/W')~
@@ -164,14 +164,51 @@ results to external data files that can be used by others.
 :                3 File(s)         12,522 bytes
 :                2 Dir(s)  347,487,109,120 bytes free
 
-* TODO Manual data entry
+* Manual data entry
+
+- Manual data entry is tedious and error-prone and should be avoided
+
+- You have to do it e.g. when data are embedded in images ([[http://www.coventryleague.com/blogentary/the-starbucks-latte-index][source]])
+  #+attr_html: :width 400px
+  [[../img/starbucks.jpg]]
+
+- Example: City names and Grande Latte prices via link (Wall Street
+  Journal and Bloomberg News on Feb 27, 2013).
+  #+attr_html: :width 500px
+  [[../img/grandlatte.jpg]]
+
+- Constructing the data frame begins with a one-row data frame.
+  - ~fix~ pops up a spreadsheet-style data entry window
+  - ~write.csv~ writes the data to a CSV file
+  - Enter the next row (~Stockholm 7.40 Sweden~) and close the app
+  #+begin_src R :results silent
+    LatteIndexFrame <- data.frame(
+      city = "Oslo",
+      price = 9.83,
+      country = "Norway")
+    fix(LatteIndexFrame)
+    write.csv(x = LatteIndexFrame,
+              file = "../data/LatteIndexFrame.csv",
+              row.names=FALSE)
+  #+end_src
+- Show the dataframe in R and also print it from the file using the
+  Windows shell command ~notepad [file]~
+  #+begin_src R
+    LatteIndexFrame
+    shell("notepad ../data/LatteIndexFrame.csv")
+  #+end_src
 
 * TODO Interacting with the Internet
+
+
+
+
 
 * TODO Working with CSV files
 
 * TODO Working with other file types
 
+* TODO Working with 
 * TODO References
 
 - Pearson RK (2016). Exploratory Data Analysis. CRC Press.

@@ -351,18 +351,37 @@ results to external data files that can be used by others.
   5) Combine resulting variables and car names into a data frame
 
 - All these commands are contained in the function
-  ~ConvertAutoMpgRecords~. It is saved as a file with that name. You can
+  ~ConvertAutoMpgRecords~. An R file with the function is here:
+  https://pastebin.com/C4bmppbm.
+  1) Download the file from this URL as ~ConvertAutoMpgRecords.R~
+  2) Run the file using ~shell~ from within R
+
+  It is saved as a file with that name. You can
   load it into your R session after downloading the file:
   #+begin_src R
-    load(URL=
+    URL2 <- "https://tinyurl.com/yc65uauv"
+    download.file(URL2, "ConvertAutoMpgRecords")
+    load(file="ConvertAutoMpgRecords")
     autoMpgFrame <- ConvertAutoMpgRecords(autoMpgRecords)
     head(autoMpgFrame)
   #+end_src
 
   #+RESULTS:
   #+begin_example
-  Error in ConvertAutoMpgRecords(autoMpgRecords) : 
-    could not find function "ConvertAutoMpgRecords"
+  trying URL 'https://drive.google.com/file/d/1-2V_a0-GBkDg95MIHIjuhlMQ77ghK9df/view?usp=share_link'
+  downloaded 72 KB
+  Error in load(file = "ConvertAutoMpgRecords") : 
+    bad restore file magic number (file may be corrupted) -- no data loaded
+  In addition: Warning message:
+  file 'ConvertAutoMpgRecords' has magic number '<!DOC'
+    Use of save versions prior to 2 is deprecated
+  Warning messages:
+  1: NAs introduced by coercion 
+  2: NAs introduced by coercion 
+  3: NAs introduced by coercion 
+  4: NAs introduced by coercion 
+  5: NAs introduced by coercion 
+  6: NAs introduced by coercion
     mpg cylinders displacement horsepower weight acceleration modelYear origin
   1  18         8          307        130   3504         12.0        70      1
   2  15         8          350        165   3693         11.5        70      1
@@ -378,6 +397,8 @@ results to external data files that can be used by others.
   5               ford torino
   6          ford galaxie 500
   #+end_example
+
+- Amazingly, R's download function can recover the GDrive file!
 
 - The function definition and saving to file:
   #+begin_src R :results silent
@@ -406,11 +427,6 @@ results to external data files that can be used by others.
     save(ConvertAutoMpgRecords, file="ConvertAutoMpgRecords")
   #+end_src  
    
-* TODO Working with CSV files
-
-* TODO Working with other file types
-
-* TODO Working with 
-* TODO References
+* References
 
 - Pearson RK (2016). Exploratory Data Analysis. CRC Press.

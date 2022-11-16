@@ -1,4 +1,17 @@
 #+property: header-args:R :session *R* :results output
+* README
+
+  Run the following code blocks to understand how (difficult it is) to
+  clean arbitrarily formatted text data from the web. Source: Pearson
+  (2016).
+  
+* Get URL
+
+  View web pages with data for download using ~browseURL~
+  #+begin_src R :results silent
+    browseURL("http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/")
+  #+end_src
+  
 * Get data records
 
   - Get raw data file using ~download.file~

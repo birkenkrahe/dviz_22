@@ -191,6 +191,7 @@ results to external data files that can be used by others.
               file = "../data/LatteIndexFrame.csv",
               row.names=FALSE)
   #+end_src
+
 - Show the dataframe in R and also print it from the file using the
   Windows shell command ~notepad [file]~
   #+begin_src R
@@ -199,6 +200,88 @@ results to external data files that can be used by others.
   #+end_src
 
 * TODO Interacting with the Internet
+
+- Three examples of Internet data download and use: CSV, Excel, text
+
+- The Internet is a potentially volatile data source: web pages can be
+  changed, moved, taken down - apply good citation habits!
+
+* Getting the data set
+
+- An automobile gas mileage data set is available from Univ of Calif
+  at Irvine's Machine Learning Repository - used for benchmarking ML
+  algorithms.
+  
+- You can open a browser to a URL (Universal Resource Locator) with
+  ~browseURL~ (you have to manually navigate back to R or Emacs):
+  #+begin_src R :results silent
+    browseURL("http://archive.ics.uci.edu/ml")
+  #+end_src
+  1) Open the dataset list on the page with ~*View ALL Data Sets*~
+  2) Open the ~Data Folder~
+  3) Copy link address of ~auto-mpg.data~ (mouse right click)
+
+- Feed the copied URL to ~download.file~ and check that the file was
+  downloaded with ~shell~
+  #+begin_src R
+    URL <- "http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data"
+    download.file(URL, "UCIautoMpg.txt")
+    shell('DIR/W UCIautoMpg.txt')
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  trying URL 'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data'
+  Content type 'application/x-httpd-php' length 30286 bytes (29 KB)
+  downloaded 29 KB
+   Volume in drive C is OS
+   Volume Serial Number is 0654-135C
+
+   Directory of c:\Users\birkenkrahe\Documents\GitHub\ds1\org
+
+  UCIautoMpg.txt   
+                 1 File(s)         30,684 bytes
+                 0 Dir(s)  346,708,860,928 bytes free
+  #+end_example
+
+- View the file using the Windows ~notepad~ app:
+  #+begin_src R :results silent
+    shell('notepad UCIautoMpg.txt')
+  #+end_src
+
+* Reading the data records
+
+- The format of the dataset requires us to develop a /parsing/ strategy
+  to extract the fields we want from each record
+
+- The function for reading text data (including HTML) is ~readLines~. It
+  reads the extracted data into a ~character~ vector
+
+- To see what the raw data format looks like, we analyze the first
+  record of the data set using
+  1) ~readLine~ to read the data into R
+  2) ~head~ to show a couple of lines
+  3) ~nchar~ to count characters,
+  4) ~substr~ to split record in two components
+  #+begin_src R
+    autoMpgRecords <- readLines("UCIautoMpg.txt")
+    head(autoMpgRecords,1)
+    x <- autoMpgRecords[1]  # store first record in x
+    nchar(x)
+    substr(x, 1, 56) # numbers
+    substr(x, 57, 84) # text
+  #+end_src
+
+  #+RESULTS:
+  : [1] "18.0   8   307.0      130.0      3504.      12.0   70  1\t\"chevrolet chevelle malibu\""
+  : [1] 84
+  : [1] "18.0   8   307.0      130.0      3504.      12.0   70  1"
+  : [1] "\t\"chevrolet chevelle malibu\""
+   
+* Reading the data variable names
+
+ 
+
 
 
 

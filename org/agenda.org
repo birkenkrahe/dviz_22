@@ -1642,12 +1642,44 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 [[../img/rsqlite.png]]
 
 - [X] File and shell management: ~shell~, ~dir.create~, ~getwd~, ~setwd~
-- [ ] Manual data entry (~fix~)
-- [ ] CSV and other file types (~read.csv~)
-- [ ] Data on the Internet (~download.file~, ~browseURL~)
+- [X] Manual data entry (~fix~)
+- [X] CSV and other file types (~read.csv~)
+- [X] Data on the Internet (~download.file~, ~browseURL~)
 - [ ] Data in relational databases (~sqldf~, ~RSQLite~)
+* TODO Internet text mining example
+#+attr_html: :width 400px
+[[../img/penguin.jpg]]
+
+- "I cleaned today's Internet / web scraping example up and put it in
+  a short file of its own: ~9_internet.org~ Links to an external site.-
+  you can download this (raw) Org-mode file and run the code blocks in
+  Emacs. Most of this already worked in class but with this code you
+  can also complete the last step and see the data frame that belongs
+  to the web data. Enjoy!"
+
+- Get the updated file from here: [[https://tinyurl.com/cfwhayya][tinyurl.com/cfwhayya]]
 
 * TODO Tableau review [DataCamp]
+#+attr_html: :width 400px
+[[../img/book.jpg]]
+
+
+- Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topics/1294][see Canvas announcement]]):
+  1) [[https://www.datacamp.com/tutorial/creating-stories-tableau][Creating stories in Tableau]] (aka [[http://www.literateprogramming.com/][literate programming]])
+  2) How to build engaging dashboards ([[https://drive.google.com/file/d/18ISvLVzA5nNjNUExkqd5_CxH0wfpUY-k/view?usp=share_link][whitepaper]] and [[https://www.datasciencecentral.com/dsc-webinar-seriesmaking-flow-happen-dashboards-that-persuade-inform-and-engage-10-29-2013/][video]])
+  3) Tableau courses [[https://app.datacamp.com/search/?q=tableau&type=course][at DataCamp]] (limited access - 6 months)
+     - [[https://app.datacamp.com/learn/courses/introduction-to-tableau][Introduction to Tableau]]
+     - [[https://app.datacamp.com/learn/courses/analyzing-data-in-tableau][Analyzing data with Tableau]]
+     - [[https://app.datacamp.com/learn/courses/creating-dashboards-in-tableau][Creating dashboards in Tableau]]
+     - [[https://app.datacamp.com/learn/courses/calculations-in-tableau][Calculations with Tableau]]
+     - [[https://app.datacamp.com/learn/courses/connecting-data-in-tableau][Connecting data with Tableau]]
+     - [[https://app.datacamp.com/learn/courses/statistical-techniques-in-tableau][Statistical techniques in Tableau]]
+     - [[https://app.datacamp.com/learn/courses/data-visualization-in-tableau][Data visualization in Tableau]]
+     - Tableau case studies: [[https://app.datacamp.com/learn/courses/case-study-analyzing-customer-churn-in-tableau][customer churn]], [[https://app.datacamp.com/learn/courses/case-study-analyzing-job-market-data-in-tableau][job market data analysis]]
+
+* TODO Connecting R to relational databases
+
+
 
 * Week 15: Spreadsheets & evaluation
 #+attr_html: :width 500px

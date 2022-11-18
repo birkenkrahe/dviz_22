@@ -99,19 +99,20 @@ fairly standardized because of the maturity and age of SQL.
 
 - The ~sqldf~ package supports SQL queries against data frames.
 
-- We use the auto-mpg dataset that can be obtained from the UCI
+- We use the ~auto-mpg~ dataset that can be obtained from the UCI
   Machine Learning Repository including unusual cars with 3 and 5
   cylinders.
 
 - You can get this dataframe by running the code in the ~9_internet.org~
-  file (available from GitHub here: [[https://tinyurl.com/cfwhayya][tinyurl.com/cfwhayya]])
+  file, available from GitHub here: [[https://tinyurl.com/cfwhayya][tinyurl.com/cfwhayya]], with ~M-x
+  org-babel-execute-buffer~ 
 
 - Or you can read this CSV file into a dataframe ~autoMpgFrame~ - the
   CSV file was created with the command ~write.csv(autoMpgFrame,
   file="autoMpgFrame.csv")~: [[https://tinyurl.com/2tx2sr2z][tinyurl.com/2tx2sr2z]]
   #+begin_src R
-    df <- read.csv(file="https://tinyurl.com/2tx2sr2z", header=TRUE)
-    df <- df[,-1]
+    autoMpgFrame <- read.csv(file="https://tinyurl.com/2tx2sr2z", header=TRUE)
+    autoMpgFrame <- autoMpgFrame[,-1]
     str(df)
   #+end_src
 
@@ -129,6 +130,15 @@ fairly standardized because of the maturity and age of SQL.
    $ carName     : chr  "chevrolet chevelle malibu" "buick skylark 320" "plymouth satellite" "amc rebel sst" ...
   #+end_example
 
+- You should now have the dataframe ~autoMpgFrame~ loaded:
+  #+begin_src R
+     ls(autoMpgFrame) # lists the dataframe variables
+  #+end_src
+
+  #+RESULTS:
+  : [1] "acceleration" "carName"      "cylinders"    "displacement" "horsepower"  
+  : [6] "modelYear"    "mpg"          "origin"       "weight"
+  
 - Install the ~sqldf~ package from the R console ~*R*~:
   1) when you are asked if you ~want to install from sources the package
     which needs compilation~, say ~no~.
@@ -136,7 +146,7 @@ fairly standardized because of the maturity and age of SQL.
      that we will use below.
 
   #+begin_example R
-    install.packages("sqldf")
+    install.packages("sqldf")  # you only need to do this once 
   #+end_example
   
 - The following query uses SQL to extract the number of ~cylinders~, the
@@ -156,20 +166,25 @@ fairly standardized because of the maturity and age of SQL.
   #+end_src
 
   #+RESULTS:
-  :   cylinders modelYear             carName
-  : 1         3        72     mazda rx2 coupe
-  : 2         3        73           maxda rx3
-  : 3         3        77          mazda rx-4
-  : 4         5        78           audi 5000
-  : 5         5        79  mercedes benz 300d
-  : 6         5        80 audi 5000s (diesel)
-  : 7         3        80       mazda rx-7 gs
+  #+begin_example
+  Loading required package: gsubfn
+  Loading required package: proto
+  Loading required package: RSQLite
+    cylinders modelYear             carName
+  1         3        72     mazda rx2 coupe
+  2         3        73           maxda rx3
+  3         3        77          mazda rx-4
+  4         5        78           audi 5000
+  5         5        79  mercedes benz 300d
+  6         5        80 audi 5000s (diesel)
+  7         3        80       mazda rx-7 gs
+  #+end_example
 
 - In the next example, we use ~GROUP BY~ to retrieve the average (~AVG~)
   mileage (~mpg~), ~horsepower~, and ~weight~ as a function of the number of
   ~cylinders~ and the number of records (~COUNT~) in each group:
 
-
+  
 
 
 * Database support in R

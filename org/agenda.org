@@ -1753,7 +1753,10 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
    6) Select ~All values > Range of values > Maximum = 200~
    #+end_quote
 
-10) Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topics/1294][see Canvas announcement]]):
+10) To make inquiries like these in R, use ~sqldf~, which allows you to
+    query data frames with SQL commands (this is what Tableau does).
+   
+Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topics/1294][see Canvas announcement]]):
     - [[https://www.datacamp.com/tutorial/creating-stories-tableau][Creating stories in Tableau]] (aka [[http://www.literateprogramming.com/][literate programming]])
     - How to build engaging dashboards ([[https://drive.google.com/file/d/18ISvLVzA5nNjNUExkqd5_CxH0wfpUY-k/view?usp=share_link][whitepaper]] and [[https://www.datasciencecentral.com/dsc-webinar-seriesmaking-flow-happen-dashboards-that-persuade-inform-and-engage-10-29-2013/][video]])
     - Tableau courses [[https://app.datacamp.com/search/?q=tableau&type=course][at DataCamp]] (limited access - 6 months)
@@ -1773,7 +1776,8 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - Very brief introduction to relational db and SQL
 - Database support in R with ~sqldf~ and ~RSQLite~
 - Examples querying dataframes and databases
-
+- Download and open in Emacs: 
+  
 
 * Week 15: Exam prep, spreadsheets & evaluation
 #+attr_html: :width 500px

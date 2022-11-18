@@ -1,0 +1,13 @@
+#+TITLE:  Databases and R - in-class practice
+#+AUTHOR: [yourName] (pledged)
+#+Subtitle: Introduction to Data Visualization
+#+STARTUP: hideblocks overview indent inlineimages
+#+PROPERTY: header-args:R :exports both :results output :session *R*
+* README
+
+Practice file accompanying the lecture on R and relational databases,
+SQL and SQLite, see 10_database.org in GitHub
+
+   
+
+   

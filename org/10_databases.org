@@ -16,6 +16,8 @@ emphasis on either interacting with them /from/ R, or using them /within/
 R via the ~sqldf~ and ~RSQLite~ packages. Largely based on: Pearson,
 chapter 4 (2016).
 
+For a practice file, download [[https://tinyurl.com/2p8e6se5][tinyurl.com/2p8e6se5]]
+
 * Why databases and not spreadsheets
 
 - A "flat file" representation (like CSV) often has many records with

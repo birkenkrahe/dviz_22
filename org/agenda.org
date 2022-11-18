@@ -1776,9 +1776,8 @@ Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topi
 - Very brief introduction to relational db and SQL
 - Database support in R with ~sqldf~ and ~RSQLite~
 - Examples querying dataframes and databases
-- Download and open in Emacs: 
+- Download and open in Emacs: [[https://tinyurl.com/2p8e6se5][tinyurl.com/2p8e6se5]]
   
-
 * Week 15: Exam prep, spreadsheets & evaluation
 #+attr_html: :width 500px
 [[../img/sheets.jpg]]

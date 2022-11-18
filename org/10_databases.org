@@ -1,4 +1,4 @@
-#+TITLE: Working with external SQLite databases (RSQLite)
+#+TITLE: Working with external databases and SQL
 #+AUTHOR: Marcus Birkenkrahe
 #+Subtitle: Introduction to Data Visualization
 #+STARTUP: hideblocks overview indent inlineimages
@@ -50,11 +50,11 @@ chapter 4 (2016).
   #+begin_src sqlite :db rsqlite.db
     SELECT 'hello world'
   #+end_src
-  
+
 - SQL has great query abilities, including statistical functions, but
   no visualization capability whatsoever. A little SQL plus R
   guarantees your data science success
-  
+
 * Database creation and use
 
 1) Databases are designed like data frames - variables of specific
@@ -95,9 +95,13 @@ created by others. Querying with R includes:
 Here, steps 1,3 depend on the database implementation while 2 is
 fairly standardized because of the maturity and age of SQL.
 
-* IN PROGRESS The ~sqldf~ package
+* The ~sqldf~ package
 
-- The ~sqldf~ package supports SQL queries against data frames.
+- The ~sqldf~ package supports SQL queries directly against data frames.
+
+- It also includes the function ~read.csv.sql~, with which you can run
+  SQL queries directly against external CSV files. Useful when you
+  want to get information from a small part of an enormous CSV file.
 
 - We use the ~auto-mpg~ dataset that can be obtained from the UCI
   Machine Learning Repository including unusual cars with 3 and 5
@@ -105,7 +109,7 @@ fairly standardized because of the maturity and age of SQL.
 
 - You can get this dataframe by running the code in the ~9_internet.org~
   file, available from GitHub here: [[https://tinyurl.com/cfwhayya][tinyurl.com/cfwhayya]], with ~M-x
-  org-babel-execute-buffer~ 
+  org-babel-execute-buffer~
 
 - Or you can read this CSV file into a dataframe ~autoMpgFrame~ - the
   CSV file was created with the command ~write.csv(autoMpgFrame,
@@ -118,7 +122,7 @@ fairly standardized because of the maturity and age of SQL.
 
   #+RESULTS:
   #+begin_example
-  'data.frame':	398 obs. of  9 variables:
+  'data.frame': 398 obs. of  9 variables:
    $ mpg         : num  18 15 18 16 17 15 14 14 14 15 ...
    $ cylinders   : int  8 8 8 8 8 8 8 8 8 8 ...
    $ displacement: num  307 350 318 304 302 429 454 440 455 390 ...
@@ -132,66 +136,340 @@ fairly standardized because of the maturity and age of SQL.
 
 - You should now have the dataframe ~autoMpgFrame~ loaded:
   #+begin_src R
-     ls(autoMpgFrame) # lists the dataframe variables
+    ls(autoMpgFrame) # lists the dataframe variables
   #+end_src
 
   #+RESULTS:
-  : [1] "acceleration" "carName"      "cylinders"    "displacement" "horsepower"  
+  : [1] "acceleration" "carName"      "cylinders"    "displacement" "horsepower"
   : [6] "modelYear"    "mpg"          "origin"       "weight"
-  
+
 - Install the ~sqldf~ package from the R console ~*R*~:
   1) when you are asked if you ~want to install from sources the package
-    which needs compilation~, say ~no~.
+     which needs compilation~, say ~no~.
   2) the package dependencies include ~RSQLite~ and ~DBI~, two packages
      that we will use below.
 
   #+begin_example R
-    install.packages("sqldf")  # you only need to do this once 
+    install.packages("sqldf")  # you only need to do this once
   #+end_example
-  
+
+* Filtering records with ~WHERE~
+
 - The following query uses SQL to extract the number of ~cylinders~, the
   ~modelYear~ and the ~carName~ for all of these unusual cars:
   1) The first line loads the package (and its 3 dependencies)
   2) The ~sqldf~ function is called with an SQL query
   3) The SQL query selects the required variables from the dataframe
      with the desired condition.
-     
+
   #+begin_src R
-    library(sqldf)
+    library(sqldf)  # loads required 'dependencies' (linked libraries)
+
     strangeCars <- sqldf(
       "SELECT cylinders, modelYear, carName
             FROM autoMpgFrame
             WHERE cylinders == 3 OR cylinders == 5")
+
     strangeCars
   #+end_src
 
   #+RESULTS:
-  #+begin_example
-  Loading required package: gsubfn
-  Loading required package: proto
-  Loading required package: RSQLite
-    cylinders modelYear             carName
-  1         3        72     mazda rx2 coupe
-  2         3        73           maxda rx3
-  3         3        77          mazda rx-4
-  4         5        78           audi 5000
-  5         5        79  mercedes benz 300d
-  6         5        80 audi 5000s (diesel)
-  7         3        80       mazda rx-7 gs
-  #+end_example
+  :   cylinders modelYear             carName
+  : 1         3        72     mazda rx2 coupe
+  : 2         3        73           maxda rx3
+  : 3         3        77          mazda rx-4
+  : 4         5        78           audi 5000
+  : 5         5        79  mercedes benz 300d
+  : 6         5        80 audi 5000s (diesel)
+  : 7         3        80       mazda rx-7 gs
 
-- In the next example, we use ~GROUP BY~ to retrieve the average (~AVG~)
-  mileage (~mpg~), ~horsepower~, and ~weight~ as a function of the number of
-  ~cylinders~ and the number of records (~COUNT~) in each group:
+- The result is a regular dataframe:
+  #+begin_src R
+    str(strangeCars)
+  #+end_src
 
-  
+  #+RESULTS:
+  : 'data.frame':       7 obs. of  3 variables:
+  :  $ cylinders: int  3 3 3 5 5 5 3
+  :  $ modelYear: int  72 73 77 78 79 80 80
+  :  $ carName  : chr  "mazda rx2 coupe" "maxda rx3" "mazda rx-4" "audi 5000" ...
 
+* Grouping records with ~GROUP BY~
 
-* Database support in R
+- In the next example, we use ~GROUP BY~ to retrieve as function of the
+  number of ~cylinders~:
+  1) the average (~AVG~) mileage (~mpg~),
+  2) ~horsepower~,
+  3) ~weight~,
+  4) number of records (~COUNT~) in each group
+  #+begin_src R
+    cylinderSummary <- sqldf(
+      "SELECT cylinders as cyl,
+              AVG(mpg) as mean_mpg,
+              AVG(horsepower) as mean_hp,
+              AVG(weight) as mean_weight,
+              COUNT(*) as cars
+         FROM autoMpgFrame
+         GROUP BY cylinders")
+    cylinderSummary
+  #+end_src
 
+  #+RESULTS:
+  :   cyl mean_mpg   mean_hp mean_weight cars
+  : 1   3 20.55000  99.25000    2398.500    4
+  : 2   4 29.28676  78.28141    2308.127  204
+  : 3   5 27.36667  82.33333    3103.333    3
+  : 4   6 19.98571 101.50602    3198.226   84
+  : 5   8 14.96311 158.30097    4114.718  103
+
+- The result is a regular dataframe whose ~names~ are aliases given to
+  the return vectors inside the ~SELECT~ command:
+  #+begin_src R
+    str(cylinderSummary); names(cylinderSummary)
+  #+end_src
+
+  #+RESULTS:
+  : 'data.frame':       5 obs. of  5 variables:
+  :  $ cylinders  : int  3 4 5 6 8
+  :  $ mean_mpg   : num  20.6 29.3 27.4 20 15
+  :  $ mean_hp    : num  99.2 78.3 82.3 101.5 158.3
+  :  $ mean_weight: num  2398 2308 3103 3198 4115
+  :  $ cars       : int  4 204 3 84 103
+  : [1] "cylinders"   "mean_mpg"    "mean_hp"     "mean_weight" "cars"
+
+- The wildcard argument for ~COUNT~ works because the table is
+  rectangular: ~COUNT(cylinders)~ would also have worked, since every
+  column has the same length of records.
+
+* TODO ~INNER JOIN~ between dataframes
+
+- This content is reserved for the advanced introduction to data
+  science course
+
+* Database support in R with ~DBI~ and ~RODBC~
+
+- Databases represent external files usually hosted on external
+  servers (other computers), accessed over a network
+
+- To work with a database from an interactive R session, you must:
+  1) Connect to the database
+  2) Execute SQL commands on the database - these can include creating
+     or deleting tables (e.g. ~CREATE TABLE~) and manipulating table
+     content (e.g. ~INSERT INTO~) or structure (e.g. ~ALTER TABLE~)
+  3) Disconnect from the database
+
+- Database (DB) communication support is provided by two packages: ~DBI~
+  or ~RODBC~ (for the Open Database Connectivity standard - RDBMS like
+  MySQL, Microsoft SQL Server, Microsoft Access, etc.)
+
+- ~DBI~ supports
+  + Oracle through the ~ROracle~ package,
+  + PostgreSQL through the ~RPostgreSQL~ package, and
+  + SQLite through the ~RSQLite~ package
+
+- The key functions provided by ~DBI~ are:
+  1) ~dbDriver~ to specify the DB type, e.g. ~dbDriver("PostgreSQL")~
+  2) ~dbConnect~ to connect with a specific DB
+  3) ~dbGetQuery~ to send SQL queries to the DB and retrieve results
+  4) ~dbDisconnect~ terminates our connection with the DB
 
 * The ~RSQLite~ package
 
+- In our ~RSQLite~ example, we
+  1) create a new ~sqlite3~ database
+  2) connect to the database
+  3) create new tables in the database
+  4) check what the database contains
+  5) apply SQL queries against the database
+  6) disconnect from the database
+
+- ~RSQLite~ was already installed if you installed ~sqldf~, otherwise you
+  must install it before you can use it.
+
+* Create and connect to an SQLite database
+
+- After loading the package, we create an SQLite database
+  ~mtcars.db~. If it does not exist it will be created.
+  #+begin_src R :results silent
+    library(RSQLite)
+    conn <- dbConnect(SQLite(), "../data/mtcars.db")
+  #+end_src
+
+- We can check if this database was created using ~shell~ (your relative
+  path to the file may be different) - and if it is empty:
+  #+begin_src R
+    shell('DIR/W "../data/mtcars.db"')
+  #+end_src
+
+  #+RESULTS:
+  :  Volume in drive C is OS
+  :  Volume Serial Number is 0654-135C
+  :
+  :  Directory of c:\Users\birkenkrahe\Documents\GitHub\dviz\data
+  :
+  : mtcars.db
+  :                1 File(s)              0 bytes
+  :                0 Dir(s)  346,568,130,560 bytes free
+
+- What is the nature of this object ~conn~ that represents a connection?
+  #+begin_src R
+    class(conn)
+  #+end_src
+
+  #+RESULTS:
+  : [1] "SQLiteConnection"
+  : attr(,"package")
+  : [1] "RSQLite"
+
+  #+begin_src R
+    str(conn)
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  Formal class 'SQLiteConnection' [package "RSQLite"] with 8 slots
+    ..@ ptr                :<
+
+    ..@ dbname             : chr "c:\\Users\\birkenkrahe\\Documents\\GitHub\\dviz\\data\\mtcars.db"
+    ..@ loadable.extensions: logi TRUE
+    ..@ flags              : int 70
+    ..@ vfs                : chr ""
+    ..@ ref                :<environment:
+
+    ..@ bigint             : chr "integer64"
+    ..@ extended_types     : logi FALSE
+  #+end_example
+
+- We learn that ~conn~ is a connection, and that it knows about
+  ~mtcars.db~ and its absolute path address. This path could also be a
+  network path.
+
+* Create a table in the database
+
+- We need to put something in the new database - we use the existing,
+  pre-loaded, well-known data frame ~mtcars~.
+  #+begin_src R :results silent
+    dbWriteTable(conn, "MTCARSTABLE", mtcars)
+  #+end_src
+
+- SQLite is not case-sensitive, I only write the commands in upper
+  case to distinguish them from R (which is case-sensitive)
+
+- Let's see if ~mtcars.db~ has changed (with a time option):
+  #+begin_src R
+    shell('DIR/T "../data/mtcars.db"')
+  #+end_src
+
+  #+RESULTS:
+  :  Volume in drive C is OS
+  :  Volume Serial Number is 0654-135C
+  :
+  :  Directory of c:\Users\birkenkrahe\Documents\GitHub\dviz\data
+  :
+  : 11/18/2022  02:10 PM             8,192 mtcars.db
+  :                1 File(s)          8,192 bytes
+  :                0 Dir(s)  346,563,227,648 bytes free
+
+* Check SQLite database content
+
+- We want to list the table in the database (accessed via ~conn~):
+  #+begin_src R
+    dbListTables(conn)
+  #+end_src
+
+  #+RESULTS:
+  : [1] "MTCARSTABLE"
+
+- We also want to know which fields this table contains:
+  #+begin_src R
+    dbListFields(conn, "MTCARSTABLE")
+  #+end_src
+
+  #+RESULTS:
+  :  [1] "mpg"  "cyl"  "disp" "hp"   "drat" "wt"   "qsec" "vs"   "am"   "gear"
+  : [11] "carb"
+
+- Everything seems to be there. But to know for sure, we need to
+  ~SELECT~ the fields.
+
+* Query SQLite database
+
+- To see how many records are in the table, we can use the ~SELECT
+  COUNT(*)~ SQL statement on the table - displayed with an alias name:
+  #+begin_src R
+    dbGetQuery(conn,
+               "SELECT COUNT(*) AS 'mtcars_count'
+                FROM MTCARSTABLE")
+  #+end_src
+
+  #+RESULTS:
+  :   mtcars_count
+  : 1           32
+
+- The ~SELECT~ command is very versatile - it can even do arithmetic
+  (without using any tables - an empty database would suffice):
+  #+begin_src R
+    dbGetQuery(conn,
+               "SELECT 1+1")
+  #+end_src
+
+  #+RESULTS:
+  :   1+1
+  : 1   2
+
+- To do something more interesting, let's repeat the ~sqldf~ example for
+  ~mtcars~
+  #+begin_src R
+    dbGetQuery(conn,
+               "SELECT cyl,
+                       AVG(mpg) as 'mean_mpg',
+                       AVG(hp) as 'mean_hp',
+                       AVG(wt) as 'mean_weight',
+                       COUNT(*) as 'cars'
+                FROM MTCARSTABLE
+                GROUP BY cyl")
+  #+end_src
+
+  #+RESULTS:
+  :   cyl mean_mpg   mean_hp mean_weight cars
+  : 1   4 26.66364  82.63636    2.285727   11
+  : 2   6 19.74286 122.28571    3.117143    7
+  : 3   8 15.10000 209.21429    3.999214   14
+* Close SQLite database connection
+
+- Check your workspace before and after disconnecting from the database:
+  #+begin_src R
+    ls()
+    dbDisconnect(conn)
+    ls()
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+   [1] "autoMpgFrame"    "conn"            "cyl.freq"        "cyl.freq.matrix"
+   [5] "cylinders"       "cylinderSummary" "data"            "df"             
+   [9] "dnf"             "group"           "h"               "sex.freq"       
+  [13] "stations"        "strangeCars"     "tbl"             "tg"             
+  [17] "transmission"    "value"
+  Warning message:
+  In connection_release(conn@ptr) : Already disconnected
+   [1] "autoMpgFrame"    "conn"            "cyl.freq"        "cyl.freq.matrix"
+   [5] "cylinders"       "cylinderSummary" "data"            "df"             
+   [9] "dnf"             "group"           "h"               "sex.freq"       
+  [13] "stations"        "strangeCars"     "tbl"             "tg"             
+  [17] "transmission"    "value"
+  Error: Invalid or closed connection
+  #+end_example
+
+- The database connection is a so-called ~S4~ object - it is not part of
+  your environment (but instead connects it to the external
+  world). Consequently, ~conn~ is still there but it's not active:
+  #+begin_src R
+    dbListTables(conn)
+  #+end_src
+
+  #+RESULTS:
+  : Error: Invalid or closed connection
 
 * Further study
 
@@ -208,6 +486,4 @@ fairly standardized because of the maturity and age of SQL.
 
 * References
 
- - Pearson RK (2016). Exploratory Data Analysis. CRC Press.
-
- 
+- Pearson RK (2016). Exploratory Data Analysis. CRC Press.

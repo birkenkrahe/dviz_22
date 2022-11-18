@@ -6,7 +6,169 @@
 * README
 
 Practice file accompanying the lecture on R and relational databases,
-SQL and SQLite, see 10_database.org in GitHub
+SQL and SQLite, see [[https://github.com/birkenkrahe/dviz/blob/piHome/org/10_databases.org][10_database.org in GitHub]]. Based in parts on -
+Pearson (2016). Exploratory Data Analysis. CRC Press.
+
+* SQL - Structured Query Language
+
+- Here is the 'hello world' program in SQLite. The code block opens on
+  an SQLite database ~rsqlite.db~, which is created if it does not
+  exist.
+  #+begin_src sqlite :db rsqlite.db
+    SELECT 'hello world'
+  #+end_src
+
+* The ~sqldf~ package
+
+- You can get this dataframe by running the code in the ~9_internet.org~
+  file, available from GitHub here: [[https://tinyurl.com/cfwhayya][tinyurl.com/cfwhayya]], with ~M-x
+  org-babel-execute-buffer~
+
+- Or you can read this CSV file into a dataframe ~autoMpgFrame~ - the
+  CSV file was created with the command ~write.csv(autoMpgFrame,
+  file="autoMpgFrame.csv")~: [[https://tinyurl.com/2tx2sr2z][tinyurl.com/2tx2sr2z]]
+  #+begin_src R
+    autoMpgFrame <- read.csv(file="https://tinyurl.com/2tx2sr2z", header=TRUE)
+    autoMpgFrame <- autoMpgFrame[,-1]
+    str(df)
+  #+end_src
+
+- You should now have the dataframe ~autoMpgFrame~ loaded:
+  #+begin_src R
+
+  #+end_src
+
+- Install the ~sqldf~ package from the R console ~*R*~:
+  1) when you are asked if you ~want to install from sources the package
+     which needs compilation~, say ~no~.
+  2) the package dependencies include ~RSQLite~ and ~DBI~, two packages
+     that we will use below.
+
+  #+begin_example R
+    install.packages("sqldf")  # you only need to do this once
+  #+end_example
+
+* Filtering records with ~WHERE~
+
+- The following query uses SQL to extract the number of ~cylinders~, the
+  ~modelYear~ and the ~carName~ for all of these unusual cars:
+  1) The first line loads the package (and its 3 dependencies)
+  2) The ~sqldf~ function is called with an SQL query
+  3) The SQL query selects the required variables from the dataframe
+     with the desired condition.
+
+  #+begin_src R
+
+  #+end_src
+
+- The result is a regular dataframe:
+  #+begin_src R
+
+  #+end_src
+
+* Grouping records with ~GROUP BY~
+
+- In the next example, we use ~GROUP BY~ to retrieve as function of the
+  number of ~cylinders~:
+  1) the average (~AVG~) mileage (~mpg~),
+  2) ~horsepower~,
+  3) ~weight~,
+  4) number of records (~COUNT~) in each group
+  #+begin_src R
+
+  #+end_src
+
+- The result is a regular dataframe whose ~names~ are aliases given to
+  the return vectors inside the ~SELECT~ command:
+  #+begin_src R
+
+  #+end_src
+
+* Create and connect to an SQLite database
+
+- After loading the package, we create an SQLite database
+  ~mtcars.db~. If it does not exist it will be created.
+  #+begin_src R :results silent
+
+  #+end_src
+
+- We can check if this database was created using ~shell~ (your relative
+  path to the file may be different) - and if it is empty:
+  #+begin_src R
+
+  #+end_src
+
+- What is the nature of this object ~conn~ that represents a connection?
+  #+begin_src R
+
+  #+end_src
+
+  #+begin_src R
+
+  #+end_src
+
+* Create a table in the database
+
+- We need to put something in the new database - we use the existing,
+  pre-loaded, well-known data frame ~mtcars~.
+  #+begin_src R :results silent
+
+  #+end_src
+
+- SQLite is not case-sensitive, I only write the commands in upper
+  case to distinguish them from R (which is case-sensitive)
+
+- Let's see if ~mtcars.db~ has changed (with a time option ~DIR/T~):
+  #+begin_src R
+
+  #+end_src
+
+ Check SQLite database content
+
+- We want to list the table in the database (accessed via ~conn~):
+  #+begin_src R
+
+  #+end_src
+
+- We also want to know which fields this table contains:
+  #+begin_src R
+
+  #+end_src
+
+* Query SQLite database
+
+- To see how many records are in the table, we can use the ~SELECT
+  COUNT(*)~ SQL statement on the table - displayed with an alias name:
+  #+begin_src R
+
+  #+end_src
+
+- The ~SELECT~ command is very versatile - it can even do arithmetic
+  (without using any tables - an empty database would suffice):
+  #+begin_src R
+
+  #+end_src
+
+- To do something more interesting, let's repeat the ~sqldf~ example for
+  ~mtcars~
+  #+begin_src R
+
+  #+end_src
+
+* Close SQLite database connection
+
+- Check your workspace before and after disconnecting from the database:
+  #+begin_src R
+
+  #+end_src
+
+- The database connection is a so-called ~S4~ object - it is not part of
+  your environment (but instead connects it to the external
+  world). Consequently, ~conn~ is still there but it's not active:
+  #+begin_src R
+
+  #+end_src
+
 
    
 

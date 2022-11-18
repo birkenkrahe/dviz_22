@@ -1608,7 +1608,8 @@ Are you comfy?
 
 More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io/run-shiny-apps-locally/][analythium.io]]
 
-* IN PROGRESS Week 14: Data visualization with Tableau
+
+* Week 14: Data visualization with Tableau
 #+attr_html: :width 500px
 [[../img/tableau.png]]
 
@@ -1617,7 +1618,7 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - [ ] DataCamp review: Tableau
 - [ ] Working with external data: file management
 
-* Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
+* DONE Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
 #+attr_html: :width 250px
 [[../img/paratrooper.png]]
 
@@ -1626,7 +1627,7 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - Show: speaker notes / themes (moon, serif)
 - Extensive documentation on GitHub ([[reveal.js)][org-reveal]])
 
-* Save/load/run ~BasicSummary~ on different datasets
+* DONE Save/load/run ~BasicSummary~ on different datasets
 #+attr_html: :width 600px
 [[../img/eastwest.jpg]]
 
@@ -1645,7 +1646,7 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - [X] Manual data entry (~fix~)
 - [X] CSV and other file types (~read.csv~)
 - [X] Data on the Internet (~download.file~, ~browseURL~)
-- [ ] Data in relational databases (~sqldf~, ~RSQLite~)
+- [X] Data in relational databases (~sqldf~, ~RSQLite~)
 * TODO Internet text mining example
 #+attr_html: :width 400px
 [[../img/penguin.jpg]]
@@ -1663,25 +1664,118 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 #+attr_html: :width 400px
 [[../img/book.jpg]]
 
+1) What's Tableau for?
+   #+begin_quote
+   1) "Click, drag, drop" (no-code) Data visualization
+   2) Access to data analysis tool
+   3) Dashboard building
+   #+end_quote
 
-- Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topics/1294][see Canvas announcement]]):
-  1) [[https://www.datacamp.com/tutorial/creating-stories-tableau][Creating stories in Tableau]] (aka [[http://www.literateprogramming.com/][literate programming]])
-  2) How to build engaging dashboards ([[https://drive.google.com/file/d/18ISvLVzA5nNjNUExkqd5_CxH0wfpUY-k/view?usp=share_link][whitepaper]] and [[https://www.datasciencecentral.com/dsc-webinar-seriesmaking-flow-happen-dashboards-that-persuade-inform-and-engage-10-29-2013/][video]])
-  3) Tableau courses [[https://app.datacamp.com/search/?q=tableau&type=course][at DataCamp]] (limited access - 6 months)
-     - [[https://app.datacamp.com/learn/courses/introduction-to-tableau][Introduction to Tableau]]
-     - [[https://app.datacamp.com/learn/courses/analyzing-data-in-tableau][Analyzing data with Tableau]]
-     - [[https://app.datacamp.com/learn/courses/creating-dashboards-in-tableau][Creating dashboards in Tableau]]
-     - [[https://app.datacamp.com/learn/courses/calculations-in-tableau][Calculations with Tableau]]
-     - [[https://app.datacamp.com/learn/courses/connecting-data-in-tableau][Connecting data with Tableau]]
-     - [[https://app.datacamp.com/learn/courses/statistical-techniques-in-tableau][Statistical techniques in Tableau]]
-     - [[https://app.datacamp.com/learn/courses/data-visualization-in-tableau][Data visualization in Tableau]]
-     - Tableau case studies: [[https://app.datacamp.com/learn/courses/case-study-analyzing-customer-churn-in-tableau][customer churn]], [[https://app.datacamp.com/learn/courses/case-study-analyzing-job-market-data-in-tableau][job market data analysis]]
+2) Is Tableau useful to get a job as an analyst or developer?
+   #+begin_quote
+   Yes - [[https://www.google.com/search?q=jobs+tableau&rlz=1C1GCEB_enUS965US965&oq=jobs+tableau&aqs=chrome..69i57j0i512l2j0i22i30l7.3590j0j7&sourceid=chrome&ie=UTF-8&ibp=htl;jobs&sa=X&ved=2ahUKEwjd7fn7hbb7AhUmkokEHZ0vAwQQutcGKAF6BAgcEAY#htivrt=jobs&htidocid=l_oXSMqFK6QAAAAAAAAAAA%3D%3D&fpstate=tldetail][see search here]] - most ads are looking for experience but
+   often SQL may be enough to get a junior position. Many remote
+   opportunities.
+   #+end_quote
 
-* TODO Connecting R to relational databases
+3) Is there a free version of this commercial tool? Did you check it
+   out?
+   #+begin_quote
+   #+attr_html: :width 400px
+   [[../img/tableau.png]]
+
+   Yes there is - Tableau Public is a free, cloud-based, you can
+   connect to Excel/CSV files, for up to 15 mio rows of data. Link:
+   [[https://public.tableau.com/app/discover][public.tableau.com/]]
+   #+end_quote
+
+4) How much does Tableau actually cost? Is this a lot compared to other
+   analytical dashboard apps (e.g. Microsoft's PowerBI)? Who owns
+   Tableau?
+   #+begin_quote
+   #+attr_html: :width 400px
+   [[../img/tableau_pricing.png]]
+
+   #+attr_html: :width 400px
+   [[../img/powerbi_pricing.png]]
+
+   - Tableau is owned by Salesforce who are known for their CRM
+     software.
+   - Other BI software platforms like [[https://www.grow.com/product/grow-integrations][grow.com]] or [[https://count.co/][count.co]] come with
+     "connectors" (to databases, other systems, like Salesforce,
+     Shopify etc.)
+   #+end_quote
+
+5) Did you register for Tableau public? Did you check the "Available
+   for Hire" field in the profile?
+   #+begin_quote
+   #+attr_html: :width 400px
+   [[../img/tableau_public.png]]
+
+   See also: [[https://www.tableau.com/blog/beginners-guide-tableau-public][A Beginner's Guide to Tableau Public]] with tips on "how to
+   build a strong profile page". Find and follow me
+   #+attr_html: :width 250px
+   [[../img/tableau_follow.png]]
+   #+end_quote
+
+6) Did you download the workbooks from the course page? You can find
+   them [[https://public.tableau.com/app/profile/datacamp.introduction.to.tableau#!/][on Tableau public]]
+   #+begin_quote
+   #+attr_html: :width 400px
+   [[../img/tableau_datacamp.png]]
+   #+end_quote
+
+7) How are different data types indicated in Tableau?
+   #+begin_quote
+   - *Green fields* are numeric-continuous fields, treated as an
+     infinite range. Examples are the number of reviews per month,
+     room price, or the longitude of the location.
+   - *Blue fields* are discrete, or categorical fields, which means they
+     have individually separate and distinct values. Examples include
+     room type, neighborhood, and the ID number of the listing.
+   #+end_quote
+
+8) How do quantitative "dimensions" and qualitative "measures" affect
+   visualizations?
+   #+begin_quote
+   #+attr_html: :width 500px
+   [[../img/tableau_dimensions_measures.png]]
+   #+end_quote
+
+9) How can you get the number of reviews per neighborhood for listings
+   below $200 from the ~new_york.csv~ AirBnB dataset - in Tableau?
+   #+begin_quote
+   1) Choose ~Data > New data source~ at the top and select ~new_york.csv~
+   2) Click on the ~sheet~ tab (bottom) to open the spreadsheet
+   3) Drag the ~neighborhood~ variable into the ~sheet > rows~ field at top
+   4) Drag the ~number of reviews~ variable into the ~Marks > Text~ field
+   5) Drag ~price~ variable into the ~Filters~ field
+   6) Select ~All values > Range of values > Maximum = 200~
+   #+end_quote
+
+10) Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topics/1294][see Canvas announcement]]):
+    - [[https://www.datacamp.com/tutorial/creating-stories-tableau][Creating stories in Tableau]] (aka [[http://www.literateprogramming.com/][literate programming]])
+    - How to build engaging dashboards ([[https://drive.google.com/file/d/18ISvLVzA5nNjNUExkqd5_CxH0wfpUY-k/view?usp=share_link][whitepaper]] and [[https://www.datasciencecentral.com/dsc-webinar-seriesmaking-flow-happen-dashboards-that-persuade-inform-and-engage-10-29-2013/][video]])
+    - Tableau courses [[https://app.datacamp.com/search/?q=tableau&type=course][at DataCamp]] (limited access - 6 months)
+      - [[https://app.datacamp.com/learn/courses/introduction-to-tableau][Introduction to Tableau]]
+      - [[https://app.datacamp.com/learn/courses/analyzing-data-in-tableau][Analyzing data with Tableau]]
+      - [[https://app.datacamp.com/learn/courses/creating-dashboards-in-tableau][Creating dashboards in Tableau]]
+      - [[https://app.datacamp.com/learn/courses/calculations-in-tableau][Calculations with Tableau]]
+      - [[https://app.datacamp.com/learn/courses/connecting-data-in-tableau][Connecting data with Tableau]]
+      - [[https://app.datacamp.com/learn/courses/statistical-techniques-in-tableau][Statistical techniques in Tableau]]
+      - [[https://app.datacamp.com/learn/courses/data-visualization-in-tableau][Data visualization in Tableau]]
+      - Tableau case studies: [[https://app.datacamp.com/learn/courses/case-study-analyzing-customer-churn-in-tableau][customer churn]], [[https://app.datacamp.com/learn/courses/case-study-analyzing-job-market-data-in-tableau][job market data analysis]]
+
+* TODO R and relational databases
+#+attr_html: :width 400px
+[[../img/query.jpg]]
+
+- Very brief introduction to relational db and SQL
+- Database support in R with ~sqldf~ and ~RSQLite~
+- Examples querying dataframes and databases
 
 
-
-* Week 15: Spreadsheets & evaluation
+* Week 15: Exam prep, spreadsheets & evaluation
 #+attr_html: :width 500px
 [[../img/sheets.jpg]]
 

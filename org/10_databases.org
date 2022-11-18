@@ -95,26 +95,88 @@ created by others. Querying with R includes:
 Here, steps 1,3 depend on the database implementation while 2 is
 fairly standardized because of the maturity and age of SQL.
 
-* The ~sqldf~ package
+* IN PROGRESS The ~sqldf~ package
 
 - The ~sqldf~ package supports SQL queries against data frames.
 
-- For examples, we use the auto-mpg dataset that can be obtained from
-  the UCI Machine Learning Repository including unusual cars with 3
-  and 5 cylinders.
+- We use the auto-mpg dataset that can be obtained from the UCI
+  Machine Learning Repository including unusual cars with 3 and 5
+  cylinders.
 
 - You can get this dataframe by running the code in the ~9_internet.org~
   file (available from GitHub here: [[https://tinyurl.com/cfwhayya][tinyurl.com/cfwhayya]])
 
 - Or you can read this CSV file into a dataframe ~autoMpgFrame~ - the
   CSV file was created with the command ~write.csv(autoMpgFrame,
-  file="autoMpgFrame.csv")~: 
+  file="autoMpgFrame.csv")~: [[https://tinyurl.com/2tx2sr2z][tinyurl.com/2tx2sr2z]]
+  #+begin_src R
+    df <- read.csv(file="https://tinyurl.com/2tx2sr2z", header=TRUE)
+    df <- df[,-1]
+    str(df)
+  #+end_src
+
+  #+RESULTS:
+  #+begin_example
+  'data.frame':	398 obs. of  9 variables:
+   $ mpg         : num  18 15 18 16 17 15 14 14 14 15 ...
+   $ cylinders   : int  8 8 8 8 8 8 8 8 8 8 ...
+   $ displacement: num  307 350 318 304 302 429 454 440 455 390 ...
+   $ horsepower  : int  130 165 150 150 140 198 220 215 225 190 ...
+   $ weight      : int  3504 3693 3436 3433 3449 4341 4354 4312 4425 3850 ...
+   $ acceleration: num  12 11.5 11 12 10.5 10 9 8.5 10 8.5 ...
+   $ modelYear   : int  70 70 70 70 70 70 70 70 70 70 ...
+   $ origin      : int  1 1 1 1 1 1 1 1 1 1 ...
+   $ carName     : chr  "chevrolet chevelle malibu" "buick skylark 320" "plymouth satellite" "amc rebel sst" ...
+  #+end_example
+
+- Install the ~sqldf~ package from the R console ~*R*~:
+  1) when you are asked if you ~want to install from sources the package
+    which needs compilation~, say ~no~.
+  2) the package dependencies include ~RSQLite~ and ~DBI~, two packages
+     that we will use below.
+
+  #+begin_example R
+    install.packages("sqldf")
+  #+end_example
+  
+- The following query uses SQL to extract the number of ~cylinders~, the
+  ~modelYear~ and the ~carName~ for all of these unusual cars:
+  1) The first line loads the package (and its 3 dependencies)
+  2) The ~sqldf~ function is called with an SQL query
+  3) The SQL query selects the required variables from the dataframe
+     with the desired condition.
+     
+  #+begin_src R
+    library(sqldf)
+    strangeCars <- sqldf(
+      "SELECT cylinders, modelYear, carName
+            FROM autoMpgFrame
+            WHERE cylinders == 3 OR cylinders == 5")
+    strangeCars
+  #+end_src
+
+  #+RESULTS:
+  :   cylinders modelYear             carName
+  : 1         3        72     mazda rx2 coupe
+  : 2         3        73           maxda rx3
+  : 3         3        77          mazda rx-4
+  : 4         5        78           audi 5000
+  : 5         5        79  mercedes benz 300d
+  : 6         5        80 audi 5000s (diesel)
+  : 7         3        80       mazda rx-7 gs
+
+- In the next example, we use ~GROUP BY~ to retrieve the average (~AVG~)
+  mileage (~mpg~), ~horsepower~, and ~weight~ as a function of the number of
+  ~cylinders~ and the number of records (~COUNT~) in each group:
+
+
+
 
 * Database support in R
 
+
 * The ~RSQLite~ package
 
-* Practicing R with relational databases
 
 * Further study
 

@@ -3,6 +3,12 @@
 #+Subtitle: Introduction to Data Visualization
 #+STARTUP: hideblocks overview indent inlineimages
 #+PROPERTY: header-args:R :exports both :results output :session *R*
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: black
+#+REVEAL_INIT_OPTIONS: transition: 'cube'
+:END:
 * README
 
 This lecture gives a brief introduction relational databases, with an
@@ -10,17 +16,118 @@ emphasis on either interacting with them /from/ R, or using them /within/
 R via the ~sqldf~ and ~RSQLite~ packages. Largely based on: Pearson,
 chapter 4 (2016).
 
-* Relational databases, queries, and SQL
+* Why databases and not spreadsheets
 
-https://blog.rsquaredacademy.com/working-with-databases-using-r/
+- A "flat file" representation (like CSV) often has many records with
+  the same values for certain fields, i.e. high search overhead
+
+- Relational databases can store very large data volumes efficiently
+  ("normalized") as collection of linked tables
+
+- Because of this organisation to update a customer's name in a
+  database, you only need to update information (e.g. address) once
+
+- Relational database management systems (RDBMS) allow fast,
+  concurrent access to a large number of records stored in linked
+  tables and multiple databases
+
+* SQL - Structured Query Language
+
+- SQL (Structured Query Language) is the language to define,
+  manipulate, query and control RDBMS
+
+- SQL queries are "natural", e.g. to select a table column 'address'
+  of a customer named 'Smith' from a table 'customer', write:
+  #+begin_example sql
+    SELECT address
+      FROM customer
+      WHERE name = 'Smith'
+  #+end_example
+
+- Here is the 'hello world' program in SQLite. The code block opens on
+  an SQLite database ~rsqlite.db~, which is created if it does not
+  exist.
+  #+begin_src sqlite :db rsqlite.db
+    SELECT 'hello world'
+  #+end_src
+  
+- SQL has great query abilities, including statistical functions, but
+  no visualization capability whatsoever. A little SQL plus R
+  guarantees your data science success
+  
+* Database creation and use
+
+1) Databases are designed like data frames - variables of specific
+   types are stored in rectangular tables
+
+2) The database design is implemented in a specific software
+   environment - examples are Oracle, MySQL, PostgreSQL, Microsoft SQL
+   Server, or SQLite.
+
+   Among these, SQLite is the most common database of all: it is a
+   free, fast, lightweight RDBMS written in C that can live on "bare
+   metal" computing devices (cars, sensors, microcontrollers etc.). It
+   is present in every mobile phone and mobile device.
+
+3) Users run SQL queries against the database to extract the specific
+   subsets of data they need and/or basic statistical functions.
+
+* Interaction with databases using R
+
+R users are typically consumers of data from databases that have been
+created by others. Querying with R includes:
+
+1. Connect to the database from your R session;
+
+2. Execute SQL queries against the database to retrieve the data we
+   want, frequently involves:
+   - a merge of records distributed over several tables (so-called
+     ~INNER JOIN~)
+   - functions like ~AVG~ (average), ~SUM~ or ~COUNT~ to sum or count number
+     of records, ~MIN~ and ~MAX~ to find minimal and maximal values
+   - a grouping of records with ~GROUP BY~ and run subqueries on the
+     groups
+   - combine important or frequently used sets of commands as
+     procedures (SQL scripts)
+
+3. Close the database connection.
+
+Here, steps 1,3 depend on the database implementation while 2 is
+fairly standardized because of the maturity and age of SQL.
 
 * The ~sqldf~ package
+
+- The ~sqldf~ package supports SQL queries against data frames.
+
+- For examples, we use the auto-mpg dataset that can be obtained from
+  the UCI Machine Learning Repository including unusual cars with 3
+  and 5 cylinders.
+
+- You can get this dataframe by running the code in the ~9_internet.org~
+  file (available from GitHub here: [[https://tinyurl.com/cfwhayya][tinyurl.com/cfwhayya]])
+
+- Or you can read this CSV file into a dataframe ~autoMpgFrame~ - the
+  CSV file was created with the command ~write.csv(autoMpgFrame,
+  file="autoMpgFrame.csv")~: 
 
 * Database support in R
 
 * The ~RSQLite~ package
 
 * Practicing R with relational databases
+
+* Further study
+
+1) [[https://www.datacamp.com/tutorial/sqlite-in-r][SQLite in R]] - lightweight DataCamp tutorial
+   - Creating databases and tables
+   - Executing SQL queries through RSQLite
+   - Insert variables into queries
+   - Administrating databases from R
+
+2) [[https://blog.rsquaredacademy.com/working-with-databases-using-r/][A Comprehensive Introduction to Working with Databases using R]]
+   - Free tutorial looking at connecting to databases from R
+   - Uses the table manipulation package ~dplyr~ ("Tidyverse")
+   - Overuse of "Tidyverse" packages overcomplicates thingsx
 
 * References
 

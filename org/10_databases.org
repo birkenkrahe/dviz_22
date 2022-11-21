@@ -79,20 +79,20 @@ For a practice file, download [[https://tinyurl.com/2p8e6se5][tinyurl.com/2p8e6s
 R users are typically consumers of data from databases that have been
 created by others. Querying with R includes:
 
-1. Connect to the database from your R session;
+   1. Connect to the database from your R session;
 
-2. Execute SQL queries against the database to retrieve the data we
-   want, frequently involves:
-   - a merge of records distributed over several tables (so-called
-     ~INNER JOIN~)
-   - functions like ~AVG~ (average), ~SUM~ or ~COUNT~ to sum or count number
-     of records, ~MIN~ and ~MAX~ to find minimal and maximal values
-   - a grouping of records with ~GROUP BY~ and run subqueries on the
-     groups
-   - combine important or frequently used sets of commands as
-     procedures (SQL scripts)
+   2. Execute SQL queries against the database to retrieve the data we
+      want, frequently involves:
+      - a merge of records distributed over several tables (so-called
+        ~INNER JOIN~)
+      - functions like ~AVG~ (average), ~SUM~ or ~COUNT~ to sum or count number
+        of records, ~MIN~ and ~MAX~ to find minimal and maximal values
+      - a grouping of records with ~GROUP BY~ and run subqueries on the
+        groups
+      - combine important or frequently used sets of commands as
+        procedures (SQL scripts)
 
-3. Close the database connection.
+   3. Close the database connection.
 
 Here, steps 1,3 depend on the database implementation while 2 is
 fairly standardized because of the maturity and age of SQL.
@@ -117,7 +117,7 @@ fairly standardized because of the maturity and age of SQL.
   CSV file was created with the command ~write.csv(autoMpgFrame,
   file="autoMpgFrame.csv")~: [[https://tinyurl.com/2tx2sr2z][tinyurl.com/2tx2sr2z]]
   #+begin_src R
-    autoMpgFrame <- read.csv(file="https://tinyurl.com/2tx2sr2z", header=TRUE)
+    autoMpgFrame <- read.csv(file="https://tinyurl.com/2tx2sr2z",     header=TRUE)
     autoMpgFrame <- autoMpgFrame[,-1]
     str(df)
   #+end_src
@@ -246,7 +246,8 @@ fairly standardized because of the maturity and age of SQL.
 * TODO ~INNER JOIN~ between dataframes
 
 - This content is reserved for the advanced introduction to data
-  science course
+  science course because queries with merged tables require a little
+  more SQL than I can convey in 50 minutes
 
 * Database support in R with ~DBI~ and ~RODBC~
 

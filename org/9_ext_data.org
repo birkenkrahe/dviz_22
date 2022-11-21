@@ -3,7 +3,7 @@
 #+Subtitle: Introduction to Data Visualization
 #+STARTUP: hideblocks overview indent inlineimages
 #+PROPERTY: header-args:R :exports both :results output :session *R*
-#+OPTIONS: toc:nil num:nil
+#+OPTIONS: toc:1 num:1
 :REVEAL_PROPERTIES:
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+REVEAL_REVEAL_JS_VERSION: 4
@@ -134,20 +134,6 @@ o* NEXT Practice: navigation
 #+RESULTS:
 [[file:./navtest/nile1.png]]
 
-#+begin_src R :session *R2* :results graphics file :file c:/Users/birkenkrahe/navtest/nile2.png
-  hist(Nile)
-#+end_src
-
-#+RESULTS:
-[[file:c:/Users/birkenkrahe/navtest/nile2.png]]
-
-#+begin_src R :session *R2* :results graphics file :file ~/navtest/nile3.png
-  hist(Nile)
-#+end_src
-
-#+RESULTS:
-[[file:~/navtest/nile3.png]]
-
 #+begin_src R
   shell('CD')
   shell('DIR/W navtest')
@@ -197,7 +183,8 @@ o* NEXT Practice: navigation
     LatteIndexFrame
     shell("notepad ../data/LatteIndexFrame.csv")
   #+end_src
-
+  #+attr_html: :width 400px 
+  [[../img/9_fix.png]]
 * Interacting with the Internet
 #+attr_html: :width 600px
 [[../img/internet.jpg]]
@@ -252,7 +239,8 @@ o* NEXT Practice: navigation
   #+begin_src R :results silent
     shell('notepad UCIautoMpg.txt')
   #+end_src
-
+  #+attr_html: :width 400px 
+  [[../img/9_notepad.png]]
 * Reading the data records
 
 - The format of the dataset requires us to develop a /parsing/ strategy
@@ -309,7 +297,8 @@ o* NEXT Practice: navigation
                  1 File(s)          1,705 bytes
                  0 Dir(s)  346,672,795,648 bytes free
   #+end_example
-
+  #+attr_html: :width 400px 
+  [[../img/9_notepad1.png]]
 - View the file with ~notepad~ by passing the filename only to ~shell~
   #+begin_src R :results silent
     shell("UCIautoMpgNames.txt")

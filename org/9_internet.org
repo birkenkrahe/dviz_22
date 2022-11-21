@@ -5,14 +5,15 @@
   clean arbitrarily formatted text data from the web. Source: Pearson
   (2016).
   
-* Get URL
+* GET URL
 
   View web pages with data for download using ~browseURL~
   #+begin_src R :results silent
-    browseURL("http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/")
+    browseURL(
+      "http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/")
   #+end_src
   
-* Get data records
+* GET DATA RECORDS
 
   - Get raw data file using ~download.file~
     #+begin_src R
@@ -41,8 +42,6 @@
       shell('notepad UCIautoMpg.txt')
     #+end_src
 
-    #+RESULTS:
-
   - Read raw data into R data using ~readLines~
     #+begin_src R
       autoMpgRecords <- readLines("UCIautoMpg.txt")
@@ -59,7 +58,7 @@
     : [1] "18.0   8   307.0      130.0      3504.      12.0   70  1"
     : [1] "\t\"chevrolet chevelle malibu\""
 
-* Get data variable names
+* GET DATA VARIABLE NAMES
 
   - Get raw data names file using ~download.file~
     #+begin_src R
@@ -111,7 +110,7 @@
     [13] "8. Missing Attribute Values:  horsepower has 6 missing values"
     #+end_example
 
-* Create data frame
+* CREATE DATA FRAME
 
   - Define conversion function ~ConvertAutoMpgRecords~
     #+begin_src R :results silent
@@ -170,6 +169,6 @@
     6          ford galaxie 500
     #+end_example
 
-* References
+* REFERENCES
  
   - Pearson RK (2016). Exploratory Data Analysis. CRC Press.

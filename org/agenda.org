@@ -34,7 +34,7 @@
 
 * Week 1: Introduction to the course
 #+attr_hmtl: :width 400px
- [[../img/2_brain.png]]
+[[../img/2_brain.png]]
 ** Objectives
 
 - [X] Mutual introductions
@@ -1515,7 +1515,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 - [ ] Easter egg: what do the paintings have in common?
   - Goya, The Clothed Maja
   - Da Vinci, The Last Supper
-  - van Gogh, Sunflowers 
+  - van Gogh, Sunflowers
   - Botticelli, La Primavera
 
 ** EDA: Summarizing numerical data (Notebook demo)
@@ -1529,7 +1529,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
 #+attr_html: :width 500px#+attr_html: :width 500px
 [[../img/rstudio.png]]
 (Image: RStudio IDE with R console and R notebook)
-  
+
 - *RStudio IDE* overview (more at posit.co - rebranded company)
   1) RStudio looks much like the DataCamp lesson dashboard
   2) Significant time investment especially for documentation
@@ -1551,7 +1551,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
      - Create new R Markdown file
      - Run template code chunk
      - Knit markdown file and view HTML output
-  7) In the R console 
+  7) In the R console
      - Install ~Lock5withR~ package
      - Load ~Lock5withR~ package
      - Load ~HollywoodMovies2011~ data frame
@@ -1571,7 +1571,7 @@ to 300. [[https://github.com/birkenkrahe/org/blob/master/research/Abstract.org][
   #+attr_html: :width 500px
   [[../img/emacsorg.png]]
   (Image: Buffers in the fully extensible Emacs editor)
-      
+
 ** Rendering HTML pages from Emacs Org-mode
 
 1) Open one of your practice files (preferably with images) in Emacs
@@ -1608,7 +1608,6 @@ Are you comfy?
 
 More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io/run-shiny-apps-locally/][analythium.io]]
 
-
 * Week 14: Data visualization with Tableau
 #+attr_html: :width 500px
 [[../img/tableau.png]]
@@ -1618,7 +1617,7 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - [ ] DataCamp review: Tableau
 - [ ] Working with external data: file management
 
-* DONE Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
+** Presenting in Emacs: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-can-i-present-in-emacs][new FAQ]]
 #+attr_html: :width 250px
 [[../img/paratrooper.png]]
 
@@ -1627,7 +1626,7 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - Show: speaker notes / themes (moon, serif)
 - Extensive documentation on GitHub ([[reveal.js)][org-reveal]])
 
-* DONE Save/load/run ~BasicSummary~ on different datasets
+** Save/load/run ~BasicSummary~ on different datasets
 #+attr_html: :width 600px
 [[../img/eastwest.jpg]]
 
@@ -1637,8 +1636,8 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - Communism vs. beauty: "[[https://intellectualtakeout.org/2021/07/beauty-and-the-brutalist-the-architectural-effect-on-our-souls/][Beauty and the brutalist: the architectural
   effect on our souls.]]" - this is what I was talking about
   (Holmquist, 2021)
-  
-* IN PROGRESS Working with external data
+
+** Working with external data
 #+attr_html: :width 400px
 [[../img/rsqlite.png]]
 
@@ -1647,7 +1646,7 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 - [X] CSV and other file types (~read.csv~)
 - [X] Data on the Internet (~download.file~, ~browseURL~)
 - [X] Data in relational databases (~sqldf~, ~RSQLite~)
-* TODO Internet text mining example
+** Internet text mining example
 #+attr_html: :width 400px
 [[../img/penguin.jpg]]
 
@@ -1660,7 +1659,7 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 
 - Get the updated file from here: [[https://tinyurl.com/cfwhayya][tinyurl.com/cfwhayya]]
 
-* TODO Tableau review [DataCamp]
+** Tableau review [DataCamp]
 #+attr_html: :width 400px
 [[../img/book.jpg]]
 
@@ -1755,21 +1754,21 @@ More examples on hosting R Shiny apps locally at [[https://hosting.analythium.io
 
 10) To make inquiries like these in R, use ~sqldf~, which allows you to
     query data frames with SQL commands (this is what Tableau does).
-   
-Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topics/1294][see Canvas announcement]]):
-    - [[https://www.datacamp.com/tutorial/creating-stories-tableau][Creating stories in Tableau]] (aka [[http://www.literateprogramming.com/][literate programming]])
-    - How to build engaging dashboards ([[https://drive.google.com/file/d/18ISvLVzA5nNjNUExkqd5_CxH0wfpUY-k/view?usp=share_link][whitepaper]] and [[https://www.datasciencecentral.com/dsc-webinar-seriesmaking-flow-happen-dashboards-that-persuade-inform-and-engage-10-29-2013/][video]])
-    - Tableau courses [[https://app.datacamp.com/search/?q=tableau&type=course][at DataCamp]] (limited access - 6 months)
-      - [[https://app.datacamp.com/learn/courses/introduction-to-tableau][Introduction to Tableau]]
-      - [[https://app.datacamp.com/learn/courses/analyzing-data-in-tableau][Analyzing data with Tableau]]
-      - [[https://app.datacamp.com/learn/courses/creating-dashboards-in-tableau][Creating dashboards in Tableau]]
-      - [[https://app.datacamp.com/learn/courses/calculations-in-tableau][Calculations with Tableau]]
-      - [[https://app.datacamp.com/learn/courses/connecting-data-in-tableau][Connecting data with Tableau]]
-      - [[https://app.datacamp.com/learn/courses/statistical-techniques-in-tableau][Statistical techniques in Tableau]]
-      - [[https://app.datacamp.com/learn/courses/data-visualization-in-tableau][Data visualization in Tableau]]
-      - Tableau case studies: [[https://app.datacamp.com/learn/courses/case-study-analyzing-customer-churn-in-tableau][customer churn]], [[https://app.datacamp.com/learn/courses/case-study-analyzing-job-market-data-in-tableau][job market data analysis]]
 
-* TODO R and relational databases
+Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topics/1294][see Canvas announcement]]):
+- [[https://www.datacamp.com/tutorial/creating-stories-tableau][Creating stories in Tableau]] (aka [[http://www.literateprogramming.com/][literate programming]])
+- How to build engaging dashboards ([[https://drive.google.com/file/d/18ISvLVzA5nNjNUExkqd5_CxH0wfpUY-k/view?usp=share_link][whitepaper]] and [[https://www.datasciencecentral.com/dsc-webinar-seriesmaking-flow-happen-dashboards-that-persuade-inform-and-engage-10-29-2013/][video]])
+- Tableau courses [[https://app.datacamp.com/search/?q=tableau&type=course][at DataCamp]] (limited access - 6 months)
+  - [[https://app.datacamp.com/learn/courses/introduction-to-tableau][Introduction to Tableau]]
+  - [[https://app.datacamp.com/learn/courses/analyzing-data-in-tableau][Analyzing data with Tableau]]
+  - [[https://app.datacamp.com/learn/courses/creating-dashboards-in-tableau][Creating dashboards in Tableau]]
+  - [[https://app.datacamp.com/learn/courses/calculations-in-tableau][Calculations with Tableau]]
+  - [[https://app.datacamp.com/learn/courses/connecting-data-in-tableau][Connecting data with Tableau]]
+  - [[https://app.datacamp.com/learn/courses/statistical-techniques-in-tableau][Statistical techniques in Tableau]]
+  - [[https://app.datacamp.com/learn/courses/data-visualization-in-tableau][Data visualization in Tableau]]
+  - Tableau case studies: [[https://app.datacamp.com/learn/courses/case-study-analyzing-customer-churn-in-tableau][customer churn]], [[https://app.datacamp.com/learn/courses/case-study-analyzing-job-market-data-in-tableau][job market data analysis]]
+
+** R and relational databases
 #+attr_html: :width 400px
 [[../img/query.jpg]]
 
@@ -1777,13 +1776,31 @@ Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topi
 - Database support in R with ~sqldf~ and ~RSQLite~
 - Examples querying dataframes and databases
 - Download and open in Emacs: [[https://tinyurl.com/2p8e6se5][tinyurl.com/2p8e6se5]]
-  
+
 * Week 15: Exam prep, spreadsheets & evaluation
 #+attr_html: :width 500px
 [[../img/sheets.jpg]]
 
-** Data Visualization in Spreadsheets [DC]
-** Projects
+** TODO Easter egg - solution
+
+I asked what these pieces of art have in common:
+- Goya, The Clothed Maja (Madrid)
+- Da Vinci, The Last Supper (Milan)
+- van Gogh, Sunflowers (Louvre)
+- Botticelli, La Primavera (Florence)
+
+#+begin_notes
+The answer: they've all been attacked in 2022 by climate activists
+from the [[https://www.last-generation.org/]["Last Generation]]" group. This group attacks public art with
+mashed potatoes, black paint, tomato soup etc. and the attackers glue
+themselves to the wall shouting slogans until they are taken away. Two
+more have been added to the list in the last 2 weeks:
+- Klimt, Death and Life (Austria)
+- Monet, Les Meules (Berlin)
+#+end_notes
+
+** TODO Data Visualization in Spreadsheets [DC]
+** TODO Projects: 4th and final sprint review
 ** TODO Course evaluation now! Hit me! Hard!
 #+attr_html: :width 480px
 [[../img/eval.png]]
@@ -1816,7 +1833,7 @@ Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topi
 
 - Holmquist A (July 16, 2021). Beauty and the Brutalist: The
   Architectural Effect on Our Souls. [[https://intellectualtakeout.org/2021/07/beauty-and-the-brutalist-the-architectural-effect-on-our-souls/https://intellectualtakeout.org/2021/07/beauty-and-the-brutalist-the-architectural-effect-on-our-souls/][URL: intellectualtakeout.org]]
-  
+
 - Kahn J (June 21, 2022). Deep learning pioneer Andrew Ng says
   companies should get ‘data-centric’ to achieve
   A.I. success. [[https://fortune.com/2022/06/21/andrew-ng-data-centric-ai/][URL: fortune.com]].

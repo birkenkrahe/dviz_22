@@ -1781,7 +1781,21 @@ Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topi
 #+attr_html: :width 500px
 [[../img/sheets.jpg]]
 
-** TODO Easter egg - solution
+- [ ] Course evaluation now! Bonus points! Canvas: ~Course Eval~
+- [ ] Last [DataCamp] assignment / submit missing in-class assignments
+- [ ] Final presentations: Nov 28, Nov 30, Dec 2 (3 pm)
+- [ ] Test driving the final exam
+  
+* TODO Course evaluation now! Hit me! Hard!
+#+attr_html: :width 300px
+[[../img/eval.png]]
+
+- *If you'd like for me to stick around, please evaluate (fairly) now*
+- *Extra credit for completing this in class today (send proof)!*
+- *A couple of examples of useful feedback for me from past surveys:*
+#+attr_html: :width 700px
+[[../img/eval1.png]]
+* DONE Easter egg - solution
 
 I asked what these pieces of art have in common:
 - Goya, The Clothed Maja (Madrid)
@@ -1789,28 +1803,172 @@ I asked what these pieces of art have in common:
 - van Gogh, Sunflowers (Louvre)
 - Botticelli, La Primavera (Florence)
 
-#+begin_notes
-The answer: they've all been attacked in 2022 by climate activists
-from the [[https://www.last-generation.org/]["Last Generation]]" group. This group attacks public art with
-mashed potatoes, black paint, tomato soup etc. and the attackers glue
-themselves to the wall shouting slogans until they are taken away. Two
-more have been added to the list in the last 2 weeks:
+Kim Ho identified the commonality! Well done!
+
+#+begin_quotes
+The answer: these works of art have all been attacked in 2022 by
+climate activists from the [[https://www.last-generation.org/]["Last Generation]]" group. This group attacks
+public art with mashed potatoes, black paint, tomato soup etc. and the
+attackers glue themselves to the wall shouting slogans until they are
+taken away. Two more have been added to the list in the last 2 weeks:
 - Klimt, Death and Life (Austria)
 - Monet, Les Meules (Berlin)
-#+end_notes
+#+end_quotes
 
-** TODO Data Visualization in Spreadsheets [DC]
-** TODO Projects: 4th and final sprint review
-** TODO Course evaluation now! Hit me! Hard!
+* TODO Data Visualization in Spreadsheets [DC]
 #+attr_html: :width 480px
-[[../img/eval.png]]
+[[../img/dashboard2.png]]
 
-#+attr_html: :width 700px
-[[../img/eval1.png]]
-- *If you'd like for me to stick around, please evaluate (fairly) now*
-- *Extra credit for completing this in class today (send proof)!*
-- *A couple of examples of useful feedback for me from past surveys:*
+- Last DataCamp assignment & last assignment overall
+- Don't forget to submit missing practice sheets
 
+* TODO Projects: 4th and final sprint review
+#+attr_html: :width 500px
+[[../img/presentation.png]]
+
+- FAQ: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-should-we-do-in-the-fourth-sprint][What should you do in the 4th and final sprint review?]]
+
+- FAQ: [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][How should we prepare for the final presentation?]]
+  1) go through the *checklist*
+  2) act *strategically*
+  3) *show* me your presentation beforehand if in doubt
+  4) *rehearse* under real conditions (in the class room if you can)
+
+- *Upload* [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#what-do-we-have-to-deliver-for-the-final-essay-or-presentation][some material]] online (see email later this week)
+
+- *Timing*: enter your time/names/titles [[https://lyon.instructure.com/courses/571/pages/register-your-final-presentation-date-here][in Canvas]] 
+
+* TODO Test driving the final exam (Dec 5-7)
+#+attr_html: :width 500px
+[[../img/ghost.png]]
+
+*Selection of quiz questions (__/115) from the final exam (40/115)*
+
+1) How can you run SQL queries on an R dataframe?
+   #+begin_src R
+     library(sqldf)
+     ## query on data frame 'mtcars' returns dataframe
+     query <- sqldf("SELECT * FROM mtcars LIMIT 6")
+     query
+     class(query)
+   #+end_src
+
+   Similar (not identical) to ~head~:
+   #+begin_src R
+     head(mtcars)
+     mt <- mtcars
+     rownames(mt) <- NULL
+     head(mt)
+   #+end_src
+
+2) What does "literate programming" stand for?
+   #+begin_notes
+   - A programming paradigm: doc + code + output = story
+   - A programming methodology to improve program readability
+   - A method introduced by Don Knuth in 1984 using "cweb"
+   - Basis of interactive data science notebooks (Jupyter, Org-mode)
+   #+end_notes
+
+3) What does the "Git" in "GitHub" stand for?
+
+4) What's the output of ~plot(factor)~?
+   #+begin_src R :results graphics file :file ../img/test.png
+     ## bar chart with one bar per factor level
+     plot(x=ToothGrowth$supp)
+   #+end_src
+
+5) How can you turn a scatterplot into a line plot - in base R? In
+   ggplot2?
+   #+begin_src R :results graphics file :file ../img/test.png
+     plot(Nile, type="p") # for line plot: p -> l 
+   #+end_src
+   ggplot2:
+   #+begin_src R :results graphics file :file ../img/ggtest.png
+     library(ggplot2)
+     ggplot(data=data.frame(Nile))+
+       geom_line(aes(x=time(Nile),y=Nile))
+   #+end_src
+
+6) What does the ~grid~ function do?
+   #+begin_src R :results graphics file :file ../img/test.png
+     par(mfrow=c(2,1))
+     plot(Nile)
+     plot(Nile)
+     grid()
+   #+end_src
+   
+7) How can you check if a graphics function in R is /generic/? And what
+   does this actually mean?
+   #+begin_src R
+     methods(plot)
+     methods(legend)
+   #+end_src
+   
+8) What's a /plot array/, what is it good for, and do you have an example?
+   #+begin_src R :results graphics file :file ../img/test.png
+     ## plot array of 'iris' for exploration of the data frame
+     ## a plot array is a panel of pairwise scatterplots
+     plot(iris, col=iris$Species)
+   #+end_src
+   
+9) Which ways are effective to represent > 2 dimensions in 2d?
+   #+begin_notes
+   - using different colors for the additional dimension
+   - using different sizes
+   - using different shapes
+   - using text annotations 
+   #+end_notes
+
+10) What is a boxplot?
+    #+begin_notes
+      - Shows Tukey's 5-point summary
+      - Shows ~summary~ without the ~mean~
+      - Shows different measures (centrality, spread, IQR)
+    #+end_notes
+    #+attr_html: :width 400px
+    [[../img/boxtest.png]]
+
+    #+begin_src R
+      summary(mtcars$mpg)
+    #+end_src
+
+    #+RESULTS:
+    :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    :   10.40   15.43   19.20   20.09   22.80   33.90
+
+11) List some ways to customize a scatterplot!
+    #+begin_src R :results graphics file :file test.png
+      plot(mtcars$mpg ~ mtcars$wt,
+           main = "Performance cars in 'mtcars'",
+           xlab = "Weight of car [tons]",
+           ylab = "Mileage (miles per gallon)",
+           pch = 19,
+           type ="p")
+      legend("topright",
+       legend=c("nothing","to show"))
+      abline(lm(mtcars$mpg ~ mtcars$wt), col="red")
+    #+end_src
+
+12) What should you reference in your papers, projects, presentations?
+    #+begin_notes
+    - authors, title, date, place of publication
+    - software, any media not made by you
+    #+end_notes
+
+13) Which Emacs Org-mode header argument generates a file ~test.png~ in
+    the directory on top of your current working directory?
+    #+begin_notes
+    #+begin_src R :results output graphics file :file "../test.png"
+    #+end_notes
+
+14) How can you plot the numeric variable ~Gas~ against the categories
+    of ~Insul~ in the ~MASS::whiteside~ dataset?
+    #+begin_src R :results graphics file :file test.png
+      library(MASS)
+      data(whiteside)
+      boxplot(Gas ~ Insul, data = whiteside)
+    #+end_src
+    
 * Week 16: Final sprint reviews (Nov 28,30, Dec 2)
 #+attr_html: :width 550px
 [[../img/leonardo.jpg]]

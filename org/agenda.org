@@ -1842,7 +1842,7 @@ taken away. Two more have been added to the list in the last 2 weeks:
 #+attr_html: :width 500px
 [[../img/ghost.png]]
 
-*Selection of quiz questions (__/115) from the final exam (40/115)*
+*Selection of quiz questions (14/115) from the final exam (40/115)*
 
 1) How can you run SQL queries on an R dataframe?
    #+begin_src R
@@ -1853,6 +1853,16 @@ taken away. Two more have been added to the list in the last 2 weeks:
      class(query)
    #+end_src
 
+   #+RESULTS:
+   :    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+   : 1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+   : 2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+   : 3 22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+   : 4 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+   : 5 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+   : 6 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+   : [1] "data.frame"
+
    Similar (not identical) to ~head~:
    #+begin_src R
      head(mtcars)
@@ -1860,6 +1870,17 @@ taken away. Two more have been added to the list in the last 2 weeks:
      rownames(mt) <- NULL
      head(mt)
    #+end_src
+
+   #+RESULTS:
+   #+begin_example
+      mpg cyl disp  hp drat    wt  qsec vs am gear carb
+   1 21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+   2 21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+   3 22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+   4 21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+   5 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+   6 18.1   6  225 105 2.76 3.460 20.22  1  0    3    1
+   #+end_example
 
 2) What does "literate programming" stand for?
    #+begin_notes
@@ -1870,18 +1891,30 @@ taken away. Two more have been added to the list in the last 2 weeks:
    #+end_notes
 
 3) What does the "Git" in "GitHub" stand for?
-
+   #+begin_notes
+    - It's not Welsh/English for "lowlife", or a lug
+    - It's a version control system written by Linus Torvalds (who
+      also created the original Linux kernel)
+   #+end_notes
+   
 4) What's the output of ~plot(factor)~?
    #+begin_src R :results graphics file :file ../img/test.png
      ## bar chart with one bar per factor level
      plot(x=ToothGrowth$supp)
    #+end_src
 
+   #+RESULTS:
+   [[file:../img/test.png]]
+
 5) How can you turn a scatterplot into a line plot - in base R? In
    ggplot2?
    #+begin_src R :results graphics file :file ../img/test.png
-     plot(Nile, type="p") # for line plot: p -> l 
+     plot(Nile, type="l") # for line plot: p -> l 
    #+end_src
+
+   #+RESULTS:
+   [[file:../img/test.png]]
+
    ggplot2:
    #+begin_src R :results graphics file :file ../img/ggtest.png
      library(ggplot2)
@@ -1894,15 +1927,34 @@ taken away. Two more have been added to the list in the last 2 weeks:
      par(mfrow=c(2,1))
      plot(Nile)
      plot(Nile)
-     grid()
+     grid()     # call grid on the last plot
    #+end_src
+
+   #+RESULTS:
+   [[file:../img/test.png]]
    
 7) How can you check if a graphics function in R is /generic/? And what
    does this actually mean?
    #+begin_src R
-     methods(plot)
-     methods(legend)
+     methods(plot)  # generic
+     methods(legend)   # not generic
    #+end_src
+
+   #+RESULTS:
+   #+begin_example
+    [1] plot.acf*           plot.data.frame*    plot.decomposed.ts*
+    [4] plot.default        plot.dendrogram*    plot.density*      
+    [7] plot.ecdf           plot.factor*        plot.formula*      
+   [10] plot.function       plot.hclust*        plot.histogram*    
+   [13] plot.HoltWinters*   plot.isoreg*        plot.lm*           
+   [16] plot.medpolish*     plot.mlm*           plot.ppr*          
+   [19] plot.prcomp*        plot.princomp*      plot.profile.nls*  
+   [22] plot.raster*        plot.spec*          plot.stepfun       
+   [25] plot.stl*           plot.table*         plot.times*        
+   [28] plot.ts             plot.tskernel*      plot.TukeyHSD*     
+   see '?methods' for accessing help and source code
+   no methods found
+   #+end_example
    
 8) What's a /plot array/, what is it good for, and do you have an example?
    #+begin_src R :results graphics file :file ../img/test.png
@@ -1910,16 +1962,19 @@ taken away. Two more have been added to the list in the last 2 weeks:
      ## a plot array is a panel of pairwise scatterplots
      plot(iris, col=iris$Species)
    #+end_src
+
+   #+RESULTS:
+   [[file:../img/test.png]]
    
 9) Which ways are effective to represent > 2 dimensions in 2d?
    #+begin_notes
    - using different colors for the additional dimension
    - using different sizes
    - using different shapes
-   - using text annotations 
+   - using text annotations (bubble plot)
    #+end_notes
 
-10) What is a boxplot?
+10) What is a boxplot (box-and-whisker)?
     #+begin_notes
       - Shows Tukey's 5-point summary
       - Shows ~summary~ without the ~mean~
@@ -1935,7 +1990,7 @@ taken away. Two more have been added to the list in the last 2 weeks:
     #+RESULTS:
     :    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
     :   10.40   15.43   19.20   20.09   22.80   33.90
-
+    
 11) List some ways to customize a scatterplot!
     #+begin_src R :results graphics file :file test.png
       plot(mtcars$mpg ~ mtcars$wt,
@@ -1968,6 +2023,9 @@ taken away. Two more have been added to the list in the last 2 weeks:
       data(whiteside)
       boxplot(Gas ~ Insul, data = whiteside)
     #+end_src
+
+    #+RESULTS:
+    [[file:test.png]]
     
 * Week 16: Final sprint reviews (Nov 28,30, Dec 2)
 #+attr_html: :width 550px

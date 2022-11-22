@@ -1786,7 +1786,7 @@ Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topi
 - [ ] Final presentations: Nov 28, Nov 30, Dec 2 (3 pm)
 - [ ] Test driving the final exam
   
-* TODO Course evaluation now! Hit me! Hard!
+** TODO Course evaluation now! Hit me! Hard!
 #+attr_html: :width 300px
 [[../img/eval.png]]
 
@@ -1795,7 +1795,7 @@ Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topi
 - *A couple of examples of useful feedback for me from past surveys:*
 #+attr_html: :width 700px
 [[../img/eval1.png]]
-* DONE Easter egg - solution
+** DONE Easter egg - solution
 
 I asked what these pieces of art have in common:
 - Goya, The Clothed Maja (Madrid)
@@ -1815,14 +1815,14 @@ taken away. Two more have been added to the list in the last 2 weeks:
 - Monet, Les Meules (Berlin)
 #+end_quotes
 
-* TODO Data Visualization in Spreadsheets [DC]
+** TODO Data Visualization in Spreadsheets [DC]
 #+attr_html: :width 480px
 [[../img/dashboard2.png]]
 
 - Last DataCamp assignment & last assignment overall
 - Don't forget to submit missing practice sheets
 
-* TODO Projects: 4th and final sprint review
+** TODO Projects: 4th and final sprint review
 #+attr_html: :width 500px
 [[../img/presentation.png]]
 
@@ -1838,7 +1838,7 @@ taken away. Two more have been added to the list in the last 2 weeks:
 
 - *Timing*: enter your time/names/titles [[https://lyon.instructure.com/courses/571/pages/register-your-final-presentation-date-here][in Canvas]] 
 
-* TODO Test driving the final exam (Dec 5-7)
+** TODO Test driving the final exam (Dec 5-7)
 #+attr_html: :width 500px
 [[../img/ghost.png]]
 

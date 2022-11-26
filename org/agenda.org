@@ -1781,12 +1781,12 @@ Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topi
 #+attr_html: :width 500px
 [[../img/sheets.jpg]]
 
-- [ ] Course evaluation now! Bonus points! Canvas: ~Course Eval~
-- [ ] Last [DataCamp] assignment / submit missing in-class assignments
-- [ ] Final presentations: Nov 28, Nov 30, Dec 2 (3 pm)
-- [ ] Test driving the final exam
+- [X] Course evaluation now! Bonus points! Canvas: ~Course Eval~
+- [X] Last [DataCamp] assignment / submit missing in-class assignments
+- [X] Final presentations: Nov 28, Nov 30, Dec 2 (3 pm)
+- [X] Test driving the final exam
   
-** TODO Course evaluation now! Hit me! Hard!
+** Course evaluation now! Hit me! Hard!
 #+attr_html: :width 300px
 [[../img/eval.png]]
 
@@ -1795,7 +1795,7 @@ Additional resources ([[https://lyon.instructure.com/courses/571/discussion_topi
 - *A couple of examples of useful feedback for me from past surveys:*
 #+attr_html: :width 700px
 [[../img/eval1.png]]
-** DONE Easter egg - solution
+** Easter egg - solution
 
 I asked what these pieces of art have in common:
 - Goya, The Clothed Maja (Madrid)
@@ -1815,14 +1815,15 @@ taken away. Two more have been added to the list in the last 2 weeks:
 - Monet, Les Meules (Berlin)
 #+end_quotes
 
-** TODO Data Visualization in Spreadsheets [DC]
+** Data Visualization in Spreadsheets [DC]
 #+attr_html: :width 480px
 [[../img/dashboard2.png]]
 
-- Last DataCamp assignment & last assignment overall
+- Last [[https://app.datacamp.com/learn/courses/data-visualization-in-spreadsheets][DataCamp assignment]] & last assignment overall
 - Don't forget to submit missing practice sheets
+- See also: [[https://www.digitalocean.com/community/tutorials/google-sheets-in-r][Reading Google sheets in R]] (tutorial)
 
-** TODO Projects: 4th and final sprint review
+** Projects: 4th and final sprint review
 #+attr_html: :width 500px
 [[../img/presentation.png]]
 
@@ -1838,11 +1839,11 @@ taken away. Two more have been added to the list in the last 2 weeks:
 
 - *Timing*: enter your time/names/titles [[https://lyon.instructure.com/courses/571/pages/register-your-final-presentation-date-here][in Canvas]] 
 
-** TODO Test driving the final exam (Dec 5-7)
+** Test driving the final exam (Dec 5-7)
 #+attr_html: :width 500px
 [[../img/ghost.png]]
 
-*Selection of quiz questions (14/115) from the final exam (40/115)*
+*Selection of quiz questions (14/40) from the final exam (40/115)*
 
 1) How can you run SQL queries on an R dataframe?
    #+begin_src R
@@ -2029,19 +2030,18 @@ taken away. Two more have been added to the list in the last 2 weeks:
     
 * Week 16: Final sprint reviews (Nov 28,30, Dec 2)
 #+attr_html: :width 550px
-[[../img/leonardo.jpg]]
-[[https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)][Image: Leonardo da Vinci, Last Supper (1495), Milano]][fn:3]
+[[../img/dvizprojectsf22.png]]
 
-- *Present* final project prototype in no particular order!
-- *Submit* all material prior to the presentation!
-- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist carefully *now*!
+- *Present* final project prototype!
+- *Submit* all material via GDrive!
+- *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist!
 
 - There are currently 10 projects and we only have 3 sessions with 50
   minutes each = 150 minutes. Teams get 25', individuals get 15'. We
   have 4 teams (ca. 100') and 6 individuals (ca. 90').
 
-- Since we only have MWF available, are you OK if we go over and
-  extend the sessions to 65 min? (Giving us 3 x 65 = 195 min).
+- Since we only have MWF available, we need to go over and extend the
+  sessions to 65 min (Giving us 3 x 65 = 195 min).
 
 * References
 #+attr_html: :width 500px
@@ -2058,9 +2058,6 @@ taken away. Two more have been added to the list in the last 2 weeks:
   BI service. [[https://docs.microsoft.com/en-us/power-bi/consumer/end-user-dashboards][URL: docs.microsoft.com]].
 
 * Footnotes
-
-[fn:3]Can you figure out the connection between the three paintings
-selected for this term's final presentation announcement?
 
 [fn:2]The heatmap correlates different marketing variables from a
 customer survey, indicating which characteristics are correlated to

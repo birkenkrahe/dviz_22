@@ -2033,15 +2033,9 @@ taken away. Two more have been added to the list in the last 2 weeks:
 [[../img/dvizprojectsf22.png]]
 
 - *Present* final project prototype!
-- *Submit* all material via GDrive!
+- *Submit* all material via GDrive (upload URL to Canvas)!
 - *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist!
-
-- There are currently 10 projects and we only have 3 sessions with 50
-  minutes each = 150 minutes. Teams get 25', individuals get 15'. We
-  have 4 teams (ca. 100') and 6 individuals (ca. 90').
-
-- Since we only have MWF available, we need to go over and extend the
-  sessions to 65 min (Giving us 3 x 65 = 195 min).
+- *Wait* for the evaluation & grade!
 
 * References
 #+attr_html: :width 500px

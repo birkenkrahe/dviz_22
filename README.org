@@ -5,6 +5,7 @@
 #+attr_html: :width 600px
 [[./img/cover.jpg]]
 [[https://unsplash.com/@roadtripwithraj][Photo by Road Trip with Raj on Unsplash]]
+
 * What's in this repo?
 
   - Repository for DSC 302 - Data Visualization

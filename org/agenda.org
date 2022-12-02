@@ -2037,6 +2037,17 @@ taken away. Two more have been added to the list in the last 2 weeks:
 - *Read* *[[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-should-we-prepare-for-the-final-presentation][the FAQ]]* with the checklist!
 - *Wait* for the evaluation & grade!
 
+* Week 17: Final exams
+#+attr_html: :width 600px
+[[../img/exam.jpg]]
+
+The final exams will take place in the Lyon building room 104.
+
+The schedule acc. to the [[https://assets.speakcdn.com/assets/2433/fa22_final_exam_schedule_final.pdf][final examination schedule fall 2022]]:
+
+- DSC 105 (intro ds): Thursday, December 8, 10.30 am-12.30 pm
+- DSC 302 (data viz): Friday, December 9, 8.00-10.00 am
+- DSC 482 (ds math): Friday, December 9, 10.30 am-12.30 pm
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

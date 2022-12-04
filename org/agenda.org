@@ -2048,6 +2048,7 @@ The schedule acc. to the [[https://assets.speakcdn.com/assets/2433/fa22_final_ex
 - DSC 105 (intro ds): Thursday, December 8, 10.30 am-12.30 pm
 - DSC 302 (data viz): Friday, December 9, 8.00-10.00 am
 - DSC 482 (ds math): Friday, December 9, 10.30 am-12.30 pm
+
 * References
 #+attr_html: :width 500px
 [[../img/books.jpg]]

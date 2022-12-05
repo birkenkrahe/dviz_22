@@ -123,7 +123,7 @@ participation (if there's a practice file, you can make up).
 - [X] Practice: Metadata identification
 - [ ] Practice: Representative R session
 
-** DONE Home assignments - how they work
+** Home assignments - how they work
 #+attr_html: :width 400px
 #+captions: course infrastructure
 [[../img/platforms.png]]
@@ -133,7 +133,7 @@ participation (if there's a practice file, you can make up).
 - You loose 1 point for every day of late submission
 - Canvas Gradebook is updated manually (with some delay)
 
-** DONE Getting started with projects
+** Getting started with projects
 
 - Course has 15 participants!
 
@@ -150,13 +150,13 @@ participation (if there's a practice file, you can make up).
 
 - Recommended: overview of visualization in data science (no coding):
   "Preparation, Exploration and Visualization" [[https://app.datacamp.com/learn/courses/data-science-for-everyone][in this DataCamp course]]
-** DONE Project idea: datasaurus dozen
+** Project idea: datasaurus dozen
 #+attr_html: :width 600px
 [[../img/datasaurus.png]]
 
 - Featured example: [[https://www.autodesk.com/research/publications/same-stats-different-graphs][Datasaurus Dozen in R (or Python)]] (see also [[https://youtu.be/iwzzv1biHv8][video]])
 
-** DONE Business dashboard example
+** Business dashboard example
 #+attr_html: :width 500px
 [[../img/dashboard.png]]
 
@@ -181,7 +181,7 @@ participation (if there's a practice file, you can make up).
 - DataCamp offers a [[https://app.datacamp.com/learn/courses/introduction-to-power-bi][Power BI course]] - in this course, you'll start
   with Tableau instead (completely comparable product).
 
-** DONE Meta data example: nuclear winter
+** Meta data example: nuclear winter
 #+attr_html: :width 500px
 [[../img/nuclear.jpg]]
 
@@ -195,7 +195,7 @@ participation (if there's a practice file, you can make up).
 - I mixed this up with [[https://github.com/birkenkrahe/dsmath/issues/26]["Disproving a 60-year-old hypothesis: most
   'silent' mutations are actually harmful"]]
 
-** DONE 1st sprint review - Wed 31-Aug
+** 1st sprint review - Wed 31-Aug
 
 - [[https://lyon.instructure.com/courses/571/assignments/1689][Canvas assignment with submission]]
 - Complete [[https://lyon.instructure.com/courses/571/pages/enter-your-project-idea-and-participants-here][projects overview table]] in Canvas *today*!
@@ -213,7 +213,7 @@ participation (if there's a practice file, you can make up).
   technology."
   #+end_quote
 
-** DONE Review: What's the problem with meta data?
+** Review: What's the problem with meta data?
 
 [[../img/review.jpg]]
 
@@ -223,17 +223,17 @@ participation (if there's a practice file, you can make up).
 - *Accuracy* - origin and validity
 #+end_quote
 
-** DONE Project idea: "Count" dashboard ([[https://count.co/][count.co]])
+** Project idea: "Count" dashboard ([[https://count.co/][count.co]])
 
-** DONE Test 2 open ("Data, EDA, and R")
+** Test 2 open ("Data, EDA, and R")
 
-** DONE Practice: Run R in Org-mode file
+** Practice: Run R in Org-mode file
 
 - [[https://github.com/birkenkrahe/dviz/blob/piHome/org/1_overview_practice.org#run-r-in-org-mode-file][Instructions in GitHub]]
 - Update your Emacs configuration file
 - Check that you can run R inside Emacs
 
-** TODO Practice: a representative R session
+** Practice: a representative R session
 
 1) Questions to ask from data
 2) [[https://github.com/birkenkrahe/dviz/blob/piHome/org/2_data_eda_R_practice.org][Download the file]]
@@ -247,12 +247,12 @@ participation (if there's a practice file, you can make up).
 - [ ] [[file:~/Documents/R/dviz/2_data_eda_R_practice.org][Complete practice file]]
 - [X] DataCamp lesson: [[https://app.datacamp.com/learn/courses/data-visualization-for-everyone][visualizing distributions]] (by Aug 26)
 
-** READ Monday Aug 29 last day to drop class
+** Monday Aug 29 last day to drop class
 
 [[../img/drop.png]]
 
 (https://my.lyon.edu/ICS/Academics/Student_Forms.jnz)
-** DONE DataCamp: visualizing distributions
+** DataCamp: visualizing distributions
 
 - What did you think of this lesson?
 - Review question: when do you use histograms?
@@ -283,8 +283,8 @@ participation (if there's a practice file, you can make up).
 
 #+end_notes
 
-** PROJECT Project idea: [[https://github.com/birkenkrahe/dviz/issues/29][healthcare data visualization]]
-** READ GNU Emacs: ref cards
+** Project idea: [[https://github.com/birkenkrahe/dviz/issues/29][healthcare data visualization]]
+** GNU Emacs: ref cards
 #+attr_html: :width 400px
 [[../img/gnu.jpg]]
 
@@ -321,11 +321,11 @@ participation (if there's a practice file, you can make up).
 - [X] Review: test 3 - looking at data
 - [X] Lab: comparing two similar data frames
 
-** READ [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
+** [[https://github.com/birkenkrahe/org/blob/master/FAQ.org#how-do-emacs--org-mode--ess-work-work-together][How Emacs, Org-mode and ESS work together]]
 #+attr_html: :width 500px
 [[../img/emacsorg.png]]
 
-** READ DataCamp Data Literacy month
+** DataCamp Data Literacy month
 #+attr_html: :width 400px
 [[../img/dataliteracymonth.png]]
 
@@ -334,7 +334,7 @@ ability to read, write, communicate, and reason with data. Data
 literacy skills are foundational for succeeding in the 21st century,
 and are the prerequisites for a career in data." ([[https://www.datacamp.com/data-literacy-month][DataCamp]])
 
-** DONE Review: 1st sprint review
+** Review: 1st sprint review
 #+attr_html: :width 500px
 [[../img/lost.jpg]]
 
@@ -351,7 +351,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 
 - Next sprint review: 30th September
 
-** DONE Review: Visualizing two variables
+** Review: Visualizing two variables
 *** Example: Nile
 - Plot example: use ~Nile~ data set
   #+begin_src R :results output
@@ -410,10 +410,10 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
   - Display multiple numeric scores for each category
   #+end_notes
 
-** DONE Extended EDA example in R
+** Extended EDA example in R
 
 [[../img/2_analysis.svg]]
-** READ Review test 3: looking at data
+** Review test 3: looking at data
 
 *Some of you had difficulty with the following questions:*
 
@@ -454,7 +454,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 7) What is the /upper quartile/?
    - The set of values that are smaller or equal than 75% of all
      values in the sample
-** DONE Lab: Comparing two data frames
+** Lab: Comparing two data frames
 #+attr_html: :width 500px
 [[../img/lab.jpg]]
 
@@ -474,7 +474,7 @@ and are the prerequisites for a career in data." ([[https://www.datacamp.com/dat
 - [X] Exploratory vs. explanatory graphics & R graphics systems
 - [X] Complete 1st DataCamp course this week (add to your resume)
 - [X] Test 4 review - color, plots, and comparison of data frames
-
+  
 ** DataCamp review - The color and the shape
 
 1) What is GNI? Difference between GNI, GNP and GDP?
@@ -704,7 +704,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - [X] Adding details to plots
 - [ ] Lab session with ~plot~
 
-** DONE Review test 6: base R parameters and ~plot~
+** Review test 6: base R parameters and ~plot~
 
 *ALL OF THESE QUESTIONS ARE DERIVED FROM TEST 6. TRY TO ANSWER THEM.*
 
@@ -1024,7 +1024,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
     : [1] 1 6 8 9
     : [1] 0.9706462 0.7562431 0.1276132 1.1852212
 
-** DONE Adding details to plots (cont'd)
+** Adding details to plots (cont'd)
 #+attr_html: :width 500px
 
 [[../img/details.jpg]]
@@ -1033,7 +1033,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - The customized file so far: [[https://tinyurl.com/mrx3txen][tinyurl.com/mrx3txen]]
 - Submit completed practice file [[https://lyon.instructure.com/courses/571/assignments/2990][to Canvas]]
 
-** TODO Practice: adding details to ~plot~
+** Practice: adding details to ~plot~
 #+attr_html: :width 400px
 [[../img/3_gnome.jpg]]
 
@@ -1058,7 +1058,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 
 4) *Upload the completed practice file to Canvas (practice 5)*
 
-** TODO Project Update - 2nd sprint
+** Project Update - 2nd sprint
 #+attr_html: :width 500px
 [[../img/scrum.jpg]]
 
@@ -1068,7 +1068,7 @@ The basis of this section is [[https://github.com/birkenkrahe/dviz/blob/piHome/o
 - What're your sources?
 - What's are you most looking forward to in this project?
 
-** TODO What did you learn so far?
+** What did you learn so far?
 #+attr_html: :width 500px
 [[../img/goal.jpg]]
 
@@ -1899,13 +1899,13 @@ taken away. Two more have been added to the list in the last 2 weeks:
    #+end_notes
    
 4) What's the output of ~plot(factor)~?
-   #+begin_src R :results graphics file :file ../img/test.png
+   #+begin_src R :results graphics file :file ../img/tooth.png
      ## bar chart with one bar per factor level
      plot(x=ToothGrowth$supp)
    #+end_src
 
    #+RESULTS:
-   [[file:../img/test.png]]
+   [[file:../img/tooth.png]]
 
 5) How can you turn a scatterplot into a line plot - in base R? In
    ggplot2?

@@ -2019,7 +2019,7 @@ taken away. Two more have been added to the list in the last 2 weeks:
 
 14) How can you plot the numeric variable ~Gas~ against the categories
     of ~Insul~ in the ~MASS::whiteside~ dataset?
-    #+begin_src R :results graphics file :file test.png
+    #+begin_src R :results output graphics file :file test.png :session *R*
       library(MASS)
       data(whiteside)
       boxplot(Gas ~ Insul, data = whiteside)

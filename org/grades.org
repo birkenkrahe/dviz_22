@@ -1,0 +1,170 @@
+#+title: DSC 302 Grades Analysis - Fall 2022
+#+options: toc:nil num:nil
+#+startup: overview hideblocks indent
+#+property: header-args:R :results output :session *R*
+
+1) Download data into data frame ~dviz~
+   #+begin_src R
+     dviz <- read.csv(
+       file="data/dviz.csv",
+       header=TRUE)
+     str(dviz)
+   #+end_src
+
+2) Final grades ~final_dviz~ and final exam results ~exam_dviz~
+   #+begin_src R
+     final_dviz <- as.numeric(dviz$Final.Score[3:nrow(dviz)-1])
+     final_dviz
+     exam_dviz <- as.numeric(dviz$Final.exam.Final.Score[3:nrow(dviz)-1])
+     exam_dviz
+   #+end_src
+
+3) Plot final grades and final exam results:
+   #+begin_src R :results graphics file :file ./img/dviz_f22_final.png
+     par(mfrow=c(2,2), pty='s')
+     hist(final_dviz,
+          xlab="Result (%)",
+          main="Final grades\nData visualization")
+     plot(density(final_dviz),
+          xlab="Result (%)",
+          main="Final grades\nDSC 302 - Fall 2022")
+     hist(exam_dviz,
+          xlab="Result (%)",
+          main="Final exam results\nData visualization")
+     plot(density(exam_dviz),
+          xlab="Result (%)",
+          main="Final exam results\nDSC 302 - Fall 2022")
+   #+end_src
+
+   [[../img/dviz_f22_final.png]]
+
+4) Final projects - grade table and stats summary
+   #+begin_src R
+     proj <- data.frame(
+       sr1 = 100*dviz[3:nrow(dviz)-1,grep("X1st", colnames(dviz))]/20,
+       sr2 = 100*dviz[3:nrow(dviz)-1,grep("X2nd", colnames(dviz))]/20,
+       sr3 = 100*dviz[3:nrow(dviz)-1,grep("X3rd", colnames(dviz))]/20,
+       sr4 = 100*dviz[3:nrow(dviz)-1,grep("Fourth", colnames(dviz))]/40)
+     proj
+     summary(proj)
+   #+end_src
+
+5) Barplots - sprint review averages
+
+   #+begin_src R
+     avg_proj_dviz <- sapply(X=proj,FUN=mean)
+     str(avg_proj_dviz)
+   #+end_src
+
+   Barplot of project averages by sprint review:
+   #+begin_src R :results graphics file :file ./img/dviz_f22_projects1.png
+     barplot(avg_proj_dviz)
+   #+end_src
+
+   [[../img/dviz_f22_projects1.png]]
+
+   With the individual member results (stacked barplot):
+   #+begin_src R
+     as.matrix(proj)
+   #+end_src
+
+   Barplot of project averages by team member and sprint review:
+   #+begin_src R :results graphics file :file ./img/dviz_f22_projects2.png
+     barplot(as.matrix(proj))
+   #+end_src
+
+   [[../img/dviz_f22_projects2.png]]
+
+   But what we want is grouping the results by team. We have the
+   following groups:
+   #+begin_src R
+     ## dviz$Student[3:nrow(dviz)-1]  # all students
+
+     soccer_idx <- sort(c(grep(pattern="Andrei",x=dviz$Student,fixed=TRUE)-1,
+                          grep(pattern="Fortu",x=dviz$Student,fixed=TRUE)-1))
+     soccer_idx
+     hasbro_idx <- sort(c(grep("Brittany",dviz$Student)-1,
+                          grep("Jordan",dviz$Student)-1))
+     hasbro_idx
+     baseball_idx <- c(grep("Nick",dviz$Student)-1)
+     baseball_idx
+     spin_idx <- c(grep("Harrod",dviz$Student)-1)
+     spin_idx
+     rcpp_idx <- c(grep("Wyatt",dviz$Student)-1)
+     rcpp_idx
+     pokemon_idx <- c(grep("Marlon",dviz$Student)-1)
+     pokemon_idx
+     kappasig_idx <- c(grep("Payne",dviz$Student)-1)
+     kappasig_idx
+     deception_idx <- sort(c(grep("Jacob",dviz$Student)-1,
+                             grep("Brandon",dviz$Student)-1))
+     deception_idx
+     powerbi_idx <- sort(c(grep("Victor",dviz$Student)-1,
+                           grep("Kim",dviz$Student)-1))
+     powerbi_idx
+     nba_idx <- sort(c(grep("Michael",dviz$Student)-1,
+                       grep("Malcolm",dviz$Student)-1))
+     nba_idx
+   #+end_src
+
+   Extracting team data and building a data frame from the index
+   vectors:
+   #+begin_src R
+     dviz_proj_team <- proj[soccer_idx[1],]
+     dviz_proj_team[2,] <- proj[hasbro_idx[1],]
+     dviz_proj_team[3,] <- proj[baseball_idx[1],]
+     dviz_proj_team[4,] <- proj[spin_idx[1],]
+     dviz_proj_team[5,] <- proj[rcpp_idx[1],]
+     dviz_proj_team[6,] <- proj[pokemon_idx[1],]
+     dviz_proj_team[7,] <- proj[kappasig_idx[1],]
+     dviz_proj_team[8,] <- proj[deception_idx[1],]
+     dviz_proj_team[9,] <- proj[powerbi_idx[1],]
+     dviz_proj_team[10,] <- proj[nba_idx[1],]
+     rownames(dviz_proj_team) <- c("Soccer",
+                                   "Hasbro",
+                                   "Baseball",
+                                   "Spin",
+                                   "Rcpp",
+                                   "Pokemon",
+                                   "KappaSig",
+                                   "Deception",
+                                   "PowerBI",
+                                   "NBA")
+     dviz_proj_team
+   #+end_src
+
+   #+begin_src R
+     dviz_teams <- apply(X=dviz_proj_team,
+                         MARGIN=2,
+                         FUN=function(x){
+                           x/sum(x,na.rm=TRUE)})
+     sum(dviz_teams[,1])
+     dviz_teams
+     class(dviz_teams)
+   #+end_src
+
+6) Barplot of project averages by team and sprint review:
+   #+begin_src R :results graphics file :file ./img/dviz_f22_projects3.png
+     colors <- c("red","green","yellow","blue","black","gray","pink",
+                 "cyan","orange","purple")
+     barplot(dviz_teams,
+             col=colors,
+             xlab="Sprint review",
+             names.arg=c("1st","2nd","3rd","4th"),
+             las=2)
+     legend("topright",
+            legend=rownames(dviz_proj_team),
+            pch=15,
+            title="Team:",
+            col=colors)
+   #+end_src
+
+   [[../img/dviz_f22_projects3.png]]
+
+7) Data entry - Student + final grade
+   #+begin_src R
+     data.frame("Student"=dviz$Student[3:nrow(dviz)-1],
+                "Grade"=final_dviz)
+     mean(final_dviz)
+   #+end_src
+

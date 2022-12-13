@@ -75,35 +75,36 @@
 
    [[../img/dviz_f22_projects2.png]]
 
-   But what we want is grouping the results by team. We have the
-   following groups:
+   But what we want is grouping the results by team. We define index
+   vectors using ~grep~ to search for the names of students that belong
+   to a team (names deleted here):
    #+begin_src R
-     ## dviz$Student[3:nrow(dviz)-1]  # all students
+     ## dviz$Student[3:nrow(dviz)-1] # all students
 
-     soccer_idx <- sort(c(grep(pattern="Andrei",x=dviz$Student,fixed=TRUE)-1,
-                          grep(pattern="Fortu",x=dviz$Student,fixed=TRUE)-1))
+     soccer_idx <- sort(c(grep(pattern="_____",x=dviz$Student,fixed=TRUE)-1,
+                          grep(pattern="_____",x=dviz$Student,fixed=TRUE)-1))
      soccer_idx
-     hasbro_idx <- sort(c(grep("Brittany",dviz$Student)-1,
-                          grep("Jordan",dviz$Student)-1))
+     hasbro_idx <- sort(c(grep("_____",dviz$Student)-1,
+                          grep("_____",dviz$Student)-1))
      hasbro_idx
-     baseball_idx <- c(grep("Nick",dviz$Student)-1)
+     baseball_idx <- c(grep("_____",dviz$Student)-1)
      baseball_idx
-     spin_idx <- c(grep("Harrod",dviz$Student)-1)
+     spin_idx <- c(grep("_____",dviz$Student)-1)
      spin_idx
-     rcpp_idx <- c(grep("Wyatt",dviz$Student)-1)
+     rcpp_idx <- c(grep("_____",dviz$Student)-1)
      rcpp_idx
-     pokemon_idx <- c(grep("Marlon",dviz$Student)-1)
+     pokemon_idx <- c(grep("_____",dviz$Student)-1)
      pokemon_idx
-     kappasig_idx <- c(grep("Payne",dviz$Student)-1)
+     kappasig_idx <- c(grep("_____",dviz$Student)-1)
      kappasig_idx
-     deception_idx <- sort(c(grep("Jacob",dviz$Student)-1,
-                             grep("Brandon",dviz$Student)-1))
+     deception_idx <- sort(c(grep("_____",dviz$Student)-1,
+                             grep("_____",dviz$Student)-1))
      deception_idx
-     powerbi_idx <- sort(c(grep("Victor",dviz$Student)-1,
-                           grep("Kim",dviz$Student)-1))
+     powerbi_idx <- sort(c(grep("_____",dviz$Student)-1,
+                           grep("_____",dviz$Student)-1))
      powerbi_idx
-     nba_idx <- sort(c(grep("Michael",dviz$Student)-1,
-                       grep("Malcolm",dviz$Student)-1))
+     nba_idx <- sort(c(grep("_____",dviz$Student)-1,
+                       grep("_____",dviz$Student)-1))
      nba_idx
    #+end_src
 

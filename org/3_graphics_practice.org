@@ -5,25 +5,27 @@
 #+PROPERTY: header-args:R :exports both :results output :session *R*
 * README
 
-- This assignment is based on Pearson's archived DataCamp course
-  "Data Visualization in R" (2016), chapter 1, "A quick introduction
-  to graphics in base R", which in turn is based on Pearson's book
-  "Exploratory Data Analysis" (CRC Press, 2017).
+- This assignment is based on Pearson's archived DataCamp course "Data
+  Visualization in R" (2016), chapter "A quick introduction to base R
+  graphics".
 
-- For the exercises, create or complete R code blocks as needed. If
-  you use the Org-mode header ~#+PROPERTY~ and ~#+STATUS~ remember that
-  you have may have to activate these with ~C-c C-c~.
+- We've done most of these in class already, so this is a hopefully
+  welcome repetition of stuff you've seen and should know.
 
-- If you don't see plots in the Org-mode file, it may be that your
-  session is not linked to the directory of the Org-mode file. Use
-  ~setwd~ to set the working directory as needed.
+- Each chapter comes with one video (of 4 minutes length), which you
+  should watch before completing the exercises. There are also slides
+  available ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
+
+- For the exercises, create or complete R code blocks as needed.
 
 - When you completed all exercises and watched all videos, update the
-  ~#+AUTHOR:~ information with your name and ~(pledged)~, and submit.
+  ~#+AUTHOR:~ information with your name and ~(pledged)~, and submit here.
+
+- Total time: ca. 45 minutes.
 
 * TODO The world of data visualization
 
-Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
+Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]) - 4 min
 
 * TODO Creating an exploratory plot array
 
@@ -59,7 +61,7 @@ Watch the video and/or look at the slides ([[https://drive.google.com/drive/fold
 
 * TODO A preview of some more and less useful techniques
 
-Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]).
+Watch the video and/or look at the slides ([[https://drive.google.com/drive/folders/1KM9n3kJ8kjGSbuPYT3fFkMCzsOD1_Uyw?usp=sharing][GDrive]]) - 4 minutes.
 
 * TODO Adding details to a plot using point shapes, color, and reference lines
 

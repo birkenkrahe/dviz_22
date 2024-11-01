@@ -56,7 +56,6 @@
 2) Label the axes and give the plot a suitable title. Save your final
    plot in ~final.png~. 
   
-
 * TODO Add a trendline
 
 In the last plot, we indexed all male participants taller than or

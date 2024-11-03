@@ -13,7 +13,7 @@
 * TODO Identify yourself
 
 1) Add your name and ~(pledged)~ at the top
-2) Run the ~#+PROPERTY~ and ~#+STARTUP~ lines with ~C-c C-c~
+2) Run the ~#+PROPERTY~ and ~#+STARTUP~ lines with ~C-c C-c~ 
 
 * TODO Getting the data
 

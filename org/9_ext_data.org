@@ -181,7 +181,7 @@ o* NEXT Practice: navigation
   Windows shell command ~notepad [file]~
   #+begin_src R
     LatteIndexFrame
-    shell("notepad ../data/LatteIndexFrame.csv")
+    shell("gedit ../data/LatteIndexFrame.csv")
   #+end_src
   #+attr_html: :width 400px 
   [[../img/9_fix.png]]
